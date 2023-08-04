@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="custom_internal_layout" inherit_id="web.internal_layout">
-        <xpath expr="//div[hasclass('header')]" position="replace"/>
-    </template>
+        <template id="custom_internal_layout" inherit_id="web.internal_layout">
+<!--            <xpath expr="//div[hasclass('header')]" position="replace"/>-->
+        </template>
+
     <template id="report_invoice_document">
+        <!--<t t-name="custom_invoice.report_invoice_document">-->
         <t t-call="custom_invoice.custom_internal_layout">
             <t t-set="o" t-value="o.with_context(lang=lang)"/>
             <style>
@@ -18,6 +20,10 @@
                 .table tr td{
                 padding: 0.2rem 0.2rem !important;
                 }
+                .text {
+                flex: 1;
+                }
+
             </style>
             <div class="page">
                 <div class="header" style="margin-bottom:-5%;">
@@ -39,81 +45,87 @@
                         }
                     </style>
 
-                    <table class="table table-bordered" style="border: 2px solid white;width: 100%;">
-                        <tr>
-                            <td width="35%" style="border: 1px solid white;">
-                                <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"
-                                     style="max-height: 120px;" alt="Logo"/>
-                            </td>
-                            <td rowspan="3" width="50%" style="border: 1px solid white;text-align:right; ">
-                                <t t-out="o.company_id.name"/>
-                                <br/>
-                                <span>Company UEN:
-                                    <t t-out="o.company_id.vat"/>
-                                </span>
-                                <br/>
-                                <span>Invoice No:
-                                    <t t-out="o.name"/>
-                                </span>
-                            </td>
-
-
-                        </tr>
-
-                    </table>
-
 
                 </div>
-                <table class="table table-sm o_main_table table-borderless" >
+                <table class="table table-bordered" style="border: 2px solid white;width: 100%;">
                     <tr>
-                            <td width="20%">
-                                <div style="text-align:left; font-size:20px;">
-                                    <span>Bill to:
-                                        <t t-out="o.partner_id.name"/>
-                                    </span>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="20%">
-                                <div style="text-align:left; font-size:20px;">
-                                    <t t-out="o.partner_id.street"/>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="20%">
-                                <div style="text-align:left; font-size:20px;">
-
-                                    <t t-out="o.partner_id.street2"/>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="20%">
-                                <div style="text-align:left; font-size:20px;">
+                        <td width="35%" style="border: 1px solid white;">
+                            <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"
+                                 style="max-height: 120px;" alt="Logo"/>
+                        </td>
+                        <td rowspan="3" width="50%" style="border: 1px solid white;text-align:right; ">
+                            <span style="font-size:20px;">
+                                <t t-out="o.company_id.name"/>
+                            </span>
+                            <br/>
+                            <span style="font-size:20px;">Company UEN: 202230352Z
+<!--                                <t t-out="o.company_id.vat"/>-->
+                            </span>
+                            <br/>
+                            <span style="font-size:20px;">Invoice No:
+                                <t t-out="o.name"/>
+                            </span>
+                        </td>
 
 
-                                    <t t-out="o.partner_id.city"/>
-                                </div>
-                            </td>
-                        </tr>
+                    </tr>
+
+                </table>
+
+                <table class="table table-sm o_main_table table-borderless">
+                    <tr>
+                        <td width="20%">
+                            <div style="text-align:left; font-size:20px;">
+                                <span>Bill to:
+                                    <t t-out="o.partner_id.name"/>
+                                </span>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="20%">
+                            <div style="text-align:left; font-size:20px;">
+                                <t t-out="o.partner_id.street"/>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="20%">
+                            <div style="text-align:left; font-size:20px;">
+
+                                <t t-out="o.partner_id.street2"/>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="20%">
+                            <div style="text-align:left; font-size:20px;">
+
+
+                                <t t-out="o.partner_id.city"/>
+                            </div>
+                        </td>
+                    </tr>
                 </table>
 
                 <br/>
                 <table style="width:100%;">
                     <thead>
-                        <th class="text-start" style="padding:8px;">Mechanic</th>
-                        <th class="text-start" style="padding:8px;">Date</th>
+                        <th class="text-start" style="border:1px solid black;border-collapse: collapse; padding:8px;">
+                            Mechanic
+                        </th>
+                        <th class="text-start" style="border:1px solid black;border-collapse: collapse; padding:8px;">
+                            Date
+                        </th>
                     </thead>
                     <tbody>
-                        <td style="padding:8px;">
+                        <td style="padding:8px; border:1px solid black;border-collapse: collapse;">
                             <t t-out="o.user_id.name"/>
                         </td>
-                        <td style="padding:8px;">
+                        <td style="padding:8px;border:1px solid black;border-collapse: collapse;">
                             <t t-out="o.invoice_date"/>
                         </td>
                     </tbody>
@@ -168,13 +180,13 @@
                                         <span class="text-nowrap" t-field="line.price_unit"/>
                                     </td>
 
-                                    <td style="border:1px solid black;border-collapse: collapse;"
-                                        class="text-end o_price_total">
+                                    <td style="border:1px solid black;border-collapse: collapse;" class="text-end ">
                                         <span class="text-nowrap" t-field="line.price_subtotal"
                                               groups="account.group_show_line_subtotals_tax_excluded"/>
                                         <span class="text-nowrap" t-field="line.price_total"
                                               groups="account.group_show_line_subtotals_tax_included"/>
                                     </td>
+
                                 </t>
                                 <t t-if="line.display_type == 'line_section'">
                                     <td style="border:1px solid black;border-collapse: collapse;" colspan="99">
@@ -190,21 +202,18 @@
                                 </t>
                             </tr>
 
-                            <t t-if="current_section and (line_last or lines[line_index+1].display_type == 'line_section')">
-                                <tr class="is-subtotal text-end">
-                                    <td colspan="99">
-                                        <strong class="mr16">Subtotal</strong>
-                                        <span
-                                                t-esc="current_subtotal"
-                                                t-options='{"widget": "monetary", "display_currency": o.currency_id}'
-                                        />
-                                    </td>
-                                </tr>
-                            </t>
+                            <!--<t t-if="current_section and (line_last or lines[line_index+1].display_type == 'line_section')">-->
+                            <!--    <tr class="is-subtotal text-end">-->
+                            <!--        <td colspan="99">-->
+                            <!--            <strong class="mr16">Subtotal</strong>-->
+                            <!--            <span t-esc="current_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>-->
+                            <!--        </td>-->
+                            <!--    </tr>-->
+                            <!--</t>-->
                         </t>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td/>
+                            <td/>
                             <td style="padding:8px;">
                                 <div style="padding:8px;" class="text-end">
                                     <b>Total</b>
@@ -225,7 +234,53 @@
 
 
                 <br/>
-                <t t-out="o.narration"/>
+                <div class="text">
+                    ￼
+                    <p style="font-size:18px;">
+                        <b>
+                            <u>Terms and Conditions:</u>
+                        </b>
+                    </p>
+                    <p>The customer acknowledges goods and services to have performed satisfactory and accepted to be in
+                        good order.
+                    </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <p style="font-size:18px;">
+                                <b>
+                                    <u>Payment Modes:</u>
+                                </b>
+                            </p>
+
+                            <!--<h2>Payment Modes:</h2>-->
+                            <ul>
+                                <li>Bank Transfers to Maybank Account Number 04061079870</li>
+                                <li>Paynow to Ampere Garage Private Limited UEN 202230352Z</li>
+                                <li>Cheque Payable to "Ampere Garage Private Limited"</li>
+                                <li>Please indicate your Invoice No. e.g. Invoice No. INV/2023/00001</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-4">
+                            <div class="image">
+<!--                                <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"-->
+                                <img src="custom_invoice/static/src/img/qrcode.png"
+                                     style="max-height: 120px;" alt="Logo"/>
+                                <p>Simply Scan and Pay using QR Code!</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <br/>
+                    <p>Ampere Garage private Limited, Premier @ Kaki Bukit, 8 kaki Bukit Ave 4 #07-10 Singapore 415875 Phone: 91473909 Email: admin@amperegarage.com.sg</p>
+<!--                    <p>Phone: 91473909 Email: admin@amperegarage.com.sg</p>-->
+                </div>
+
+
+                <!--<p style="font-size:15px;"><b><u>Terms and Conditions:</u></b></p>-->
+
+                <!--<t t-out="o.narration"/>-->
 
             </div>
         </t>
