@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="lims_parameter_limit_collection_form_view" model="ir.ui.view">
+            <field name="name">lims_decision_limit.lims_parameter_limit_collection.form</field>
+            <field name="model">lims.parameter.limit.collection</field>
+            <field name="arch" type="xml">
+                <form string="Limit set collection">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="matrix_id"/>
+                                <field name="regulation_id"/>
+                            </group>
+                            <group>
+                                <field name="partner_id"/>
+                                <field name="product_id"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="set_ids" string="Sets">
+                                <field name="set_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="lims_parameter_limit_collection_tree_view" model="ir.ui.view">
+            <field name="name">lims_decision_limit.lims_parameter_limit_collection.tree</field>
+            <field name="model">lims.parameter.limit.collection</field>
+            <field name="arch" type="xml">
+                <tree string="Parameter limit set" decoration-muted="set_count == 0">
+                    <field name="name" required="1"/>
+                    <field name="matrix_id" optional="show"/>
+                    <field name="regulation_id" optional="show"/>
+                    <field name="partner_id" optional="show"/>
+                    <field name="product_id" optional="show"/>
+                    <field name="set_ids" widget="many2many_tags"/>
+                    <field name="set_count" invisible="1"/>
+                    <field name="active" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="lims_parameter_limit_collection_act_window" model="ir.actions.act_window">
+            <field name="name">Limit set collection</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">lims.parameter.limit.collection</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    There is no examples click here to add new Parameter limit set.
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Parameter limit collection" id="lims_parameter_limit_collection_menu" parent="lims_base.limit_submenu"
+                  action="lims_parameter_limit_collection_act_window" sequence="15"/>
+
+    </data>
+</odoo>

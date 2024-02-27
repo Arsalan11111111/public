@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="lims_analysis_form">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='result_num_ids']/tree/field[@name='value']" position="after">
+                <field name="rel_nbr_dec_showed" invisible="1" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='result_num_ids']/tree/field[@name='value']" position="attributes">
+                    <attribute name="widget">float_dynamic</attribute>
+                    <attribute name="options">{'dynamic_digits_field': 'rel_nbr_dec_showed'}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='result_num_ids']/tree/field[@name='corrected_value']" position="attributes">
+                    <attribute name="widget">float_dynamic</attribute>
+                    <attribute name="options">{'dynamic_digits_field': 'rel_nbr_dec_showed'}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='result_compute_ids']/tree/field[@name='value']" position="after">
+                <field name="rel_nbr_dec_showed" invisible="1" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='result_compute_ids']/tree/field[@name='value']" position="attributes">
+                    <attribute name="widget">float_dynamic</attribute>
+                    <attribute name="options">{'dynamic_digits_field': 'rel_nbr_dec_showed'}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

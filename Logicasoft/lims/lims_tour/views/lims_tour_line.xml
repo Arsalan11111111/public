@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="lims_tour_line_form">
+        <field name="name">Analysis (Sampler)</field>
+        <field name="model">lims.tour.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <header></header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+
+                    </div>
+                    <group>
+                        <group name="upper_left_group">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" class="oe_inline"/>
+                            </h1>
+                            <field name="analysis_id" readonly="1" force_save="0" context="{'not_update_analysis_stage':True}"/>
+                            <field name="sample_name"/>
+                            <field name="description"/>
+                            <field name="matrix_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="regulation_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="date_tour"/>
+                            <field name="date_plan"/>
+                            <field name="date_sample"/>
+                            <field name="date_sample_receipt"/>
+                            <field name="sample_condition_id"/>
+                        </group>
+                        <group name="upper_right_group">
+                            <field name="priority" widget="priority"/>
+                            <field name="tour_id" readonly="1"/>
+                            <field name="sampling_point_id" readonly="1"/>
+                            <field name="location_id" readonly="1"/>
+                            <field name="address"/>
+                            <field name="external_sampling"/>
+                            <field name="sampler_id" widget="many2one_avatar"
+                                   attrs="{'readonly': [('external_sampling','=',True)]}"/>
+                            <field name="partner_id" readonly="1"
+                                       widget="many2one_avatar"/>
+                            <field name="partner_contact_ids" domain="[('parent_id', '=', partner_id)]"
+                                       widget="many2many_tags" readonly="1"
+                                       context="{'default_parent_id':partner_id}"/>
+                            <field name="rel_partner_owner_id" readonly="1"/>
+                            <field name="is_on_site_complete"/>
+                        </group>
+                    </group>
+                    <notebook name="main_notebook">
+                        <page name="numerical_results" string="Numerical results"
+                              attrs="{'invisible': [('on_site_result_num_ids', '=', [])]}">
+                            <field name="on_site_result_num_ids" width="100%" nolabel="1">
+                                <tree create="false" limit="300" editable="bottom"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform' and not is_alert"
+                                      decoration-warning="state in ['conform','unconclusive'] and is_alert"
+                                      context="{'default_analysis_id': active_id}">
+                                    <button name="get_form_view_of_result" icon="fa-arrow-right"
+                                            type="object" title="numeric_result"/>
+                                    <field name="rel_manage_accreditation" invisible="1"/>
+                                    <field name="sop_id" readonly="1" optional="show"/>
+                                    <field name="rel_type" invisible="1"/>
+                                    <field name="method_param_charac_id"
+                                           attrs="{'readonly': True}"
+                                           optional="show"/>
+                                    <field name="value" attrs="{'readonly': [('rel_change_result', '=', False), ('rel_type', 'not in', ['draft','plan','todo'])]}"
+                                           optional="show"/>
+                                    <field name="rel_change_result" invisible="1"/>
+                                    <field name="uom_id" optional="show"/>
+                                    <field name="is_null" attrs="{'readonly': [('rel_change_result', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="corrected_value" readonly="1" optional="show"/>
+                                    <field name="rel_change_loq" invisible="1"/>
+                                    <field name="loq" attrs="{'readonly': [('rel_change_loq', '=', False)]}"
+                                           optional="hide"/>
+                                    <field name="corrected_loq" readonly="1" optional="hide"/>
+                                    <field name="mloq" attrs="{'readonly': [('rel_change_loq', '=', False)]}"
+                                           optional="hide"/>
+                                    <field name="corrected_mloq" readonly="1" optional="hide"/>
+                                    <field name="is_alert" invisible="1"/>
+                                    <field name="dilution_factor"
+                                           attrs="{'readonly': [('rel_change_result', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="result_reason_id" attrs="{'required': [('rel_change_result', '=', True), ('rel_type', 'in', ['done','validated'])],
+                                        'readonly': [('rel_type', 'not in', ['done','validated'])]}"
+                                    />
+                                    <field name="comment" optional="show"/>
+                                    <field name="show" optional="show"/>
+                                    <field name="print_on_report" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="change" optional="show"/>
+                                    <field name="accreditation" groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="accreditation_ids" widget="many2many_tags"
+                                           groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}"
+                                           optional="show"/>
+                                    <field name="pack_id" invisible="1"/>
+                                    <field name="is_rework" invisible="1"/>
+                                    <button string="History" name="open_wizard_history" type="object"
+                                            icon="fa-bar-chart-o"/>
+                                    <button name="open_rework" string="Rework" type="object" icon="fa-refresh"
+                                            attrs="{'invisible': ['|', ('rel_type', 'not in',
+                                                ['done', 'validated']), ('is_rework', '=', True)]}"/>
+                                    <button name="open_cancel" string="Cancel" type="object"
+                                            icon="fa-times-circle"
+                                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Computed results" name="computed_results"
+                              attrs="{'invisible': [('on_site_result_compute_ids', '=', [])]}">
+                            <field name="on_site_result_compute_ids" widget="one2many_list">
+                                <tree create="false" editable="bottom" limit="300"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform' and not is_alert"
+                                      decoration-warning="state in ['conform','unconclusive'] and is_alert"
+                                >
+                                    <button name="get_form_view_of_result" icon="fa-arrow-right"
+                                            type="object" title="compute_result"/>
+                                    <field name="analysis_id" invisible="1"/>
+                                    <field name="rel_manage_accreditation" invisible="1"/>
+                                    <field name="sop_id" readonly="1" optional="show"/>
+                                    <field name="rel_sample_name" readonly="1" optional="show"/>
+                                    <field name="rel_type" invisible="1"/>
+                                    <field name="method_param_charac_id" attrs="{'readonly': True}"
+                                           domain="[('format', '=', 'ca')]" optional="show"/>
+                                    <field name="formula" readonly="1" optional="show"/>
+                                    <field name="value" readonly="1" optional="show"/>
+                                    <field name="uom_id" optional="show"/>
+                                    <field name="rel_change_result" invisible="1"/>
+                                    <field name="comment" optional="show"/>
+                                    <field name="show" optional="show"/>
+                                    <field name="print_on_report" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="change" optional="show"/>
+                                    <field name="accreditation" groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="accreditation_ids" widget="many2many_tags"
+                                           groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}" optional="show"/>
+                                    <field name="pack_id" invisible="1"/>
+                                    <field name="is_alert" invisible="1"/>
+                                    <button string="History" name="open_wizard_history" type="object"
+                                            icon="fa-bar-chart-o"/>
+                                    <button name="open_cancel" string="Cancel" type="object" icon="fa-times-circle"
+                                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="comments" string="Comments">
+                            <label for="comment"/>
+                            <field name="comment"
+                                   placeholder="Write here your internal comments (will not be printed on analysis reports)"
+                            />
+                            <separator/>
+                            <label for="note"/>
+                            <field name="note"
+                                   placeholder="Write here your external comments (will be printed on analysis reports)"
+                            />
+                        </page>
+                    </notebook>
+                    <notebook name="second_notebook">
+                        <page string="Select results" name="select_results"
+                              attrs="{'invisible': [('on_site_result_sel_ids', '=', [])]}">
+                            <field name="on_site_result_sel_ids" widget="one2many_list" nolabel="1">
+                                <tree create="false" editable="bottom" limit="300"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform'">
+                                    <button name="get_form_view_of_result" icon="fa-arrow-right"
+                                            type="object" title="sel_result"/>
+                                    <field name="analysis_id" invisible="1"/>
+                                    <field name="rel_manage_accreditation" invisible="1"/>
+                                    <field name="sop_id" readonly="1" optional="show" widget="many2one"/>
+                                    <field name="rel_type" invisible="1"/>
+                                    <field name="method_param_charac_id"
+                                           attrs="{'readonly': True}" optional="show"/>
+                                    <field name="rel_parameter_id" invisible="1"/>
+                                    <field name="value_ids" invisible="1"/>
+                                    <field name="value_id" attrs="{'readonly': [('rel_change_result', '=', False), ('rel_type', 'not in', ['draft','plan','todo'])]}"
+                                           domain="[('id', 'in', value_ids)]" optional="show"
+                                           options="{'no_quick_create':True}"
+                                           context="{'rel_parameter_id': rel_parameter_id}"/>
+                                    <field name="uom_id" optional="show"/>
+                                    <field name="rel_change_result" invisible="1"/>
+                                    <field name="result_reason_id" attrs="{'required':[('rel_change_result', '=', True), ('rel_type', 'in', ['done','validated'])],
+                                        'readonly': [('rel_type', 'not in', ['done','validated'])]}"
+                                    />
+                                    <field name="comment" optional="show"/>
+                                    <field name="show" optional="show"/>
+                                    <field name="print_on_report" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="change" optional="show"/>
+                                    <field name="accreditation" groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="accreditation_ids" widget="many2many_tags"
+                                           groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}"
+                                           optional="show"/>
+                                    <field name="is_rework" invisible="1"/>
+                                    <button string="History" name="open_wizard_history" type="object"
+                                            icon="fa-bar-chart-o"/>
+                                    <button name="open_rework" string="Rework" type="object" icon="fa-refresh"
+                                            attrs="{'invisible': ['|', ('rel_type', 'not in', ['done', 'validated']), ('is_rework', '=', True)]}"/>
+                                    <button string="Cancel" name="open_cancel" type="object"
+                                            icon="fa-times-circle"
+                                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+                                </tree>
+                            </field>
+                            </page>
+                        <page string="Text results" name="text_results"
+                              attrs="{'invisible': [('on_site_result_text_ids', '=', [])]}">
+                            <field name="on_site_result_text_ids" widget="one2many_list" nolabel="1">
+                                <tree create="false" editable="bottom" limit="300"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform'" default_order="id desc">
+                                    <button name="get_form_view_of_result" icon="fa-arrow-right"
+                                            type="object" title="text_result"/>
+                                    <field name="analysis_id" invisible="1"/>
+                                    <field name="rel_manage_accreditation" invisible="1"/>
+                                    <field name="sop_id" readonly="1"/>
+                                    <field name="rel_type" invisible="1"/>
+                                    <field name="method_param_charac_id"
+                                           attrs="{'readonly': True}"/>
+                                    <field name="value" attrs="{'readonly': [('rel_change_result', '=', False), ('rel_type', 'not in', ['draft','plan','todo'])]}"/>
+                                    <field name="rel_change_result" invisible="1"/>
+                                    <field name="result_reason_id" attrs="{'required': [('rel_change_result', '=', True), ('rel_type', 'in', ['done','validated'])],
+                                        'readonly': [('rel_type', 'not in', ['done','validated'])]}"/>
+                                    <field name="comment" optional="show"/>
+                                    <field name="show" optional="show"/>
+                                    <field name="print_on_report" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="change" optional="show"/>
+                                    <field name="accreditation" groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="accreditation_ids" widget="many2many_tags"
+                                           groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="state" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}"
+                                           optional="show"/>
+                                    <field name="is_rework" invisible="1"/>
+                                    <button string="History" name="open_wizard_history" type="object"
+                                            icon="fa-bar-chart-o"/>
+                                    <button name="open_rework" string="Rework" type="object" icon="fa-refresh"
+                                            attrs="{'invisible': ['|', ('rel_type', 'not in', ['done', 'validated']), ('is_rework', '=', True)]}"/>
+                                    <button string="Cancel" name="open_cancel" type="object"
+                                            icon="fa-times-circle"
+                                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+        <record id="lims_tour_line_map" model="ir.ui.view">
+            <field name="name">Lims Tour line Map</field>
+            <field name="model">lims.tour.line</field>
+            <field name="arch" type="xml">
+                <map res_partner="rel_partner_owner_id" default_order="sequence" routing="true">
+                    <field name="tour_id" string="Tour"/>
+                    <field name="is_sampled" string="Sampled"/>
+                    <field name="is_on_site_complete" string="Complete"/>
+                </map>
+            </field>
+        </record>
+
+
+        <record id="lims_tour_line_action" model="ir.actions.act_window">
+            <field name="name">Analysis (Sampler)</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">lims.tour.line</field>
+            <field name="view_mode">tree,form,map,pivot,graph</field>
+            <field name="context">{'not_update_analysis_stage':True}</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('lims_base.lims_analysis_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('lims_tour.lims_tour_line_form')}),
+                (0, 0, {'view_mode': 'map', 'view_id': ref('lims_tour.lims_tour_line_map')}),
+                (0, 0, {'view_mode': 'pivot', 'view_id': ref('lims_base.lims_analysis_pivot')}),
+                (0, 0, {'view_mode': 'graph', 'view_id': ref('lims_base.lims_analysis_graph')}),
+                (0, 0, {'view_mode': 'calendar', 'view_id': ref('lims_base.lims_analysis_calendar')}),
+                (0, 0, {'view_mode': 'activity', 'view_id': ref('lims_base.lims_analysis_activity')}),
+                ]"/>
+            <field name="search_view_id" ref="lims_base.lims_analysis_search"/>
+        </record>
+
+    </data>
+</odoo>

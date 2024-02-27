@@ -1,0 +1,2 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+lims_report_lot.access_create_report_product_lot_wizard,access_create_report_product_lot_wizard,lims_report_lot.model_create_report_product_lot_wizard,lims_base.viewer_group,1,1,1,1

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_method_parameter_characteristic_view'>
+        <field name="name">Lims MethodParameter Characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position='inside'>
+                <page name="equipment" string="Equipment">
+                    <field name="method_param_equipment_ids">
+                        <tree editable="bottom">
+                            <field name="equipment_id" required="True"
+                                   domain="[('is_laboratory', '=', True), '|', ('laboratory_id', '=', parent.laboratory_id), ('laboratory_id', '=', False)]"
+                                   context="{'default_is_laboratory': 1, 'default_laboratory_id': parent.laboratory_id}"/>
+                            <field name="reference"/>
+                            <field name="loq" attrs="{'column_invisible': [('parent.format', 'in', ['tx', 'se'])]}" optional="show"/>
+                            <field name="ls" attrs="{'column_invisible': [('parent.format', 'in', ['tx', 'se'])]}" optional="show"/>
+                            <field name="lod" attrs="{'column_invisible': [('parent.format', 'in', ['tx', 'se'])]}" optional="show"/>
+                            <field name="u" attrs="{'column_invisible': [('parent.format', 'in', ['tx', 'se'])]}" optional="show"/>
+                            <field name="recovery" attrs="{'column_invisible': [('parent.format', 'in', ['tx', 'se'])]}" optional="show"/>
+                            <field name="factor" attrs="{'column_invisible': [('parent.format', 'in', ['tx', 'se'])]}" optional="show"/>
+                            <field name="mandatory" optional="hide"/>
+                            <field name="comment" optional="show"/>
+                            <field name="laboratory_id"/>
+                            <field name="rel_laboratory_state" widget="selection_badge"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

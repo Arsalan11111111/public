@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="mail_remover_form">
+        <field name="name">Mail Remover Wizard</field>
+        <field name="model">mail.remover</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Mail Remover Form">
+                <header>
+                    <h2 class="oe_title">Remove mail</h2>
+                </header>
+                <group>
+                    <group>
+                        <field name="author_id"/>
+                        <field name="subject"/>
+                    </group>
+                    <group></group>
+                </group>
+                <group>
+                    <field name="message"/>
+                </group>
+                <footer>
+                    <button name="confirm" string="Remove" type="object" class="oe_highlight" confirm="Are you sure?"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

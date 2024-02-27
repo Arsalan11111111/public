@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="extended_res_settings">
+        <field name="name">Extended Res Settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='integration']" position="after">
+                <h2>Form Followup</h2>
+                <div class="row mt16 o_settings_container" name="form_followup">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="rel_send_mail_followup_stage_ids"/>
+                            <field name="rel_send_mail_followup_stage_ids" widget="many2many_tags" placeholder="Fill with stages where validity and reception mail notifications should be send..."/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

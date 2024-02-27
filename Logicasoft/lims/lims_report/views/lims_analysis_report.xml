@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_analysis_report_tree_view'>
+        <field name="name">Analysis Report</field>
+        <field name="model">lims.analysis.report</field>
+        <field name="arch" type="xml">
+            <tree name="lims_analysis_report_tree" create="0">
+                <header>
+                    <button name="analysis_report_send" string="Send by email" type="object"
+                            context="{'do_mass_send': True}"
+                            groups="lims_report.group_lims_validate_report"
+                            title="Send report by email, only 'validated' reports. Changes 'validated' reports to 'sent' reports."/>
+                </header>
+                <field name="name" decoration-bf="1" readonly="1"/>
+                <field name="version" invisible="1" optional="show"/>
+                <field name="partner_id" optional="show" widget="many2one_avatar"/>
+                <field name="report_id" optional="show"/>
+                <field name="laboratory_id" optional="show"/>
+                <field name="signatory_01" optional="hide" widget="many2one_avatar_user"/>
+                <field name="signatory_02" optional="hide" widget="many2one_avatar_user"/>
+                <field name="validator_id" optional="hide" widget="many2one_avatar_user"/>
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                <field name="title" optional="show"/>
+                <field name="report_date" optional="show"/>
+                <field name="date_sent" optional="hide"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
+                <field name="state" optional="show"
+                       decoration-success="state == 'sent'" decoration-warning="state == 'validated'"
+                       decoration-danger="state == 'cancel'" decoration-muted="state == 'draft'"
+                       widget="badge"
+                />
+                <field name="kanban_state" widget="kanban_state_selection" optional="show" readonly="1" nolabel="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_analysis_report_form_view'>
+        <field name="name">Analysis Report</field>
+        <field name="model">lims.analysis.report</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <button type="object" name="do_print_preview_html" string="Print Preview HTML"
+                            states="draft,validated,sent"/>
+                    <button type="object" name="do_print_preview_pdf" string="Print Preview PDF"
+                            states="draft,validated,sent"/>
+                    <button type="object" name="do_print" string="Print" states="draft,validated,sent"/>
+                    <button type="object" name="do_print_and_send" string="Print and Send"
+                            attrs="{'invisible': [('state', '!=', 'validated')]}"/>
+                    <button type="object" name="analysis_report_send" string="Send by email"
+                            attrs="{'invisible': [('state', 'in', ['cancel', 'draft'])]}"/>
+                    <button type="object" name="analysis_report_draft_send" string="Send draft" states="draft"
+                            groups="lims_report.group_lims_validate_report"/>
+                    <button name="do_validated" groups="lims_report.group_lims_validate_report" string="Validate"
+                            type="object" states="draft"/>
+                    <button name="open_cancel" string="Cancel" type="object"
+                            attrs="{'invisible': [('state', '=', 'cancel')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" class="oe_stat_button" icon="fa-flask" name="open_analysis">
+                            <field name="analysis_count" widget="statinfo" string="Analysis"/>
+                        </button>
+                    </div>
+                    <div class="oe_title pr-0">
+                        <h1 class="d-flex flex-row justify-content-between">
+                            <field name="name" readonly="True"/>
+                            <field name="kanban_state" widget="state_selection"/>
+                        </h1>
+                    </div>
+                    <group col="4">
+                        <field name="title" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                        <field name="version" invisible="1"/>
+                        <field name="is_locked" invisible="1"/>
+                    </group>
+                    <group name="analysis_report_information">
+                        <group>
+                            <field name="analysis_request_id" options="{'no_create': True}"
+                                   attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            <field name="partner_id" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            <field name="partner_contact_ids" attrs="{'readonly': [('is_locked', '=', True)]}"
+                                   widget="many2many_tags" domain="[('parent_id', '=', partner_id)]" context="{'default_parent_id':partner_id}"/>
+                            <field name="customer_ref" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            <field name="laboratory_id" required="True" options="{'no_create': True}"
+                                   attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            <field name="report_template_id" options='{"no_open": True, "no_create": True}'
+                                   attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            <field name="report_id" required="True" options='{"no_open": True, "no_create": True}'
+                                   attrs="{'readonly': ['|', ('is_locked', '=', True), ('report_template_id', '!=', False)]}"
+                                   force_save="1"
+                            />
+                            <field name="previous_analysis_report_id" options="{'no_create': True}"
+                                   domain="[('state','=', 'cancel'), ('id','!=', id)]"
+                                   attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                        </group>
+                        <group>
+                            <field name="report_date" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            <field name="date_sent"/>
+                            <field name="signatory_01"/>
+                            <field name="signatory_02"/>
+                            <field name="validator_id"/>
+                            <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            <field name="message_main_attachment_id"
+                                   string="Published attachment"
+                                   domain="[('res_id', '=', id), ('res_model', '=', 'lims.analysis.report') ]"
+                                   options="{'no_open':1, 'no_create':1}"/>
+                            <field name="is_classic_report" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="options" string="Options">
+                            <group name="option_on_content" string="Option on content" col="3">
+                                <group>
+                                    <field name="option_print_u"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_report_limit_value"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_state"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                            </group>
+                            <group name="classic_report" string="Option on content (only on classic report)"
+                                   attrs="{'invisible': [('is_classic_report', '=', False)]}" col="3">
+                                <group>
+                                    <field name="option_print_instruction"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_standard_parameter"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_lod"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_loq"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_standard_method"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                            </group>
+                            <group name='Auxiliary' string="Auxiliary content" col="3">
+                                <group>
+                                    <field name="option_print_comment_result"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_comment_method"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_conclusion"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_general_information"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="option_print_sop_id_comment"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="comments" string="Comments">
+                            <group name="comment" string="Comment">
+                                <group>
+                                    <span>
+                                        <field name="option_print_comment" nolabel="1"
+                                               attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                        <label for="option_print_comment" style="font-weight:bold"/>
+                                    </span>
+                                </group>
+                                <field name="comment" nolabel="1" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            </group>
+                            <group name="remark" string="Remark">
+                                <group>
+                                    <span>
+                                        <field name="option_print_remark" nolabel="1"
+                                               attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                        <label for="option_print_remark" style="font-weight:bold"/>
+                                    </span>
+                                </group>
+                                <field name="remark" nolabel="1" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            </group>
+                            <group name="note" string="Internal note">
+                                <group></group>
+                                <field name="note" nolabel="1" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                            </group>
+                        </page>
+                        <page name="report_line" string="Report Line">
+                            <field name="report_analysis_line_ids" nolabel="1"
+                                   attrs="{'readonly': [('is_locked', '=', True)]}">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="analysis_id" widget="Many2one"
+                                           domain="[('partner_id', '=', parent.partner_id)]"/>
+                                    <field name="analysis_state" readonly="1"/>
+                                    <field name="analysis_stage_id" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="images" string="Images">
+                            <group>
+                                <group>
+                                    <field name="image_01" widget="image" options="{'size': [150, 150]}"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                    <field name="text_image_01" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                    <field name="image_03" widget="image" options="{'size': [150, 150]}"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                    <field name="text_image_03" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                                <group>
+                                    <field name="image_02" widget="image" options="{'size': [150, 150]}"
+                                           attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                    <field name="text_image_02" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="lims_analysis_report_search" model="ir.ui.view">
+        <field name="name">Analysis Report</field>
+        <field name="model">lims.analysis.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="analysis_request_id"/>
+                <field name="report_analysis_line_ids"/>
+                <field name="tag_ids"/>
+                <filter name="this_month" string="This Month"
+                        domain="[('report_date','&lt;',(context_today() + relativedelta(months=1)).strftime('%Y-%m-01')),('report_date','&gt;=',time.strftime('%Y-%m-01'))]"/>
+                <filter name="this_week" string="This Week"
+                        domain="[('report_date','&lt;=', (context_today() + relativedelta(weeks=0, weekday=6)).strftime('%Y-%m-%d')),('report_date','&gt;',(context_today() - relativedelta(weeks=1, weekday=6)).strftime('%Y-%m-%d'))]"/>
+                <filter name="today" string="Today"
+                        domain="[('report_date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter name="until_today" string="Until Today"
+                        domain="[('report_date','&lt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter name="from_today" string="From Today"
+                        domain="[('report_date','&gt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <filter name="reports" string="Reports" domain="[('state','!=','cancel')]"/>
+                <filter name="draft_stage" string="Draft" domain="[('state','=','draft')]"/>
+                <filter name="validated_stage" string="Validated" domain="[('state','=','validated')]"/>
+                <filter name="sent_stage" string="Sent" domain="[('state','=','sent')]"/>
+                <filter name="cancel_stage" string="Cancelled" domain="[('state','=','cancel')]"/>
+                 <group name="group_by" string="Group By">
+                     <filter name="partner_id" context="{'group_by': 'partner_id'}"/>
+                     <filter name="date_sent" context="{'group_by': 'date_sent'}"/>
+                     <filter name="report_date" context="{'group_by': 'report_date'}"/>
+                     <filter name="laboratory_id" context="{'group_by': 'laboratory_id'}"/>
+                     <filter name="report_id" context="{'group_by': 'report_id'}"/>
+                     <filter name="tag_ids" context="{'group_by': 'tag_ids'}"/>
+                     <filter name="state" context="{'group_by': 'state'}"/>
+                 </group>
+            </search>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_analysis_report_action'>
+        <field name="name">Analysis Report</field>
+        <field name="res_model">lims.analysis.report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form,activity</field>
+        <field name="context">{'search_default_reports':1}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new analysis reason.
+            </p>
+            <p>
+                You can define several.
+            </p>
+        </field>
+    </record>
+
+    <record id="report_mass_change_wizard" model="ir.actions.act_window">
+        <field name="name">Mass Change</field>
+        <field name="res_model">report.mass.change.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="model_lims_analysis_report"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem action="lims_analysis_report_action" parent="lims_report_submenu" id="lims_analysis_report_menu"
+              sequence="10"/>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.laboratory" id="lims_base.default_laboratory">
+            <field name="default_report_template" ref="lims_analysis_report_template_default"/>
+            <field name="seq_report_id" ref="lims_report.sequence_analysis_report"/>
+        </record>
+        <record  model="lims.laboratory" id="lims_base.demo_laboratory">
+            <field name="default_report_template" ref="lims_analysis_report_template_default"/>
+            <field name="seq_report_id" ref="lims_report.sequence_analysis_report"/>
+        </record>
+    </data>
+</odoo>

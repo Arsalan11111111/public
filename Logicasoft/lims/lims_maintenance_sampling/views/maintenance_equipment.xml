@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='maintenance_equipment_form_view'>
+        <field name="name">Maintenance Equipment</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="open_view_sampling_point" type="object" groups="lims_base.viewer_group" class="oe_stat_button" icon="fa-globe">
+                    <field name="total_sampling_point" widget="statinfo" class="oe_inline"/>
+                </button>
+                <button name="get_all_analysis_view" type="object" groups="lims_base.viewer_group" class="oe_stat_button" icon="fa-flask"
+                        attrs="{'invisible': [('total_sampling_point', '=', 0)]}">
+                    <field name="total_analysis" widget="statinfo" class="oe_inline"/>
+                </button>
+                <button name="get_all_result_view" type="object" groups="lims_base.viewer_group" class="oe_stat_button" icon="fa-flask"
+                        attrs="{'invisible': [('total_result', '=', 0)]}">
+                    <field name="total_result" widget="statinfo" class="oe_inline"/>
+                </button>
+                <button name="get_all_sel_result_view" type="object" groups="lims_base.viewer_group" class="oe_stat_button" icon="fa-flask"
+                        attrs="{'invisible': [('total_sel_result', '=', 0)]}">
+                    <field name="total_sel_result" widget="statinfo" class="oe_inline"/>
+                </button>
+                <button name="get_all_compute_result_view" type="object" groups="lims_base.viewer_group" class="oe_stat_button" icon="fa-flask"
+                        attrs="{'invisible': [('total_compute_result', '=', 0)]}">
+                    <field name="total_compute_result" widget="statinfo" class="oe_inline"/>
+                </button>
+                <button name="get_all_text_result_view" type="object" groups="lims_base.viewer_group" class="oe_stat_button" icon="fa-flask"
+                        attrs="{'invisible': [('total_text_result', '=', 0)]}">
+                    <field name="total_text_result" widget="statinfo" class="oe_inline"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="product_normal_form_view">
+        <field name="name">product.product.form</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <field name="pack_ids" position="after">
+                <field name="additional_pack_ids" domain="[('matrix_id', '=', matrix_id)]" groups="lims_base.viewer_group" widget="many2many_tags" attrs="{'invisible': [('lims_for_analysis', '=', False)]}"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+
+access_product_date_viewer,product.date viewer,lims_batch_product.model_product_date,lims_base.viewer_group,1,0,0,0
+access_product_date_user,product.date user,lims_batch_product.model_product_date,lims_base.user_group,1,1,1,0
+access_product_date_manager,product.date manager,lims_batch_product.model_product_date,lims_base.manager_group,1,1,1,1

@@ -1,0 +1,49 @@
+<section class="oe_container">
+    <div class="oe_row">
+        <h1>Lims Analysis Recurrence</h1>
+        <p>Main use: Allows you to duplicate an analysis already performed and to schedule it at regular intervals.</p>
+
+        <h2>Objective</h2>
+        <p>Simplification of the work of planning routine analyses. This module adds only one action available on the
+         Lims analyses, this action is available from creation which allows multiplying easily analyses.</p>
+        <h2>Access Menu :</h2>
+        <p>The configuration is available for users with the Lims manager role.
+        The menu can be found in the Lims application on any seen form of an analysis via the action button.
+        </p>
+
+        <h2>Details of the possibilities of the duplication action:</h2>
+        <p>Available configuration fields:
+            <ol>
+                <li>Interval: Allows you to define the creation interval, if the interval is set to 2 it will generate an
+            element every other period (if day, it will be a generation of every other day).
+                </li>
+            <li>Up to: Defines the limit of the recurrence, either via the option :</li>
+                <ol>
+                    <li>"Number of repetitions" stops when the number of analyses is reached. (configured via the account field)</li>
+                    <li>"End date" stops once the end date is reached when creating recurring analyses. (by entering the date in the
+                        Repeat until field that appears when the corresponding mode is selected)</li>
+                    <li>"Period:"</li>
+                    <ol>
+                        <li>Day (no additional options)</li>
+                        <li>Week</li>
+                        <ol>
+                            <i>options day of the week (Monday, ..., Sunday)</i>
+                        </ol>
+                        <li>Month</li>
+                        <ol>
+                            <i>options (date of the month or day of the month)</i>
+                            <li>date of the month : value between 1 and 31 days</li>
+                            <li>day of the month :</li>
+                            <ol>
+                                <li>On: (1st, 2nd, 3rd, 4th, last)</li>
+                                <li>day of the week (Monday, ..., Sunday)</li>
+                            </ol>
+                        </ol>
+                        <li>Year (no additional options)</li>
+                    </ol>
+                </ol>
+            </ol>
+        </p>
+    </div>
+</section>
+

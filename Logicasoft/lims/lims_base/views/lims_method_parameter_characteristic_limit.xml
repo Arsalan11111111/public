@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model='ir.ui.view' id='lims_method_parameter_charac_limit_form'>
+        <field name="name">Method Parameter Characteristic Limit</field>
+        <field name="model">lims.method.parameter.characteristic.limit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="4">
+                        <field name="sequence"/>
+                        <field name="limit_value_from"/>
+                        <field name="limit_value_to"/>
+                        <field name="operator_from"/>
+                        <field name="operator_to"/>
+                        <field name="type_alert"/>
+                        <field name="state"/>
+                        <field name="message"/>
+                        <field name="method_param_charac_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_method_parameter_charac_limit_tree'>
+        <field name="name">Method Parameter Characteristic Limit</field>
+        <field name="model">lims.method.parameter.characteristic.limit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"  widget="handle"/>
+                <field name="limit_value_from"/>
+                <field name="limit_value_to"/>
+                <field name="operator_from"/>
+                <field name="operator_to"/>
+                <field name="type_alert"/>
+                <field name="state"/>
+                <field name="message"/>
+                <field name="method_param_charac_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_method_parameter_charac_limit_action'>
+        <field name="name">Method Parameter Characteristic Limit</field>
+        <field name="res_model">lims.method.parameter.characteristic.limit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new method parameter characteristic limit.
+            </p><p>
+            You can define several.
+        </p>
+        </field>
+    </record>
+
+
+    <menuitem name="Parameter Characteristic Limit" action="lims_method_parameter_charac_limit_action" parent="limit_submenu"
+              id="lims_method_parameter_characteristic_limit_menu" sequence="10"/>
+</odoo>

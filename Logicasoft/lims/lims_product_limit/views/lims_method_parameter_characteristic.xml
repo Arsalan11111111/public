@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="lims_method_parameter_characteristic_form">
+        <field name="name">Lims Method Parameter Characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='param_limit']" position="after">
+                <page name="param_char_product" string="Products Limit">
+                    <field name="param_product_ids" context="{'default_accreditation':accreditation,
+                        'default_accreditation_ids':accreditation_ids }">
+                        <tree editable="bottom">
+                            <field name="method_param_charac_id" invisible="1"/>
+                            <field name="product_id" domain="[('lims_for_analysis', '=', True)]"/>
+                            <field name="rel_matrix_id" optional="hide"/>
+                            <field name="accreditation"
+                                attrs="{'readonly':[('parent.format','in',['se','tx'])]}"/>
+                            <field name="accreditation_ids" widget="many2many_tags"
+                                attrs="{'readonly':[('parent.format','in',['se','tx'])]}"/>
+                            <field name="report_limit_value"/>
+                            <field name="reference"/>
+                            <field name="comment"/>
+                            <button name="open_limit" string="Open Limit" type="object"
+                                    attrs="{'invisible':[('parent.format','in',['se','tx'])]}"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

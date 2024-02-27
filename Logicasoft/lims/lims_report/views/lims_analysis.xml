@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_analysis_inherit_form" model="ir.ui.view">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_form"/>
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button name="create_report" type="object" string="Create report" attrs="{'invisible': [('request_id', '!=', False)]}"
+                        help="Creates a report containing this analysis only"/>
+            </header>
+            <button name="do_print_preview_html" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </button>
+            <button name="do_print_preview_pdf" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </button>
+            <button name="do_print" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </button>
+            <xpath expr="//button[@name='open_analysis_sop']" position="after">
+                <button name="open_analysis_report" type="object" class="oe_stat_button" icon="fa-newspaper-o">
+                    <field name="nb_reports" widget="statinfo"/>
+                </button>
+            </xpath>
+            <div name="button_box" position="after">
+                <widget name="web_ribbon" title="Locked" bg_color="bg-danger"
+                        attrs="{'invisible': [('is_locked', '=', False)]}"
+                        tooltip="Analysis is locked. To unlock it, cancel the related report."/>
+            </div>
+            <xpath expr="//field[@name='is_duplicate']" position="before">
+                <field name="is_locked"/>
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="date_report_sent"/>
+            </xpath>
+            <field name="date_report" position="after">
+                <field name="time_to_report" widget="float_time"/>
+            </field>
+            <xpath expr="//field[@name='result_num_ids']//field[@name='result_reason_id']" position="after">
+                <field name="report_limit_value" readonly="True" optional="show"/>
+            </xpath>
+            <xpath expr="//field[@name='result_sel_ids']//field[@name='rel_change_result']" position="after">
+                <field name="report_limit_value" readonly="True" optional="show"/>
+            </xpath>
+            <xpath expr="//field[@name='result_compute_ids']//field[@name='rel_change_result']" position="after">
+                <field name="report_limit_value" readonly="True" optional="show"/>
+            </xpath>
+            <xpath expr="//field[@name='result_text_ids']//field[@name='rel_change_result']" position="after">
+                <field name="report_limit_value" readonly="True" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_inherit_search" >
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='report_to_do']" position="after">
+                <separator/>
+                <filter name="analysis_is_locked" string="Is Locked" domain="[('is_locked', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

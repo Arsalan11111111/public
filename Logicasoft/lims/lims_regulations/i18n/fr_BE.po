@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_regulations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-05 09:02+0000\n"
+"PO-Revision-Date: 2022-08-05 09:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_regulations
+#: model_terms:ir.ui.view,arch_db:lims_regulations.analysis_report_template_auxiliary_content
+msgid "<b>Conclusion :</b>"
+msgstr ""
+
+#. module: lims_regulations
+#: model_terms:ir.ui.view,arch_db:lims_regulations.analysis_report_template_auxiliary_content
+msgid ""
+"<span style=\"color:green\">\n"
+"                            meets\n"
+"                        </span>"
+msgstr ""
+"<span style=\"color:green\">\n"
+"                            répond\n"
+"                        </span>"
+
+#. module: lims_regulations
+#: model_terms:ir.ui.view,arch_db:lims_regulations.analysis_report_template_auxiliary_content
+msgid ""
+"<span style=\"color:red\">\n"
+"                            does not meet\n"
+"                        </span>"
+msgstr ""
+"<span style=\"color:red\">\n"
+"                            ne répond pas\n"
+"                        </span>"
+
+#. module: lims_regulations
+#: model:ir.model,name:lims_regulations.model_lims_analysis
+msgid "Analysis"
+msgstr "Échantillon"
+
+#. module: lims_regulations
+#: model:ir.model,name:lims_regulations.model_report_lims_report_analysis_report_qweb
+msgid "Analysis Report Parser"
+msgstr "Parser Rapport d'analyse"
+
+#. module: lims_regulations
+#: model:ir.model,name:lims_regulations.model_lims_analysis_request_sample
+msgid "Analysis Request Sample"
+msgstr "Échantillon de la demande"
+
+#. module: lims_regulations
+#: model:ir.model.fields,field_description:lims_regulations.field_lims_analysis__matrix_id_domain_ids
+msgid "Matrix Id Domain"
+msgstr "Domaine de la matrice"
+
+#. module: lims_regulations
+#: model_terms:ir.ui.view,arch_db:lims_regulations.analysis_report_board_template_board
+msgid "Regulation"
+msgstr "Législation"
+
+#. module: lims_regulations
+#: model:ir.model.fields,field_description:lims_regulations.field_lims_analysis__regulation_ids
+msgid "Regulations"
+msgstr "Législations"
+
+#. module: lims_regulations
+#: model:ir.model,name:lims_regulations.model_lims_request_product_pack
+msgid "Request Product Pack"
+msgstr "Demande de groupe de produit"
+
+#. module: lims_regulations
+#: model_terms:ir.ui.view,arch_db:lims_regulations.analysis_report_template_auxiliary_content
+msgid "With regard to the parameter(s) analyzed, the sample"
+msgstr "En ce qui concerne le(s) paramètre(s) analysé(s), l'échantillon"
+
+#. module: lims_regulations
+#: model_terms:ir.ui.view,arch_db:lims_regulations.analysis_report_template_auxiliary_content
+msgid "the standards prescribed by the legislation"
+msgstr "aux normes prescrites par la législation"

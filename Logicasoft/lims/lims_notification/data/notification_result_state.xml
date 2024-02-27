@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="lims.analysis.notification.result.state" id="notification_state_init">
+        <field name="name">Init</field>
+        <field name="state">init</field>
+    </record>
+
+    <record model="lims.analysis.notification.result.state" id="notification_state_conform">
+        <field name="name">Conform</field>
+        <field name="state">conform</field>
+    </record>
+
+    <record model="lims.analysis.notification.result.state" id="notification_state_not_conform">
+        <field name="name">Not Conform</field>
+        <field name="state">Not Conform</field>
+    </record>
+
+    <record model="lims.analysis.notification.result.state" id="notification_state_unconclusive">
+        <field name="name">Inconclusive</field>
+        <field name="state">unconclusive</field>
+    </record>
+
+</odoo>

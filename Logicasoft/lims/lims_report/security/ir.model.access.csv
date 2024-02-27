@@ -1,0 +1,40 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_parameter_print_viewer,lims.parameter.print viewer,model_lims_parameter_print,lims_base.viewer_group,1,0,0,0
+access_parameter_print_group_viewer,lims.parameter.print.group viewer,model_lims_parameter_print_group,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_report_section_viewer,lims.analysis.report.section viewer,model_lims_analysis_report_section,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_report_viewer,lims.analysis.report viewer,model_lims_analysis_report,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_report_template_viewer,lims.analysis.report.template viewer,model_lims_analysis_report_template,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_report_line_viewer,lims.analysis.report.line viewer,model_lims_analysis_report_line,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_report_tag_viewer,lims.analysis.report.tag.viewer,lims_report.model_lims_analysis_report_tag,lims_base.viewer_group,1,0,0,0
+
+access_parameter_print_user,lims.parameter.print user,model_lims_parameter_print,lims_base.user_group,1,0,0,0
+access_parameter_print_group_user,lims.parameter.print.group user,model_lims_parameter_print_group,lims_base.user_group,1,0,0,0
+access_lims_analysis_report_user,lims.analysis.report user,model_lims_analysis_report,lims_base.user_group,1,1,1,0
+access_lims_analysis_report_line_user,lims.analysis.report.line user,model_lims_analysis_report_line,lims_base.user_group,1,1,1,0
+access_ir_model_fields_user,ir.model.fields user,base.model_ir_model_fields,lims_base.user_group,1,0,0,0
+access_ir_model_user,ir.model user,base.model_ir_model,lims_base.user_group,1,0,0,0
+
+access_parameter_print_manager,lims.parameter.print manager,model_lims_parameter_print,lims_base.manager_group,1,0,0,0
+access_parameter_print_group_manager,lims.parameter.print.group manager,model_lims_parameter_print_group,lims_base.manager_group,1,0,0,0
+access_lims_analysis_report_section_manager,lims.analysis.report.section manager,model_lims_analysis_report_section,lims_base.manager_group,1,0,0,0
+access_lims_analysis_report_manager,lims.analysis.report manager,model_lims_analysis_report,lims_base.manager_group,1,1,1,0
+access_lims_analysis_report_template_manager,lims.analysis.report.template manager,model_lims_analysis_report_template,lims_base.manager_group,1,1,1,1
+access_lims_analysis_report_line_manager,lims.analysis.report.line manager,model_lims_analysis_report_line,lims_base.manager_group,1,1,1,1
+access_lims_analysis_report_tag_user,lims.analysis.report.tag.user,lims_report.model_lims_analysis_report_tag,lims_base.user_group,1,0,0,0
+
+access_parameter_print_admin,lims.parameter.print admin,model_lims_parameter_print,lims_base.lims_admin_group,1,1,1,1
+access_parameter_print_group_admin,lims.parameter.print.group admin,model_lims_parameter_print_group,lims_base.lims_admin_group,1,1,1,1
+access_lims_analysis_report_section_admin,lims.analysis.report.section admin,model_lims_analysis_report_section,lims_base.lims_admin_group,1,1,1,1
+access_lims_analysis_report_tag_manager,lims.analysis.report.tag.manager,lims_report.model_lims_analysis_report_tag,lims_base.manager_group,1,1,1,1
+
+access_create_report_wizard_viewer,access_create_report_wizard viewer,model_create_report_wizard,lims_base.viewer_group,1,1,1,1
+access_create_report_wizard_line_viewer,access_create_report_wizard_line viewer,model_create_report_wizard_line,lims_base.viewer_group,1,1,1,1
+access_report_mass_change_wizard_viewer,access_report_mass_change_wizard viewer,model_report_mass_change_wizard,lims_base.viewer_group,1,1,1,1
+access_report_mass_change_wizard_line_viewer,access_report_mass_change_wizard_line viewer,model_report_mass_change_wizard_line,lims_base.viewer_group,1,1,1,1
+access_confirmation_create_report_viewer,access_confirmation_create_report viewer,model_confirmation_create_report,lims_base.viewer_group,1,1,1,1
+access_confirmation_create_report_request_viewer,access_confirmation_create_report_request viewer,model_confirmation_create_report_request,lims_base.viewer_group,1,1,1,1
+access_cancel_report_wizard_viewer,access_cancel_report_wizard viewer,model_cancel_report_wizard,lims_base.viewer_group,1,1,1,1
+access_wizard_group_report_viewer,access_wizard_group_report viewer,model_wizard_group_report,lims_base.viewer_group,1,1,1,1
+
+access_lims_analysis_report_portal,lims.analysis.report portal,model_lims_analysis_report,base.group_portal,1,0,0,0
+access_lims_analysis_report_line_portal,lims.analysis.report.line portal,model_lims_analysis_report_line,base.group_portal,1,0,0,0

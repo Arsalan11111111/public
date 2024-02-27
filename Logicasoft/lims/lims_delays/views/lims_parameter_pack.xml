@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model='ir.ui.view' id='lims_parameter_pack_tree'>
+        <field name="name">Parameter Pack</field>
+        <field name="model">lims.parameter.pack</field>
+        <field name="inherit_id" ref="lims_base.lims_parameter_pack_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='matrix_id']" position="after">
+                <field name="commercial_lead_time" widget="float_time" optional="show" invisible="1"/>
+                <field name="commercial_warning_time" widget="float_time" optional="show" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_parameter_pack_form">
+        <field name="name">Parameter Pack</field>
+        <field name="model">lims.parameter.pack</field>
+        <field name="inherit_id" ref="lims_base.lims_parameter_pack_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='lims_parameter_pack_form']" position="after">
+                <group name="delay" string="Delay Configuration">
+                    <field name="commercial_lead_time" widget="float_time"/>
+                    <field name="commercial_warning_time" widget="float_time"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

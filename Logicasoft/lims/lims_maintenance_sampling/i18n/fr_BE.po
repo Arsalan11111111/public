@@ -1,0 +1,104 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_maintenance_sampling
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-05 14:01+0000\n"
+"PO-Revision-Date: 2022-12-05 14:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_maintenance_sampling
+#. odoo-python
+#: code:addons/lims_maintenance_sampling/models/maintenance_equipment.py:0
+#, python-format
+msgid "Analysis"
+msgstr "Analyse"
+
+#. module: lims_maintenance_sampling
+#. odoo-python
+#: code:addons/lims_maintenance_sampling/models/maintenance_equipment.py:0
+#, python-format
+msgid "Analysis Result"
+msgstr "Résultat d'analyse"
+
+#. module: lims_maintenance_sampling
+#. odoo-python
+#: code:addons/lims_maintenance_sampling/models/maintenance_equipment.py:0
+#, python-format
+msgid "Analysis Sel Result"
+msgstr "Résultat d'analyse de sélection"
+
+#. module: lims_maintenance_sampling
+#. odoo-python
+#: code:addons/lims_maintenance_sampling/models/maintenance_equipment.py:0
+#, python-format
+msgid "Compute Analysis Result"
+msgstr "Résultat d'analyse calculé"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model.fields,field_description:lims_maintenance_sampling.field_lims_sampling_point__equipment_id
+msgid "Equipment"
+msgstr "Équipement"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model,name:lims_maintenance_sampling.model_maintenance_equipment
+msgid "Maintenance Equipment"
+msgstr "Equipement de maintenance"
+
+#. module: lims_maintenance_sampling
+#. odoo-python
+#: code:addons/lims_maintenance_sampling/models/maintenance_equipment.py:0
+#: model:ir.model,name:lims_maintenance_sampling.model_lims_sampling_point
+#, python-format
+msgid "Sampling Point"
+msgstr "Point de Prélèvement"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model.fields,field_description:lims_maintenance_sampling.field_maintenance_equipment__sampling_point_ids
+msgid "Sampling points"
+msgstr "Points de prélèvement"
+
+#. module: lims_maintenance_sampling
+#. odoo-python
+#: code:addons/lims_maintenance_sampling/models/maintenance_equipment.py:0
+#, python-format
+msgid "Text Analysis Result"
+msgstr "Résultat d'analyse texte"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model.fields,field_description:lims_maintenance_sampling.field_maintenance_equipment__total_analysis
+msgid "Total Analysis"
+msgstr "Echantillon Total"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model.fields,field_description:lims_maintenance_sampling.field_maintenance_equipment__total_compute_result
+msgid "Total Compute Results"
+msgstr "Résultats Calculé Total"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model.fields,field_description:lims_maintenance_sampling.field_maintenance_equipment__total_result
+msgid "Total Results"
+msgstr "Résultats Total"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model.fields,field_description:lims_maintenance_sampling.field_maintenance_equipment__total_sampling_point
+msgid "Total Sampling Point"
+msgstr "Total Point de prélèvement"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model.fields,field_description:lims_maintenance_sampling.field_maintenance_equipment__total_sel_result
+msgid "Total Sel Results"
+msgstr "Résultats Sel Total"
+
+#. module: lims_maintenance_sampling
+#: model:ir.model.fields,field_description:lims_maintenance_sampling.field_maintenance_equipment__total_text_result
+msgid "Total Text Results"
+msgstr "Résultat Texte Total"

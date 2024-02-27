@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_batch_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 09:06+0000\n"
+"PO-Revision-Date: 2023-08-11 09:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__rel_lot_id_alert_date
+msgid "Alert Date"
+msgstr "Date d'alerte"
+
+#. module: lims_batch_product
+#: model:ir.model,name:lims_batch_product.model_lims_batch
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__batch_id
+msgid "Batch"
+msgstr ""
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__rel_product_id_company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,help:lims_batch_product.field_product_date__rel_lot_id_alert_date
+msgid ""
+"Date to determine the expired lots and serial numbers using the filter "
+"\"Expiration Alerts\"."
+msgstr ""
+"Date pour déterminer les lots et numéros de série expirés en utilisant le "
+"filtre \"Alertes d'expiration\"."
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,help:lims_batch_product.field_product_date__rel_product_id_tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Assurez la traçabilité d'un produit stocké dans votre entrepôt."
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__rel_lot_id_expiration_date
+msgid "Expiration Date"
+msgstr "Date de péremption"
+
+#. module: lims_batch_product
+#: model_terms:ir.ui.view,arch_db:lims_batch_product.product_date_view_search
+msgid "Filter"
+msgstr "Filtre"
+
+#. module: lims_batch_product
+#: model_terms:ir.ui.view,arch_db:lims_batch_product.product_date_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__lot_id
+msgid "Lot"
+msgstr ""
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__product_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: lims_batch_product
+#: model:ir.model,name:lims_batch_product.model_product_date
+msgid "Product Date"
+msgstr "Date du produit"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_lims_batch__product_date_ids
+#: model_terms:ir.ui.view,arch_db:lims_batch_product.lims_batch_form_view
+msgid "Product(s)"
+msgstr "Produit(s)"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: lims_batch_product
+#: model:ir.model.fields,help:lims_batch_product.field_product_date__rel_lot_id_expiration_date
+msgid ""
+"This is the date on which the goods with this Serial Number may become "
+"dangerous and must not be consumed."
+msgstr ""
+"C'est la date à laquelle les marchandises portant ce numéro de série peuvent"
+" devenir dangereuses et ne doivent pas être consommées."
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__rel_product_id_tracking
+msgid "Tracking"
+msgstr "Suivi"
+
+#. module: lims_batch_product
+#: model:ir.model.fields,field_description:lims_batch_product.field_product_date__usage_date
+msgid "Usage Date"
+msgstr "Date d'utilisation"
+
+#. module: lims_batch_product
+#: model_terms:ir.ui.view,arch_db:lims_batch_product.product_date_view_search
+msgid "Without expiration date"
+msgstr "Sans date d'expiration"

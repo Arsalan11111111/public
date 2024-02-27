@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_analysis_request_tags_tree'>
+        <field name="name">Analysis Request Tags</field>
+        <field name="model">lims.analysis.request.tags</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record model='ir.ui.view' id='lims_analysis_request_tags_form'>
+        <field name="name">Analysis Request Tags</field>
+        <field name="model">lims.analysis.request.tags</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="color" widget="color_picker"/>
+                        <field name="sequence"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="lims_analysis_request_tag_search" model="ir.ui.view">
+        <field name="name">Analysis Request Tags</field>
+        <field name="model">lims.analysis.request.tags</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name"/>
+                <separator/>
+                <filter name="archived" string="Archived" domain="[('active','=',False)]"/>
+                <group string="Group By">
+                    <filter name="color" string="Color" context="{'group_by': 'color'}"/>
+                    <filter name="active" string="Active" context="{'group_by': 'active'}"/>
+                </group>
+        </search>
+       </field>
+    </record>
+    
+    <record model='ir.actions.act_window' id='lims_analysis_request_tags_action'>
+        <field name="name">Analysis Request Tags</field>
+        <field name="res_model">lims.analysis.request.tags</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to create a new analysis request tags.
+          </p><p>
+            You can define several.
+          </p>
+        </field>
+    </record>
+
+    <menuitem action="lims_analysis_request_tags_action" parent="analysis_request_submenu" id="lims_analysis_request_tags_menu" sequence="65"/>
+</odoo>
+    

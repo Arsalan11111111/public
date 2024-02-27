@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form -->
+    <record model="ir.ui.view" id="spw_tax_treatment_form">
+        <field name="name">Treatment</field>
+        <field name="model">spw.tax.treatment</field>
+        <field name="arch" type="xml">
+            <form string="Treatment">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="spw_tax_treatment_tree">
+        <field name="name">Treatment</field>
+        <field name="model">spw.tax.treatment</field>
+        <field name="arch" type="xml">
+            <tree string="Treatment">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_treatment_action" >
+        <field name="name">Treatment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.treatment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="spw_tax_treatment_menu"
+              name="Treatment"
+              parent="spw_tax_configuration"
+              action="spw_tax_treatment_action"/>
+</odoo>

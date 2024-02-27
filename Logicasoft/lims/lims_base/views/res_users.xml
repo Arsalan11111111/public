@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_users_form" model="ir.ui.view">
+        <field name="name">Res Users</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position='inside'>
+                <group string="Lims" groups="lims_base.viewer_group,base.group_system">
+                    <field name="default_laboratory_id" domain="[('res_users_ids', 'in', id)]" groups="lims_base.viewer_group"/>
+                    <field name="laboratory_ids" widget="many2many_tags" options="{'color_field': 'color'}" groups="lims_base.viewer_group,base.group_system"/>
+                    <field name="department_ids" widget="many2many_tags" domain="[('labo_id.res_users_ids', 'in', id)]"
+                           options="{'color_field': 'rel_color'}" groups="lims_base.viewer_group,base.group_system"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

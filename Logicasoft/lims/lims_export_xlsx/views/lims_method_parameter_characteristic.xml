@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_method_parameter_characteristic_form" model="ir.ui.view">
+        <field name="name">Parameter characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_form"/>
+        <field name="arch" type="xml">
+            <page name="other_info" position="inside">
+                <group>
+                    <field name="export_reference"/>
+                </group>
+            </page>
+        </field>
+    </record>
+
+    <record id="lims_method_parameter_characteristic_tree" model="ir.ui.view">
+        <field name="name">Parameter characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_tree"/>
+        <field name="arch" type="xml">
+            <field name="uom" position="after">
+                <field name="export_reference"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <data noupdate="1">
+            <record model="lims.analysis.request" id="lims_base.demo_lims_analysis_request_1">
+                <field name="service_type_id" ref="lims_sale_service_level.lims_default_service_type"/>
+            </record>
+            <record model="lims.analysis.request" id="lims_base.demo_lims_analysis_request_2">
+                <field name="service_type_id" ref="lims_sale_service_level.lims_default_service_type"/>
+            </record>
+        </data>
+    </data>
+</odoo>

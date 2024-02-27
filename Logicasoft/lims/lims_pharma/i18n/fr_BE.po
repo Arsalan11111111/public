@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_pharma
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-06 13:09+0000\n"
+"PO-Revision-Date: 2022-12-06 13:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_pharma
+#: model:ir.model.fields,help:lims_pharma.field_lims_analysis_report__option_print_result_lod
+msgid ""
+"Allows to print the LOD instead of the result in the report in the format (<"
+" value LOD ) if the result is strictly lower than the LOD"
+msgstr ""
+"Permet d'imprimer la LOD à la place du résultat dans le rapport sous la "
+"forme (<valeur LOD) si le résultat est strictement inférieur à la LOD"
+
+#. module: lims_pharma
+#: model:ir.model.fields,help:lims_pharma.field_lims_analysis_report__option_print_result_loq
+msgid ""
+"Allows to print the LOQ instead of the result in the report, if the value of"
+" the result is strictly lower than the LOQ"
+msgstr ""
+"Permet d'imprimer la LOQ à la place du résultat dans le rapport, si la "
+"valeur du résultat est strictement inférieur à la LOQ"
+
+#. module: lims_pharma
+#: model:ir.model,name:lims_pharma.model_lims_analysis
+msgid "Analysis"
+msgstr "Échantillon"
+
+#. module: lims_pharma
+#: model:ir.model,name:lims_pharma.model_report_lims_report_analysis_report_board
+msgid "Analysis Report Board Parser (H)"
+msgstr "Synthèse des rapports (H)"
+
+#. module: lims_pharma
+#: model:ir.model,name:lims_pharma.model_report_lims_report_analysis_report_board_vertical
+msgid "Analysis Report Board Parser (V)"
+msgstr "Synthèse des rapports (V)"
+
+#. module: lims_pharma
+#: model:ir.model,name:lims_pharma.model_report_lims_report_analysis_report_qweb
+msgid "Analysis Report Parser"
+msgstr "Parser Rapport d'analyse"
+
+#. module: lims_pharma
+#: model:ir.model,name:lims_pharma.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: lims_pharma
+#. odoo-python
+#: code:addons/lims_pharma/models/lims_analysis.py:0
+#, python-format
+msgid "ND"
+msgstr ""
+
+#. module: lims_pharma
+#: model:ir.model,name:lims_pharma.model_lims_analysis_numeric_result
+msgid "Numerical analysis result"
+msgstr "Résultat numérique"
+
+#. module: lims_pharma
+#: model:ir.model.fields,field_description:lims_pharma.field_lims_analysis_report__option_print_result_lod
+msgid "Print <LOD as result"
+msgstr "Imprimer <LOD comme résultat"
+
+#. module: lims_pharma
+#: model:ir.model.fields,field_description:lims_pharma.field_lims_analysis_report__option_print_result_loq
+msgid "Print <LOQ as result"
+msgstr "Imprimer <LOQ comme résultat"
+
+#. module: lims_pharma
+#: model:ir.model.fields,field_description:lims_pharma.field_res_config_settings__unquantifiable_text
+msgid "Printing when not quantifiable"
+msgstr "Impression lorsque non quantifiable"
+
+#. module: lims_pharma
+#: model:ir.model,name:lims_pharma.model_lims_analysis_report
+msgid "Report"
+msgstr "Rapport"
+
+#. module: lims_pharma
+#: model:ir.model.fields,field_description:lims_pharma.field_lims_analysis_numeric_result__is_unquantifiable
+msgid "Unquantifiable"
+msgstr "Non quantifiable"
+
+#. module: lims_pharma
+#: model_terms:ir.ui.view,arch_db:lims_pharma.res_config_settings_view_form
+msgid "lims pharma"
+msgstr ""

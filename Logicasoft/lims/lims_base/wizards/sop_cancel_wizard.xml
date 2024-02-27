@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="sop_cancel_wizard_form" model="ir.ui.view">
+        <field name="name">Cancel test</field>
+        <field name="model">sop.cancel.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cancel_reason" placeholder="Cancel reason must be filled."/>
+                        <field name="sop_ids" readonly="1" nolabel="1" colspan="2">
+                            <tree name="sop_ids_tree">
+                                <field name="name" readonly="1" string="Cancel these tests"/>
+                                <field name="method_id" readonly="1" optional="show"/>
+                                <field name="method_id" readonly="1" optional="show"/>
+                                <field name="analysis_id" readonly="1" optional="show"/>
+                                <field name="rel_sample_name" readonly="1" optional="show"/>
+                                <field name="rel_request_id" readonly="1" optional="show"/>
+                                <field name="state" readonly="1" optional="show"/>
+                                <field name="rel_type" readonly="1" optional="show"/>
+                            </tree>
+                            <form name="sop_ids_form">
+                                <group name="sop_ids_from_group">
+                                    <field name="name" readonly="1"/>
+                                    <field name="method_id" readonly="1" optional="show"/>
+                                    <field name="method_id" readonly="1" optional="show"/>
+                                    <field name="analysis_id" readonly="1" optional="show"/>
+                                    <field name="rel_sample_name" readonly="1" optional="show"/>
+                                    <field name="rel_request_id" readonly="1" optional="show"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="rel_type" readonly="1" optional="show"/>
+                                </group>
+                            </form>
+                        </field>
+                        <field name="cancel_dependent_sop" attrs="{'invisible': [('depend_sop_ids', '=', [])]}" placeholder="Cancel reason must be filled."/>
+                        <p colspan="2" attrs="{'invisible': [('depend_sop_ids', '=', [])]}">This will cancel all results linked to this test. Continue ?</p>
+                        <field name="depend_sop_ids" attrs="{'invisible': ['|',('depend_sop_ids', '=', []), ('cancel_dependent_sop','=',False)]}" readonly="1" nolabel="1" colspan="2">
+                            <tree editable="bottom">
+                                <field name="name" readonly="1" string="Cancel these dependent tests"/>
+                                <field name="method_id" readonly="1" optional="show"/>
+                                <field name="method_id" readonly="1" optional="show"/>
+                                <field name="analysis_id" readonly="1" optional="show"/>
+                                <field name="rel_sample_name" readonly="1" optional="show"/>
+                                <field name="rel_request_id" readonly="1" optional="show"/>
+                                <field name="state" readonly="1" optional="show"/>
+                                <field name="rel_type" readonly="1" optional="show"/>
+                            </tree>
+                            <form name="depend_sop_id_form">
+                                <group name="depend_sop_id_from_group">
+                                    <field name="name" readonly="1"/>
+                                    <field name="method_id" readonly="1"/>
+                                    <field name="method_id" readonly="1"/>
+                                    <field name="analysis_id" readonly="1"/>
+                                    <field name="rel_sample_name" readonly="1"/>
+                                    <field name="rel_request_id" readonly="1"/>
+                                    <field name="state" readonly="1"/>
+                                    <field name="rel_type" readonly="1"/>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="confirm_cancel" string="Confirm" type="object"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="sop_cancel_wizard_action" model="ir.actions.act_window">
+        <field name="name">Cancel test</field>
+        <field name="res_model">sop.cancel.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

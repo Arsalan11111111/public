@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form -->
+    <record model="ir.ui.view" id="spw_tax_campaign_treatedmat_form">
+        <field name="name">Campaign Treated Mat</field>
+        <field name="model">spw.tax.campaign.treatedmat</field>
+        <field name="arch" type="xml">
+            <form string="Campaign Treated Mat">
+                <sheet>
+                    <group>
+                        <field name="campaign_id"/>
+                        <field name="product_id"/>
+                        <field name="quantity"/>
+                        <field name="uom"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="spw_tax_campaign_treatedmat_tree">
+        <field name="name">Campaign Treated Mat</field>
+        <field name="model">spw.tax.campaign.treatedmat</field>
+        <field name="arch" type="xml">
+            <tree string="Campaign Treated Mat">
+                <field name="campaign_id"/>
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="uom"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_campaign_treatedmat_action" >
+        <field name="name">Campaign Treated Mat</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.campaign.treatedmat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="spw_tax_campaign_treatedmat"
+              name="Campaign Treated Mat"
+              parent="spw_tax_configuration"
+              action="spw_tax_campaign_treatedmat_action"/>
+</odoo>

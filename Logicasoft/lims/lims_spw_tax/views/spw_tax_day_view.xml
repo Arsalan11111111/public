@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form -->
+    <record model="ir.ui.view" id="spw_tax_day_form">
+        <field name="name">Day</field>
+        <field name="model">spw.tax.day</field>
+        <field name="arch" type="xml">
+            <form string="Day">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="sequence"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="spw_tax_day_tree">
+        <field name="name">Days</field>
+        <field name="model">spw.tax.day</field>
+        <field name="arch" type="xml">
+            <tree string="Days">
+                <field name="name"/>
+                <field name="sequence"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_day_action" >
+        <field name="name">Day</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.day</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="spw_tax_day_menu"
+              name="Day"
+              parent="spw_tax_configuration"
+              action="spw_tax_day_action"/>
+</odoo>

@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_plausibility
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-29 11:07+0000\n"
+"PO-Revision-Date: 2021-07-29 11:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_plausibility
+#: model:ir.model,name:lims_plausibility.model_lims_analysis
+msgid "Analysis"
+msgstr "Echantillons"
+
+#. module: lims_plausibility
+#: model:ir.model,name:lims_plausibility.model_lims_analysis_compute_result
+msgid "Analysis Compute Result"
+msgstr "Résultat calculé"
+
+#. module: lims_plausibility
+#: model:ir.model,name:lims_plausibility.model_lims_analysis_limit_compute_result
+msgid "Analysis Limit Compute Result"
+msgstr "Limite résultat calculé"
+
+#. module: lims_plausibility
+#: model:ir.model,name:lims_plausibility.model_lims_analysis_limit_result
+msgid "Analysis Limit Result"
+msgstr "Limite résultat"
+
+#. module: lims_plausibility
+#: model:ir.model,name:lims_plausibility.model_lims_analysis_result
+msgid "Analysis Result"
+msgstr "Résultat d'analyse"
+
+#. module: lims_plausibility
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis__display_name
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_compute_result__display_name
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_limit_compute_result__display_name
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_limit_result__display_name
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_result__display_name
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_method_parameter_characteristic_limit__display_name
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_sop__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_plausibility
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis__id
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_compute_result__id
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_limit_compute_result__id
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_limit_result__id
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_result__id
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_method_parameter_characteristic_limit__id
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_sop__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_plausibility
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis__plausible
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_sop__plausible
+msgid "Implausible"
+msgstr "Invraisemblable"
+
+#. module: lims_plausibility
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis____last_update
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_compute_result____last_update
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_limit_compute_result____last_update
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_limit_result____last_update
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_result____last_update
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_method_parameter_characteristic_limit____last_update
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_sop____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_plausibility
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_compute_result__plausible
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_result__plausible
+msgid "NPL"
+msgstr ""
+
+#. module: lims_plausibility
+#: model:ir.model,name:lims_plausibility.model_lims_method_parameter_characteristic_limit
+msgid "Parameter Limit"
+msgstr "Limite de paramètre"
+
+#. module: lims_plausibility
+#: code:addons/lims_plausibility/models/lims_analysis_compute_result.py:0
+#: code:addons/lims_plausibility/models/lims_analysis_result.py:0
+#, python-format
+msgid "Parameter is not correctly configured."
+msgstr "Le paramètre n'est pas correctement configuré."
+
+#. module: lims_plausibility
+#: code:addons/lims_plausibility/models/lims_analysis_limit_compute_result.py:0
+#: code:addons/lims_plausibility/models/lims_analysis_limit_result.py:0
+#: code:addons/lims_plausibility/models/lims_method_parameter_characteristic_limit.py:0
+#: model:ir.model.fields.selection,name:lims_plausibility.selection__lims_analysis_limit_compute_result__type_alert__plausibility
+#: model:ir.model.fields.selection,name:lims_plausibility.selection__lims_analysis_limit_result__type_alert__plausibility
+#: model:ir.model.fields.selection,name:lims_plausibility.selection__lims_method_parameter_characteristic_limit__type_alert__plausibility
+#, python-format
+msgid "Plausibility"
+msgstr "Plausible"
+
+#. module: lims_plausibility
+#: model:ir.model,name:lims_plausibility.model_lims_sop
+msgid "Test"
+msgstr ""
+
+#. module: lims_plausibility
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_limit_compute_result__type_alert
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_analysis_limit_result__type_alert
+#: model:ir.model.fields,field_description:lims_plausibility.field_lims_method_parameter_characteristic_limit__type_alert
+msgid "Type"
+msgstr ""

@@ -1,0 +1,650 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_decision_limit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 09:01+0000\n"
+"PO-Revision-Date: 2023-08-11 09:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_needaction
+msgid "Action Needed"
+msgstr "Nécessite une action"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__active
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__active
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activité d'exception de décoration"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_state
+msgid "Activity State"
+msgstr "État de l'Activité"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de type d'activité"
+
+#. module: lims_decision_limit
+#: model:ir.model,name:lims_decision_limit.model_lims_analysis
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__analysis_id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__analysis_id
+msgid "Analysis"
+msgstr "Analyse"
+
+#. module: lims_decision_limit
+#: model:ir.model,name:lims_decision_limit.model_report_lims_decision_limit_lims_analysis_limit_report_parser
+msgid "Analysis Limit Report Parser"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.actions.act_window,name:lims_decision_limit.analysis_parameter_limit_wizard_act_window
+msgid "Apply limits sets on analysis"
+msgstr "Appliquer des limites à l'analyse"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.analysis_parameter_limit_wizard_form_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__collection_ids
+msgid "Collection"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_decision_limit_form_view
+msgid "Collections"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__collection_ids
+msgid "Collections tested"
+msgstr "Collections testées"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.analysis_parameter_limit_wizard_form_view
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__conform_collection_ids
+msgid "Conform Collection"
+msgstr "Collections conforme"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__conform_collection_ids
+msgid "Conform Collections"
+msgstr "Collections conformes"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__create_uid
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__create_uid
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__create_uid
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__create_date
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__create_date
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__create_date
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__create_date
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__rel_partner_id
+msgid "Customer"
+msgstr "Client"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__datas
+msgid "Datas"
+msgstr "Données"
+
+#. module: lims_decision_limit
+#: model:ir.actions.act_window,name:lims_decision_limit.lims_decision_limit_act_window
+#: model:ir.model,name:lims_decision_limit.model_lims_decision_limit
+#: model:ir.ui.menu,name:lims_decision_limit.lims_decision_limit_menu
+msgid "Decision limit"
+msgstr "Limite de décision"
+
+#. module: lims_decision_limit
+#. odoo-python
+#: code:addons/lims_decision_limit/models/lims_analysis.py:0
+#: code:addons/lims_decision_limit/wizards/analysis_parameter_limit_wizard.py:0
+#, python-format
+msgid "Decision limit : {}"
+msgstr "Limite de décision : {}"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_analysis__decision_limit_count
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_analysis_form
+msgid "Decision(s) Limits"
+msgstr "Limites de décision(s)"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__display_name
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__display_name
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__display_name
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__display_name
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__is_matrix
+msgid "Filter matrix"
+msgstr "Filtre par matrice"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__is_partner
+msgid "Filter partner"
+msgstr "Filtre par client"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__is_product
+msgid "Filter product"
+msgstr "Filtre par produit"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__is_regulation
+msgid "Filter regulation"
+msgstr "Filtre par regulation"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__filtered_collection_ids
+msgid "Filtered Collection"
+msgstr "Collection filtrée"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__filtered_set_ids
+msgid "Filtered Set"
+msgstr "Set filtré"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.analysis_parameter_limit_wizard_form_view
+msgid "Filtered limit collections"
+msgstr "Collections de limites filtrées"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.analysis_parameter_limit_wizard_form_view
+msgid "Filtered limit sets"
+msgstr "Sets de limites filtrés"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône Font Awesome e.g. fa-tasks"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_decision_limit_search_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_search_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_set_search_view
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__id
+msgid "ID"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité d'exception."
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, de nouveaux messages demandent votre attention."
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__message_has_error
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si actif, certains messages ont une erreur de livraison."
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_decision_limit_form_view
+msgid "Information"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_is_follower
+msgid "Is Follower"
+msgstr "Est un abonné"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard____last_update
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit____last_update
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit____last_update
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection____last_update
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__write_uid
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__write_uid
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__write_uid
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__write_date
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__write_date
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__write_date
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__write_date
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__limit_ids
+msgid "Limit"
+msgstr "Limite"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__limit_count
+msgid "Limit Count"
+msgstr "Nombre de limites"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__limit_set_ids
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter__limit_set_ids
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__limit_set_id
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.analysis_parameter_limit_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_form
+msgid "Limit Set"
+msgstr "Set de Limites"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__limit_value_from
+msgid "Limit Value From"
+msgstr "Valeur limite de"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__limit_value_to
+msgid "Limit Value To"
+msgstr "Valeur limite à"
+
+#. module: lims_decision_limit
+#: model:ir.actions.act_window,name:lims_decision_limit.lims_parameter_limit_collection_act_window
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.analysis_parameter_limit_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_collection_form_view
+msgid "Limit set collection"
+msgstr "Collection de set de limites"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_set_form_view
+msgid "Limits"
+msgstr "Limites"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_analysis_parameter_limit_wizard__is_specific_filter
+msgid "Limits set must have all filter defined below in their configuration"
+msgstr ""
+"Les limites définies doivent avoir tous les filtres définis ci-dessous dans "
+"leur configuration."
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__rel_matrix_id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__matrix_id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__matrix_id
+msgid "Matrix"
+msgstr "Matrice"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message
+msgid "Message"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur d'envoi du message"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Échéance de mon activité"
+
+#. module: lims_decision_limit
+#. odoo-python
+#: code:addons/lims_decision_limit/models/lims_decision_limit.py:0
+#, python-format
+msgid "N/A"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de l'Activité à Venir"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé d'activité suivante"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type d'activités à venir"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_analysis_limit_report_parser
+msgid "No data"
+msgstr "Pas de données"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__non_conform_collection_ids
+msgid "Non Conform Collection"
+msgstr "Collections non conforme"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__non_conform_collection_ids
+msgid "Non Conform Collections"
+msgstr "Collections non conformes"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec des erreurs d'envoi"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_form
+msgid "Open Limit"
+msgstr "Ouvrir Limite"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__operator_from
+msgid "Operator From"
+msgstr "Opérateur De"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__operator_to
+msgid "Operator To"
+msgstr "Opérateur à"
+
+#. module: lims_decision_limit
+#: model:ir.model,name:lims_decision_limit.model_lims_parameter
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__parameter_ids
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__parameter_id
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: lims_decision_limit
+#: model:ir.model,name:lims_decision_limit.model_lims_parameter_limit_collection
+msgid "Parameter Limit Collection"
+msgstr "Collection de limites de paramètre"
+
+#. module: lims_decision_limit
+#: model:ir.model,name:lims_decision_limit.model_lims_parameter_limit_set
+msgid "Parameter Limit Set"
+msgstr "Set de limites de paramètre"
+
+#. module: lims_decision_limit
+#: model:ir.actions.act_window,name:lims_decision_limit.lims_parameter_limit_act_window
+#: model:ir.model,name:lims_decision_limit.model_lims_parameter_limit
+#: model:ir.ui.menu,name:lims_decision_limit.lims_parameter_limit_menu
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_decision_limit_form_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_decision_limit_search_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_form_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_search_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_tree_view
+msgid "Parameter limit"
+msgstr "Limite de paramètre"
+
+#. module: lims_decision_limit
+#: model:ir.ui.menu,name:lims_decision_limit.lims_parameter_limit_collection_menu
+msgid "Parameter limit collection"
+msgstr "Collection de limites de paramètre"
+
+#. module: lims_decision_limit
+#. odoo-python
+#: code:addons/lims_decision_limit/models/lims_parameter_limit_set.py:0
+#: model:ir.actions.act_window,name:lims_decision_limit.lims_parameter_limit_set_act_window
+#: model:ir.ui.menu,name:lims_decision_limit.lims_parameter_limit_set_menu
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_form
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_collection_tree_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_set_form_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_set_search_view
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_set_tree_view
+#, python-format
+msgid "Parameter limit set"
+msgstr "Set de limite de paramètres"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.analysis_parameter_limit_wizard_form_view
+msgid "Parameters"
+msgstr "Paramètres"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__partner_id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__rel_product_id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__product_id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__product_id
+msgid "Product"
+msgstr "Article"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__rel_regulation_id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__regulation_id
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__regulation_id
+msgid "Regulation"
+msgstr "Législation"
+
+#. module: lims_decision_limit
+#: model:ir.actions.report,name:lims_decision_limit.lims_analysis_limit_report_action
+msgid "Report Analysis Limit"
+msgstr "Rapport de limites d'analyses"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_set__report_limit_value
+msgid "Report Limit Value"
+msgstr "Valeur Limite Rapport"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur Responsable"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur d'envoi SMS"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_decision_limit__set_ids
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__set_ids
+msgid "Set"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit_collection__set_count
+msgid "Set Count"
+msgstr "Nombre de set"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_parameter_limit_collection_form_view
+msgid "Sets"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_analysis_parameter_limit_wizard__is_specific_filter
+msgid "Specific filter"
+msgstr "Filtre spécifique"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__state
+msgid "State"
+msgstr "État"
+
+#. module: lims_decision_limit
+#. odoo-python
+#: code:addons/lims_decision_limit/wizards/analysis_parameter_limit_wizard.py:0
+#, python-format
+msgid "State :"
+msgstr "État :"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : la date d'échéance est déjà dépassée\n"
+"Aujourd'hui : la date d'activité est aujourd'hui\n"
+"Planifiée : activités futures"
+
+#. module: lims_decision_limit
+#: model_terms:ir.actions.act_window,help:lims_decision_limit.lims_parameter_limit_collection_act_window
+#: model_terms:ir.actions.act_window,help:lims_decision_limit.lims_parameter_limit_set_act_window
+msgid "There is no examples click here to add new Parameter limit set."
+msgstr ""
+"Il n'y a pas d'exemples cliquez ici pour ajouter un nouveau set de limites "
+"de paramètres ."
+
+#. module: lims_decision_limit
+#: model_terms:ir.actions.act_window,help:lims_decision_limit.lims_parameter_limit_act_window
+msgid "There is no examples click here to add new Parameter limit."
+msgstr ""
+"Il n'y a pas d'exemples cliquez ici pour ajouter une nouvelle limite de "
+"paramètres"
+
+#. module: lims_decision_limit
+#: model_terms:ir.actions.act_window,help:lims_decision_limit.lims_decision_limit_act_window
+msgid "There is no examples click here to add new decision limit."
+msgstr ""
+"Il n'y a pas d'exemples cliquez ici pour ajouter une nouvelle décision de "
+"limite."
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__type_alert
+msgid "Type"
+msgstr ""
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d'activité d'exception enregistrée"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,field_description:lims_decision_limit.field_lims_parameter_limit__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: lims_decision_limit
+#: model:ir.model.fields,help:lims_decision_limit.field_lims_parameter_limit__website_message_ids
+msgid "Website communication history"
+msgstr "Historique de communication du site web"
+
+#. module: lims_decision_limit
+#: model:ir.model,name:lims_decision_limit.model_analysis_parameter_limit_wizard
+msgid "Wizard for applying parameter limits to an analysis"
+msgstr "Assistant pour appliquer des limites de paramètres à une analyse"
+
+#. module: lims_decision_limit
+#: model_terms:ir.ui.view,arch_db:lims_decision_limit.lims_decision_limit_tree_view
+msgid "decision limit"
+msgstr "limites de décision"

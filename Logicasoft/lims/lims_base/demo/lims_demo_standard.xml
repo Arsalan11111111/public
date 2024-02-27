@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.standard" id="demo_standard_1">
+            <field name="name">ISO 6059:1984</field>
+            <field name="active">1</field>
+            <field name="description">Determination of the sum of calcium and magnesium</field>
+        </record>
+    </data>
+</odoo>

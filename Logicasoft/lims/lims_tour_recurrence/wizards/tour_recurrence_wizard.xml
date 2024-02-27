@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="tour_recurrence_wizard_form" model="ir.ui.view">
+        <field name="name">Tour Recurrence</field>
+        <field name="model">tour.recurrence.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="tour_id" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="interval"/>
+                            <field name="rrule_type"/>
+                        </group>
+                        <group>
+                            <field name="end_type"/>
+                            <field name="count" attrs="{'invisible': [('end_type', '!=', 'count')]}"/>
+                            <field name="date_end"
+                                   attrs="{'invisible': [('end_type', '!=', 'end_date')],
+                               'required': [('end_type', '=', 'end_date')]}"/>
+                        </group>
+                    </group>
+                    <group name="weekdays" attrs="{'invisible' :[('rrule_type','not in', ['weekly'])]}">
+                        <field name="monday"/>
+                        <field name="tuesday"/>
+                        <field name="wednesday"/>
+                        <field name="thursday"/>
+                        <field name="friday"/>
+                        <field name="saturday"/>
+                        <field name="sunday"/>
+                    </group>
+                    <group attrs="{'invisible': [('rrule_type','!=','monthly')]}">
+                        <field name="month_by"/>
+                        <field name="day"
+                               attrs="{'required': [('month_by','=','date'), ('rrule_type','=','monthly')],
+                               'invisible': ['|',('month_by','=','day'),('month_by','=',False)]}"/>
+                        <field name="byday" string="The"
+                               attrs="{'required': [('month_by','=','day'), ('rrule_type','=','monthly')],
+                               'invisible': ['|',('month_by','=','date'),('month_by','=',False)]}"/>
+                        <field name="week_list"
+                               attrs="{'required': [('month_by','=','day'), ('rrule_type','=','monthly')],
+                               'invisible': ['|',('month_by','=','date'),('month_by','=',False)]}"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Create recurrence" type="object" name="create_recurrence" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="tour_recurrence_wizard_action" model="ir.actions.act_window">
+        <field name="name">Tour Recurrence</field>
+        <field name="res_model">tour.recurrence.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+</odoo>

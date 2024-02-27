@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_analysis_request_form" model="ir.ui.view">
+        <field name="name">LIMS Analysis Request Form</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_request_form"/>
+        <field name="arch" type="xml">
+            <group name="upper_right_group" position="inside">
+                <field name="project_id" context="{'default_allow_lims_links':1}"/>
+                <field name="allow_lims_project_ids" widget="many2many_tags" invisible="1"/>
+                <field name="task_id"
+                       context="{'default_partner_id': partner_id,'default_user_ids':[uid], 'default_project_id':project_id, 'default_allow_lims_links':1}"
+                       domain="[('project_id','in',allow_lims_project_ids)]"/>
+            </group>
+        </field>
+    </record>
+
+    <record id="lims_analysis_request_tree" model="ir.ui.view">
+        <field name="name">LIMS Analysis Request Tree</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_request_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='request_date']" position='after'>
+                <field name="project_id" optional="hide" widget="many2one"/>
+                <field name="task_id" optional="hide" widget="many2one"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_request_search">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_request_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='request_type_id']" position="after">
+                <field name="project_id"/>
+                <field name="task_id" string="Task"/>
+            </xpath>
+            <xpath expr="//filter[@name='laboratory']" position="after">
+                <filter name="project_id" context="{'group_by': 'project_id'}"/>
+                <filter name="task_id" string="Task" context="{'group_by': 'task_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,60 @@
+<odoo>
+
+    <template id="portal_my_requests" inherit_id="lims_base.portal_request_page_state_element">
+        <t t-elif="request_id.state == 'done' or request_id.state == 'report'" position="before">
+            <t t-elif="request_id.state == 'report' and request_id.get_sent_reports()">
+                <t t-set="reports" t-value="request_id.get_sent_reports()"/>
+                <span class="badge bg-success">
+                    <t t-if="reports">
+                        <t t-set="report_id" t-value="request_id.get_sent_reports(get_only_if_one=1)"/>
+                        <t t-if="report_id">
+                            <a t-if="report_id.kanban_state != 'blocked' and report_id.message_main_attachment_id and report_id.message_main_attachment_id.datas"
+                               t-att-title="report_id.name"
+                               t-att-href="report_id.get_portal_url(report_type='pdf', download=True)"
+                               style="color: initial;">
+                                <i class="fa fa-cloud-download" aria-label="Report Done" title="Done" role="img"/>
+                                <span class="d-none d-md-inline">Report</span>
+                            </a>
+                        </t>
+                        <t t-else="">
+                            <a style="color: initial;"
+                               t-att-href="request_id.get_portal_url()" t-att-title="request_id.description">
+                                <i class="fa fa-link fa-1x" aria-label="Reports Done" title="Done" role="img"/>
+                                <span class="d-none d-md-inline">Reports</span>
+                            </a>
+                        </t>
+                    </t>
+                </span>
+            </t>
+        </t>
+
+    </template>
+
+    <template id="portal_request_page"  inherit_id="lims_base.portal_request_page">
+        <ul name="list_entries" position="inside">
+            <t t-set="reports" t-value="request_id.get_sent_reports()"/>
+            <li t-if="reports" class="list-group-item flex-grow-1">
+                <div class="small mb-1">
+                    <strong class="text-muted">
+                        Report #
+                    </strong>
+                </div>
+                <div class="row" t-foreach="reports" t-as="report_id">
+                    <div class="col flex-grow-0 pr-2">
+                        <a t-att-title="report_id.title" t-att-href="report_id.get_portal_url()">
+                            <i class="fa fa-link fa-1x"/>
+                        </a>
+                    </div>
+                    <div class="col pl-0">
+                        <span t-field="report_id.name" t-att-title="report_id.title" t-att-href="report_id.get_portal_url(report_type='pdf', download=True)"/>
+                        <a t-if="report_id.kanban_state != 'blocked' and report_id.message_main_attachment_id and report_id.message_main_attachment_id.datas"
+                                t-att-title="report_id.title" t-att-href="report_id.get_portal_url(report_type='pdf', download=True)">
+                            <i class="fa fa-cloud-download"/>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </template>
+
+</odoo>

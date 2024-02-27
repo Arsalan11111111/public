@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.method" id="lims_base.demo_method_2">
+            <field name="is_on_site">1</field>
+        </record>
+    </data>
+</odoo>

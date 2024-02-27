@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="sequence_analysis_report" model="ir.sequence">
+        <field name="name">Analysis Report</field>
+        <field name="code">lims.analysis.report</field>
+        <field eval="6" name="padding"/>
+    </record>
+</odoo>

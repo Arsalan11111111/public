@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_compute_costing" model="ir.actions.server">
+        <field name="name">Compute Costing</field>
+        <field name="model_id" ref="model_lims_analysis"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    records.with_context(force_write=True).compute_costing()
+        </field>
+    </record>
+    
+    <record id="action_create_sale_order" model="ir.actions.server">
+        <field name="name">Create Sale Order</field>
+        <field name="model_id" ref="model_lims_analysis"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action = records.with_context(force_write=True).create_sale_order_wizard()
+        </field>
+    </record>
+
+    <record id="action_create_sale_order_request" model="ir.actions.server">
+        <field name="name">Create Sale Order Request</field>
+        <field name="model_id" ref="model_lims_analysis_request"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action = records.with_context(force_write=True).action_create_sale_order_request()
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="report_cancel_wizard_form" model="ir.ui.view">
+        <field name="name">Report Cancel</field>
+        <field name="model">cancel.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="report_id" readonly="1"/>
+                        <field name="reason" required="1"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="do_cancel" type="object" string="Confirm"/>
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="report_cancel_wizard_action" model="ir.actions.act_window">
+        <field name="name">Report cancel</field>
+        <field name="res_model">cancel.report.wizard</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+</odoo>

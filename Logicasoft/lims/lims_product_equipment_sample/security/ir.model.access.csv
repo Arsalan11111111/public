@@ -1,0 +1,8 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_lims_maintenance_equipment_viewer,lims.maintenance.equipment viewer,lims_product_equipment_sample.model_lims_maintenance_equipment,lims_base.viewer_group,1,0,0,0
+access_lims_maintenance_equipment_user,lims.maintenance.equipment user,lims_product_equipment_sample.model_lims_maintenance_equipment,lims_base.user_group,1,1,1,0
+access_lims_maintenance_equipment_manager,lims.maintenance.equipment manager,lims_product_equipment_sample.model_lims_maintenance_equipment,lims_base.manager_group,1,1,1,1
+
+access_lims_reagent_stock_viewer,lims.reagent.stock viewer,lims_product_equipment_sample.model_lims_reagent_stock,lims_base.viewer_group,1,0,0,0
+access_lims_reagent_stock_user,lims.reagent.stock user,lims_product_equipment_sample.model_lims_reagent_stock,lims_base.user_group,1,1,1,0
+access_lims_reagent_stock_manager,lims.reagent.stock manager,lims_product_equipment_sample.model_lims_reagent_stock,lims_base.manager_group,1,1,1,1

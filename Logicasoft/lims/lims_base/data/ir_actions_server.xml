@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_parameter_pack_duplicate" model="ir.actions.server">
+        <field name="name">Duplicate All</field>
+        <field name="model_id" ref="model_lims_parameter_pack"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action = records.duplicate_all()
+        </field>
+    </record>
+
+    <record id="set_result_is_null_action" model="ir.actions.server">
+        <field name="name">Set Result Is Null</field>
+        <field name="model_id" ref="model_lims_analysis_numeric_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+records.set_is_null()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="update_result_alert">
+        <field name="name">Create result limit</field>
+        <field name="model_id" ref="model_lims_analysis_numeric_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+records.with_context(force_write=True).compute_corrected_value()
+records.with_context(force_write=True).create_limit_result()
+records.with_context(force_write=True).check_result_conformity()
+records.mapped('analysis_id').with_context(force_write=True).check_analysis_state()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="analysis_result_action_validate">
+        <field name="name">Mass change result</field>
+        <field name="model_id" ref="model_lims_analysis_numeric_result"/>
+        <field name="binding_model_id" ref="model_lims_analysis_numeric_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+action = records.open_wizard_mass_change_result()
+        </field>
+    </record>
+
+    <!-- Server action to call def create_sop()-->
+    <record id="action_analysis_create_sop" model="ir.actions.server">
+        <field name="name">Create test</field>
+        <field name="model_id" ref="model_lims_analysis"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+active_ids = env.context.get('active_ids')
+analysis_ids = env['lims.analysis'].browse(active_ids)
+analysis_ids.create_sop()
+        </field>
+    </record>
+
+    <record id="sop_next_stage_action" model="ir.actions.server">
+        <field name="name">Next Stage</field>
+        <field name="model_id" ref="model_lims_sop"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+records.do_next_stage()
+        </field>
+    </record>
+
+
+    <record model="ir.actions.server" id="analysis_compute_result_action_validate">
+        <field name="name">Mass change compute result</field>
+        <field name="model_id" ref="model_lims_analysis_compute_result"/>
+        <field name="binding_model_id" ref="model_lims_analysis_compute_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+action = records.open_wizard_mass_change_result()
+        </field>
+    </record>
+
+
+    <record model="ir.actions.server" id="update_param_alert">
+        <field name="name">Update parameter alert</field>
+        <field name="model_id" ref="model_lims_method_parameter_characteristic"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+records.update_param_alert()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="analysis_sel_result_action_validate">
+        <field name="name">Mass change sel result</field>
+        <field name="model_id" ref="model_lims_analysis_sel_result"/>
+        <field name="binding_model_id" ref="model_lims_analysis_sel_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+action = records.open_wizard_mass_change_result()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="analysis_text_result_action_validate">
+        <field name="name">Mass change text result</field>
+        <field name="model_id" ref="model_lims_analysis_text_result"/>
+        <field name="binding_model_id" ref="model_lims_analysis_text_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+action = records.open_wizard_mass_change_result()
+        </field>
+    </record>
+
+    <record id="action_analysis_request_duplicate_with_line" model="ir.actions.server">
+        <field name="name">Duplicate with line</field>
+        <field name="model_id" ref="model_lims_analysis_request"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+action = records.duplicate_with_line()
+        </field>
+    </record>
+
+    <record id="action_open_wizard_for_create_parameter_pack" model="ir.actions.server">
+        <field name="name">Create Parameter Pack</field>
+        <field name="model_id" ref="model_lims_method_parameter_characteristic"/>
+        <field name="binding_model_id" ref="model_lims_method_parameter_characteristic" />
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+action = records.open_wizard_create_parameter_pack()
+        </field>
+    </record>
+
+    <record id="action_result_value_recalculate_state" model="ir.actions.server">
+        <field name="name">Recalculate result state</field>
+        <field name="model_id" ref="model_lims_analysis_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+result_to_update_ids = records.filtered(lambda r: r.rel_type != 'cancel')
+if result_to_update_ids:
+    result_to_update_ids.mapped('limit_result_ids').unlink()
+    result_to_update_ids.create_limit_result()
+    result_to_update_ids.check_result_conformity()
+        </field>
+    </record>
+
+    <record id="action_check_accreditation_in_result" model="ir.actions.server">
+        <field name="name">Check Accreditation in result</field>
+        <field name="model_id" ref="model_lims_analysis"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+records.check_accreditation_in_result()
+        </field>
+    </record>
+
+    <record id="action_user_set_departments" model="ir.actions.server">
+        <field name="name">Set departments</field>
+        <field name="model_id" ref="model_res_users"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+for record in records:
+    department_ids = env['lims.department'].search([('labo_id.res_users_ids', 'in', record.id)])
+    record.write({
+            'department_ids': [(6, False, department_ids.ids)]
+            })
+        </field>
+    </record>
+
+    <record id="action_parameter_char_duplicate" model="ir.actions.server">
+        <field name="name">Duplicate all (not method)</field>
+        <field name="model_id" ref="model_lims_method_parameter_characteristic"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+if record:
+    action = record.duplicate_all()
+        </field>
+    </record>
+
+    <record id="action_parameter_char_duplicate_regulation" model="ir.actions.server">
+        <field name="name">Duplicate all (not regulation)</field>
+        <field name="model_id" ref="model_lims_method_parameter_characteristic"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+if record:
+    action = record.duplicate_all_regulation()
+        </field>
+    </record>
+
+    <record id="action_generate_pack_line_item" model="ir.actions.server">
+        <field name="name">Generate Pack Line Item</field>
+        <field name="model_id" ref="model_lims_parameter_pack"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+if record:
+    action = record.create_pack_line_item()
+        </field>
+    </record>
+
+    <record id="set_loq_on_compute_result" model="ir.actions.server">
+        <field name="name">Set LOQ on computed results</field>
+        <field name="model_id" ref="model_lims_analysis_compute_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+for record in records:
+    record.write({
+        'loq': record.method_param_charac_id.loq,
+    })
+        </field>
+    </record>
+
+     <record id="compute_result_calculation" model="ir.actions.server">
+        <field name="name">Calculate result</field>
+        <field name="model_id" ref="model_lims_analysis_compute_result"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+records.compute_state()
+        </field>
+    </record>
+
+    <record id="action_second_validation_mass_change" model="ir.actions.server">
+        <field name="name">Second validation mass change</field>
+        <field name="model_id" ref="model_lims_analysis"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+action = records.second_validation_mass_change()
+        </field>
+    </record>
+
+    <record id="archive_cascade_request" model="ir.actions.server">
+        <field name="name">Archive/unarchive Cascade</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_lims_analysis_request" />
+        <field name="binding_model_id" ref="model_lims_analysis_request" />
+        <field name="state">code</field>
+        <field name="binding_type">action</field>
+        <field name="code">records.archive_cascade()</field>
+    </record>
+
+    <record id="archive_cascade_analysis" model="ir.actions.server">
+        <field name="name">Archive/unarchive Cascade</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_lims_analysis" />
+        <field name="binding_model_id" ref="model_lims_analysis" />
+        <field name="state">code</field>
+        <field name="binding_type">action</field>
+        <field name="code">records.archive_cascade()</field>
+    </record>
+
+    <record id="archive_cascade_sop" model="ir.actions.server">
+        <field name="name">Archive/unarchive Cascade</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_lims_sop" />
+        <field name="binding_model_id" ref="model_lims_sop" />
+        <field name="state">code</field>
+        <field name="binding_type">action</field>
+        <field name="code">records.archive_cascade()</field>
+    </record>
+
+    <record id="link_all_methods_to_stage" model="ir.actions.server">
+        <field name="name">Link all methods</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_lims_method_stage"/>
+        <field name="state">code</field>
+        <field name="code">
+method_ids = env['lims.method'].search([])
+records.write({'method_ids': [(6, 0, method_ids.ids)]})
+        </field>
+    </record>
+
+</odoo>

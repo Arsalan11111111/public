@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="analysis_report_template_img" inherit_id="lims_report.analysis_report_template_img">
+        <xpath expr="." position="replace">
+            <t t-if="doc.report_image_attachment_ids" name="image">
+                <t t-set="ir_attachment_ids" t-value="doc.get_attachment_for_analysis(analysis_id)"/>
+
+                <div class="row" name="attachments_analysis" t-if="ir_attachment_ids" style="text-align: center">
+                    <t t-set="parts" t-value="group_by_n_parts(ir_attachment_ids, 3)"/>
+                    <div class="col-12">
+                        <t t-if="1 &lt; len(parts)">
+                            <table>
+                                <tr>
+                                    <t t-foreach="parts" t-as="part">
+                                        <td style="padding: 10px">
+                                            <t t-foreach="part" t-as="ir_attachment_id">
+                                                <img t-attf-src="data:image/*;base64,{{ir_attachment_id.datas}}" style="max-height: 4cm; max-width: 100%"/>
+                                                <div t-esc="ir_attachment_id.description"/>
+                                            </t>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </table>
+                        </t>
+                        <t t-else="">
+                            <t t-foreach="parts" t-as="part">
+                                <t t-foreach="part" t-as="ir_attachment_id">
+                                    <img t-attf-src="data:image/*;base64,{{ir_attachment_id.datas}}" style="max-height: 4cm; max-width: 100%"/>
+                                    <div t-esc="ir_attachment_id.description"/>
+                                </t>
+                            </t>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

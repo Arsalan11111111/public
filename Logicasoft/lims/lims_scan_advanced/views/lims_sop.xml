@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_sop_form" model="ir.ui.view">
+        <field name="name">SOP</field>
+        <field name="model">lims.sop</field>
+        <field name="inherit_id" ref="lims_base.lims_sop_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <field name="_barcode_scanned" widget="lims_barcode_handler"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

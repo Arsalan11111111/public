@@ -1,0 +1,703 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_web
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-29 08:43+0000\n"
+"PO-Revision-Date: 2022-08-29 08:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid ""
+"<i class=\"fa fa-download\"/>\n"
+"                                                            <span role=\"img\" aria-label=\"Download Report\" title=\"Download report\"/>Report"
+msgstr ""
+"<i class=\"fa fa-download\"/>\n"
+"                                                            <span role=\"img\" aria-label=\"Download Report\" title=\"Télécharger rapport\"/>Rapport"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid ""
+"<i class=\"fa fa-download\"/>\n"
+"                                        <span role=\"img\" aria-label=\"Download Report\" title=\"Download report\"/> Report"
+msgstr ""
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_analysis_page
+msgid "<i class=\"fa fa-file-excel-o\"/> Export"
+msgstr ""
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_tree_view_layout
+msgid ""
+"<i class=\"fa fa-info-circle\"/> Access is not permitted. Contact the "
+"administrator for more information."
+msgstr ""
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_home_forbidden_access
+msgid ""
+"<i class=\"fa fa-info-circle\"/> Access to the portal has been restricted by"
+" an administrator."
+msgstr ""
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_analysis
+msgid ""
+"<i class=\"fa fa-info-circle\"/> There are currently no analysis for your "
+"account."
+msgstr ""
+"<i class=\"fa fa-info-circle\"/> Il n'y a actuellement pas d'échantillon sur"
+" votre compte."
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_requests
+msgid ""
+"<i class=\"fa fa-info-circle\"/> There are currently no requests for your "
+"account."
+msgstr ""
+"<i class=\"fa fa-info-circle\"/> Il n'y a actuellement pas de demande "
+"d'analyse pour vôtre compte."
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_analysis_page
+msgid "<i class=\"fa fa-paper-plane\"/> Submit"
+msgstr "<i class=\"fa fa-paper-plane\"/> Envoyer"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.user_navbar
+msgid "<i class=\"fa fa-wrench mr-1\"/> Lims Portal"
+msgstr "<i class=\"fa fa-wrench mr-1\"/> Portail LIMS"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Analysis State:</strong>"
+msgstr "<strong>Etat d'analyse: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Contacts:</strong>"
+msgstr ""
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Customer Order Reference:</strong>"
+msgstr "<strong>Référence commande client: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Customer Reference:</strong>"
+msgstr "<strong>Référence client:</strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_analysis_page
+msgid "<strong>Customer: </strong>"
+msgstr "<strong>Client: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>Client: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Date Plan:</strong>"
+msgstr "<strong>Date prévue: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Date:</strong>"
+msgstr ""
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Incomplete:</strong>"
+msgstr "<strong>Incomplet: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Laboratory:</strong>"
+msgstr "<strong>Laboratoire: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Order Date:</strong>"
+msgstr "<strong>Date commande: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "<strong>Request Type:</strong>"
+msgstr "<strong>Type demande: </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_analysis_page
+msgid "<strong>Request: </strong>"
+msgstr "<strong>Demande : </strong>"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_analysis_page
+msgid "<strong>Sample name: </strong>"
+msgstr "<strong>Nom échantillon: </strong>"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Accepted"
+msgstr "Accepté"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Active"
+msgstr "Actif"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_res_partner__type
+#: model:ir.model.fields,field_description:lims_web.field_res_users__type
+msgid "Address Type"
+msgstr "Type d'adresse"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "All"
+msgstr "Tout"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Allow user to export data (XLSX file)"
+msgstr "Autoriser utilisateur à exporter des données (fichier XLSX)"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Allow users to download reports"
+msgstr "Autoriser les utilisateurs à télécharger les rapports"
+
+#. module: lims_web
+#: model:ir.model,name:lims_web.model_lims_analysis
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_home_lims
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_home_menu_request
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "Analysis"
+msgstr "Échantillon"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Analysis Count"
+msgstr "Nombre d'échantillons"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_cancel_result
+msgid "Cancel Reason"
+msgstr "Raison d'annulation"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Client Reference"
+msgstr "Référence du client"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/js/portal.js:0
+#, python-format
+msgid "Close"
+msgstr "Fermer"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_analysis_page
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "Comments"
+msgstr "Commentaires"
+
+#. module: lims_web
+#: model:ir.model,name:lims_web.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: lims_web
+#: model:ir.model,name:lims_web.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Create Date"
+msgstr "Date de création"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Current page"
+msgstr "Page en cours"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+#, python-format
+msgid "Customer"
+msgstr "Client"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Customer Contact"
+msgstr "Contact du client"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Date Plan"
+msgstr "Date Prévue"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Date Report"
+msgstr "Date du rapport"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Date Sample"
+msgstr "date échantillon"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Disabled pages"
+msgstr "Désactiver les pages"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Done"
+msgstr "Terminé"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "Download"
+msgstr "Télécharger"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: lims_web
+#: model:ir.model,name:lims_web.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Assistant de composition d'emails"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Enable access to this page"
+msgstr "Autoriser l'accès à cette page"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Enable portal access (no page will be accessible)"
+msgstr "Autoriser l'accès au portail (Aucune page ne sera accèsible)"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_analysis_page
+msgid "Export all tables"
+msgstr "Exporter toutes les tables"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_analysis_page
+msgid "Export current table"
+msgstr "EXporter la table en cours"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Fields"
+msgstr "Champs"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "General"
+msgstr "Générale"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "In Progress"
+msgstr "En cours"
+
+#. module: lims_web
+#: model:ir.model.fields,help:lims_web.field_res_partner__type
+#: model:ir.model.fields,help:lims_web.field_res_users__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are"
+" only visible by authorized users."
+msgstr ""
+"Les adresses de facturation et de livraison sont utilisées dans les "
+"commandes clients. Les adresses privées ne sont visibles que par les "
+"utilisateurs autorisés."
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_method_parameter_characteristic__is_published_portal
+msgid "Is Published Portal"
+msgstr "Est publié sur le portail"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__inactive
+msgid "Is inactive"
+msgstr "Es inactive"
+
+#. module: lims_web
+#: model:ir.model.fields.selection,name:lims_web.selection__res_partner__type__laboratory
+msgid "Labo"
+msgstr "Laboratoire"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/js/portal.js:0
+#: model:ir.model,name:lims_web.model_lims_portal_configuration
+#, python-format
+msgid "Lims Portal Configuration"
+msgstr "Configuration du portail lims"
+
+#. module: lims_web
+#: model:ir.model.fields,help:lims_web.field_lims_method_parameter_characteristic__is_published_portal
+msgid ""
+"Make the vision of            this parameter accessible to people who have "
+"access to the lims portal and if the            result is indicated as print"
+" on the report"
+msgstr ""
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Matrix"
+msgstr "Matrice"
+
+#. module: lims_web
+#: model:ir.model,name:lims_web.model_lims_method
+msgid "Method"
+msgstr "Méthode"
+
+#. module: lims_web
+#: model:ir.model,name:lims_web.model_lims_method_parameter_characteristic
+msgid "Method Parameter Characteristic"
+msgstr "paramètre de caractéristique de méthode"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__name
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "No page is deactivated"
+msgstr "Aucune page n'est désactivé"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_method__on_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_method_parameter_characteristic__on_web
+msgid "On Web"
+msgstr "Sur le web"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Options"
+msgstr ""
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__page
+msgid "Page"
+msgstr ""
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__parent
+msgid "Parent"
+msgstr ""
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Plan"
+msgstr ""
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Received"
+msgstr "Reçu"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Reference"
+msgstr "Référence"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_analysis
+#, python-format
+msgid "Report"
+msgstr "Rapport"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+msgid "Report Date"
+msgstr "Date de rapport"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Request"
+msgstr "Demande"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Request Date"
+msgstr "Date Demande"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#, python-format
+msgid "Request Type"
+msgstr "Type de Demande"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_home_lims
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_my_home_menu_request
+msgid "Requests"
+msgstr "Demandes"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Result {} cancelled reason: {} by {}"
+msgstr "Résultat {} raison d'annulation: {} par {}"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_res_config_settings__has_reworkable_results_web
+#: model_terms:ir.ui.view,arch_db:lims_web.res_config_settings_form_lims_web
+msgid "Reworkable results on web"
+msgstr "Les résultats retravaillables sur le web"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Sampling Point"
+msgstr "Point de prélèvement"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/js/portal.js:0
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_searchbar
+#, python-format
+msgid "Search"
+msgstr "Recherche"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Second Validation"
+msgstr "Seconde validation"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Show/Hide fields"
+msgstr "Cacher/montrer champs"
+
+#. module: lims_web
+#. openerp-web
+#: code:addons/lims_web/static/src/xml/portal_configuration.xml:0
+#, python-format
+msgid "Show/Hide options"
+msgstr "Cacher/montrer options"
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Stage"
+msgstr ""
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: code:addons/lims_web/controllers/lims_request_portal.py:0
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_request_page
+#, python-format
+msgid "State"
+msgstr "Étape"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.portal_cancel_result
+msgid "Turn back"
+msgstr "Revenir"
+
+#. module: lims_web
+#: model:ir.model.fields,field_description:lims_web.field_lims_portal_configuration__type
+msgid "Type"
+msgstr ""
+
+#. module: lims_web
+#: code:addons/lims_web/controllers/lims_analysis_portal.py:0
+#, python-format
+msgid "Validated"
+msgstr "Validé"
+
+#. module: lims_web
+#: model:ir.model.fields.selection,name:lims_web.selection__lims_portal_configuration__type__field
+msgid "field"
+msgstr "champs"
+
+#. module: lims_web
+#: model_terms:ir.ui.view,arch_db:lims_web.res_config_settings_form_lims_web
+msgid "lims web"
+msgstr ""
+
+#. module: lims_web
+#: model:ir.model.fields.selection,name:lims_web.selection__lims_portal_configuration__type__option
+msgid "option"
+msgstr ""
+
+#. module: lims_web
+#: model:ir.model.fields.selection,name:lims_web.selection__lims_portal_configuration__type__page
+msgid "page"
+msgstr ""
+
+#. module: lims_web
+#: model:ir.model.fields.selection,name:lims_web.selection__lims_portal_configuration__type__portal
+msgid "portal"
+msgstr "portail"

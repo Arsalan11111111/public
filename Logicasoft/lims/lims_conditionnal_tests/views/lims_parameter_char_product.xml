@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_parameter_char_product_form" model="ir.ui.view">
+        <field name="name">Parameter Product</field>
+        <field name="model">lims.parameter.char.product</field>
+        <field name="inherit_id" ref="lims_product_limit.lims_parameter_char_product_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='limit_ids']/tree/field[@name='message']" position="before">
+                <field name="pack_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

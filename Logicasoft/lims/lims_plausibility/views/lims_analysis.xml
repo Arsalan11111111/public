@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_analysis_inherit_form" model="ir.ui.view">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_incomplete']" position="after">
+                <field name="plausible"/>
+            </xpath>
+            <xpath expr="//field[@name='result_num_ids']//tree//field[@name='stage_id']" position="after">
+                <field name="plausible" optional="show"/>
+            </xpath>
+            <xpath expr="//field[@name='result_compute_ids']//tree//field[@name='stage_id']" position="after">
+                <field name="plausible" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

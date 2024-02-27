@@ -1,0 +1,325 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_parameter_attribute
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-06 10:25+0000\n"
+"PO-Revision-Date: 2022-12-06 10:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__active
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__active
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__active
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_search
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_type_search
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_type_value_search
+msgid "Active"
+msgstr "Actif"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__rel_analysis_id
+msgid "Analysis"
+msgstr "Echantillon"
+
+#. module: lims_parameter_attribute
+#: model:ir.model,name:lims_parameter_attribute.model_lims_analysis_sel_result_attribute
+msgid "Analysis Sel Result Attribute"
+msgstr ""
+
+#. module: lims_parameter_attribute
+#: model:ir.model,name:lims_parameter_attribute.model_lims_analysis_sel_result
+msgid "Analysis Selection Result"
+msgstr "Résultat de sélection"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__attribute_id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_result_value__attribute_ids
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_analysis_form
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_analysis_sel_result_tree
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_sop_form
+msgid "Attribute"
+msgstr "Attribut"
+
+#. module: lims_parameter_attribute
+#: model:ir.model,name:lims_parameter_attribute.model_attribute_sel_result_wizard
+msgid "Attribute Sel Result"
+msgstr "Attribut de résultat sélection"
+
+#. module: lims_parameter_attribute
+#: model:ir.model,name:lims_parameter_attribute.model_attribute_sel_result_wizard_line
+msgid "Attribute Sel Result Line"
+msgstr "Attribut de résultat sélection Line"
+
+#. module: lims_parameter_attribute
+#: model:ir.actions.act_window,name:lims_parameter_attribute.attribute_sel_result_action
+msgid "Attribute Sel Result Wizard"
+msgstr "Attribut de résultat sélection Wizard"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__attribute_type_id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__attribute_type_id
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_search
+msgid "Attribute Type"
+msgstr "Type d'attribut"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__attribute_type_values_ids
+msgid "Attribute Type Values"
+msgstr "Valeur de type d'attibut"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__attribute_value_id
+msgid "Attribute Value"
+msgstr "Valeur de l'attribut"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result__attribute_values_ids
+msgid "Attribute Values"
+msgstr "Valeurs de l'attribut"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,help:lims_parameter_attribute.field_lims_parameter_attribute__name
+msgid "Automatic concatenation of  Attribute Type (if exist) and Value"
+msgstr ""
+"Concaténation automatique du type d'attribut (s'il existe) et de la valeur"
+
+#. module: lims_parameter_attribute
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.attribute_sel_result_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_parameter_attribute
+#: model_terms:ir.actions.act_window,help:lims_parameter_attribute.lims_parameter_attribute_type_action
+#: model_terms:ir.actions.act_window,help:lims_parameter_attribute.lims_parameter_attribute_type_value_action
+msgid "Click to create a new parameter attribute type."
+msgstr "Cliquez pour créer un nouveau type d'attribut de paramètre."
+
+#. module: lims_parameter_attribute
+#: model_terms:ir.actions.act_window,help:lims_parameter_attribute.lims_parameter_attribute_action
+msgid "Click to create a new parameter attribute."
+msgstr "Cliquez pour créer un nouvel attribut de paramètre."
+
+#. module: lims_parameter_attribute
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.attribute_sel_result_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__create_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute__create_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__create_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__create_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__create_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__create_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute__create_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__create_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__create_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__display_name
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__display_name
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute__display_name
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__display_name
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__display_name
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_parameter_attribute
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_search
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_type_search
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_type_value_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute__id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard____last_update
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line____last_update
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute____last_update
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute____last_update
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type____last_update
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__write_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute__write_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__write_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__write_uid
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__write_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__write_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute__write_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__write_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__write_date
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__line_ids
+msgid "Line"
+msgstr "Ligne"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__name
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__name
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,help:lims_parameter_attribute.field_lims_analysis_sel_result__rel_is_attribute
+#: model:ir.model.fields,help:lims_parameter_attribute.field_lims_parameter__is_attribute
+msgid ""
+"Option allowing to add attributes for decision making, this is only "
+"available for parameters in SE format"
+msgstr ""
+"Option permettant d'ajouter des attributs pour la prise de décision,"
+"ceci n'est disponible que pour les paramètres au format SE"
+
+#. module: lims_parameter_attribute
+#: model:ir.model,name:lims_parameter_attribute.model_lims_parameter
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__rel_parameter_id
+#: model:ir.ui.menu,name:lims_parameter_attribute.lims_parameter_menu
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: lims_parameter_attribute
+#: model:ir.actions.act_window,name:lims_parameter_attribute.lims_parameter_attribute_action
+#: model:ir.model,name:lims_parameter_attribute.model_lims_parameter_attribute
+#: model:ir.ui.menu,name:lims_parameter_attribute.lims_parameter_attribute_menu
+msgid "Parameter Attribute"
+msgstr "Attribut de paramètre"
+
+#. module: lims_parameter_attribute
+#: model:ir.actions.act_window,name:lims_parameter_attribute.lims_parameter_attribute_type_action
+#: model:ir.model,name:lims_parameter_attribute.model_lims_parameter_attribute_type
+#: model:ir.ui.menu,name:lims_parameter_attribute.lims_parameter_attribute_type_menu
+msgid "Parameter Attribute Type"
+msgstr "Type d'attribut de paramètre"
+
+#. module: lims_parameter_attribute
+#: model:ir.actions.act_window,name:lims_parameter_attribute.lims_parameter_attribute_type_value_action
+#: model:ir.model,name:lims_parameter_attribute.model_lims_parameter_attribute_type_value
+#: model:ir.ui.menu,name:lims_parameter_attribute.lims_parameter_attribute_type_value_menu
+msgid "Parameter Attribute Type Value"
+msgstr "Valeur de type d'attribut de paramètre"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_result_value__is_attribute_print
+msgid "Print the attributes"
+msgstr "Imprimer les attributs"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,help:lims_parameter_attribute.field_lims_result_value__is_attribute_print
+msgid "Print the attributes for this value on the report"
+msgstr "Imprimer les attributs de cette valeur sur le rapport"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute__result_id
+msgid "Result"
+msgstr "Résultat"
+
+#. module: lims_parameter_attribute
+#: model:ir.model,name:lims_parameter_attribute.model_lims_result_value
+msgid "Result Value"
+msgstr "Valeur de sélections de résultats"
+
+#. module: lims_parameter_attribute
+#. odoo-python
+#: code:addons/lims_parameter_attribute/models/lims_analysis_sel_result.py:0
+#, python-format
+msgid "Result with parameter: {} and value : {} with attributes : {}"
+msgstr ""
+"Résultat avec le paramètre : {} et la valeur : {} avec les attributs : {} "
+
+#. module: lims_parameter_attribute
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_search
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_type_search
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_type_value_search
+msgid "Search"
+msgstr "Rechercher"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__sel_result_id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__sel_result_id
+msgid "Sel Result"
+msgstr "Résultats sélection"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__sequence
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type__sequence
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute_type_value__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__rel_sop_id
+msgid "Test"
+msgstr ""
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard__value_id
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__value_id
+#: model_terms:ir.ui.view,arch_db:lims_parameter_attribute.lims_parameter_attribute_search
+msgid "Value"
+msgstr "Valeur"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result_attribute__value_ids
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter_attribute__value_ids
+msgid "Values"
+msgstr "Valeurs"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_analysis_sel_result__rel_is_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_lims_parameter__is_attribute
+msgid "With Attributes"
+msgstr "Avec des attributs"
+
+#. module: lims_parameter_attribute
+#: model:ir.model.fields,field_description:lims_parameter_attribute.field_attribute_sel_result_wizard_line__wizard_id
+msgid "Wizard"
+msgstr "Assistant"
+
+#. module: lims_parameter_attribute
+#: model_terms:ir.actions.act_window,help:lims_parameter_attribute.lims_parameter_attribute_action
+#: model_terms:ir.actions.act_window,help:lims_parameter_attribute.lims_parameter_attribute_type_action
+#: model_terms:ir.actions.act_window,help:lims_parameter_attribute.lims_parameter_attribute_type_value_action
+msgid "You can define several."
+msgstr "Vous pouvez en définir plusieurs."

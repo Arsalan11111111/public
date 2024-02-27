@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="email_template_request_receipt" model="mail.template">
+        <field name="name">Receipt: Send by email</field>
+        <field name="model_id" ref="lims_base.model_lims_analysis_request"/>
+        <field name="subject">Analysis Request : {{ object.name }}</field>
+        <field name="email_from">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
+        <field name="partner_to">{{ object.partner_id.id }}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                    Hello,
+                    <br/>
+                    We inform you that the analyses of your request :<b> <t t-out="object.name or ''"/></b>,
+                    <br/>
+                    <p t-if="object.request_date">
+                        requested on <b t-out="object.request_date" />
+                    </p>
+                </p>
+            </div>
+            <p>
+            <t t-if="object.analysis_count">
+                which include:
+                <br/>
+                <ul>
+                    <t t-as="line" t-foreach="object.sample_ids">
+                        <li t-if="line.analysis_id">
+                            <t t-out="line.analysis_id.sample_name or ''"/> <t t-out="line.analysis_id.matrix_id.name or ''"/> <t t-out="line.analysis_id.name or ''"/>
+                        </li>
+                    </t>
+                </ul>
+            </t>
+            have been received.
+            <br/>
+            Do not hesitate to contact us if you have any questions.
+            <br/>
+            </p>
+        </field>
+        <field name="report_template" ref="lims_analysis_request_report_action"/>
+        <field name="report_name">{{ (object.name or '').replace('/','_') }}</field>
+        <field name="lang">{{ object.partner_id.lang }}</field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+
+</odoo>

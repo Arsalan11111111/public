@@ -1,0 +1,261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_water
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-27 11:42+0000\n"
+"PO-Revision-Date: 2022-04-27 11:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__active
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__active
+msgid "Active"
+msgstr "Actif/ve"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_lims_analysis
+msgid "Analysis"
+msgstr "Échantillon"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_sampling_point__analysis_category_id
+msgid "Analysis Category"
+msgstr "Catégorie d'analyse"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_analysis_mass_change_wizard
+msgid "Analysis Mass Change"
+msgstr "Modification de masse analyse"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_analysis_mass_change_wizard_line
+msgid "Analysis Mass Change Line"
+msgstr "Ligne de modification de masse analyse"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_create_analysis_wizard_sampling
+msgid "Analysis Sampling Wizard"
+msgstr "Wizard de Prélevement d'échantillon"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_tour_line__category_id
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: lims_water
+#: model_terms:ir.actions.act_window,help:lims_water.lims_network_action
+msgid "Click to create a new network."
+msgstr "Cliquez pour créer un nouveau réseau"
+
+#. module: lims_water
+#: model_terms:ir.actions.act_window,help:lims_water.lims_subnetwork_action
+msgid "Click to create a new sub network."
+msgstr "Cliquez pour créer un nouveau sous-réseau"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__code
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__code
+msgid "Code"
+msgstr ""
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_create_analysis_wizard
+msgid "Create Analysis"
+msgstr "Créer Analyse"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_create_analysis_wizard_line
+msgid "Create Analysis Line"
+msgstr "Ligne Créer Analyse"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__create_uid
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__create_date
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__description
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__description
+msgid "Description"
+msgstr ""
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__display_name
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__entity_id
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__entity_id
+msgid "Entity"
+msgstr "Entité"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__id
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network____last_update
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__write_uid
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__write_date
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_lims_network
+msgid "Lims Network"
+msgstr "Réseau Lims"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_lims_subnetwork
+msgid "Lims Subnetwork"
+msgstr "Sous-réseau lims"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_lims_tour_line
+msgid "Lims Tour Line"
+msgstr "Ligne de tournée"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_lims_method_parameter_characteristic
+msgid "Method Parameter Characteristic"
+msgstr "paramètre de caractéristique de méthode"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__name
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_water
+#: model:ir.actions.act_window,name:lims_water.lims_network_action
+#: model:ir.model.fields,field_description:lims_water.field_lims_sampling_point__network_id
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__network_id
+#: model:ir.ui.menu,name:lims_water.lims_network_menu
+msgid "Network"
+msgstr "Réseau"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_method_parameter_characteristic__parameter_type_id
+msgid "Parameter Type"
+msgstr "Type de paramètre"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_analysis_mass_change_wizard__reception_temperature
+#: model:ir.model.fields,field_description:lims_water.field_analysis_mass_change_wizard_line__reception_temperature
+#: model:ir.model.fields,field_description:lims_water.field_create_analysis_wizard__reception_temperature
+#: model:ir.model.fields,field_description:lims_water.field_create_analysis_wizard_line__reception_temperature
+#: model:ir.model.fields,field_description:lims_water.field_lims_analysis__reception_temperature
+msgid "Reception Temperature"
+msgstr "Température Réception"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_sampling_point__regulation_id
+msgid "Regulation"
+msgstr "Législation"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_lims_analysis_request
+msgid "Request"
+msgstr "Demande"
+
+#. module: lims_water
+#: model:ir.model,name:lims_water.model_lims_sampling_point
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__sampling_point_ids
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__sampling_point_ids
+#: model_terms:ir.ui.view,arch_db:lims_water.lims_network_form
+#: model_terms:ir.ui.view,arch_db:lims_water.lims_subnetwork_form
+msgid "Sampling Point"
+msgstr "Point de prélèvement"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__subnetwork_ids
+msgid "Sub Networks"
+msgstr "Sous-réseaux"
+
+#. module: lims_water
+#: model:ir.actions.act_window,name:lims_water.lims_subnetwork_action
+#: model:ir.model.fields,field_description:lims_water.field_lims_sampling_point__subnetwork_id
+#: model:ir.ui.menu,name:lims_water.lims_subnetwork_menu
+msgid "Subnetwork"
+msgstr "Sous-réseau"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_method_parameter_characteristic__symbol
+msgid "Symbol"
+msgstr "Symbole"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__total_analysis
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__total_analysis
+msgid "Total Analysis"
+msgstr "Total des analyses"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__total_compute_result
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__total_compute_result
+msgid "Total Compute Results"
+msgstr "Total résultats calculés"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__total_result
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__total_result
+msgid "Total Results"
+msgstr "Total résultats"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__total_sel_result
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__total_sel_result
+msgid "Total Sel Results"
+msgstr "Total résultats de sélection"
+
+#. module: lims_water
+#: model:ir.model.fields,field_description:lims_water.field_lims_network__total_text_result
+#: model:ir.model.fields,field_description:lims_water.field_lims_subnetwork__total_text_result
+msgid "Total Text Results"
+msgstr "Total résultats texte"
+
+#. module: lims_water
+#: model_terms:ir.actions.act_window,help:lims_water.lims_network_action
+#: model_terms:ir.actions.act_window,help:lims_water.lims_subnetwork_action
+msgid "You can define several."
+msgstr "Vous pouvez en définir plusieurs."
+
+#. module: lims_water
+#: code:addons/lims_water/models/lims_analysis.py:0
+#, python-format
+msgid ""
+"You can not pass the analysis in todo if there is no date sample receipt"
+msgstr ""
+"Vous ne pouvez pas passer une analyse à l'état 'à faire' si il n'y pas de "
+"date de réception de l'échantillon"

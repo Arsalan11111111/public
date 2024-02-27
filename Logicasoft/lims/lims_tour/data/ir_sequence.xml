@@ -1,0 +1,10 @@
+<odoo noupdate="1">
+    <record id="sequence_tour" model="ir.sequence">
+        <field name="name">Tour</field>
+        <field name="code">lims.tour</field>
+        <field eval="6" name="padding"/>
+    </record>
+    <record id="lims_base.default_laboratory" model="lims.laboratory">
+        <field name="seq_tour_id" ref="lims_tour.sequence_tour"/>
+    </record>
+</odoo>

@@ -1,0 +1,37 @@
+<odoo>
+    <template id="sale_order_portal_template" inherit_id="sale.sale_order_portal_template">
+        <li t-if="sale_order.user_id" position="before">
+            <t t-if="sale_order.analysis_request_ids and len(sale_order.analysis_request_ids)>1">
+                <t t-set="lims_elements" t-value="sale_order.analysis_request_ids"/>
+            </t>
+            <t t-elif="sale_order.analysis_request_id">
+                <t t-set="lims_elements" t-value="sale_order.analysis_request_id"/>
+            </t>
+            <t t-elif="sale_order.analysis_ids">
+                <t t-set="lims_elements" t-value="sale_order.analysis_ids"/>
+            </t>
+            <t t-else="" name="lims_element_false">
+                <t t-set="lims_elements" t-value="False"/>
+            </t>
+            <li t-if="lims_elements" class="list-group-item" name="lims_request_link">
+                <div class="small mb-1" name="lims_element_label">
+                    <strong  t-if="lims_elements._name == 'lims.analysis.request'" class="text-muted">
+                        Request #
+                    </strong>
+                    <strong  t-elif="lims_elements._name == 'lims.analysis'" class="text-muted">
+                        Analysis #
+                    </strong>
+                </div>
+                <div class="row" t-foreach="lims_elements" t-as="element_id" name="lims_element_link">
+                    <div class="col flex-grow-0 pr-2">
+                        <i class="fa fa-link fa-1x"/>
+                    </div>
+                    <div class="col pl-0">
+                        <a t-field="element_id.name" t-att-href="element_id.access_url"
+                           t-title="element_id.description"/>
+                    </div>
+                </div>
+            </li>
+        </li>
+    </template>
+</odoo>

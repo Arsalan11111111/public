@@ -1,0 +1,3084 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-30 19:48+0000\n"
+"PO-Revision-Date: 2023-11-30 19:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_report
+#: model:ir.actions.report,print_report_name:lims_report.lims_analysis_report_report_board_vertical
+msgid "'WSBATCH_' + object.name"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_analysis_page_content
+msgid ""
+"<b>\n"
+"                            <em>Other analyses in this report:</em>\n"
+"                        </b>"
+msgstr ""
+"<b>\n"
+"                            <em>Autres analyses dans ce rapport :</em>\n"
+"                        </b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid "<b>Analysis note :</b>"
+msgstr "<b>Commentaire/Réserves :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid "<b>Comment(s) :</b>"
+msgstr "<b>Commentaire(s) :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<b>Comment(s) :</b>\n"
+"                    <br/>"
+msgstr ""
+"<b>Commentaire(s) :</b>\n"
+"                    <br/>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<b>Conclusion :</b>\n"
+"                    With regard to the parameter(s) analyzed, the sample"
+msgstr ""
+"<b>Conclusion :</b>\n"
+"                    En ce qui concerne le(s) paramètre(s) analysé(s), l'échantillon"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_request_information
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_vertical_request_information
+msgid "<b>Customer reference :</b>"
+msgstr "<b>Référence commande client : </b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_board
+msgid "<b>Date Analysis</b>"
+msgstr "<b>Date d'Analyse</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_board
+msgid "<b>Date Sample Receipt</b>"
+msgstr "<b>Date Réception d'échantillon</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid "<b>Date sample receipt :</b>"
+msgstr "<b>Date Réception d'échantillon</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid "<b>Deviation of reception :</b>"
+msgstr "<b>Anomalie de réception :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_board
+msgid "<b>General Parameter</b>"
+msgstr "<b>Paramètre Général</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid "<b>General information</b>"
+msgstr "<b>Informations Générales</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid "<b>Legend :</b>"
+msgstr "<b>Légende :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+msgid ""
+"<b>Legend :</b>\n"
+"                    <br/>"
+msgstr "<b>Légende :</b><br/>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_request_information
+msgid "<b>Order reference :</b>"
+msgstr "<b>Ref. commande : </b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<b>Remark(s) :</b>\n"
+"                    <br/>"
+msgstr "<b>Remarque(s) :</b><br/>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_request_information
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_vertical_request_information
+msgid "<b>Request number :</b>"
+msgstr "<b>Numéro de demande : </b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page
+msgid ""
+"<b>Request:</b>\n"
+"                                <br/>"
+msgstr ""
+"<b>Demande :</b>\n"
+"                                <br/>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page
+msgid "<b>Samples:</b>"
+msgstr "<b>Échantillons :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"\n"
+"                    <b>Date start :</b>"
+msgstr ""
+"<br/>\n"
+"\n"
+"                                <b>Date d'analyse :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"\n"
+"                    <b>Matrix :</b>"
+msgstr ""
+"<br/>\n"
+"\n"
+"                                <b>Type d'échantillon :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"\n"
+"                    <b>Picked by :</b>"
+msgstr ""
+"<br/>\n"
+"\n"
+"                                <b>Prélevé par :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"\n"
+"                    <b>Request ref :</b>"
+msgstr ""
+"<br/>\n"
+"\n"
+"                                <b>Numéro de DA :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"\n"
+"                    <b>Sample name :</b>"
+msgstr ""
+"<br/>\n"
+"\n"
+"                                <b>Référence :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"                         <b>This report cancels and replaces the report :</b>"
+msgstr ""
+"<br/>\n"
+"                                     <b>Ce rapport annule et remplace le rapport :</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"                        <b>Product:</b>"
+msgstr ""
+"<br/>\n"
+"                        <b>Produit:</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_footer
+msgid ""
+"<br/>\n"
+"                        T."
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_footer
+msgid ""
+"<br/>\n"
+"                        email:"
+msgstr ""
+
+#. module: lims_report
+#: model:mail.template,body_html:lims_report.lims_email_template_analysis_draft_report
+msgid ""
+"<div style=\"margin:0px 0 1rem 0; font-size:13px; font-family:'Lucida Grande', Helvetica, Verdana, Arial, sans-serif;\">\n"
+"                <h3>Analysis draft report <em>(<t t-out=\"object.name or ''\"></t>)</em></h3>\n"
+"                <br>\n"
+"                <p>Dear <t t-out=\"object.partner_id.title.name or ''\"></t> <t t-out=\"object.partner_id.name or ''\"></t></p>\n"
+"                <p>Please find enclosed your report <t t-out=\"object.name or ''\"></t></p>\n"
+"                <t t-if=\"object.report_analysis_line_ids\">\n"
+"                    <br>\n"
+"                    <p><em>This draft report includes the results of the samples :</em></p>\n"
+"                    <ul>\n"
+"                        <t t-foreach=\"object.report_analysis_line_ids\" t-as=\"line\">\n"
+"                            <li><t t-out=\"line.analysis_id.name or ''\"></t> <t t-out=\"line.analysis_id.description or ''\"></t></li>\n"
+"                        </t>\n"
+"                    </ul>\n"
+"                </t>\n"
+"                <br>\n"
+"                <p>Please contact us in case of any further questions.</p>\n"
+"                <br>\n"
+"                <p><small>Kind regards.</small></p>\n"
+"                <p><small><t t-out=\"user.title.name or ''\"></t> <t t-out=\"user.name or ''\"></t></small></p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin:0px 0 1rem 0; font-size:13px; font-family:'Lucida Grande', Helvetica, Verdana, Arial, sans-serif;\">\n"
+"                <h3>Rapport d'analyse brouillon <em>(<t t-out=\"object.name or ''\"/>)</em></h3>\n"
+"                <br/>\n"
+"                <p>Chèr(e) <t t-out=\"object.partner_id.title.name or ''\"/> <t t-out=\"object.partner_id.name or ''\"/></p>\n"
+"                <p>Veuillez trouver ci-joint votre rapport <t t-out=\"object.name or ''\"/></p>\n"
+"                <t t-if=\"object.report_analysis_line_ids\">\n"
+"                    <br/>\n"
+"                    <p><em>Ce rapport brouillon comprend les résultats des prélèvements :</em></p>\n"
+"                    <ul>\n"
+"                        <t t-foreach=\"object.report_analysis_line_ids\" t-as=\"line\">\n"
+"                            <li><t t-out=\"line.analysis_id.name or ''\"/> <t t-out=\"line.analysis_id.description or ''\"/></li>\n"
+"                        </t>\n"
+"                    </ul>\n"
+"                </t>\n"
+"                <br/>\n"
+"                <p>Veuillez nous contacter si vous avez d'autres questions.</p>\n"
+"                <br/>\n"
+"                <p><small>Cordialement.</small></p>\n"
+"                <p><small><t t-out=\"user.title.name or ''\"/> <t t-out=\"user.name or ''\"/></small></p>\n"
+"            </div>\n"
+"        "
+
+#. module: lims_report
+#: model:mail.template,body_html:lims_report.lims_email_template_analysis_report
+msgid ""
+"<div style=\"margin:0px 0 1rem 0; font-size:13px; font-family:'Lucida Grande', Helvetica, Verdana, Arial, sans-serif;\">\n"
+"                <h3>Analysis report <em>(<t t-out=\"object.name or ''\"></t>)</em></h3>\n"
+"                <br>\n"
+"                <p>Dear <t t-out=\"object.partner_id.title.name or ''\"></t> <t t-out=\"object.partner_id.name or ''\"></t></p>\n"
+"                <p>Please find enclosed your report <t t-out=\"object.name or ''\"></t></p>\n"
+"                <t t-if=\"object.report_analysis_line_ids\">\n"
+"                    <br>\n"
+"                    <p><em>This report includes the results of the samples :</em></p>\n"
+"                    <ul>\n"
+"                        <t t-foreach=\"object.report_analysis_line_ids\" t-as=\"line\">\n"
+"                            <li><t t-out=\"line.analysis_id.name or ''\"></t> <t t-out=\"line.analysis_id.description or ''\"></t></li>\n"
+"                        </t>\n"
+"                    </ul>\n"
+"                </t>\n"
+"                <br>\n"
+"                <p>Please contact us in case of any further questions.</p>\n"
+"                <br>\n"
+"                <p><small>Kind regards.</small></p>\n"
+"                <p><small><t t-out=\"user.title.name or ''\"></t> <t t-out=\"user.name or ''\"></t></small></p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin:0px 0 1rem 0; font-size:13px; font-family:'Lucida Grande', Helvetica, Verdana, Arial, sans-serif;\">\n"
+"                <h3>Rapport d'analyse <em>(<t t-out=\"object.name or ''\"/>)</em></h3>\n"
+"                <br/>\n"
+"                <p>Chèr(e) <t t-out=\"object.partner_id.title.name or ''\"/> <t t-out=\"object.partner_id.name or ''\"/></p>\n"
+"                <p>Veuillez trouver ci-joint votre rapport <t t-out=\"object.name or ''\"/></p>\n"
+"                <t t-if=\"object.report_analysis_line_ids\">\n"
+"                    <br/>\n"
+"                    <p><em>Ce rapport comprend les résultats des prélèvements :</em></p>\n"
+"                    <ul>\n"
+"                        <t t-foreach=\"object.report_analysis_line_ids\" t-as=\"line\">\n"
+"                            <li><t t-out=\"line.analysis_id.name or ''\"/> <t t-out=\"line.analysis_id.description or ''\"/></li>\n"
+"                        </t>\n"
+"                    </ul>\n"
+"                </t>\n"
+"                <br/>\n"
+"                <p>Veuillez nous contacter si vous avez d'autres questions.</p>\n"
+"                <br/>\n"
+"                <p><small>Cordialement.</small></p>\n"
+"                <p><small><t t-out=\"user.title.name or ''\"/> <t t-out=\"user.name or ''\"/></small></p>\n"
+"            </div>\n"
+"        "
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_requests
+msgid ""
+"<i class=\"fa fa-cloud-download\" aria-label=\"Report Done\" title=\"Done\" role=\"img\"/>\n"
+"                                <span class=\"d-none d-md-inline\">Report</span>"
+msgstr ""
+"<i class=\"fa fa-cloud-download\" aria-label=\"Rapport terminé\" title=\"Terminé\" role=\"img\"/>\n"
+"                                <span class=\"d-none d-md-inline\">Rapport</span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page
+msgid ""
+"<i class=\"fa fa-cloud-download\"/>\n"
+"                                                Download"
+msgstr ""
+"<i class=\"fa fa-cloud-download\"/>\n"
+"                                                Télécharger"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid ""
+"<i class=\"fa fa-flask\" aria-label=\"Number of analysis\" title=\"Number of"
+" analysis\" role=\"img\"/>"
+msgstr ""
+"<i class=\"fa fa-flask\" aria-label=\"Nombre d'analyses\" title=\"Nombre "
+"d'analyses\" role=\"img\"/>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page
+msgid ""
+"<i class=\"fa fa-fw fa-comments\"/>\n"
+"                                                <b>Send message</b>"
+msgstr ""
+"<i class=\"fa fa-fw fa-comments\"/>\n"
+"                                                <b>Envoyer un message</b>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_requests
+msgid ""
+"<i class=\"fa fa-link fa-1x\" aria-label=\"Reports Done\" title=\"Done\" role=\"img\"/>\n"
+"                                <span class=\"d-none d-md-inline\">Reports</span>"
+msgstr ""
+"<i class=\"fa fa-link fa-1x\" aria-label=\"Rapports Terminés\" title=\"Terminé\" role=\"img\"/>\n"
+"                                <span class=\"d-none d-md-inline\">Rapports</span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<i>\n"
+"                            <b>Test(s)'s Comment(s) :</b>\n"
+"                        </i>"
+msgstr ""
+"<i>\n"
+"                            <b>Commentaire(s) des tests :</b>\n"
+"                        </i>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+msgid "<i><b>Test(s)'s Comment(s) :</b></i>"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<i>Comment(s) Method(s) :</i>\n"
+"                    <br/>"
+msgstr ""
+"<i>Commentaire(s) des méthodes :</i>\n"
+"                    <br/>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+msgid ""
+"<i>Comment(s) Method(s) :</i>\n"
+"                <br/>"
+msgstr ""
+"<i>Commentaire(s) des méthodes :</i>\n"
+"                <br/>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_state_element
+msgid ""
+"<span class=\"badge bg-danger\">\n"
+"                <i class=\"fa fa-fw fa-times\" aria-label=\"Canceled\" title=\"Canceled\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Canceled</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"badge bg-danger\">\n"
+"                <i class=\"fa fa-fw fa-times\" aria-label=\"Annulé\" title=\"Annulé\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Annulé</span>\n"
+"            </span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_state_element
+msgid ""
+"<span class=\"badge bg-info\">\n"
+"                <i class=\"fa fa-fw fa-check\" aria-label=\"Validated\" title=\"Validated\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Validated</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"badge bg-info\">\n"
+"                <i class=\"fa fa-fw fa-check\" aria-label=\"Validé\" title=\"Validé\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Validé</span>\n"
+"            </span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_state_element
+msgid ""
+"<span class=\"badge bg-muted\">\n"
+"                <i class=\"fa fa-fw fa-clock-o\" aria-label=\"Draft\" title=\"Draft\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Draft</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"badge bg-muted\">\n"
+"                <i class=\"fa fa-fw fa-clock-o\" aria-label=\"Brouillon\" title=\"Brouillon\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Brouillon</span>\n"
+"            </span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_state_element
+msgid ""
+"<span class=\"badge bg-success\">\n"
+"                <i class=\"fa fa-fw fa-file-text-o\" aria-label=\"Sent\" title=\"Sent\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Sent</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"badge bg-success\">\n"
+"                <i class=\"fa fa-fw fa-file-text-o\" aria-label=\"Envoyé\" title=\"Envoyé\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Envoyé</span>\n"
+"            </span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<span class=\"result_not_conform\">\n"
+"                            Analysis not conform\n"
+"                        </span>"
+msgstr ""
+"<span class=\"result_not_conform\">\n"
+"                            Analyse non conforme\n"
+"                        </span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+msgid "<span class=\"result_not_conform\">Results not conform</span>"
+msgstr "<span class=\"result_not_conform\">Résultats non conformes</span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_board
+msgid ""
+"<span style=\"color:grey;\">\n"
+"                                    <small>Sample # / Sample name</small>\n"
+"                                </span>"
+msgstr ""
+"<span style=\"color:grey;\">\n"
+"                                    <small># échantillon / Nom échantillon</small>\n"
+"                                </span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid "<span>By yourself</span>"
+msgstr "<span>Par le client</span>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_footer
+msgid ""
+"<span>Page: </span><span class=\"page\"/> <span>/</span> <span "
+"class=\"topage\"/>"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_result
+msgid "<span>±</span>"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page
+msgid ""
+"<strong class=\"text-muted\">\n"
+"                                            Customer\n"
+"                                        </strong>"
+msgstr ""
+"<strong class=\"text-muted\">\n"
+"                                            Client\n"
+"                                        </strong>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_analysis_page
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_request_page
+msgid ""
+"<strong class=\"text-muted\">\n"
+"                        Report #\n"
+"                    </strong>"
+msgstr ""
+"<strong class=\"text-muted\">\n"
+"                        Rapport #\n"
+"                    </strong>"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_vertical_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "<sup>I</sup>"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<sup>I</sup>\n"
+"                        Accredited Parameter"
+msgstr ""
+"<sup>I</sup>\n"
+"                        Paramètre Accrédité"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_vertical_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "<sup>II</sup>"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<sup>II</sup>\n"
+"                        Non Accredited Parameter"
+msgstr ""
+"<sup>II</sup>\n"
+"                        Paramètre Non Accrédité"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_vertical_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "<sup>III</sup>"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<sup>III</sup>\n"
+"                        Subcontracted Parameter (Accredited)"
+msgstr ""
+"<sup>III</sup>\n"
+"                        Paramètre sous-traité (accrédité)"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_vertical_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "<sup>IV</sup>"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid ""
+"<sup>IV</sup>\n"
+"                        Subcontracted Parameter (Non Accredited)"
+msgstr ""
+"<sup>IV</sup>\n"
+"                        Paramètre sous-traité (non accrédité)"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_res_groups
+msgid "Access Groups"
+msgstr "Groupes d'accès"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__access_warning
+msgid "Access warning"
+msgstr "Avertissement d'accès"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_needaction
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_needaction
+msgid "Action Needed"
+msgstr "Nécessite une action"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__active
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__active
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__active
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__active
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_template_search
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+msgid "Active"
+msgstr "Actif"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_ids
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_exception_decoration
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activité d'exception de décoration"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_state
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_state
+msgid "Activity State"
+msgstr "État d'activité"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_type_icon
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de Type d'Activité"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/wizards/create_report_wizard.py:0
+#, python-format
+msgid "Add a report sequence in the laboratory : "
+msgstr "Configurez d'abord une séquence de rapport sur le laboratoire"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__comment
+msgid ""
+"Additional comment addressed to the customer (will be printed on analysis "
+"report)"
+msgstr ""
+"Commentaire additionnel adressé au client (sera imprimé sur le rapport "
+"d'analyse)"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__note
+msgid ""
+"Additional comment addressed to the internal team (won't be printed on "
+"analysis report)"
+msgstr ""
+"Commentaire additionnel adressé à l'équipe interne (ne sera pas imprimé sur "
+"le rapport d'analyse)"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "All"
+msgstr "Tous"
+
+#. module: lims_report
+#: model:res.groups,name:lims_report.group_lims_validate_report
+msgid "Allow Lims Report Validation"
+msgstr "Autoriser la validation de rapport Lims"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis.py:0
+#, python-format
+msgid "An analysis at least must be selected to create an analysis report."
+msgstr ""
+"Au moins une analyse doit être sélectionnée pour créer un rapport "
+"d'analyses."
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_confirmation_report_form
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_confirmation_report_request_form
+msgid "An analysis report already exists, do you want to proceed ?"
+msgstr "Un rapport d'analyse existe déjà, voulez-vous continuer ?"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis.py:0
+#, python-format
+msgid ""
+"Analyses {} are locked because they are linked to a report in a locked "
+"state. Cancel the report to go further."
+msgstr ""
+"Les échantillons {} sont bloqués parce que liés à un rapport dans un statut "
+"bloqué. Annulez le rapport pour pouvoir les modifier."
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#: model:ir.model,name:lims_report.model_lims_analysis
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__line_ids
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line__analysis_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__analysis_ids
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__analysis_id
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+#, python-format
+msgid "Analysis"
+msgstr "Échantillon"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__analysis_count
+msgid "Analysis Count"
+msgstr "Échantillon(s)"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis.py:0
+#: code:addons/lims_report/wizards/wizard_confirmation_create_report.py:0
+#: code:addons/lims_report/wizards/wizard_confirmation_create_report_request.py:0
+#: model:ir.actions.act_window,name:lims_report.lims_analysis_report_action
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_request__analysis_report_ids
+#: model:ir.ui.menu,name:lims_report.lims_analysis_report_menu
+#, python-format
+msgid "Analysis Report"
+msgstr "Rapport d'essais"
+
+#. module: lims_report
+#: model:mail.template,name:lims_report.lims_email_template_analysis_report
+msgid "Analysis Report - Send by Email"
+msgstr "Rapport d'essais - Envoyé par Email"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_report_lims_report_analysis_report_board
+msgid "Analysis Report Board Parser (H)"
+msgstr "Synthèse des rapports (H)"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_report_lims_report_analysis_report_board_vertical
+msgid "Analysis Report Board Parser (V)"
+msgstr "Synthèse des rapports (V)"
+
+#. module: lims_report
+#: model:mail.template,name:lims_report.lims_email_template_analysis_draft_report
+msgid "Analysis Report Draft - Send by Email"
+msgstr "Rapport d'analyse brouillon - Envoyer par Email"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_lims_analysis_report_line
+msgid "Analysis Report Line"
+msgstr "Ligne Rapport d'Analyse"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_report_lims_report_analysis_report_qweb
+msgid "Analysis Report Parser"
+msgstr "Parser Rapport d'analyse"
+
+#. module: lims_report
+#: model:ir.actions.report,name:lims_report.lims_analysis_report_report_board
+msgid "Analysis Report Table (H)"
+msgstr "Rapport d'analyse tableau"
+
+#. module: lims_report
+#: model:ir.actions.report,name:lims_report.lims_analysis_report_report_board_vertical
+msgid "Analysis Report Table (V)"
+msgstr "Rapport de synthèse (V)"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__analysis_request_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__analysis_request_id
+msgid "Analysis Request"
+msgstr "Demande d'Analyse"
+
+#. module: lims_report
+#: model:mail.template,subject:lims_report.lims_email_template_analysis_draft_report
+msgid "Analysis draft report ({{object.name or '' }})"
+msgstr "Rapport d'analyse brouillon ({{object.name or '' }})"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_sample_information
+msgid "Analysis number :"
+msgstr "Numéro d'analyse :"
+
+#. module: lims_report
+#: model:mail.template,subject:lims_report.lims_email_template_analysis_report
+msgid "Analysis report ({{object.name or '' }})"
+msgstr "Rapport d'analyse ({{object.name or '' }})"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__is_locked
+msgid ""
+"Analysis report is locked, according to laboratory configuration (apply to "
+"sent and/or validated stages)"
+msgstr ""
+"Le rapport d'analyse est bloqué, d'après la configuration du laboratoire "
+"(s'applique aux états envoyé et/ou validé)"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_lims_analysis_report_tag
+msgid "Analysis report tag"
+msgstr "Étiquette de rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__report_analysis_line_ids
+msgid "Analysis(es)"
+msgstr "Échantillon"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "April"
+msgstr "Avril"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_res_config_settings__ask_password_lims_analysis_report_do_validated
+msgid "Ask password for validate Report"
+msgstr "Demander le mot de passe pour valider un rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_attachment_count
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "August"
+msgstr "Août"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#, python-format
+msgid "Automatic cancellation"
+msgstr "Annulation automatique."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__validator_id
+msgid ""
+"Automatically fills in with the name of the person who validates the report."
+msgstr ""
+"Rempli automatiquement par le nom de la personne qui a validé le rapport."
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Auxiliary content"
+msgstr "Contenu additionnel"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_report_lims_report_lims_analysis_base_report_parser
+msgid "Base analysis report parser"
+msgstr "Parseur de rapport d'analyse de base"
+
+#. module: lims_report
+#: model:ir.model.fields.selection,name:lims_report.selection__lims_analysis_report__kanban_state__blocked
+msgid "Blocked"
+msgstr "Bloqué"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__is_default_print_on_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+msgid "By default print result"
+msgstr "Imprimer le résultat par défaut"
+
+#. module: lims_report
+#: model:lims.parameter.print,print_name:lims_report.demo_parameter_print_3
+msgid "Ca2+"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis__time_to_report
+msgid ""
+"Calculation of the time between the date of receipt of the sample and the "
+"date of sending the sample report."
+msgstr ""
+"Calcul du temps entre la date de réception de l'échantillon et la date "
+"d'envoi du rapport"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.create_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+#: model_terms:ir.ui.view,arch_db:lims_report.report_cancel_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_report.report_mass_change_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_confirmation_report_form
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_confirmation_report_request_form
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_group_report_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_cancel_report_wizard
+msgid "Cancel Report Wizard"
+msgstr "Rapport annulé"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+#, python-format
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_template_form
+msgid "Choose the structure of the report template"
+msgstr "Choisissez la structure du modèle de rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__is_classic_report
+msgid "Classic report"
+msgstr "Rapport classique"
+
+#. module: lims_report
+#: model_terms:ir.actions.act_window,help:lims_report.lims_analysis_report_action
+msgid "Click to create a new analysis reason."
+msgstr "Cliquer pour créer une nouvelle raison analyse."
+
+#. module: lims_report
+#: model_terms:ir.actions.act_window,help:lims_report.lims_analysis_report_tag_action
+msgid "Click to create a new analysis report tag."
+msgstr "Cliquer pour créer un nouveau tag de rapport."
+
+#. module: lims_report
+#: model_terms:ir.actions.act_window,help:lims_report.create_report_wizard_action
+msgid "Click to create analysis report."
+msgstr "Cliquer pour créer un nouveau d'apport d'essai."
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__comment
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__comment
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_laboratory__note_report_replaced
+msgid "Comment of report when the report replace a previous report"
+msgstr "Commentaire du rapport lorsqu'il remplace un rapport précédent"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_comment
+msgid "Comment(s)"
+msgstr "Commentaire(s)"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Comments"
+msgstr "Commentaires"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#, python-format
+msgid "Compose Email"
+msgstr "Créer un Email"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_board
+msgid "Conclusion"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__conclusion_text
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__conclusion_text
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_section_view_form
+msgid "Conclusion text"
+msgstr "Texte de conclusion"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.parameter_print_group_form
+msgid "Conclusion text for print groups"
+msgstr "Texte de conclusion pour les groupes d'impression"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: lims_report
+#: model:ir.ui.menu,name:lims_report.lims_report_config_submenu
+msgid "Configuration"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.report_cancel_wizard_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_confirmation_create_report_request
+msgid "Confirmation create report request wizard"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_confirmation_create_report
+msgid "Confirmation create report wizard"
+msgstr ""
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page
+#, python-format
+msgid "Contact"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__partner_contact_ids
+msgid "Contacts"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.actions.server,name:lims_report.action_analysis_create_report
+#: model_terms:ir.ui.view,arch_db:lims_report.create_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_confirmation_report_form
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_confirmation_report_request_form
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_group_report_form
+msgid "Create Report"
+msgstr "Créer un Rapport"
+
+#. module: lims_report
+#: model:ir.actions.act_window,name:lims_report.create_report_wizard_action
+msgid "Create Report Wizard"
+msgstr "Créer un rapport wizard"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_inherit_form
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_request
+msgid "Create report"
+msgstr "Créer un rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report_request__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__create_uid
+#: model:ir.model.fields,field_description:lims_report.field_wizard_group_report__create_uid
+msgid "Created by"
+msgstr "Créer par "
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard__create_date
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report__create_date
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report_request__create_date
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__create_date
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line__create_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__create_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__create_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__create_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__create_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__create_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__create_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__create_date
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__create_date
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__create_date
+#: model:ir.model.fields,field_description:lims_report.field_wizard_group_report__create_date
+msgid "Created on"
+msgstr "Créer le"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_inherit_form
+msgid "Creates a report containing this analysis only"
+msgstr "Crée un rapport contenant uniquement cet échantillon"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_detailed_worksheet_parser
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_batch_worksheet_parameters_parser
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_sop_worksheet
+msgid "Criteria"
+msgstr "Critère"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__partner_id
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+#, python-format
+msgid "Customer"
+msgstr "Client"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_introduction
+msgid "Customer Contact(s):"
+msgstr "Contact(s) client :"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__access_url
+msgid "Customer Portal URL"
+msgstr "URl du portail client"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__customer_ref
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__customer_ref
+msgid "Customer Ref."
+msgstr "Référence Client"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_introduction
+msgid "Customer:"
+msgstr "Client :"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis__date_report_sent
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_request__date_report_sent
+msgid "Date Report Sent"
+msgstr "Date d'envoi du rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__date_sent
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Date Sent"
+msgstr "Date d'envoi"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "December"
+msgstr "Décembre"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__default_report_template
+msgid "Default Report Template"
+msgstr "Modèle de rapport par défaut"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__report_signatory_1_id
+msgid "Default signatory 1"
+msgstr "Signature par défaut 1"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_laboratory__report_signatory_1_id
+msgid "Default signatory 1 when a report is created"
+msgstr "Signature par défaut 1 quand un rapport est créé"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__report_signatory_2_id
+msgid "Default signatory 2"
+msgstr "Signature par défaut 2"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_laboratory__report_signatory_2_id
+msgid "Default signatory 2 when a report is created"
+msgstr "Signature par défaut 2 quand un rapport est créé"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_laboratory__default_report_template
+msgid ""
+"Defines the report template that will be proposed by default when creating a"
+" report for LIMS."
+msgstr ""
+"Définit le modèle de rapport qui sera proposé par défaut lors de la création"
+" d'un rapport pour le LIMS."
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__description
+msgid "Description"
+msgstr ""
+
+#. module: lims_report
+#: model:lims.parameter.print,print_name:lims_report.demo_parameter_print_6
+msgid "Detailed visual description of water"
+msgstr "Description visuelle détaillée de l'eau"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard__display_name
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report__display_name
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report_request__display_name
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__display_name
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line__display_name
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__display_name
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__display_name
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__display_name
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__display_name
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__display_name
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__display_name
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__display_name
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__display_name
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__display_name
+#: model:ir.model.fields,field_description:lims_report.field_wizard_group_report__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_do_sop_is_null_wizard
+msgid "Do test Is Null"
+msgstr "Test est nul"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_do_sop_is_null_wizard_line
+msgid "Do test Is Null Line"
+msgstr "Le test est nul"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Done"
+msgstr "Terminé"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page
+msgid "Download the report"
+msgstr "Télécharger le rapport"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#: model:ir.model.fields.selection,name:lims_report.selection__lims_analysis_report__kanban_state__normal
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+#, python-format
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_mail_thread
+msgid "Email Thread"
+msgstr "Discussion par email"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Assistant de composition d'emails"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__comment
+msgid "External comment"
+msgstr "Commentaire externe"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "February"
+msgstr "Février"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_template_search
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+msgid "Filters"
+msgstr "Filtres"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_follower_ids
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_partner_ids
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Clients)"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__activity_type_icon
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône Font Awesome e.g. fa-tasks"
+
+#. module: lims_report
+#: model:lims.parameter.print,print_name:lims_report.demo_parameter_print_1
+msgid "Food water evaluation"
+msgstr "Évaluation de l'eau alimentaire"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print__is_default_print_on_report
+msgid ""
+"For each result line generated by this parameter print copy this 'Print "
+"Result' value."
+msgstr ""
+"Valeur par défaut du champ 'Afficher sur le rapport' pour tous les résultats"
+" liés à ce paramètre d'impression"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_board
+msgid "From"
+msgstr "Du"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+msgid "From Today"
+msgstr "A partir d' aujourd'hui"
+
+#. module: lims_report
+#: model:lims.parameter.print.group,name:lims_report.demo_parameter_print_group_1
+msgid "Global print group"
+msgstr "Groupe d'impression global"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_template_search
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+#: model_terms:ir.ui.view,arch_db:lims_report.parameter_print_group_search
+msgid "Group by"
+msgstr "Grouper Par"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_wizard_group_report__group_by_customer
+msgid "Group by customer ?"
+msgstr "Grouper par clients ?"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_wizard_group_report
+msgid "Group report wizard"
+msgstr "Wizard de groupe de rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__has_message
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page
+msgid "History"
+msgstr "Historique"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard__id
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report__id
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report_request__id
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__id
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line__id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__id
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__id
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__id
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__id
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__id
+#: model:ir.model.fields,field_description:lims_report.field_wizard_group_report__id
+msgid "ID"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_exception_icon
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__activity_exception_icon
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité exceptionnelle"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_conclusion
+msgid ""
+"If checked, a conclusion for the analysis about his conformity state and the"
+" standard prescribed by his legislation will be printed."
+msgstr ""
+"Si cochée, une conclusion pour l'analyse à propos de son état de conformité "
+"et de la norme prescrite par sa législation sera imprimée."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_comment_result
+msgid "If checked, comments on results will be printed."
+msgstr "Si cette case est cochée, les commentaires sur les résultats seront imprimés."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__message_needaction
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, les nouveaux messages requièrent votre attention."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__message_has_error
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__message_has_sms_error
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__message_has_error
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si actif, certains messages ont une erreur de livraison."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_lod
+msgid ""
+"If checked, the 'LOD' of the parameter of the analysis result will be "
+"printed."
+msgstr "Si cochée, le 'LOD' du paramètre du résultat d'analyse sera imprimé."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_loq
+msgid ""
+"If checked, the 'LOQ' of the parameter of the analysis result will be "
+"printed."
+msgstr "Si cochée, le 'LOQ' du paramètre du résultat d'analyse sera imprimé."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_report_limit_value
+msgid "If checked, the 'Limit value' of the analysis result will be printed."
+msgstr ""
+"Si cochée, la 'Valeur limite' du paramètre du résultat d'analyse sera "
+"imprimée."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_standard_parameter
+msgid ""
+"If checked, the 'Standards' of the parameter of the analysis result will be "
+"printed."
+msgstr ""
+"Si cochée, les 'Normes' du paramètre du résultat d'analyse seront imprimées."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_standard_method
+msgid ""
+"If checked, the 'Standards' of the parameter's method of the analysis result"
+" will be printed."
+msgstr ""
+"Si cochée, les 'Normes' de la méthode du paramètre du résultat d'analyse "
+"seront imprimées."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_state
+msgid ""
+"If checked, the 'State of conformity' of the analysis result will be "
+"printed."
+msgstr "Si cochée, l'état de conformité de l'analyse sera imprimé."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_u
+msgid ""
+"If checked, the 'U' of the parameter of the analysis result will be printed."
+msgstr "Si cochée, le 'U' du paramètre du résultat d'analyse sera imprimé."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_sop_id_comment
+msgid ""
+"If checked, the comment of the test (only) of the analysis result will be "
+"printed."
+msgstr ""
+"Si cochée, le commentaire du test (seulement) du résultat d'analyse sera "
+"imprimé."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_comment_method
+msgid ""
+"If checked, the comment of the test and alternatively of the method of the "
+"analysis result will be printed."
+msgstr ""
+"Si cochée, le commentaire du test et de la méthode du résultat d'analyse "
+"seront imprimés."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_comment
+msgid "If checked, the comment of this report will be printed."
+msgstr "Si cochée, le commentaire de ce rapport sera imprimé."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_remark
+msgid "If checked, the remark of this report will be printed."
+msgstr "Si cochée, la remarque de ce rapport sera imprimée."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_instruction
+msgid ""
+"If checked, the work instruction of the parameter of the analysis result (or"
+" of his method if empty) will be printed."
+msgstr ""
+"Si cochée, la consigne de travail du paramètre du résultat d'analyse (ou de "
+"sa méthode si vide) sera imprimée."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__laboratory_id
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_template_form
+msgid "If filled, only this laboratory will be able to select this template."
+msgstr "S'il est rempli, seul ce laboratoire pourra sélectionner ce modèle."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__remark
+msgid ""
+"If the checkbox 'Print Remark' is checked, this remark will be printed in "
+"the reports."
+msgstr ""
+"Si la case 'Imprimer la remarque' est cochée, cette remarque sera imprimée "
+"dans les rapports."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__date_sent
+msgid ""
+"If the report was validated, this date will be fulfilled on the moment the "
+"report is sent."
+msgstr ""
+"Si le rapport a été validé, cette date sera remplie au moment de l'envoi du "
+"rapport."
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__image_01
+msgid "Image 01"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__image_02
+msgid "Image 02"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__image_03
+msgid "Image 03"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__image_medium_01
+msgid "Image Medium 01"
+msgstr "Image Moyenne 01"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__image_medium_02
+msgid "Image Medium 02"
+msgstr "Image Moyenne 02"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__image_medium_03
+msgid "Image Medium 03"
+msgstr "Image Moyenne 03"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Images"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_template_search
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+msgid "Inactive"
+msgstr "Archivés"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__note
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Internal note"
+msgstr "Note interne"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__introduction_text
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__introduction_text
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_section_view_form
+msgid "Introduction text"
+msgstr "Texte d'introduction"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.parameter_print_group_form
+msgid "Introduction text for print groups"
+msgstr "Texte d'introduction pour les groupes d'impression"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_is_follower
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_is_follower
+msgid "Is Follower"
+msgstr "Est un abonné"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis__is_locked
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__is_locked
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_inherit_search
+msgid "Is Locked"
+msgstr "Est bloqué"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_request__is_ok_for_report
+msgid "Is Ok For Report"
+msgstr "Est prêt pour un Rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis__is_locked
+msgid ""
+"Is blocked by the presence of a report for this analysis. The report state "
+"from which the analysis is blocked is configured in the laboratory"
+msgstr ""
+"Est bloqué par la présence d'un rapport lié à cet échantillon. Le statut du "
+"rapport à partir duquel l'échantillon est bloqué est configuré sur le "
+"laboratoire."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_request__is_ok_for_report
+msgid "It is checked if one samples have at least one analysis."
+msgstr "Il est vérifié si un échantillon a au moins une analyse."
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "January"
+msgstr "Janvier"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "July"
+msgstr "Juillet"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "June"
+msgstr "Juin"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__kanban_state
+msgid "Kanban State"
+msgstr "État kanban"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "LOD"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "LOQ"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_lims_laboratory
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__laboratory_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__laboratory_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__laboratory_id
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_introduction
+msgid "Laboratory:"
+msgstr "Laboratoire :"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard____last_update
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report____last_update
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report_request____last_update
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard____last_update
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line____last_update
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report____last_update
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line____last_update
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section____last_update
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag____last_update
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template____last_update
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print____last_update
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group____last_update
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard____last_update
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line____last_update
+#: model:ir.model.fields,field_description:lims_report.field_wizard_group_report____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report_request__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__write_uid
+#: model:ir.model.fields,field_description:lims_report.field_wizard_group_report__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard__write_date
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report__write_date
+#: model:ir.model.fields,field_description:lims_report.field_confirmation_create_report_request__write_date
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__write_date
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line__write_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__write_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__write_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__write_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__write_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__write_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__write_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__write_date
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__write_date
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__write_date
+#: model:ir.model.fields,field_description:lims_report.field_wizard_group_report__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_compute_result__report_limit_value
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_numeric_result__report_limit_value
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_result__report_limit_value
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_sel_result__report_limit_value
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_text_result__report_limit_value
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "Limit value"
+msgstr "Valeur limite"
+
+#. module: lims_report
+#: model:ir.actions.report,name:lims_report.lims_analysis_report_report
+msgid "Lims Analysis Report"
+msgstr "Rapport d'essai Lims"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_lims_analysis_report_template
+msgid "Lims report model"
+msgstr "Modèle de rapport Lims"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__line_ids
+msgid "Line"
+msgstr "Ligne"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__lock_analysis_state_report
+msgid "Lock analysis from reports"
+msgstr "Analyse bloquée depuis les rapports"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_laboratory__lock_analysis_state_report
+msgid "Lock the analysis when the report is in this stage"
+msgstr "Bloque l'analyse quand le rapport est dans cet état"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_inherit_form
+msgid "Locked"
+msgstr "Bloqué"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_header
+msgid "Logo"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe Principale"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "March"
+msgstr "Mars"
+
+#. module: lims_report
+#: model:ir.actions.act_window,name:lims_report.report_mass_change_wizard
+msgid "Mass Change"
+msgstr "Changement de masse"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "May"
+msgstr "Mai"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_mail_message
+msgid "Message"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_has_error
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur d'envoi du message"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_ids
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_lims_method_parameter_characteristic
+msgid "Method Parameter Characteristic"
+msgstr "paramètre de caractéristique de méthode"
+
+#. module: lims_report
+#: model:lims.parameter.print,print_name:lims_report.demo_parameter_print_4
+msgid "Mg2+"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mon délai d'activité"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__name
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__report_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__name
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__name
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__name
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__name
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__name
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_calendar_event_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_date_deadline
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de la prochaine activité"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_summary
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de la prochaine activité"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_type_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type de la prochaine activité"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__note_report
+msgid "Note report"
+msgstr "Note de rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__note_report_cancelled
+msgid "Note report when cancelled"
+msgstr "Note de rapport quand annulé"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__note_report_draft
+msgid "Note report when draft"
+msgstr "Note de rapport quand brouillon"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__note_report_replaced
+msgid "Note report when replaced"
+msgstr "Note de rapport quand remplacé"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__note_report_validated
+msgid "Note report when validated"
+msgstr "Note de rapport quand validé"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "November"
+msgstr "Novembre"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_needaction_counter
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'Actions"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__number_parameter
+msgid "Number of Parameters"
+msgstr "Nombre de Paramètres"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_has_error_counter
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__message_needaction_counter
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__message_has_error_counter
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec des erreurs d'envoi"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "October"
+msgstr "Octobre"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__option_ids
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__option_ids
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_template_form
+msgid "Option"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Option on content"
+msgstr "Option sur le contenu"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Option on content (only on classic report)"
+msgstr "Option sur le contenu (seulement sur le rapport classique)"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.create_report_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_template_form
+msgid "Options"
+msgstr ""
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Our reference"
+msgstr "Notre référence"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__parameter_characteristic_ids
+msgid "Parameter Characteristics"
+msgstr "Caractéristiques de Paramètre"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_lims_parameter_pack_line
+msgid "Parameter Pack Line"
+msgstr "Ligne de groupe"
+
+#. module: lims_report
+#: model:ir.actions.act_window,name:lims_report.lims_parameter_print_action
+#: model:ir.model,name:lims_report.model_lims_parameter_print
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_compute_result__rel_parameter_print
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_numeric_result__rel_parameter_print
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_result__rel_parameter_print
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_sel_result__rel_parameter_print
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_text_result__rel_parameter_print
+#: model:ir.model.fields,field_description:lims_report.field_lims_method_parameter_characteristic__parameter_print_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__parameter_print_ids
+#: model_terms:ir.ui.view,arch_db:lims_report.parameter_print_group_form
+msgid "Parameter Print"
+msgstr "Impression de Paramètre"
+
+#. module: lims_report
+#: model:ir.actions.act_window,name:lims_report.lims_parameter_print_group_action
+#: model:ir.model,name:lims_report.model_lims_parameter_print_group
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_section_view_form
+#: model_terms:ir.ui.view,arch_db:lims_report.parameter_print_form
+msgid "Parameter Print Group"
+msgstr "Groupe d'impression de Paramètre"
+
+#. module: lims_report
+#: model:ir.ui.menu,name:lims_report.lims_parameter_print_menu
+msgid "Parameter print"
+msgstr "Impression de paramètre"
+
+#. module: lims_report
+#: model:ir.ui.menu,name:lims_report.lims_parameter_print_group_menu
+msgid "Parameter print group"
+msgstr "Groupe d'impression de paramètre"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.parameter_print_form
+msgid "Parameters"
+msgstr "Paramètres"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__partner_id
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__partner_id
+msgid "Partner"
+msgstr "Client"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__access_url
+msgid "Portal Access URL"
+msgstr "URl d'accès au portail"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Print"
+msgstr "Impression"
+
+#. module: lims_report
+#: model:lims.parameter.print,name:lims_report.demo_parameter_print_3
+msgid "Print Ca2+"
+msgstr "Impression Ca2+"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_comment
+msgid "Print Comment"
+msgstr "Imprimer Commentaire"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_comment_method
+msgid "Print Comment Method"
+msgstr "Imprimer commentaires de la méthode"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_comment_result
+msgid "Print Comment Result"
+msgstr "Imprimer Commentaire Résultat"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_conclusion
+msgid "Print Conclusion"
+msgstr "Imprimer Conclusion"
+
+#. module: lims_report
+#: model:lims.parameter.print,name:lims_report.demo_parameter_print_6
+msgid "Print Detailed visual description of water"
+msgstr "Impression Description visuelle détaillée de l'eau"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_general_information
+msgid "Print General Information"
+msgstr "Imprimer les informations générales"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__print_group_ids
+msgid "Print Group"
+msgstr "Groupe d'Impression"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__print_group_ids
+msgid "Print Groups"
+msgstr "Imprimer Groupes"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_lod
+msgid "Print LOD"
+msgstr "Imprimer LOD"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_loq
+msgid "Print LOQ"
+msgstr "Imprimer LOQ"
+
+#. module: lims_report
+#: model:lims.parameter.print,name:lims_report.demo_parameter_print_4
+msgid "Print Mg2+"
+msgstr "Impression Mg2+"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__print_name
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__print_name
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+msgid "Print Name"
+msgstr "Nom d'impression"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Print Preview HTML"
+msgstr "Prévisualiser HTML"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Print Preview PDF"
+msgstr "Prévisualiser PDF"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_remark
+msgid "Print Remark"
+msgstr "Imprimer la Remarque"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_report_limit_value
+msgid "Print Report Limit Value"
+msgstr "Imprimer la Valeur Limite du Rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_do_sop_is_null_wizard__print_on_report
+#: model:ir.model.fields,field_description:lims_report.field_do_sop_is_null_wizard_line__print_on_report
+msgid "Print Result"
+msgstr "Imprimer Résultat"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_standard_method
+msgid "Print Standard Method"
+msgstr "Imprimer standard de la méthode"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_standard_parameter
+msgid "Print Standard Parameter"
+msgstr "Imprimer standard du paramètre"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_state
+msgid "Print State"
+msgstr "Imprimer État"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_sop_id_comment
+msgid "Print Test's Comment's"
+msgstr "Imprimer les commentaires de test"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_u
+msgid "Print Uncertainty"
+msgstr "Imprimer Incertitude"
+
+#. module: lims_report
+#: model:lims.parameter.print,name:lims_report.demo_parameter_print_2
+msgid "Print Visual Water"
+msgstr "Impression visuelle de l'eau"
+
+#. module: lims_report
+#: model:lims.parameter.print,name:lims_report.demo_parameter_print_5
+msgid "Print Water Hardness"
+msgstr "Impression Dureté de l'eau"
+
+#. module: lims_report
+#: model:lims.parameter.print,name:lims_report.demo_parameter_print_1
+msgid "Print Water in food"
+msgstr "Impression L'eau dans les aliments"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__option_print_instruction
+msgid "Print Work Instruction"
+msgstr "Imprimer instruction de travail"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Print and Send"
+msgstr "Imprimer et Envoyer"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__print_name
+msgid "Print name"
+msgstr "Nom d'impression"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__is_print_title
+msgid "Print title"
+msgstr "Titre d'impression"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Published attachment"
+msgstr "Pièce jointe publiée"
+
+#. module: lims_report
+#: model:ir.model.fields.selection,name:lims_report.selection__lims_analysis_report__kanban_state__done
+msgid "Ready"
+msgstr "Prêt"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard__reason
+msgid "Reason"
+msgstr "Motif"
+
+#. module: lims_report
+#: model:ir.actions.server,name:lims_report.action_recompute_analysis_locked
+msgid "Recompute lock"
+msgstr "Recalculer blocage"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__customer_ref
+msgid "Ref. Customer"
+msgstr "Référence Client"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Reference"
+msgstr "Référence"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__remark
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Remark"
+msgstr "Remarque"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__previous_analysis_report_id
+msgid "Replace Report"
+msgstr "Remplace le rapport"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#: model:ir.model,name:lims_report.model_lims_analysis_report
+#: model:ir.model.fields,field_description:lims_report.field_cancel_report_wizard__report_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__report_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__report_id
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__report_id
+#: model:ir.ui.menu,name:lims_report.lims_report_submenu
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_laboratory
+#, python-format
+msgid "Report"
+msgstr "Rapport"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_analyses_table
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Report #"
+msgstr "Rapport #"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_ir_actions_report
+msgid "Report Action"
+msgstr "Signaler l'action"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__report_date
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__report_date
+msgid "Report Date"
+msgstr "Date du Rapport"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_introduction
+msgid "Report Date:"
+msgstr "Date du rapport :"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_method_parameter_characteristic__report_limit_value
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_pack_line__rel_report_limit_value
+msgid "Report Limit Value"
+msgstr "Valeur Limite du Rapport"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Report Line"
+msgstr "Ligne du Rapport"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_report_mass_change_wizard
+msgid "Report Mass Change"
+msgstr "Rapport du Changement de Masse"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_report_mass_change_wizard_line
+msgid "Report Mass Change Line"
+msgstr "Ligne du Rapport du Changement de Masse"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__report_note
+msgid "Report Note"
+msgstr "Note du Rapport"
+
+#. module: lims_report
+#: model:ir.actions.act_window,name:lims_report.lims_analysis_report_section_action
+#: model:ir.model,name:lims_report.model_lims_analysis_report_section
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__section_id
+#: model:ir.ui.menu,name:lims_report.lims_analysis_report_section_menu
+msgid "Report Section"
+msgstr "Section de Rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__report_template_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_request__report_template_id
+msgid "Report Template"
+msgstr "Modèle de rapport"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_create_report_wizard
+msgid "Report Wizard"
+msgstr "Wizard du Rapport"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_create_report_wizard_line
+msgid "Report Wizard Line"
+msgstr "Ligne du Wizard du Rapport"
+
+#. module: lims_report
+#: model:ir.actions.act_window,name:lims_report.report_cancel_wizard_action
+msgid "Report cancel"
+msgstr "Rapport annulé"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#, python-format
+msgid "Report cancelled reason: {} by {}"
+msgstr "Motif Rapport annulé: {} par {}"
+
+#. module: lims_report
+#: model:ir.actions.act_window,name:lims_report.lims_analysis_report_tag_action
+#: model:ir.ui.menu,name:lims_report.lims_analysis_report_tag_menu
+msgid "Report tags"
+msgstr "Étiquettes de rapport"
+
+#. module: lims_report
+#: model:ir.actions.act_window,name:lims_report.lims_analysis_report_template_action
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__report_template_id
+#: model:ir.ui.menu,name:lims_report.lims_report_template_menu
+msgid "Report template"
+msgstr "Modèle de rapport"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Report title"
+msgstr "Titre du rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis__nb_reports
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_request__nb_reports
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_analyses_table
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_home_menu_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_home_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Reports"
+msgstr "Rapport(s)"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_lims_analysis_request
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Request"
+msgstr "Demande"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__activity_user_id
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__activity_user_id
+msgid "Responsible User"
+msgstr "Responsable"
+
+#. module: lims_report
+#: model:ir.model,name:lims_report.model_lims_analysis_result
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "Result"
+msgstr "Résultat"
+
+#. module: lims_report
+#: model:lims.parameter.print.group,print_name:lims_report.demo_parameter_print_group_1
+msgid "Results"
+msgstr "Résultats"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__message_has_sms_error
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur d'envoi SMS"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.report_mass_change_wizard_form
+msgid "Save"
+msgstr "Sauvegarder"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Search in All"
+msgstr "Rechercher dans Tout"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Search in Name"
+msgstr "Recherche dans le nom"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Search in Reference"
+msgstr "Recherche dans les références"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Search in Title"
+msgstr "Recherche dans les titres"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Search in comment"
+msgstr "Recherche dans les commentaires"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Search in stage"
+msgstr "Recherche dans les étapes"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Second Validation"
+msgstr "Seconde validation"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__access_token
+msgid "Security Token"
+msgstr "Jeton de sécurité"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_confirmation_report_form
+#: model_terms:ir.ui.view,arch_db:lims_report.wizard_confirmation_report_request_form
+msgid "See existing reports"
+msgstr "Voir les rapports existants"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__option_ids
+msgid ""
+"Select the printing options to already checked for the report that will be "
+"created."
+msgstr ""
+"Sélectionnez les options d'impression à déjà cocher pour le rapport qui sera"
+" créé."
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_tree_view
+msgid "Send by email"
+msgstr "Envoyer par email"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Send draft"
+msgstr "Envoyer brouillon"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_tree_view
+msgid ""
+"Send report by email, only 'validated' reports. Changes 'validated' reports "
+"to 'sent' reports."
+msgstr ""
+"Envoi le rapport par email (seulement ceux validés). Change les rapports "
+"'validés' en rapports 'envoyés'."
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+#, python-format
+msgid "Sent"
+msgstr "Envoyé"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/reports/lims_analysis_base_report_parser.py:0
+#, python-format
+msgid "September"
+msgstr "Septembre"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__sequence
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__sequence
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_tag__sequence
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__sequence
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print__sequence
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__seq_report_id
+msgid "Sequence Report"
+msgstr "Séquence du Rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__signatory_01
+msgid "Signatory 01"
+msgstr "Signataire 01"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__signatory_02
+msgid "Signatory 02"
+msgstr "Signataire 02"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__analysis_stage_id
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "Stage"
+msgstr "Étape"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "Standard method"
+msgstr "Standard de la méthode"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "Standard parameter"
+msgstr "Standard du paramètre"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__state
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_line__analysis_state
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "State"
+msgstr "État"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_report_page_introduction
+msgid "State:"
+msgstr "État :"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/controllers/portal.py:0
+#, python-format
+msgid "Status"
+msgstr "Statut"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__activity_state
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard: la date d'échéance est déjà dépassée\n"
+"Aujourd'hui: la date d'activité est aujourd'hui\n"
+"Planifiée: activités futures."
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_method_parameter_characteristic__subcontracting_print_option
+msgid "Subcontracting print option"
+msgstr "Option d'impression en sous-traitance"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_title
+msgid "TEST REPORT"
+msgstr "RAPPORT D'ESSAI"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__tag_ids
+msgid "Tags"
+msgstr "Étiquettes"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__text_image_01
+msgid "Text Image 01"
+msgstr "Texte Image 01"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__text_image_02
+msgid "Text Image 02"
+msgstr "Texte Image 02"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__text_image_03
+msgid "Text Image 03"
+msgstr "Texte Image 03"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_laboratory__text_subcontracted
+msgid "Text for subcontracted"
+msgstr "Texte pour les sous-traitant"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_compute_result__report_limit_value
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_numeric_result__report_limit_value
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_result__report_limit_value
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_sel_result__report_limit_value
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_text_result__report_limit_value
+msgid ""
+"Text that will be printed on the report, if the print configuration is "
+"correctly configured."
+msgstr ""
+"Texte qui sera imprimé sur le rapport (si la configuration d'impression est "
+"correcte)"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_method_parameter_characteristic__report_limit_value
+msgid ""
+"Text which represents the limits informed to the customer which will be "
+"printed if the option is activated on the report."
+msgstr ""
+"Texte représentant les limités données au client, qui seront imprimées sur "
+"le rapport si l'option adéquate est activée"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_pack_line__rel_report_limit_value
+msgid "The 'Report limit value' of the parameter."
+msgstr "La 'valeur limite de rapport' du paramètre."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__partner_id
+msgid ""
+"The client of the report, which is initially the client of the analysis. The"
+" lang used in the report if oftenly comes from him."
+msgstr ""
+"Le client du rapport, qui est initialement le client de l'analyse. La langue"
+" utilisée dans le rapport vient souvent de lui."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_line__analysis_state
+msgid "The conformity state of the analysis."
+msgstr "L'état de conformité de l'analyse."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis__date_report_sent
+msgid ""
+"The date is filled with the date of the report with the most recent status "
+"sent."
+msgstr "Date du rapport le plus récemment envoyé"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__option_print_general_information
+msgid ""
+"The general information is defined in the note field of the laboratory "
+"configuration."
+msgstr ""
+"Les informations générales sont définies dans le champ note de la "
+"configuration du laboratoire."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print__print_group_ids
+msgid "The group that will regroup parameter print on the report."
+msgstr "Le groupe qui regroupera les paramètres d'impression sur le rapport."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__report_analysis_line_ids
+msgid "The list of analysis involved in the report."
+msgstr "La liste des analyses impliquées dans le rapport."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__name
+msgid "The name of the report can be printed on reports."
+msgstr "Le nom du rapport peut être imprimé sur les rapports."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print_group__print_name
+msgid ""
+"The name that will be printed on reports for the linked parameters print."
+msgstr ""
+"Le nom qui sera imprimé sur les rapports pour les paramètres d'impression "
+"lié."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print__print_name
+msgid "The name that will be printed on reports for the linked parameters."
+msgstr "Le nom qui sera imprimé sur les rapports pour les paramètres liés."
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "The number of analyses assigned to this report"
+msgstr "Nombre d'analyses attribuées à ce rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print_group__parameter_print_ids
+msgid "The parameters print that will be represented by this group."
+msgstr "Les paramètres d'impression qui seront représentés par ce groupe"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print__parameter_characteristic_ids
+msgid "The parameters that will be represented by this parameter print."
+msgstr "Les paramètres qui seront représentés par ce paramètre d'impression."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_line__analysis_stage_id
+msgid "The progress of the analysis."
+msgstr "La progression de l'analyse."
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "The reference you provided"
+msgstr "La référence que vous avez fournie"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print_group__section_id
+msgid "The section regroup this parameter print group with others."
+msgstr ""
+"La section regroupe ce groupe d'impression de paramètres avec d'autres."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__signatory_01
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__signatory_02
+msgid ""
+"The signatory can be printed on the report. If you change the laboratory,  "
+"the signatory will be the one present in the laboratory. This field has "
+"limited values to the users present in the group named 'Allow Lims Report "
+"Validation'."
+msgstr ""
+"Le signataire peut être imprimé sur le rapport. Si vous changez de "
+"laboratoire, le signataire sera celui présent dans le laboratoire. Ce champ "
+"a des valeurs limitées aux utilisateurs présents dans le groupe nommé "
+"'Autoriser la validation de rapport Lims'."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__title
+msgid "The title of the report can be printed on reports."
+msgstr "Le titre du rapport peut être imprimé sur les rapports."
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.portal_my_reports
+msgid "There are currently no reports for your account."
+msgstr "Il n'y a actuellement aucun rapport pour votre compte."
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#, python-format
+msgid "There isn't a validated report in selection. Nothing to send."
+msgstr "Aucun rapport validé dans la sélection. Rien à envoyer."
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+msgid "This Month"
+msgstr "Ce Mois"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+msgid "This Week"
+msgstr "Cette Semaine"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_request__date_report_sent
+msgid "This date is fulfilled on the moment one if his report is sent."
+msgstr "Cette date est remplie au moment où son rapport est envoyé."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__image_01
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__image_02
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__image_03
+msgid "This image is displayed in many reports, such as the 'Test report'."
+msgstr ""
+"Cette image est affichée dans de nombreux rapports, tels que le 'rapport de "
+"test'."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__customer_ref
+msgid "This is initially the 'Customer Ref.' of the analysis."
+msgstr "Il s'agit initialement de la 'Référence client' de l'analyse."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__image_medium_01
+msgid "This is the 'Image 01' that has been resized to a medium image."
+msgstr ""
+"Il s'agit de l'Image 01 qui a été redimensionnée en une image moyenne."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__image_medium_02
+msgid "This is the 'Image 02' that has been resized to a medium image."
+msgstr ""
+"Il s'agit de l'Image 02 qui a été redimensionnée en une image moyenne."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__image_medium_03
+msgid "This is the 'Image 03' that has been resized to a medium image."
+msgstr ""
+"Il s'agit de l'Image 03 qui a été redimensionnée en une image moyenne."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__analysis_request_id
+msgid ""
+"This is the analysis request of the analysis involved in the report. If you "
+"change it, this will change the version of the report to the number of "
+"reports where the request is present. The 'Date Report Sent' of the request "
+"will be fulfilled to the date you send the report, and if the request was in"
+" 'Done' state, it will switched to the 'Report' state."
+msgstr ""
+"Il s'agit de la demande d'analyse de l'analyse impliquée dans le rapport. Si"
+" vous la modifiez, cela changera la version du rapport au nombre de rapports"
+" où la demande est présente. La 'Date d'envoi du rapport' de la demande sera"
+" remplie à la date à laquelle vous envoyez le rapport, et si la demande "
+"était à l'état 'Terminé', elle passera à l'état 'Rapport'."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__previous_analysis_report_id
+msgid ""
+"This is the report that was previously done for that analysis and is now "
+"cancelled."
+msgstr ""
+"Il s'agit du rapport qui a été fait précédemment pour cette analyse et qui "
+"est maintenant annulé."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_request__report_template_id
+msgid ""
+"This report-template will be used in the future flow of creating report. If "
+"the laboratory is modified, it will be replace by the 'Default report "
+"template' present in the laboratory."
+msgstr ""
+"Ce modèle de rapport sera utilisé dans le futur flux de création de rapport."
+" Si le laboratoire est modifié, il sera remplacé par le 'Modèle de rapport "
+"par défaut' présent dans le laboratoire."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__text_image_01
+msgid "This text is shown under the Image 01' on reports."
+msgstr "Ce texte est affiché sous l'Image 01' sur les rapports."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__text_image_02
+msgid "This text is shown under the Image 02' on reports."
+msgstr "Ce texte est affiché sous l'Image 02' sur les rapports."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__text_image_03
+msgid "This text is shown under the Image 03' on reports."
+msgstr "Ce texte est affiché sous l'Image 03' sur les rapports."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_section__conclusion_text
+msgid "This text will be printed just after the parameter print groups."
+msgstr ""
+"Ce texte sera imprimé juste après les groupes d'impression des paramètres."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print_group__conclusion_text
+msgid "This text will be printed just after the table of analysis result."
+msgstr "Ce texte sera imprimé juste après le tableau des résultats d'analyse."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_section__introduction_text
+msgid "This text will be printed just before the parameter print groups."
+msgstr ""
+"Ce texte sera imprimé juste avant les groupes d'impression des paramètres."
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_parameter_print_group__introduction_text
+msgid "This text will be printed just before the table of analysis result."
+msgstr "Ce texte sera imprimé juste avant le tableau des résultats d'analyse."
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis__time_to_report
+msgid "Time To Report"
+msgstr "Temps du Rapport"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__title
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__title
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard__title
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__title
+msgid "Title"
+msgstr "Titre"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_board_template_board
+msgid "To"
+msgstr "au"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_compute_result__rel_parameter_print
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_numeric_result__rel_parameter_print
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_result__rel_parameter_print
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_sel_result__rel_parameter_print
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_text_result__rel_parameter_print
+#: model:ir.model.fields,help:lims_report.field_lims_method_parameter_characteristic__parameter_print_id
+msgid ""
+"To print a parameter, you must define a parameter print and include it in a "
+"print group in the Lims configuration."
+msgstr ""
+"Pour imprimer un paramètre, vous devez définir un paramètre d'impression et "
+"l'inclure dans un groupe"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__activity_exception_decoration
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d'activité d'exception enregistrée"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "Unit"
+msgstr "Unité"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+msgid "Until Today"
+msgstr "Jusque Aujourd'hui"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_form_view
+msgid "Validate"
+msgstr "Valider"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_analysis_report_search
+#, python-format
+msgid "Validated"
+msgstr "Validé"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__validator_id
+msgid "Validator"
+msgstr "Validé par"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard__version
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__version
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__version
+#: model_terms:ir.ui.view,arch_db:lims_report.parameter_print_group_search
+msgid "Version"
+msgstr ""
+
+#. module: lims_report
+#: model:lims.parameter.print,print_name:lims_report.demo_parameter_print_5
+msgid "Water Hardness"
+msgstr "Dureté de l'eau"
+
+#. module: lims_report
+#: model:lims.parameter.print,print_name:lims_report.demo_parameter_print_2
+msgid "Water's visual"
+msgstr "Visuel de l'eau"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report__website_message_ids
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_template__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report__website_message_ids
+#: model:ir.model.fields,help:lims_report.field_lims_analysis_report_template__website_message_ids
+msgid "Website communication history"
+msgstr "Historique de communication du site web"
+
+#. module: lims_report
+#: model:ir.model.fields,help:lims_report.field_res_config_settings__ask_password_lims_analysis_report_do_validated
+#: model_terms:ir.ui.view,arch_db:lims_report.res_config_settings_view_form
+msgid "When validate a report, user need to enter his password"
+msgstr ""
+"Quand il valide un rapport, l'utilisateur doit entrer son mot de passe"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_method_parameter_characteristic.py:0
+#, python-format
+msgid "With Result"
+msgstr "Avec Résultat"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_lims_analysis_report_section__is_with_bottom_separator
+#: model:ir.model.fields,field_description:lims_report.field_lims_parameter_print_group__is_with_bottom_separator
+msgid "With bottom separator"
+msgstr "Avec séparateur inférieur"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_method_parameter_characteristic.py:0
+#, python-format
+msgid "Without Result"
+msgstr "Sans résultat"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+msgid "Without parameter characteristic define"
+msgstr "Sans caractéristiques de paramètre définies"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.lims_parameter_print_search
+msgid "Without print group define"
+msgstr "Sans groupe d'impression défini"
+
+#. module: lims_report
+#: model:ir.model.fields,field_description:lims_report.field_create_report_wizard_line__wizard_id
+#: model:ir.model.fields,field_description:lims_report.field_report_mass_change_wizard_line__wizard_id
+msgid "Wizard"
+msgstr "Assistant"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_result
+msgid "Work instruction"
+msgstr "Instruction de travail"
+
+#. module: lims_report
+#: model_terms:ir.actions.act_window,help:lims_report.lims_analysis_report_action
+#: model_terms:ir.actions.act_window,help:lims_report.lims_analysis_report_tag_action
+msgid "You can define several."
+msgstr "Vous pouvez en définir plusieurs."
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis_report.py:0
+#, python-format
+msgid ""
+"You can not validate report only if all analysis are in second validation or"
+" cancelled"
+msgstr ""
+"Vous ne pouvez pas valider un rapport si toutes les analyses ne sont pas en "
+"seconde validation ou annulée"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/models/lims_analysis.py:0
+#, python-format
+msgid "You can't generate report with analyses from different laboratories"
+msgstr ""
+"Vous ne pouvez pas générer un rapport à partir d'échantillons de "
+"laboratoires différents"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.parameter_print_form
+msgid ""
+"You must add groups on this parameter print in order to show it on reports."
+msgstr ""
+"Vous devez ajouter un ou plusieurs groups à ce paramètre d'impression pour "
+"qu'il soit affiché sur les rapports"
+
+#. module: lims_report
+#. odoo-python
+#: code:addons/lims_report/wizards/create_report_wizard.py:0
+#, python-format
+msgid ""
+"You must define a sequence report for laboratory %s before creating a report"
+msgstr ""
+"Vous devez définir une séquence de rapport pour le laboratoire %s avant de "
+"pouvoir créer un rapport"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid "does not meet"
+msgstr "ne répond pas"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.res_config_settings_view_form
+msgid "lims report"
+msgstr "lims rapport"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid "meets"
+msgstr "répond"
+
+#. module: lims_report
+#: model_terms:ir.ui.view,arch_db:lims_report.analysis_report_template_auxiliary_content
+msgid "the standards prescribed by the legislation"
+msgstr "aux normes prescrites par la législation"
+
+#. module: lims_report
+#: model:mail.template,report_name:lims_report.lims_email_template_analysis_draft_report
+#: model:mail.template,report_name:lims_report.lims_email_template_analysis_report
+msgid "{{'REP ' + (object.name or '')}}"
+msgstr ""

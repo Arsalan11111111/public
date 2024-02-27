@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="product_template_view">
+        <field name="name">Product Template</field>
+        <field name="inherit_id" ref="lims_base.product_template_view"/>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="get_all_pack" type="object" attrs="{'invisible': [('nb_pack', '&lt;', 1)]}" class="oe_stat_button" icon="fa-flask">
+                    <field name="nb_pack" widget="statinfo" class="oe_inline"/>
+                </button>
+                <button name="get_all_parameter" type="object" attrs="{'invisible': [('nb_parameter', '&lt;', 1)]}" class="oe_stat_button" icon="fa-flask">
+                    <field name="nb_parameter" widget="statinfo" class="oe_inline"/>
+                </button>
+                <button name="get_all_method_param" type="object" attrs="{'invisible': [('nb_method_param_charac', '&lt;', 1)]}" class="oe_stat_button" icon="fa-flask">
+                    <field name="nb_method_param_charac" widget="statinfo" class="oe_inline"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

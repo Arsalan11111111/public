@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_parameter_pack_tree'>
+        <field name="name">Parameter Pack</field>
+        <field name="model">lims.parameter.pack</field>
+        <field name="arch" type="xml">
+            <tree name="lims_parameter_pack_tree">
+                <field name="sequence" widget="handle"/>
+                <field name="name" optional="show"/>
+                <field name="regulation_id" invisible="1"/>
+                <field name="matrix_id" optional="show"/>
+                <field name="labo_id" optional="show"/>
+                <field name="department_id" optional="hide"/>
+                <field name="active" widget="boolean_toggle" optional="show"/>
+                <field name="state" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_parameter_pack_form">
+        <field name="name">Parameter Pack</field>
+        <field name="model">lims.parameter.pack</field>
+        <field name="arch" type="xml">
+            <form>
+                <header attrs="{'invisible':[('active','=',False)]}">
+                    <button name="do_draft" string="Draft" type="object" class="oe_highlight" states="validated,cancelled"/>
+                    <button name="do_validate" string="Validate" type="object" class="oe_highlight" states="draft"/>
+                    <button name="do_cancel" string="Cancel" type="object" class="oe_highlight" states="draft,validated"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" name="toggle_active" icon="fa-archive" class="oe_stat_button">
+                            <field name="active" widget="boolean_button" options="{'terminology': 'archive'}"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1 class="d-flex flex-row justify-content-between">
+                            <field name="name"/>
+                            <field name="kanban_state" widget="state_selection" class="ml-auto"/>
+                        </h1>
+                    </div>
+                    <group name="lims_parameter_pack_form" col="4">
+                        <field name="version"/>
+                        <field name="regulation_id"/>
+                        <field name="matrix_id" required="1"/>
+                        <field name="internal_reference"/>
+                        <field name="is_pack_of_pack"/>
+                        <field name="duration" widget="float_time"/>
+                        <field name="labo_id"/>
+                        <field name="department_id" domain="[('labo_id', '=', labo_id)]"/>
+                        <field name="sequence"/>
+                        <field name="tag_ids" widget="many2many_tags"/>
+                    </group>
+                    <notebook>
+                        <page name="parameter" string="Parameter" attrs="{'invisible': [('is_pack_of_pack', '=', True)]}">
+                            <field name="parameter_ids" widget="one2many" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="method_param_charac_id" filter_domain="[('matrix_id', '=', parent.matrix_id),
+                                    ('department_id', '=', parent.department_id),
+                                    ('rel_regulation_id', '=', parent.regulation_id),
+                                    ('state', '=', 'validated')]" optional="show"/>
+                                    <field name="rel_regulation_id" optional="show"/>
+                                    <field name="method_id" optional="show"/>
+                                    <field name="matrix_id" optional="show"/>
+                                    <field name="rel_department_id" optional="show"/>
+                                    <field name="active" widget="boolean_toggle" optional="show"/>
+                                    <field name="rel_state" optional="show"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="packs" string="Packs" attrs="{'invisible': [('is_pack_of_pack', '!=', True)]}">
+                                <field name="pack_of_pack_ids" nolabel="1">
+                                    <tree editable="True">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="pack_id" domain="[('is_pack_of_pack', '=', False), ('labo_id', '=', parent.labo_id), ('state', '=', 'validated'), ('matrix_id', '=', parent.matrix_id)]"/>
+                                        <field name="rel_matrix_id" optional="show"/>
+                                        <field name="rel_regulation_id" optional="show"/>
+                                        <field name="rel_labo_id" optional="show"/>
+                                        <field name="rel_department_id" optional="show"/>
+                                        <field name="rel_active" widget="boolean_toggle" optional="show"/>
+                                        <field name="rel_state" optional="show"/>
+                                    </tree>
+                                </field>
+                        </page>
+                        <page name="comment" string="Comment" invisible="1">
+                            <group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_parameter_pack_search">
+        <field name="name">Parameter Pack</field>
+        <field name="model">lims.parameter.pack</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name"/>
+                <filter name="inactive" string="To validate" domain="[('active', '=', True), ('state', '=', 'draft'), ('kanban_state', '=', 'done')]"/>
+                <group string="Group By">
+                    <filter name="matrix" string="Matrix" context="{'group_by': 'matrix_id'}"/>
+                    <filter name="regulation_id" string="Regulation" context="{'group_by': 'regulation_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_parameter_pack_action'>
+        <field name="name">Parameter Pack</field>
+        <field name="res_model">lims.parameter.pack</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new parameter pack.
+            </p><p>
+            You can define several.
+        </p>
+        </field>
+    </record>
+
+    <menuitem action="lims_parameter_pack_action" parent="lims_base.lims_master_data_submenu" id="lims_parameter_pack_menu" sequence="20"/>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="confirm_create_order_request_form" model="ir.ui.view">
+        <field name="name">Confirm Create Order Request</field>
+        <field name="model">confirm.create.order.request.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="so_exists" invisible="1"/>
+                    <field name="analysis_request_ids" invisible="1"/>
+                    <field name="nb_request" invisible="1"/>
+                    <group >
+                        <field name="section_model"
+                               attrs="{'invisible': [('nb_request', '&gt;', 1)], 'required': [('nb_request', '=', 1)]}"/>
+                    </group>
+                    <group groups="sale_management.group_sale_order_template">
+                        <field name="order_template_id"/>
+                    </group>
+                    <p attrs="{'invisible': [('so_exists', '=', False)]}">
+                        Be careful, there is already at least one sale order, this action will cancel and replace all existing sale order.
+                    </p>
+                </sheet>
+                <footer>
+                    <button name="confirm_create" string="Continue" type="object"/>
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="confirm_create_order_request_action" model="ir.actions.act_window">
+        <field name="name">Confirm Create Order Request</field>
+        <field name="res_model">confirm.create.order.request.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+
+</odoo>

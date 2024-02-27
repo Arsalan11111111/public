@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="template_mail_new_user" model="mail.template">
+        <field name="name">Template Mail New User</field>
+        <field name="model_id" ref="model_res_users"/>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html">
+            <![CDATA[
+                    <h1>Odoo - New/Active user</h1>
+                    <p>User: ${object.name} (${object.login})<p>
+                    <p>Date: ${object.create_date}</p>
+                    <p>Last login: ${object.login_date}</p>
+                    <p>Addr: ${object.signup_url}</p>
+                    <p>Sent on ${datetime.datetime.now().strftime("%y-%m-%d %H:%M:%S")}</p>
+                ]]>
+        </field>
+    </record>
+</odoo>

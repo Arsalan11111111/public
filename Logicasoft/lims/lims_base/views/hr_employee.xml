@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_employee_form">
+        <field name="name">HR Employee</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="lims" string="Lims">
+                    <group name="lims_information">
+                        <group name="lims_information_left">
+                            <field name="is_sampler"/>
+                        </group>
+                        <group name="lims_information_right">
+                        </group>
+                </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_employee_public_view_form">
+        <field name="name">HR Employee public</field>
+        <field name="model">hr.employee.public</field>
+        <field name="inherit_id" ref="hr.hr_employee_public_view_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="lims" string="Lims">
+                    <group name="lims_information">
+                        <group name="lims_information_left">
+                            <field name="is_sampler"/>
+                        </group>
+                        <group name="lims_information_right">
+                        </group>
+                </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

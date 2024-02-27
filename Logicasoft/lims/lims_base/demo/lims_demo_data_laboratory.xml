@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- modify the default laboratory-->
+        <record model="lims.laboratory" id="lims_base.default_laboratory">
+            <field name="default_analysis_category_id" ref="lims_base.external_analysis_category"/>
+            <field name="default_request_category_id" ref="lims_base.external_request_category"/>
+            <field name="seq_analysis_id" ref="lims_base.sequence_analysis"/>
+            <field name="seq_batch_id" ref="lims_base.sequence_batch"/>
+            <field name="seq_request_id" ref="lims_base.sequence_analysis_request"/>
+            <field name="seq_sop_id" ref="lims_base.sequence_sop"/>
+            <field name="nb_print_sop_label">0</field>
+        </record>
+
+        <!-- create laboratory demo-->
+        <record id="demo_laboratory" model="lims.laboratory">
+            <field name="name">Demo Laboratory</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="default_analysis_category_id" ref="lims_base.external_analysis_category"/>
+            <field name="default_request_category_id" ref="lims_base.external_request_category"/>
+            <field name="seq_analysis_id" ref="lims_base.sequence_analysis"/>
+            <field name="seq_batch_id" ref="lims_base.sequence_batch"/>
+            <field name="seq_request_id" ref="lims_base.sequence_analysis_request"/>
+            <field name="seq_sop_id" ref="lims_base.sequence_sop"/>
+            <field name="nb_print_sop_label">0</field>
+        </record>
+    </data>
+</odoo>
+

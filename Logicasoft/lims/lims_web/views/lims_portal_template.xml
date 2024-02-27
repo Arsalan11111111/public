@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- layout -->
+    <template id="portal_layout" name="Portal Layout" inherit_id="portal.portal_layout">
+        <xpath expr="//div[@id='wrap']" position="attributes">
+            <attribute name="class" separator=" " remove="o_portal_wrap"/>
+        </xpath>
+        <xpath expr="//div[@id='wrap']/div" position="attributes">
+            <attribute name="class" separator=" " remove="container mb64"/>
+            <attribute name="class" separator=" " add="pl-5 pr-5"/>
+        </xpath>
+    </template>
+
+    <!-- forbidden access -->
+    <template id="portal_my_home_forbidden_access" name="My Portal Forbidden Access">
+        <t t-call="portal.portal_layout">
+            <t t-set="my_details" t-value="True"/>
+            <div class="alert alert-info mt-3" role="alert">
+                <i class="fa fa-info-circle"></i> Access to the portal has been restricted by an administrator.
+            </div>
+        </t>
+    </template>
+
+    <!--menu-->
+    <template id="portal_my_home_lims" name="Portal My Lims" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="not page_rules.get('requests').get('/my/requests')" t-call="portal.portal_docs_entry">
+                <t t-set="title">Requests</t>
+                <t t-set="url" t-value="'/my/requests'"/>
+                <t t-set="placeholder_count" t-value="'request_count'"/>
+            </t>
+            <t t-if="not page_rules.get('analysis').get('/my/analysis')" t-call="portal.portal_docs_entry">
+                <t t-set="title">Analysis</t>
+                <t t-set="url" t-value="'/my/analysis'"/>
+                <t t-set="placeholder_count" t-value="'analysis_count'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <!--breadcrumbs-->
+    <template id="portal_my_home_menu_request" name="Portal layout : request menu entries" inherit_id="portal.portal_breadcrumbs" priority="30">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'requests' and 'ctx=requests' in keep_query()" class="active breadcrumb-item">
+                 Requests
+            </li>
+            <li t-if="page_name == 'request' and 'ctx=requests' in keep_query()" class="active breadcrumb-item">
+                <a t-if="request_id" t-attf-href="/my/requests?{{ keep_query() }}">Requests</a>
+            </li>
+            <li t-if="request_id" class="breadcrumb-item">
+                <t t-esc="request_id.name"/>
+            </li>
+            <li t-if="page_name == 'analysis' and 'ctx=analysis' in keep_query()" class="active breadcrumb-item">
+                 Analysis
+            </li>
+            <li t-if="page_name == 'analysis_id' and 'ctx=analysis' in keep_query()" class="active breadcrumb-item">
+                <a t-if="analysis_id" t-attf-href="/my/analysis?{{ keep_query() }}">Analysis</a>
+            </li>
+            <li t-if="analysis_id" class="breadcrumb-item">
+                <t t-esc="analysis_id.name"/>
+            </li>
+        </xpath>
+    </template>
+
+    <template inherit_id="portal.portal_searchbar" id="portal_searchbar">
+        <xpath expr="//nav" position="attributes">
+            <attribute name="t-attf-class" separator=" " remove="navbar-light"/>
+            <attribute name="t-attf-class" separator=" " remove="py-0"/>
+            <attribute name="t-attf-class" separator=" " remove="o_portal_navbar"/>
+            <attribute name="t-attf-class" separator=" " add="bg-white"/>
+        </xpath>
+        <xpath expr="//div[@t-if='searchbar_sortings']/span" position="replace"/>
+        <xpath expr="//div[@t-if='searchbar_sortings']/div" position="before">
+            <a type="button" class="btn btn-light mr-1" t-att-href="default_url">
+                <i class="fa fa-lg fa-undo"></i>
+            </a>
+            <a t-if="order_type" type="button" class="btn btn-light mr-1" t-att-href="default_url + '?' + keep_query('*', order_type='desc' if order_type == 'asc' else 'asc')">
+                <i class="fa fa-sort"></i>
+                <t t-esc="order_type.upper()"/>
+            </a>
+        </xpath>
+        <xpath expr="//div[@t-if='searchbar_sortings']/div" position="replace">
+            <div class="btn-group">
+                <button t-if="order_type" id="portal_searchbar_sortby" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+                    <i t-att-class="'fa fa-lg fa-sort-amount-' + order_type"></i>
+                    <t t-esc="searchbar_sortings[sortby].get('label', 'Newest')"/>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="portal_searchbar_sortby">
+                    <t t-foreach="searchbar_sortings" t-if="not searchbar_sortings[option].get('inactive')" t-as="option">
+                        <a t-att-href="request.httprequest.path + '?' + keep_query('*', sortby=option)"
+                            t-attf-class="dropdown-item#{sortby == option and ' active' or ''}">
+                            <span t-esc="searchbar_sortings[option].get('label')"/>
+                        </a>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[@t-if='searchbar_sortings']" position="after">
+            <div t-if="searchbar_filters_stages" class="dropdown pull-right ml4 mr4">
+                <button id="portal_searchbar_filters_stages"
+                        class="o_portal_search_panel_fixed_width btn btn-secondary" type="button" data-toggle="dropdown">
+                    <span class="fa fa-filter fa-lg" />
+                    <span class='hidden-xs hidden-sm hidden-md' t-esc="searchbar_filters_stages[filterbystage].get('label', 'All')"/>
+                    <span class="fa fa-caret-down"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="portal_searchbar_filters_stages">
+                    <a href="#" t-foreach="searchbar_filters_stages" t-if="not searchbar_filters_stages[option].get('inactive')"
+                            t-as="option" t-attf-class="dropdown-item #{filterbystage == option and 'active'}"
+                            t-att-href="default_url + '?' + keep_query('*', filterbystage=option)">
+                        <span t-esc="searchbar_filters_stages[option].get('label')"/>
+                    </a>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//form[@t-if='searchbar_inputs']" position="replace">
+            <form t-if="searchby_sortby_fields" class="form-inline o_portal_search_panel">
+                <div class="input-group w-100">
+                    <div class="input-group-prepend">
+                        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown"/>
+                        <div class="dropdown-menu" role="menu">
+                            <t t-foreach="searchby_sortby_fields" t-if="not searchby_sortby_fields[input].get('inactive')" t-as="input">
+                                <a t-att-href="'#' + searchby_sortby_fields[input]['input']"
+                                        t-attf-class="dropdown-item#{search_in == searchby_sortby_fields[input]['input'] and ' active' or ''}">
+                                    <span t-out="searchby_sortby_fields[input]['label']"/>
+                                </a>
+                            </t>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search" t-att-value='search' name="search"/>
+                    <span class="input-group-append">
+                        <button class="btn btn-dark search-submit" type="button">
+                            <span class="fa fa-search"/>
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </xpath>
+    </template>
+
+    <!-- Tree view layout -->
+    <template id="portal_my_tree_view_layout" name="Portal Tree View Layout">
+        <t t-if="page_rules.get(default_url) or portal_rules.get('portal_access')">
+            <div class="alert alert-info mt-3" role="alert">
+                <i class="fa fa-info-circle"></i> Access is not permitted. Contact the administrator for more information.
+            </div>
+        </t>
+        <div t-if="not page_rules.get(default_url) and not portal_rules.get('portal_access')">
+            <t t-call="portal.portal_searchbar"/>
+            <div class="card o_current_page" t-att-data-page="default_url" t-att-data-fields="json.dumps(searchbar_inputs)" t-att-data-options="json.dumps(searchbar_filters_stages)">
+                <t t-raw="0"/>
+            </div>
+            <div t-if="pager" class="o_portal_pager pagination pagination-lg justify-content-center mt-3 mb-3">
+                <t t-call="portal.pager"/>
+            </div>
+        </div>
+    </template>
+</odoo>

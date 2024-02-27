@@ -1,0 +1,12 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_control_chart_line_admin,lims.control.chart.lines admin,model_lims_control_chart_line,lims_base.lims_admin_group,1,1,1,1
+access_control_chart_line_manager,lims.control.chart.lines manager,model_lims_control_chart_line,lims_base.manager_group,1,1,1,1
+access_control_chart_line_user,lims.control.chart.lines user,model_lims_control_chart_line,lims_base.user_group,1,0,0,0
+access_control_chart_line_viewer,lims.control.chart.lines viewer,model_lims_control_chart_line,lims_base.viewer_group,1,0,0,0
+
+access_lims_control_chart_point_admin,access_lims_control_chart_point admin,model_lims_control_chart_point,lims_base.lims_admin_group,1,1,1,1
+access_lims_control_chart_point_manager,access_lims_control_chart_point manager,model_lims_control_chart_point,lims_base.manager_group,1,1,1,1
+access_lims_control_chart_point_user,access_lims_control_chart_point user,model_lims_control_chart_point,lims_base.user_group,1,0,0,0
+access_lims_control_chart_point_viewer,access_lims_control_chart_point viewer,model_lims_control_chart_point,lims_base.viewer_group,1,0,0,0
+
+access_lims_control_chart_point_statistics,lims.control.chart.point.statistics,model_lims_control_chart_point_statistics,lims_base.viewer_group,1,0,0,0

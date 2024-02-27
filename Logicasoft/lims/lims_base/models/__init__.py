@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+
+##############################################################################
+#
+#    Odoo Proprietary License v1.0
+#
+#    Copyright (c) 2013 LogicaSoft SPRL (<http://www.logicasoft.eu>).
+#
+#    This software and associated files (the "Software") may only be used (executed,
+#    modified, executed after modifications) if you have purchased a valid license
+#    from the authors, typically via Odoo Apps, or if you have received a written
+#    agreement from the authors of the Software.
+#
+#    You may develop Odoo modules that use the Software as a library (typically
+#    by depending on it, importing it and using its resources), but without copying
+#    any source code or material from the Software. You may distribute those
+#    modules under the license of your choice, provided that this license is
+#    compatible with the terms of the Odoo Proprietary License (For example:
+#    LGPL, MIT, or proprietary licenses similar to this one).
+#
+#    It is forbidden to publish, distribute, sublicense, or sell copies of the Software
+#    or modified copies of the Software.
+#
+#    The above copyright notice and this permission notice must be included in all
+#    copies or substantial portions of the Software.
+#
+#    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+#    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+#    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+#    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+#    DEALINGS IN THE SOFTWARE.
+#
+##############################################################################
+from . import res_users
+from . import lims_analysis_result
+from . import lims_accreditation
+from . import lims_analysis_request_sample
+from . import lims_analysis_text_result
+from . import lims_laboratory
+from . import lims_analysis
+from . import lims_analysis_category
+from . import lims_analysis_compute_result
+from . import lims_analysis_reason
+from . import lims_analysis_request
+from . import lims_analysis_request_tags
+from . import lims_analysis_numeric_result
+from . import lims_analysis_sel_result
+from . import lims_analysis_stage
+from . import lims_attribute_type
+from . import lims_batch
+from . import lims_batch_operator
+from . import lims_department
+from . import lims_matrix
+from . import lims_matrix_type
+from . import lims_method
+from . import lims_method_attribute
+from . import lims_method_container
+from . import lims_method_parameter_characteristic
+from . import lims_method_stage
+from . import lims_parameter
+from . import lims_parameter_compute_correspondence
+from . import lims_parameter_pack_tag
+from . import lims_parameter_pack
+from . import lims_parameter_pack_line
+from . import lims_parameter_type
+from . import lims_regulation
+from . import lims_request_category
+from . import lims_request_product_pack
+from . import lims_result_compute_correspondence
+from . import lims_result_stage
+from . import lims_result_value
+from . import lims_sop
+from . import lims_standard
+from . import res_partner
+from . import res_config
+from . import hr_employee_public
+from . import lims_method_parameter_characteristic_limit
+from . import lims_analysis_limit_result
+from . import lims_analysis_limit_compute_result
+from . import lims_analysis_tag
+from . import lims_work_instruction
+from . import lims_result_log
+from . import lims_result_reason
+from . import lims_method_attribute_category
+from . import lims_parameter_pack_line_item
+from . import lims_analytical_technique
+from . import lims_sample_condition
+from . import product_product
+from . import product_template
+from . import lims_analysis_limit_numeric_result

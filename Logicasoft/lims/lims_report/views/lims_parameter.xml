@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='lims_parameter_tree'>
+            <field name="name">Parameter</field>
+            <field name="model">lims.parameter</field>
+            <field name="inherit_id" ref="lims_base.lims_parameter_tree"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="is_default_print_on_report" position="replace"/>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='lims_parameter_form'>
+            <field name="name">Parameter</field>
+            <field name="model">lims.parameter</field>
+            <field name="inherit_id" ref="lims_base.lims_parameter_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="is_default_print_on_report" position="replace"/>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='lims_parameter_search'>
+            <field name="name">Parameter</field>
+            <field name="model">lims.parameter</field>
+            <field name="inherit_id" ref="lims_base.lims_parameter_search"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="is_default_print_on_report" position="replace"/>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="container_report_parser">
+        <t t-call="web.html_container">
+            <t t-call="lims_base.lims_internal_layout">
+                <div class="page">
+                    <div class="row">
+                        <div class="col-xs-12 text-left">
+                            <h3>Analysis:</h3>
+                        </div>
+                    </div>
+                    <table class="table" id="table_analysis">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Partner</th>
+                                <th>Date Plan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="analysis">
+                                <tr>
+                                    <td>
+                                        <span t-field="analysis.name"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="analysis.partner_id.name"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="analysis.date_plan"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-xs-12 text-left">
+                            <h3>Containers:</h3>
+                        </div>
+                    </div>
+                    <table class="table" id="table_container">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>UoM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="get_containers_ids(docs)" t-as="container">
+                                <tr>
+                                    <td>
+                                        <span t-esc="container_value['name']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="container_value['qty']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="container_value['uom']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <!-- Label Report Qweb -->
+    <record id="container_report_action" model="ir.actions.report">
+        <field name="name">Container Report</field>
+        <field name="model">lims.analysis</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_base.container_report_parser</field>
+        <field name="report_file">lims_base.container_report_parser</field>
+    </record>
+
+</odoo>

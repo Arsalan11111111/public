@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="form_followup_type_form">
+        <field name="name">Form Followup Type</field>
+        <field name="model">form.followup.type</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Form Followup Type">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="group_ids" widget="many2many_tags" groups="form_followup.group_manager"/>
+                        <field name="active"/>
+                        <field name="color" widget="color"/>
+                        <field name="sequence_id"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="delay_reception"/>
+                            <field name="mail_reception"/>
+                        </group>
+                        <group>
+                            <field name="delay_validity"/>
+                            <field name="mail_validity"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="form_followup_type_tree">
+        <field name="name">Form Followup Type</field>
+        <field name="model">form.followup.type</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Form Followup type">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="form_followup_type_action">
+        <field name="name">Form Followup Type</field>
+        <field name="res_model">form.followup.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Forms Type" parent="form_followup_configuration_menu" sequence="10" id="form_followup_type_menu" action="form_followup_type_action" groups="base.group_user"/>
+</odoo>

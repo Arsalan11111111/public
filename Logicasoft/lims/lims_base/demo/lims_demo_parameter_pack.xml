@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record model="lims.parameter.pack" id="demo_parameter_pack_1">
+            <field name="name">Water content in food</field>
+            <field name="regulation_id" ref="lims_base.demo_regulation_1"/>
+            <field name="matrix_id" ref="lims_base.demo_matrix_1"/>
+            <field name="labo_id" ref="lims_base.default_laboratory"/>
+            <field name="active">1</field>
+            <field name="state">validated</field>
+            <field name="parameter_ids" eval="[(6,0,ref('lims_base.demo_parameter_pack_line_1'))]"/>
+        </record>
+
+        <record model="lims.parameter.pack" id="demo_parameter_pack_2">
+            <field name="name">Water visual analysis</field>
+            <field name="regulation_id" ref="lims_base.demo_regulation_1"/>
+            <field name="matrix_id" ref="lims_base.demo_matrix_2"/>
+            <field name="labo_id" ref="lims_base.demo_laboratory"/>
+            <field name="active">1</field>
+            <field name="state">validated</field>
+            <field name="parameter_ids" eval="[(6,0,ref('lims_base.demo_parameter_pack_line_2'))]"/>
+        </record>
+
+        <record model="lims.parameter.pack" id="demo_parameter_pack_3">
+            <field name="name">Water cations analysis</field>
+            <field name="regulation_id" ref="lims_base.demo_regulation_1"/>
+            <field name="matrix_id" ref="lims_base.demo_matrix_2"/>
+            <field name="labo_id" ref="lims_base.demo_laboratory"/>
+            <field name="active">1</field>
+            <field name="state">validated</field>
+            <field name="parameter_ids" eval="[(6,0,(ref('lims_base.demo_parameter_pack_line_3'),ref('lims_base.demo_parameter_pack_line_4'),ref('lims_base.demo_parameter_pack_line_5')))]"/>
+        </record>
+    </data>
+</odoo>

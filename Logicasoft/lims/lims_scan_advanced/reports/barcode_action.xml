@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="barcode_report_parser">
+        <t t-call="web.html_container">
+            <div class="header"/>
+
+            <div class="article">
+                <div class="page">
+                    <p class="row">
+                        <div class="col-xs-6" style="text-align: center;">
+                            <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', 'O-CMD.SRCP', 350, 50)"
+                                 style="width:350;height:50"/>
+                            <br/>
+                            SOP.RECEIPT.MENU
+                        </div>
+                        <div class="col-xs-6" style="text-align: center;">
+                            <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', 'O-BTN.RCON', 350, 50)"
+                                 style="width:350;height:50"/>
+                            <br/>
+                            SOP.RECEIPT.CONFIRM
+                        </div>
+                    </p>
+                    <p style="padding:75;"/>
+                    <p class="row">
+                        <div class="col-xs-6" style="text-align: center;">
+                            <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', 'O-CMD.SWIP', 350, 50)"
+                                 style="width:350;height:50"/>
+                            <br/>
+                            SOP.WIP.MENU
+                        </div>
+                        <div class="col-xs-6" style="text-align: center;">
+                            <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', 'O-BTN.WCON', 350, 50)"
+                                 style="width:350;height:50"/>
+                            <br/>
+                            SOP.WIP.CONFIRM
+                        </div>
+                    </p>
+                    <p style="padding:75;"/>
+                    <p class="row">
+                        <div class="col-xs-6" style="text-align: center;">
+                            <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', 'O-CMD.BCRE', 350, 50)"
+                                 style="width:350;height:50"/>
+                            <br/>
+                            BATCH.CREATE.MENU
+                        </div>
+                        <div class="col-xs-6" style="text-align: center;">
+                            <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', 'O-BTN.CCON', 350, 50)"
+                                 style="width:350;height:50"/>
+                            <br/>
+                            BATCH.CREATE.CONFIRM
+                        </div>
+                    </p>
+                    <p style="padding:75;"/>
+                    <p class="row">
+                        <div class="col-xs-6" style="text-align: center;">
+                            <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', 'opt?', 350, 50)"
+                                 style="width:350;height:50"/>
+                            <br/>
+                            FOCUS
+                        </div>
+                        <div class="col-xs-6" style="text-align: center;">
+                            <img t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128', 'O-BTN.CNCL', 350, 50)"
+                                 style="width:350;height:50"/>
+                            <br/>
+                            CANCEL
+                        </div>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer"/>
+        </t>
+    </template>
+
+    <record id="barcode_list_action_report" model="ir.actions.report">
+        <field name="name">Barcode Action</field>
+        <field name="model">lims.sop</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_scan_advanced.barcode_report_parser</field>
+        <field name="report_file">lims_scan_advanced.barcode_report_parser</field>
+    </record>
+
+</odoo>

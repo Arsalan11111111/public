@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="lims_tour_submenu" name="Tours" parent="lims_base.menu_root" sequence="275"/>
+    <menuitem id="tour_submenu" name="Tours" parent="lims_base.lims_configuration_submenu" sequence="945"/>
+</odoo>

@@ -1,0 +1,139 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_mrp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-23 14:51+0000\n"
+"PO-Revision-Date: 2023-06-23 14:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_mrp
+#. odoo-python
+#: code:addons/lims_mrp/models/mrp_production.py:0
+#: code:addons/lims_mrp/models/mrp_production.py:0
+#: code:addons/lims_mrp/models/stock_move.py:0
+#: code:addons/lims_mrp/models/stock_move_line.py:0
+#: model_terms:ir.ui.view,arch_db:lims_mrp.lims_mrp_production_form_view
+#, python-format
+msgid "Analysis"
+msgstr "Echantillon"
+
+#. module: lims_mrp
+#: model:ir.model.fields,field_description:lims_mrp.field_mrp_production__can_create_analysis
+msgid "Can Create Analysis"
+msgstr "Peut créer un échantillon"
+
+#. module: lims_mrp
+#: model:ir.model.fields,field_description:lims_mrp.field_mrp_production__rel_create_analysis
+#: model_terms:ir.ui.view,arch_db:lims_mrp.lims_mrp_production_form_view
+msgid "Create Analysis"
+msgstr "Créer Echantillon"
+
+#. module: lims_mrp
+#: model_terms:ir.ui.view,arch_db:lims_mrp.lims_mrp_production_form_view
+msgid "Finished moves"
+msgstr "Produits finis"
+
+#. module: lims_mrp
+#: model:ir.model.fields,field_description:lims_mrp.field_stock_move_line__rel_lims_for_analysis
+msgid "Lims For Analysis"
+msgstr "Analyse pour Lims"
+
+#. module: lims_mrp
+#: model:ir.model.fields,field_description:lims_mrp.field_stock_move_line__lock_button
+msgid "Lock Button"
+msgstr "Bouton de blocage"
+
+#. module: lims_mrp
+#: model:ir.model.fields,field_description:lims_mrp.field_mrp_production__nb_analysis
+msgid "Nb Analysis"
+msgstr "Nombre d'Analyse"
+
+#. module: lims_mrp
+#. odoo-python
+#: code:addons/lims_mrp/models/stock_move.py:0
+#: code:addons/lims_mrp/models/stock_move_line.py:0
+#, python-format
+msgid "No laboratory found for this company"
+msgstr "Aucun laboratoire trouvé pour cette entreprise"
+
+#. module: lims_mrp
+#. odoo-python
+#: code:addons/lims_mrp/models/stock_move.py:0
+#, python-format
+msgid "No move line found"
+msgstr ""
+
+#. module: lims_mrp
+#. odoo-python
+#: code:addons/lims_mrp/models/mrp_production.py:0
+#, python-format
+msgid "No product inserted"
+msgstr "Pas de produit configuré"
+
+#. module: lims_mrp
+#: model_terms:ir.ui.view,arch_db:lims_mrp.lims_mrp_production_form_view
+msgid "Produced"
+msgstr "Fabriqué"
+
+#. module: lims_mrp
+#: model:ir.model,name:lims_mrp.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements d'articles (Ligne de mouvement de stock)"
+
+#. module: lims_mrp
+#. odoo-python
+#: code:addons/lims_mrp/models/mrp_production.py:0
+#, python-format
+msgid "Product have no matrix"
+msgstr "Le produit n'a pas de matrice"
+
+#. module: lims_mrp
+#. odoo-python
+#: code:addons/lims_mrp/models/mrp_production.py:0
+#, python-format
+msgid "Product is not configured for analysis"
+msgstr "Le produit n'est pas configuré pour l'analyse"
+
+#. module: lims_mrp
+#: model:ir.model,name:lims_mrp.model_mrp_production
+msgid "Production Order"
+msgstr "Ordre de fabrication"
+
+#. module: lims_mrp
+#: model:ir.model,name:lims_mrp.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: lims_mrp
+#. odoo-python
+#: code:addons/lims_mrp/models/stock_move.py:0
+#, python-format
+msgid "The matrix is not defined in the product to create an analysis."
+msgstr "La matrice n'est pas définie dans le produit pour créer une analyse."
+
+#. module: lims_mrp
+#: model:ir.model.fields,help:lims_mrp.field_stock_move_line__rel_lims_for_analysis
+msgid ""
+"This is checked to make eligible the product and all his variants inside the"
+" LIMS flow's process."
+msgstr ""
+"C'est coché pour rendre éligible le produit et toutes ses variantes dans le "
+"processus du flux LIMS."
+
+#. module: lims_mrp
+#: model:ir.model.fields,help:lims_mrp.field_mrp_production__rel_create_analysis
+msgid ""
+"activates the possibility of making a product analysis if it is subjected to"
+" this operation."
+msgstr ""
+"active la possibilité de faire une analyse du produit s'il est soumis à "
+"cette opération."

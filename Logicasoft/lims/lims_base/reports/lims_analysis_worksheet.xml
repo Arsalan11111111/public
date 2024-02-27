@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="lims_base.lims_analysis_worksheet_parser">
+        <t t-call="web.html_container">
+            <t t-foreach="doc_ids" t-as="analysis">
+                <t t-set="company" t-value="analysis.laboratory_id.company_id"/>
+                <t t-call="lims_base.lims_internal_layout">
+                    <style>
+                        td:not(.noBorder), th:not(.noBorder) {
+                        border: 1px solid;
+                        text-align: center;
+                        }
+                    </style>
+                    <div class="page">
+                        <div style="margin-right: 500px;margin-bottom: 50px;">
+                            <img t-if="analysis.name" t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s'
+            % ('QR', analysis.name, 80, 80)" alt="Barcode" style="margin-top: 8px; margin-bottom: 8px"/>
+                        </div>
+                        <div>
+                            <div name="laboratory_div">
+                                <p>
+                                    Laboratory :
+                                    <span t-field="analysis.laboratory_id"/>
+                                    <span style="float:right;">
+                                        Customer :
+                                        <span t-field="analysis.partner_id"/>
+                                    </span>
+                                </p>
+                            </div>
+                            <div t-if="analysis.request_id" name="request_div">
+                                <p>
+                                    Request :
+                                    <span t-field="analysis.request_id"/>
+                                </p>
+                            </div>
+                            <div name="sample_div">
+                                <p>
+                                    Sample :
+                                    <span t-field="analysis.name"/>
+                                    <span style="float:right;">
+                                        Matrix :
+                                        <span t-field="analysis.matrix_id"/>
+                                    </span>
+                                </p>
+                            </div>
+                            <div name="product_div">
+                                <p>
+                                    <span style="float:right;">
+                                        Category :
+                                        <span t-field="analysis.category_id"/>
+                                    </span>
+                                </p>
+                            </div>
+                            <p>
+                                Due date :
+                                <span t-field="analysis.due_date"/>
+                            </p>
+                            <div name="pack_div">
+                                <p>
+                                    Packs :
+                                    <span t-field="analysis.pack_ids"/>
+                                    <span style="float:right;">
+                                        Parameter :
+                                        <span t-field="analysis.method_param_charac_ids"/>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <table style="width: 100%">
+                            <tr>
+                                <th>
+                                    TEST
+                                </th>
+                                <th>
+                                    METHOD
+                                </th>
+                                <th>
+                                    DEPARTEMENT
+                                </th>
+                                <th>
+                                    BarCode test
+                                </th>
+                            </tr>
+                            <t t-foreach="analysis.sop_ids" t-as="sop_id">
+                                <tr height="50px;">
+                                    <td align="center" style="vertical-align: middle;">
+                                        <span t-field="sop_id.name"/>
+                                    </td>
+                                    <td align="center" style="vertical-align: middle;">
+                                        <span t-field="sop_id.method_id"/>
+                                    </td>
+                                    <td align="center" style="vertical-align: middle;">
+                                        <span t-field="sop_id.department_id"/>
+                                    </td>
+                                    <td align="center" style="vertical-align: middle;">
+                                        <img t-if="sop_id.name" t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s'
+            % ('QR', sop_id.name, 80, 80)" alt="Barcode"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="lims_analysis_worksheet" model="ir.actions.report">
+        <field name="name">WorkSheet</field>
+        <field name="model">lims.analysis</field>
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis"/>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_base.lims_analysis_worksheet_parser</field>
+        <field name="print_report_name">'ws_' + object.name</field>
+    </record>
+
+</odoo>

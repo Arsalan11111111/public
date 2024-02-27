@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="lims_sale.LimsParameterHelperDialog" t-inherit="lims_base.LimsParameterHelperDialog" t-inherit-mode="extension" owl="1">
+        <div name="accordion_line" position="inside">
+            <div t-if="pack and pack.is_additional_invoiced" class="px-2 mx-2" title="Additional selling packs; Works only if a sample with their legislation will be generated.">
+                <t t-if="pack.is_current_invoiced">
+                    <i class="fa fa-money"/>
+                    <input class="form-check-input o_checkbox_invoiced_pack form-check-input rounded-circle" type="checkbox" t-att-data-display-name="pack.display_name" checked="1" disabled="1"/>
+                </t>
+                <t t-else="">
+                    <i class="fa fa-plus"/> <i class="fa fa-money"/>
+                    <input class="form-check-input o_checkbox_invoiced_pack form-check-input rounded-circle o_lims_data" type="checkbox" t-att-data-lims-type="'invoiced_pack'" t-att-data-lims-id="pack.id" t-att-data-display-name="pack.display_name"/>
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>

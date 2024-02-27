@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="lims_analysis_report_template_form">
+        <field name="name">Report template</field>
+        <field name="model">lims.analysis.report.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="report_id" placeholder="Choose the structure of the report template"
+                                   options="{'no_create':1, 'no_edit':1}"/>
+                            <field name="laboratory_id"
+                                   placeholder="If filled, only this laboratory will be able to select this template."/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="options" string="Options">
+                            <field name="option_ids"
+                                   options="{'no_create': True,'no_create_edit': True}">
+                                <tree create="0" edit="0">
+                                    <field name="field_description" string="Options"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="field_description" string="Option" readonly="1"/>
+                                            <field name="name" readonly="1"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="lims_analysis_report_template_tree">
+        <field name="name">Report template</field>
+        <field name="model">lims.analysis.report.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="laboratory_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_report_template_search">
+        <field name="name">Report template</field>
+        <field name="model">lims.analysis.report.template</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <group string="Group by">
+                    <filter name="name" context="{'group_by': 'name'}"/>
+                    <filter name="laboratory_id" context="{'group_by': 'laboratory_id'}"/>
+                    <filter name="active" string="Active" context="{'group_by': 'active'}"/>
+                </group>
+                <group string="Filters">
+                    <filter name="inactive" string="Inactive" domain="[('active', '=', 0)]"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Parameter Print Action -->
+    <record model="ir.actions.act_window" id="lims_analysis_report_template_action">
+        <field name="name">Report template</field>
+        <field name="res_model">lims.analysis.report.template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem parent="lims_report.lims_report_config_submenu" action="lims_analysis_report_template_action"
+              id="lims_report_template_menu" sequence="20"/>
+
+</odoo>

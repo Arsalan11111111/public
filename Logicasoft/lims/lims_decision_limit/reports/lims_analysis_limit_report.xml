@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="lims_analysis_limit_report_parser">
+        <t t-set="company" t-value="env.company"/>
+        <t t-call="web.html_container">
+            <t t-call="lims_base.lims_internal_layout">
+                <div class="page" t-foreach="doc_ids" t-as="analysis_id" style="page-break-after:always;">
+                    <t t-if="analysis_id.datas">
+                        <t t-set="data" t-value="analysis_id.get_data_json()"/>
+                        <t t-foreach="data['result']" t-as="analysis">
+                            <style>
+                                table, th, td {
+                                border: 1px solid black;
+                                }
+                            </style>
+                            <t t-set="data_analysis" t-value="data['result'][analysis]"/>
+                            <table t-name="analysis" width="100%">
+                                <tr name="title">
+                                    <t t-if="data_analysis.get('Collections')" t-set="length"
+                                       t-value="len(data_analysis)-1"/>
+                                    <t t-elif="not data_analysis.get('Collections')" t-set="length"
+                                       t-value="len(data_analysis)-2"/>
+                                    <th t-out="analysis" t-att-colspan="length"/>
+                                    <t t-if="data_analysis.get('Collections')"
+                                       t-foreach="data_analysis.get('Collections')" t-as="c">
+                                        <t t-set="length" t-value="len(data_analysis['Collections'][c])"/>
+                                        <th t-out="c" t-att-colspan="length"/>
+                                    </t>
+                                </tr>
+                                <tr name="subtitle">
+                                    <t t-foreach="data_analysis" t-as="a">
+                                        <th t-if="a!='Collections'" t-out="a"/>
+                                    </t>
+                                    <t t-foreach="data_analysis['Collections']" t-as="c">
+                                        <th t-foreach="data_analysis['Collections'][c]" t-as="ct" t-out="ct"/>
+                                    </t>
+                                </tr>
+                                <t t-foreach="range(len(data_analysis['Parameters']))" t-as="row">
+                                    <tr name="data_line">
+                                        <t t-foreach="data_analysis" t-as="a" t-if="a!='Collections'">
+                                            <td t-out="data_analysis[a][row]"/>
+                                        </t>
+                                        <t t-foreach="data_analysis['Collections']" t-as="c">
+                                            <t t-foreach="data_analysis['Collections'][c]" t-as="e">
+                                                <td t-out="data_analysis['Collections'][c][e][row]"/>
+                                            </t>
+                                        </t>
+                                    </tr>
+                                </t>
+                            </table>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <h1>No data</h1>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+
+    <record id="lims_analysis_limit_report_action" model="ir.actions.report">
+        <field name="name">Report Analysis Limit</field>
+        <field name="model">lims.decision.limit</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_decision_limit.lims_analysis_limit_report_parser</field>
+        <field name="paperformat_id" ref="lims_decision_limit.lims_landscape_paperformat"/>
+        <field name="binding_model_id" ref="lims_decision_limit.model_lims_decision_limit"/>
+    </record>
+
+
+</odoo>

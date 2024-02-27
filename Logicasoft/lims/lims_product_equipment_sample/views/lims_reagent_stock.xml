@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_reagent_stock_tree_view'>
+        <field name="name">Lims reagent stock</field>
+        <field name="model">lims.reagent.stock</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_id" optional="show"/>
+                <field name="lot_id" optional="show"/>
+                <field name="serial_number" optional="show"/>
+                <field name="active" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_reagent_stock_form_view'>
+        <field name="name">Lims reagent stock</field>
+        <field name="model">lims.reagent.stock</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="product_id"/>
+                        <field name="lot_id"/>
+                        <field name="serial_number" attrs="{'readonly': [('lot_id', '!=', False)]}"/>
+                    </group>
+
+                    <group>
+                        <field name="active" widget="boolean_toggle"/>
+                        <field name="origin_analysis_id" readonly="True" attrs="{'invisible': [('origin_analysis_id', '=', False)]}"/>
+                        <field name="origin_sop_id" readonly="True" attrs="{'invisible': [('origin_sop_id', '=', False)]}"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_reagent_stock_search_view'>
+        <field name="name">Lims reagent stock</field>
+        <field name="model">lims.reagent.stock</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_id"/>
+                <field name="lot_id"/>
+                <field name="serial_number"/>
+                <field name="origin_analysis_id"/>
+                <field name="origin_sop_id"/>
+
+                <group name="group_by" string="Group By">
+                    <filter name="product" string="Product" context="{'group_by': 'product_id'}"/>
+                    <filter name="lot" string="Lot" context="{'group_by': 'lot_id'}"/>
+                    <filter name="serial_number" string="Serial number" context="{'group_by': 'serial_number'}"/>
+                    <filter name="analysis" string="Analysis" context="{'group_by': 'origin_analysis_id'}"/>
+                    <filter name="sop" string="Test" context="{'group_by': 'origin_sop_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_reagent_stock_action'>
+        <field name="name">Lims reagent stock</field>
+        <field name="res_model">lims.reagent.stock</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="lims_reagent_stock_action" parent="lims_base.analysis_submenu" id="lims_reagent_stock_menu" sequence="130"/>
+</odoo>

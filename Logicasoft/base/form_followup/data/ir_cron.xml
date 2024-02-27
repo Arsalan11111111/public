@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="check_late_reception_form_followup" model="ir.cron">
+        <field name="name">Check and remind late reception form followups</field>
+        <field name="model_id" ref="model_form_followup"/>
+        <field name="state">code</field>
+        <field name="code">model.check_late_reception()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">weeks</field>
+        <field name="numbercall">-1</field>
+        <field name="active">True</field>
+    </record>
+
+    <record id="check_late_validity_form_followup" model="ir.cron">
+        <field name="name">Check and remind late validity form followups</field>
+        <field name="model_id" ref="model_form_followup"/>
+        <field name="state">code</field>
+        <field name="code">model.check_late_validity()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">weeks</field>
+        <field name="numbercall">-1</field>
+        <field name="active">True</field>
+    </record>
+</odoo>

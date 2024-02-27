@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="email_analysis_notification" model="mail.template">
+        <field name="name">Email Analysis Notification</field>
+        <field name="subject">{{object.name or '' }}</field>
+        <field name="model_id" ref="lims_notification.model_lims_analysis_notification"/>
+        <field name="auto_delete" eval="True"/>
+        <field name="lang">{{object.language_id.code}}</field>
+        <field name="email_from">{{object.laboratory_id.company_id.email or user.email}}</field>
+        <field name="body_html" type="html">
+            <table style="width: 100%">
+                <thead>
+                    <th>Name</th>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                    <th>UoM</th>
+                    <th>Limit</th>
+                </thead>
+                <tbody>
+                    <t t-set='colors' t-value="{'conform': 'green',  'not_conform': 'red'}"/>
+                    <t t-set="all_results" t-value="object.get_all_vals()"/>
+                    <tr t-if="all_results" t-foreach='all_results' t-as='result' style="color : ${colors[result.get('state_name')] or 'black'};">
+                        <td> <t t-out="result.get('analysis_id')"/> </td>
+                        <td> <t t-out="result.get('method_parameter_charac')"/> </td>
+                        <td> <t t-out="result.get('value')"/> </td>
+                        <td> <t t-out="result.get('uom')"/> </td>
+                        <td> <t t-out="result.get('limit_value')"/> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </field>
+    </record>
+
+</odoo>

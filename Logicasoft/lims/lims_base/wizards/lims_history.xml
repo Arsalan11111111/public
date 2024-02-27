@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_history_form" model="ir.ui.view">
+        <field name="name">History</field>
+        <field name="model">lims.history</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="main_group">
+                        <group name="right_group" string="Options">
+                            <field name="method_param_charac_id" options="{'no_create': True, 'no_open': True}"
+                                   readonly="1"/>
+                            <field name="nb_history" placeholder="Max : 100, default : 10"/>
+                            <field name="date_type" widget="radio" options="{'horizontal': true}"/>
+                        </group>
+                        <group name="left_group" string="Filters" col="3">
+                            <field name="partner_id" readonly="1" options="{'no_create': True, 'no_open': True}"
+                                   attrs="{'invisible':[('partner_id','=',False)]}" domain="[('active','=',False), ('active','=',True)]" col="3"/>
+                            <field name="is_partner" nolabel="1"
+                                   attrs="{'invisible':[('partner_id','=',False)]}" widget="boolean_toggle" col="1"/>
+                            <field name="product_id" readonly="1" options="{'no_create': True, 'no_open': True}"
+                                   attrs="{'invisible':[('product_id','=',False)]}" domain="[('active','=',False), ('active','=',True)]" col="3"/>
+                            <field name="is_product" nolabel="1"
+                                   attrs="{'invisible':[('product_id','=',False)]}" widget="boolean_toggle" col="1"/>
+                            <field name="batch_id" readonly="1" options="{'no_create': True, 'no_open': True}"
+                                   attrs="{'invisible':[('batch_id','=',False)]}" domain="[('active','=',False), ('active','=',True)]" col="3"/>
+                            <field name="is_batch" nolabel="1"
+                                   attrs="{'invisible':[('batch_id','=',False)]}" widget="boolean_toggle" col="1"/>
+                            <field name="user_id" readonly="1" options="{'no_create': True, 'no_open': True}"
+                                   attrs="{'invisible':[('user_id','=',False)]}" domain="[('active','=',False), ('active','=',True)]" col="3"/>
+                            <field name="is_user" nolabel="1"
+                                   attrs="{'invisible':[('user_id','=',False)]}" widget="boolean_toggle" col="1"/>
+                        </group>
+                    </group>
+                    <group name="Statistic" string="Statistic" col="8" attrs="{'invisible': [('nb_result_nu_ids', '=', 0), ('nb_result_compute_ids', '=', 0)]}">
+                        <field name="n_results"  col="2" digits="[3,0]"/>
+                        <field name="mean_results" col="2"/>
+                        <field name="min_results" col="2"/>
+                        <field name="max_results" col="2"/>
+                    </group>
+                    <notebook>
+                        <page name="hidden_fields" invisible="1">
+                            <group name="hidden">
+                                <field name="nb_result_nu_ids" invisible="1"/>
+                                <field name="nb_result_compute_ids" invisible="1"/>
+                                <field name="nb_result_sel_ids" invisible="1"/>
+                                <field name="nb_result_txt_ids" invisible="1"/>
+                            </group>
+
+                        </page>
+                        <page attrs="{'invisible': [('nb_result_nu_ids', '=', 0)]}">
+                            <field name="result_nu_ids" nolabel="1"
+                                    readonly="1" force_save="1">
+                                <tree name="numeric_tree" create="false" delete="false"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform' and not is_alert"
+                                      decoration-warning="is_alert">
+                                    <field name="analysis_id" readonly="1" optional="show"/>
+                                    <field name="sop_id" readonly="1" optional="show"/>
+                                    <field name="rel_sample_name" readonly="1" optional="show"/>
+                                    <field name="value" readonly="1" optional="show"/>
+                                    <field name="uom_id" readonly="1" optional="show"/>
+                                    <field name="is_alert" invisible="1"/>
+                                    <field name="is_null" readonly="1" optional="hide"/>
+                                    <field name="corrected_value" readonly="1" optional="show"/>
+                                    <field name="dilution_factor" readonly="1" optional="show"/>
+                                    <field name="comment" readonly="1" optional="show"/>
+                                    <field name="rel_date_sample" readonly="1" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="date_result" readonly="1" optional="show"/>
+                                    <field name="rel_partner_id" readonly="1" optional="hide"/>
+                                    <field name="rel_batch_id" readonly="1" optional="hide"/>
+                                    <field name="user_id" readonly="1" optional="hide"/>
+                                    <field name="date_result" readonly="1" optional="hide"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}" optional="show"/>
+                                </tree>
+                                <form>
+                                    <group name="numeric_form">
+                                        <field name="analysis_id" readonly="1"/>
+                                        <field name="sop_id" readonly="1"/>
+                                        <field name="rel_sample_name" readonly="1"/>
+                                        <field name="value" readonly="1"/>
+                                        <field name="uom_id" readonly="1"/>
+                                        <field name="is_null" readonly="1"/>
+                                        <field name="corrected_value" readonly="1"/>
+                                        <field name="dilution_factor" readonly="1"/>
+                                        <field name="comment" readonly="1"/>
+                                        <field name="rel_date_sample" readonly="1"/>
+                                        <field name="date_start" readonly="1"/>
+                                        <field name="date_result" readonly="1"/>
+                                        <field name="rel_partner_id" readonly="1"/>
+                                        <field name="rel_batch_id" readonly="1"/>
+                                        <field name="user_id" readonly="1"/>
+                                        <field name="date_result" readonly="1"/>
+                                        <field name="state" readonly="1"/>
+                                        <field name="stage_id" readonly="1" options="{'no_open': True}"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page attrs="{'invisible': [('nb_result_compute_ids', '=', 0)]}">
+                            <field name="result_compute_ids" nolabel="1" readonly="1" force_save="1">
+                                <tree name="compute_tree" create="false" delete="false"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform'">
+                                    <field name="analysis_id" readonly="1" optional="show"/>
+                                    <field name="sop_id" readonly="1" optional="show"/>
+                                    <field name="rel_sample_name" readonly="1" optional="show"/>
+                                    <field name="formula" readonly="1" optional="hide"/>
+                                    <field name="value" readonly="1" optional="show"/>
+                                    <field name="comment" readonly="1" optional="show"/>
+                                    <field name="rel_date_sample" readonly="1" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="date_result" readonly="1" optional="show"/>
+                                    <field name="rel_partner_id" readonly="1" optional="hide"/>
+                                    <field name="rel_batch_id" readonly="1" optional="hide"/>
+                                    <field name="user_id" readonly="1" optional="hide"/>
+                                    <field name="date_result" readonly="1" optional="hide"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}" optional="show"/>
+                                </tree>
+                                <form>
+                                    <group name="compute_form">
+                                        <field name="analysis_id" readonly="1"/>
+                                        <field name="sop_id" readonly="1"/>
+                                        <field name="rel_sample_name" readonly="1"/>
+                                        <field name="formula" readonly="1"/>
+                                        <field name="value" readonly="1"/>
+                                        <field name="comment" readonly="1"/>
+                                        <field name="rel_date_sample" readonly="1"/>
+                                        <field name="date_start" readonly="1"/>
+                                        <field name="date_result" readonly="1"/>
+                                        <field name="rel_partner_id" readonly="1"/>
+                                        <field name="rel_batch_id" readonly="1"/>
+                                        <field name="user_id" readonly="1"/>
+                                        <field name="date_result" readonly="1"/>
+                                        <field name="state" readonly="1"/>
+                                        <field name="stage_id" readonly="1" options="{'no_open': True}"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page attrs="{'invisible': [('nb_result_sel_ids', '=', 0)]}">
+                            <field name="result_sel_ids" nolabel="1" readonly="1" force_save="1">
+                                <tree name="selection_tree" create="false" delete="false"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform'">
+                                    <field name="analysis_id" readonly="1" optional="show"/>
+                                    <field name="sop_id" readonly="1" optional="show"/>
+                                    <field name="value_id" readonly="1" optional="show"/>
+                                    <field name="comment" readonly="1" optional="show"/>
+                                    <field name="rel_date_sample" readonly="1" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="date_result" readonly="1" optional="show"/>
+                                    <field name="rel_partner_id" readonly="1" optional="hide"/>
+                                    <field name="rel_batch_id" readonly="1" optional="hide"/>
+                                    <field name="user_id" readonly="1" optional="hide"/>
+                                    <field name="date_result" readonly="1" optional="hide"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}" optional="show"/>
+                                </tree>
+                                <form>
+                                    <group name="selection_form">
+                                        <field name="analysis_id" readonly="1"/>
+                                        <field name="sop_id" readonly="1"/>
+                                        <field name="value_id" readonly="1"/>
+                                        <field name="comment" readonly="1"/>
+                                        <field name="rel_date_sample" readonly="1"/>
+                                        <field name="date_start" readonly="1"/>
+                                        <field name="date_result" readonly="1"/>
+                                        <field name="rel_partner_id" readonly="1"/>
+                                        <field name="rel_batch_id" readonly="1"/>
+                                        <field name="user_id" readonly="1"/>
+                                        <field name="date_result" readonly="1"/>
+                                        <field name="state" readonly="1"/>
+                                        <field name="stage_id" readonly="1" options="{'no_open': True}"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page attrs="{'invisible': [('nb_result_txt_ids', '=', 0)]}">
+                            <field name="result_txt_ids" nolabel="1" readonly="1" force_save="1">
+                                <tree name="text_tree" create="false" delete="false"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform'">
+                                    <field name="analysis_id" readonly="1" optional="show"/>
+                                    <field name="sop_id" readonly="1" optional="show"/>
+                                    <field name="value" readonly="1" optional="show"/>
+                                    <field name="comment" readonly="1" optional="show"/>
+                                    <field name="rel_date_sample" readonly="1" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="date_result" readonly="1" optional="show"/>
+                                    <field name="rel_partner_id" readonly="1" optional="hide"/>
+                                    <field name="rel_batch_id" readonly="1" optional="hide"/>
+                                    <field name="user_id" readonly="1" optional="hide"/>
+                                    <field name="date_result" readonly="1" optional="hide"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}" optional="show"/>
+                                </tree>
+                                <form>
+                                    <group name="text_form">
+                                        <field name="analysis_id" readonly="1"/>
+                                        <field name="sop_id" readonly="1"/>
+                                        <field name="value" readonly="1"/>
+                                        <field name="comment" readonly="1"/>
+                                        <field name="rel_date_sample" readonly="1"/>
+                                        <field name="date_start" readonly="1"/>
+                                        <field name="date_result" readonly="1"/>
+                                        <field name="rel_partner_id" readonly="1"/>
+                                        <field name="rel_batch_id" readonly="1"/>
+                                        <field name="user_id" readonly="1"/>
+                                        <field name="date_result" readonly="1"/>
+                                        <field name="state" readonly="1"/>
+                                        <field name="stage_id" readonly="1" options="{'no_open': True}"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div attrs="{'invisible': ['|','|','|',('nb_result_nu_ids', '!=', 0), ('nb_result_compute_ids', '!=', 0), ('nb_result_sel_ids', '!=', 0), ('nb_result_txt_ids', '!=', 0)]}"
+                         class="alert alert-warning" role="alert">
+                        <i>No <b>validated</b> results of this parameter to be presented according to the filters and options chosen.</i>
+                    </div>
+                </sheet>
+                <footer>
+                    <button string="Check Graph" name="open_graph" type="object" groups="lims_base.user_group"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Action -->
+    <record id="lims_history_action" model="ir.actions.act_window">
+        <field name="name">History</field>
+        <field name="res_model">lims.history</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

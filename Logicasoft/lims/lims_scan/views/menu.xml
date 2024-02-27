@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_lims_scan_root" parent="lims_base.menu_root" name="Scanner actions" sequence="150"/>
+    <menuitem id="sop_scan_receipt_menu" parent="menu_lims_scan_root" name="Receipt test" action="sop_scan_receipt_action"/>
+    <menuitem id="sop_scan_wip_menu" parent="menu_lims_scan_root" name="WIP test" action="sop_scan_wip_wizard_action"/>
+    <menuitem id="sop_scan_batch_menu" parent="menu_lims_scan_root" name="Create batch from test" action="sop_scan_batch_wizard_action"/>
+</odoo>

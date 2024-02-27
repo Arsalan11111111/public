@@ -1,0 +1,221 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+
+access_lims_analysis_viewer,lims.analysis viewer,lims_base.model_lims_analysis,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_result_viewer,lims.analysis.result viewer,lims_base.model_lims_analysis_result,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_numeric_result_viewer,lims.analysis.numeric.result viewer,lims_base.model_lims_analysis_numeric_result,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_text_result_viewer,lims.analysis.text.result viewer,lims_base.model_lims_analysis_text_result,lims_base.viewer_group,1,0,0,0
+access_lims_department_viewer,lims.department viewer,lims_base.model_lims_department,lims_base.viewer_group,1,0,0,0
+access_lims_laboratory_viewer,lims.laboratory viewer,lims_base.model_lims_laboratory,lims_base.viewer_group,1,0,0,0
+access_lims_matrix_viewer,lims.matrix viewer,lims_base.model_lims_matrix,lims_base.viewer_group,1,0,0,0
+access_lims_matrix_type_viewer,lims.matrix.type viewer,lims_base.model_lims_matrix_type,lims_base.viewer_group,1,0,0,0
+access_lims_method_viewer,lims.method viewer,lims_base.model_lims_method,lims_base.viewer_group,1,0,0,0
+access_lims_method_attribute_viewer,lims.method.attribute viewer,lims_base.model_lims_method_attribute,lims_base.viewer_group,1,0,0,0
+access_lims_method_attribute_category_viewer,lims.method.attribute.category viewer,lims_base.model_lims_method_attribute_category,lims_base.viewer_group,1,0,0,0
+access_lims_parameter_viewer,lims.parameter viewer,lims_base.model_lims_parameter,lims_base.viewer_group,1,0,0,0
+access_lims_parameter_pack_viewer,lims.parameter.pack viewer,lims_base.model_lims_parameter_pack,lims_base.viewer_group,1,0,0,0
+access_lims_parameter_pack_line_viewer,lims.parameter.pack.line viewer,lims_base.model_lims_parameter_pack_line,lims_base.viewer_group,1,0,0,0
+access_lims_parameter_type_viewer,lims.parameter.type,lims_base.model_lims_parameter_type,lims_base.viewer_group,1,0,0,0
+access_lims_standard_viewer,lims.standard viewer,lims_base.model_lims_standard,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_category_viewer,lims.analysis.category viewer,lims_base.model_lims_analysis_category,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_reason_viewer,lims.analysis.reason viewer,lims_base.model_lims_analysis_reason,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_stage_viewer,lims.analysis.stage viewer,lims_base.model_lims_analysis_stage,lims_base.viewer_group,1,0,0,0
+access_lims_accreditation_viewer,lims.accreditation viewer,lims_base.model_lims_accreditation,lims_base.viewer_group,1,0,0,0
+access_lims_method_parameter_characteristic_viewer,lims.method.parameter.characteristic viewer,lims_base.model_lims_method_parameter_characteristic,lims_base.viewer_group,1,0,0,0
+access_lims_result_value_viewer,lims.result.value viewer,lims_base.model_lims_result_value,lims_base.viewer_group,1,0,0,0
+access_lims_sop_viewer,lims.sop viewer,lims_base.model_lims_sop,lims_base.viewer_group,1,0,0,0
+access_lims_method_stage_viewer,lims.method.stage viewer,lims_base.model_lims_method_stage,lims_base.viewer_group,1,0,0,0
+access_lims_regulation_viewer,lims.regulation viewer,lims_base.model_lims_regulation,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_request_viewer,lims.analysis_request viewer,lims_base.model_lims_analysis_request,lims_base.viewer_group,1,0,0,0
+access_lims_request_category_viewer,lims.request_category viewer,lims_base.model_lims_request_category,lims_base.viewer_group,1,0,0,0
+access_lims_batch_viewer,lims.batch viewer,lims_base.model_lims_batch,lims_base.viewer_group,1,0,0,0
+access_lims_result_stage_viewer,lims.result_stage viewer,lims_base.model_lims_result_stage,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_sel_result_viewer,lims.analysis.sel.result viewer,lims_base.model_lims_analysis_sel_result,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_request_sample_viewer,lims.analysis_request_sample viewer,lims_base.model_lims_analysis_request_sample,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_request_tags_viewer,lims.analysis_request_tags viewer,lims_base.model_lims_analysis_request_tags,lims_base.viewer_group,1,0,0,0
+access_lims_method_container_viewer,lims.container.stage viewer,lims_base.model_lims_method_container,lims_base.viewer_group,1,0,0,0
+access_lims_batch_operator_viewer,lims.batch.operator viewer,lims_base.model_lims_batch_operator,lims_base.viewer_group,1,0,0,0
+access_lims_parameter_pack_tag_viewer,lims.parameter.pack.tag viewer,lims_base.model_lims_parameter_pack_tag,lims_base.viewer_group,1,0,0,0
+access_lims_sample_condition_viewer,lims.sample.condition viewer,lims_base.model_lims_sample_condition,lims_base.viewer_group,1,0,0,0
+access_lims_parameter_pack_line_item_viewer,lims.parameter.pack.line.item viewer,lims_base.model_lims_parameter_pack_line_item,lims_base.viewer_group,1,0,0,0
+access_lims_history_viewer,lims.history viewer,lims_base.model_lims_history,lims_base.viewer_group,1,1,1,1
+access_lims_analytical_technique_viewer,lims.analytical.technique viewer,lims_base.model_lims_analytical_technique,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_compute_result_viewer,lims.analysis.compute.result.viewer,model_lims_analysis_compute_result,viewer_group,1,0,0,0
+access_lims_parameter_compute_correspondence_viewer,lims.parameter.compute.correspondence.viewer,model_lims_parameter_compute_correspondence,viewer_group,1,0,0,0
+access_lims_resut_compute_correspondence_viewer,lims.result.compute.correspondence.viewer,model_lims_result_compute_correspondence,viewer_group,1,0,0,0
+access_lims_attribute_type_viewer,lims.attribute.type viewer,lims_base.model_lims_attribute_type,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_limit_result_viewer,access_lims_analysis_limit_numeric_result viewer,model_lims_analysis_limit_numeric_result,lims_base.viewer_group,1,0,0,0
+access_lims_method_parameter_characteristic_limit_viewer,access_lims_method_parameter_characteristic_limit viewer,model_lims_method_parameter_characteristic_limit,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_limit_compute_result_viewer,access_lims_analysis_limit_compute_result viewer,model_lims_analysis_limit_compute_result,lims_base.viewer_group,1,0,0,0
+access_lims_analysis_tag_viewer,lims.analysis.tag.viewer,model_lims_analysis_tag,viewer_group,1,0,0,0
+access_lims_work_instruction_viewer,lims.work.instruction viewer,lims_base.model_lims_work_instruction,lims_base.viewer_group,1,0,0,0
+access_lims_result_log_viewer,lims.result.log viewer,lims_base.model_lims_result_log,lims_base.viewer_group,1,0,0,0
+access_lims_request_product_pack_viewer,lims.lims_request_product_pack viewer,lims_base.model_lims_request_product_pack,lims_base.viewer_group,1,0,0,0
+
+access_lims_analysis_user,lims.analysis user,lims_base.model_lims_analysis,lims_base.user_group,1,1,1,1
+access_lims_analysis_result_user,lims.analysis.result user,lims_base.model_lims_analysis_result,lims_base.user_group,1,1,1,0
+access_lims_analysis_numeric_result_user,lims.analysis.numeric.result user,lims_base.model_lims_analysis_numeric_result,lims_base.user_group,1,1,1,0
+access_lims_analysis_result_text_user,lims.analysis.text.result user,lims_base.model_lims_analysis_text_result,lims_base.user_group,1,1,1,0
+access_lims_history_user,lims.history user,lims_base.model_lims_history,lims_base.user_group,1,1,1,0
+access_lims_department_user,lims.department user,lims_base.model_lims_department,lims_base.user_group,1,0,0,0
+access_lims_laboratory_user,lims.laboratory user,lims_base.model_lims_laboratory,lims_base.user_group,1,0,0,0
+access_lims_matrix_user,lims.matrix user,lims_base.model_lims_matrix,lims_base.user_group,1,0,0,0
+access_lims_matrix_type_user,lims.matrix.type user,lims_base.model_lims_matrix_type,lims_base.user_group,1,0,0,0
+access_lims_method_user,lims.method user,lims_base.model_lims_method,lims_base.user_group,1,0,0,0
+access_lims_method_attribute_user,lims.method.attribute user,lims_base.model_lims_method_attribute,lims_base.user_group,1,1,1,0
+access_lims_parameter_user,lims.parameter user,lims_base.model_lims_parameter,lims_base.user_group,1,0,0,0
+access_lims_parameter_pack_user,lims.parameter.pack user,lims_base.model_lims_parameter_pack,lims_base.user_group,1,0,0,0
+access_lims_parameter_pack_line_user,lims.parameter.pack.line user,lims_base.model_lims_parameter_pack_line,lims_base.user_group,1,0,0,0
+access_lims_parameter_type_user,lims.parameter.type user,lims_base.model_lims_parameter_type,lims_base.user_group,1,0,0,0
+access_lims_standard_user,lims.standard user,lims_base.model_lims_standard,lims_base.user_group,1,0,0,0
+access_lims_analysis_category_user,lims.analysis.category user,lims_base.model_lims_analysis_category,lims_base.user_group,1,0,0,0
+access_lims_analysis_reason_user,lims.analysis.reason user,lims_base.model_lims_analysis_reason,lims_base.user_group,1,0,0,0
+access_lims_result_reason_user,lims.result.reason user,lims_base.model_lims_result_reason,lims_base.user_group,1,0,0,0
+access_lims_analysis_stage_user,lims.analysis.stage user,lims_base.model_lims_analysis_stage,lims_base.user_group,1,0,0,0
+access_lims_accreditation_user,lims.accreditation user,lims_base.model_lims_accreditation,lims_base.user_group,1,0,0,0
+access_lims_method_parameter_characteristic_user,lims.method.parameter.characteristic user,lims_base.model_lims_method_parameter_characteristic,lims_base.user_group,1,0,0,0
+access_lims_result_value_user,lims.result.value user,lims_base.model_lims_result_value,lims_base.user_group,1,0,0,0
+access_lims_sop_user,lims.sop user,lims_base.model_lims_sop,lims_base.user_group,1,1,1,0
+access_lims_method_stage_user,lims.method.stage user,lims_base.model_lims_method_stage,lims_base.user_group,1,0,0,0
+access_lims_regulation_user,lims.regulation user,lims_base.model_lims_regulation,lims_base.user_group,1,0,0,0
+access_lims_analysis_request_user,lims.analysis_request user,lims_base.model_lims_analysis_request,lims_base.user_group,1,1,1,0
+access_lims_request_category_user,lims.request_category user,lims_base.model_lims_request_category,lims_base.user_group,1,0,0,0
+access_lims_batch_user,lims.batch user,lims_base.model_lims_batch,lims_base.user_group,1,1,1,0
+access_lims_result_stage_user,lims.result_stage user,lims_base.model_lims_result_stage,lims_base.user_group,1,0,0,0
+access_lims_analysis_sel_result_user,lims.analysis.sel.result user,lims_base.model_lims_analysis_sel_result,lims_base.user_group,1,1,1,0
+access_lims_analysis_request_sample_user,lims.analysis_request_sample user,lims_base.model_lims_analysis_request_sample,lims_base.user_group,1,1,1,1
+access_lims_analysis_request_tags_user,lims.analysis_request_tags user,lims_base.model_lims_analysis_request_tags,lims_base.user_group,1,0,0,0
+access_lims_method_container_user,lims.container.stage user,lims_base.model_lims_method_container,lims_base.user_group,1,0,0,0
+access_lims_batch_operator_user,lims.batch.operator user,lims_base.model_lims_batch_operator,lims_base.user_group,1,0,0,0
+access_lims_res_partner_user,res.partner,base.model_res_partner,lims_base.user_group,1,1,0,0
+access_lims_analytical_technique_user,lims.analytical.technique user,lims_base.model_lims_analytical_technique,lims_base.user_group,1,0,0,0
+access_lims_analysis_compute_result_user,lims.analysis.compute.result.viewer,model_lims_analysis_compute_result,user_group,1,1,1,0
+access_lims_parameter_compute_correspondence_user,lims.parameter.compute.correspondence.viewer,model_lims_parameter_compute_correspondence,user_group,1,0,0,0
+access_lims_result_compute_correspondence_user,lims.result.compute.correspondence.viewer,model_lims_result_compute_correspondence,user_group,1,1,1,0
+access_lims_attribute_type_user,lims.attribute.type user,lims_base.model_lims_attribute_type,lims_base.user_group,1,0,0,0
+access_lims_analysis_limit_numeric_result_user,access_lims_analysis_limit_numeric_result user,model_lims_analysis_limit_numeric_result,lims_base.user_group,1,1,1,0
+access_lims_method_parameter_characteristic_limit_user,access_lims_method_parameter_characteristic_limit user,model_lims_method_parameter_characteristic_limit,lims_base.user_group,1,0,0,0
+access_lims_analysis_limit_compute_result_user,access_lims_analysis_limit_compute_result user,model_lims_analysis_limit_compute_result,lims_base.user_group,1,1,1,0
+access_lims_analysis_tag_user,lims.analysis.tag.user,model_lims_analysis_tag,user_group,1,0,0,0
+access_lims_work_instruction_user,lims.work.instruction user,lims_base.model_lims_work_instruction,lims_base.user_group,1,0,0,0
+access_lims_request_product_pack_user,lims.lims_request_product_pack user,lims_base.model_lims_request_product_pack,lims_base.user_group,1,1,1,1
+access_lims_laboratory_base_user,lims.laboratory base.user,lims_base.model_lims_laboratory,base.group_user,1,0,0,0
+access_lims_department_base_user,lims.department base.user,lims_base.model_lims_department,base.group_user,1,0,0,0
+access_lims_sample_condition_user,lims.sample.condition user,lims_base.model_lims_sample_condition,lims_base.user_group,1,0,0,0
+access_lims_result_log_user,lims.result.log user,lims_base.model_lims_result_log,lims_base.user_group,1,1,1,0
+
+access_lims_analysis_manager,lims.analysis manager,lims_base.model_lims_analysis,lims_base.manager_group,1,1,1,1
+access_lims_analysis_result_manager,lims.analysis.result manager,lims_base.model_lims_analysis_result,lims_base.manager_group,1,1,1,0
+access_lims_analysis_numeric_result_manager,lims.analysis.numeric.result manager,lims_base.model_lims_analysis_numeric_result,lims_base.manager_group,1,1,1,0
+access_lims_analysis_text_result_manager,lims.analysis.text.result manager,lims_base.model_lims_analysis_text_result,lims_base.manager_group,1,1,1,0
+access_lims_department_manager,lims.department manager,lims_base.model_lims_department,lims_base.manager_group,1,1,1,1
+access_lims_laboratory_manager,lims.laboratory manager,lims_base.model_lims_laboratory,lims_base.manager_group,1,1,1,1
+access_lims_matrix_manager,lims.matrix manager,lims_base.model_lims_matrix,lims_base.manager_group,1,0,0,0
+access_lims_matrix_type_manager,lims.matrix.type manager,lims_base.model_lims_matrix_type,lims_base.manager_group,1,0,0,0
+access_lims_method_manager,lims.method manager,lims_base.model_lims_method,lims_base.manager_group,1,0,0,0
+access_lims_method_attribute_manager,lims.method.attribute manager,lims_base.model_lims_method_attribute,lims_base.manager_group,1,1,1,1
+access_lims_method_attribute_category_manager,lims.method.attribute.category manager,lims_base.model_lims_method_attribute_category,lims_base.manager_group,1,1,1,1
+access_lims_parameter_manager,lims.parameter manager,lims_base.model_lims_parameter,lims_base.manager_group,1,1,1,1
+access_lims_parameter_pack_manager,lims.parameter.pack manager,lims_base.model_lims_parameter_pack,lims_base.manager_group,1,0,0,0
+access_lims_parameter_pack_line_manager,lims.parameter.pack.line manager,lims_base.model_lims_parameter_pack_line,lims_base.manager_group,1,0,0,0
+access_lims_parameter_type_manager,lims.parameter.type manager,lims_base.model_lims_parameter_type,lims_base.manager_group,1,1,1,1
+access_lims_standard_manager,lims.standard manager,lims_base.model_lims_standard,lims_base.manager_group,1,1,1,1
+access_lims_analysis_category_manager,lims.analysis.category manager,lims_base.model_lims_analysis_category,lims_base.manager_group,1,1,1,1
+access_lims_analysis_reason_manager,lims.analysis.reason manager,lims_base.model_lims_analysis_reason,lims_base.manager_group,1,1,1,1
+access_lims_result_reason_manager,lims.result.reason manager,lims_base.model_lims_result_reason,lims_base.manager_group,1,1,1,1
+access_lims_analysis_stage_manager,lims.analysis.stage manager,lims_base.model_lims_analysis_stage,lims_base.manager_group,1,1,0,0
+access_lims_accreditation_manager,lims.accreditation manager,lims_base.model_lims_accreditation,lims_base.manager_group,1,1,1,1
+access_lims_method_parameter_characteristic_manager,lims.method.parameter.characteristic manager,lims_base.model_lims_method_parameter_characteristic,lims_base.manager_group,1,0,0,0
+access_lims_result_value_manager,lims.result.value manager,lims_base.model_lims_result_value,lims_base.manager_group,1,1,1,1
+access_lims_sop_manager,lims.sop manager,lims_base.model_lims_sop,lims_base.manager_group,1,1,1,1
+access_lims_method_stage_manager,lims.method.stage manager,lims_base.model_lims_method_stage,lims_base.manager_group,1,1,1,1
+access_lims_regulation_manager,lims.regulation manager,lims_base.model_lims_regulation,lims_base.manager_group,1,1,1,1
+access_lims_analysis_request_manager,lims.analysis_request manager,lims_base.model_lims_analysis_request,lims_base.manager_group,1,1,1,1
+access_lims_request_category_manager,lims.request_category manager,lims_base.model_lims_request_category,lims_base.manager_group,1,1,1,1
+access_lims_batch_manager,lims.batch manager,lims_base.model_lims_batch,lims_base.manager_group,1,1,1,1
+access_lims_result_stage_manager,lims.result_stage manager,lims_base.model_lims_result_stage,base.group_system,1,1,0,0
+access_lims_analysis_sel_result_manager,lims.analysis.sel.result manager,lims_base.model_lims_analysis_sel_result,lims_base.manager_group,1,1,1,0
+access_lims_analysis_request_sample_manager,lims.analysis_request_sample manager,lims_base.model_lims_analysis_request_sample,lims_base.manager_group,1,1,1,1
+access_lims_analysis_request_tags_manager,lims.analysis_request_tags manager,lims_base.model_lims_analysis_request_tags,lims_base.manager_group,1,1,1,1
+access_lims_method_container_manager,lims.container.stage manager,lims_base.model_lims_method_container,lims_base.manager_group,1,1,1,1
+access_lims_batch_operator_manager,lims.batch.operator manager,lims_base.model_lims_batch_operator,lims_base.manager_group,1,1,1,1
+access_lims_res_partner_manager,res.partner,base.model_res_partner,lims_base.manager_group,1,1,1,1
+access_lims_analysis_compute_result_manager,lims.analysis.compute.result.manager,model_lims_analysis_compute_result,manager_group,1,1,1,0
+access_lims_parameter_compute_correspondence_manager,lims.parameter.compute.correspondence.manager,model_lims_parameter_compute_correspondence,manager_group,1,1,1,1
+access_lims_result_compute_correspondence_manager,lims.result.compute.correspondence.manager,model_lims_result_compute_correspondence,manager_group,1,1,1,1
+access_lims_attribute_type_manager,lims.attribute.type manager,lims_base.model_lims_attribute_type,lims_base.manager_group,1,1,1,1
+access_lims_analysis_limit_numeric_result_manager,access_lims_analysis_limit_numeric_result manager,model_lims_analysis_limit_numeric_result,lims_base.manager_group,1,1,1,1
+access_lims_method_parameter_characteristic_limit_manager,access_lims_method_parameter_characteristic_limit manager,model_lims_method_parameter_characteristic_limit,lims_base.manager_group,1,1,1,1
+access_lims_analysis_limit_compute_result_manager,access_lims_analysis_limit_compute_result manager,model_lims_analysis_limit_compute_result,lims_base.manager_group,1,1,1,1
+access_lims_analysis_tag_manager,lims.analysis.tag.manager,model_lims_analysis_tag,manager_group,1,1,1,1
+access_lims_work_instruction_manager,lims.work.instruction manager,lims_base.model_lims_work_instruction,lims_base.manager_group,1,1,1,1
+access_lims_analytical_technique_manager,lims.analytical.technique manager,lims_base.model_lims_analytical_technique,lims_base.manager_group,1,1,1,1
+access_lims_parameter_pack_tag_manager,lims.parameter.pack.tag manager,lims_base.model_lims_parameter_pack_tag,lims_base.manager_group,1,1,1,1
+access_lims_sample_condition_manager,lims.sample.condition manager,lims_base.model_lims_sample_condition,lims_base.manager_group,1,1,1,1
+access_lims_result_log_manager,lims.result.log manager,lims_base.model_lims_result_log,lims_base.manager_group,1,1,1,1
+access_lims_history_manager,lims.history manager,lims_base.model_lims_history,lims_base.manager_group,1,1,1,1
+
+access_lims_parameter_pack_admin,lims.parameter.pack admin,lims_base.model_lims_parameter_pack,lims_base.lims_admin_group,1,1,1,1
+access_lims_parameter_pack_line_admin,lims.parameter.pack.line admin,lims_base.model_lims_parameter_pack_line,lims_base.lims_admin_group,1,1,1,1
+access_lims_parameter_pack_line_item_admin,lims.parameter.pack.line.item admin,lims_base.model_lims_parameter_pack_line_item,lims_base.lims_admin_group,1,1,1,1
+access_lims_matrix_admin,lims.matrix admin,lims_base.model_lims_matrix,lims_base.lims_admin_group,1,1,1,1
+access_lims_matrix_type_admin,lims.matrix.type admin,lims_base.model_lims_matrix_type,lims_base.lims_admin_group,1,1,1,1
+access_lims_method_parameter_characteristic_admin,lims.method.parameter.characteristic admin,lims_base.model_lims_method_parameter_characteristic,lims_base.lims_admin_group,1,1,1,1
+access_lims_method_admin,lims.method admin,lims_base.model_lims_method,lims_base.lims_admin_group,1,1,1,1
+
+access_lims_analysis_result_group_delete,lims.analysis.result group_delete,lims_base.model_lims_analysis_result,lims_base.group_delete_results,1,1,1,1
+access_lims_analysis_numeric_result_group_delete,lims.analysis.numeric.result group_delete,lims_base.model_lims_analysis_numeric_result,lims_base.group_delete_results,1,1,1,1
+access_lims_analysis_sel_result_group_delete,lims.analysis.sel.result group_delete,lims_base.model_lims_analysis_sel_result,lims_base.group_delete_results,1,1,1,1
+access_lims_analysis_compute_result_group_delete,lims.analysis.compute.result group_delete,model_lims_analysis_compute_result,lims_base.group_delete_results,1,1,1,1
+access_lims_analysis_text_result_group_delete,lims.analysis.text.result group_delete,lims_base.model_lims_analysis_text_result,lims_base.group_delete_results,1,1,1,1
+
+access_add_parameters_request_product,add.parameters.request.product user,lims_base.model_add_parameters_request_product,lims_base.manager_group,1,1,1,1
+access_add_parameters_request_product_line,add.parameters.request.product.line manager,lims_base.model_add_parameters_request_product_line,lims_base.manager_group,1,1,1,1
+access_add_parameters_request,add.parameter.request manager,lims_base.model_add_parameters_request,lims_base.manager_group,1,1,1,1
+access_add_parameters_request_line,access_add_parameters_request_line,model_add_parameters_request_line,lims_base.manager_group,1,1,1,1
+access_add_parameters_wizard,add.parameters.wizard user,lims_base.model_add_parameters_wizard,lims_base.user_group,1,1,1,1
+access_add_parameters_wizard_line,access_add_parameters_wizard_line,model_add_parameters_wizard_line,lims_base.user_group,1,1,1,1
+access_analysis_cancel_wizard,analysis.cancel.wizard manager,lims_base.model_analysis_cancel_wizard,lims_base.user_group,1,1,1,1
+access_analysis_mass_change_wizard,analysis.mass.change.wizard user,lims_base.model_analysis_mass_change_wizard,lims_base.user_group,1,1,1,1
+access_analysis_mass_change_wizard_line,access_analysis_mass_change_wizard_line,model_analysis_mass_change_wizard_line,lims_base.user_group,1,1,1,1
+access_batch_mass_change_wizard,batch.mass.change.wizard user,lims_base.model_batch_mass_change_wizard,lims_base.user_group,1,1,1,1
+access_batch_mass_change_wizard_line,access_batch_mass_change_wizard_line,model_batch_mass_change_wizard_line,lims_base.user_group,1,1,1,1
+access_create_analysis_wizard_user,create.analysis.wizard user,lims_base.model_create_analysis_wizard,lims_base.user_group,1,1,1,1
+access_create_analysis_wizard_manager,create.analysis.wizard manager,lims_base.model_create_analysis_wizard,lims_base.manager_group,1,1,1,1
+access_create_analysis_wizard_line_user,access_create_analysis_wizard_line user,model_create_analysis_wizard_line,lims_base.user_group,1,1,1,1
+access_create_analysis_wizard_line_manager,access_create_analysis_wizard_line manager,model_create_analysis_wizard_line,lims_base.manager_group,1,1,1,1
+access_create_batch_wizard,create.batch.wizard user,lims_base.model_create_batch_wizard,lims_base.user_group,1,1,1,1
+access_create_parameter_pack_wizard,create.parameter.pack.wizard manager,lims_base.model_create_parameter_pack_wizard,lims_base.manager_group,1,1,1,1
+access_create_parameter_pack_line,access_create_parameter_pack_line,model_create_parameter_pack_line,lims_base.manager_group,1,1,1,1
+access_do_sop_is_null_wizard,do.sop.is.null.wizard user,lims_base.model_do_sop_is_null_wizard,lims_base.user_group,1,1,1,1
+access_do_sop_is_null_wizard_line,access_do_sop_is_null_wizard_line,model_do_sop_is_null_wizard_line,lims_base.user_group,1,1,1,1
+access_mass_change_result_wizard,mass.change.result.wizard user,lims_base.model_mass_change_result_wizard,lims_base.user_group,1,1,1,1
+access_parameter_characteristic_duplicate_wizard,parameter.characteristic.duplicate.wizard manager,lims_base.model_parameter_characteristic_duplicate_wizard,lims_base.manager_group,1,1,1,1
+access_parameter_compute_correspondence_wizard,parameter.compute.correspondence.wizard manager,lims_base.model_parameter_compute_correspondence_wizard,lims_base.manager_group,1,1,1,1
+access_parameter_compute_correspondence_wizard_line,access_parameter_compute_correspondence_wizard_line,model_parameter_compute_correspondence_wizard_line,lims_base.manager_group,1,1,1,1
+access_print_qweb_container_wizard,print.qweb.container.wizard user,lims_base.model_print_qweb_container_wizard,lims_base.user_group,1,1,1,1
+access_print_qweb_label_wizard,print.qweb.label.wizard user,lims_base.model_print_qweb_label_wizard,lims_base.user_group,1,1,1,1
+access_print_qweb_label_wizard_lines,access_print_qweb_label_wizard_lines,model_print_qweb_label_wizard_lines,lims_base.user_group,1,1,1,1
+access_request_cancel_wizard,request.cancel.wizard manager,lims_base.model_request_cancel_wizard,lims_base.manager_group,1,1,1,1
+access_request_mass_change_wizard,request.mass.change.wizard manager,lims_base.model_request_mass_change_wizard,lims_base.manager_group,1,1,1,1
+access_request_mass_change_wizard_line,access_request_mass_change_wizard_line,model_request_mass_change_wizard_line,lims_base.manager_group,1,1,1,1
+access_result_cancel_wizard,result.cancel.wizard user,lims_base.model_result_cancel_wizard,lims_base.user_group,1,1,1,1
+access_result_cancel_wizard_line,access_result_cancel_wizard_line,model_result_cancel_wizard_line,lims_base.user_group,1,1,1,1
+access_result_rework_wizard,result.rework.wizard user,lims_base.model_result_rework_wizard,lims_base.user_group,1,1,1,1
+access_result_rework_wizard_line,access_result_rework_wizard_line,model_result_rework_wizard_line,lims_base.user_group,1,1,1,1
+access_sop_cancel_wizard,sop.cancel.wizard user,lims_base.model_sop_cancel_wizard,lims_base.user_group,1,1,1,1
+access_sop_mass_change_wizard,sop.mass.change.wizard user,lims_base.model_sop_mass_change_wizard,lims_base.user_group,1,1,1,1
+access_sop_mass_change_wizard_line,access_sop_mass_change_wizard_line,model_sop_mass_change_wizard_line,lims_base.user_group,1,1,1,1
+access_sop_rework_wizard,sop.rework.wizard user,lims_base.model_sop_rework_wizard,lims_base.user_group,1,1,1,1
+access_sop_rework_wizard_line,access_sop_rework_wizard_line,model_sop_rework_wizard_line,lims_base.user_group,1,1,1,1
+access_sel_result_mass_change_wizard,access_sel_result_mass_change_wizard,model_sel_result_mass_change_wizard,lims_base.user_group,1,1,1,1
+access_sel_result_mass_change_wizard_line,access_sel_result_mass_change_wizard_line,model_sel_result_mass_change_wizard_line,lims_base.user_group,1,1,1,1
+access_sop_duplicate_reason_wizard,sop.duplicate.reason.wizard user,model_sop_duplicate_reason_wizard,lims_base.user_group,1,1,1,1
+access_analysis_second_validation_mass_change_wizard,analysis.second.validation.mass.change.wizard user,model_analysis_second_validation_mass_change_wizard,lims_base.user_group,1,1,1,1
+access_analysis_second_validation_mass_change_wizard_line,analysis.second.validation.mass.change.wizard.line user,model_analysis_second_validation_mass_change_wizard_line,lims_base.user_group,1,1,1,1
+
+access_lims_config_settings_user,access_lims_config_settings,model_res_config_settings,lims_base.lims_admin_group,1,1,1,1
+
+access_lims_analysis_request_portal,lims.analysis_request portal,lims_base.model_lims_analysis_request,base.group_portal,1,0,0,0
+access_lims_analysis_portal,lims.analysis portal,lims_base.model_lims_analysis,base.group_portal,1,0,0,0
+access_lims_analysis_stage_portal,lims.analysis.stage portal,lims_base.model_lims_analysis_stage,base.group_portal,1,0,0,0
+

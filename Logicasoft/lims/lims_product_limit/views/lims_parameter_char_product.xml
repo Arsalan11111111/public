@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Form -->
+    <record id="lims_parameter_char_product_form" model="ir.ui.view">
+        <field name="name">Parameter Product</field>
+        <field name="model">lims.parameter.char.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="product_id"  context="{'default_lims_for_analysis': 1}"/>
+                            <field name="rel_matrix_id"/>
+                            <field name="method_param_charac_id"/>
+                            <field name="report_limit_value"/>
+                        </group>
+                        <group>
+                            <field name="accreditation"/>
+                            <field name="accreditation_ids" widget="many2many_tags"/>
+                            <field name="reference"/>
+                            <field name="comment"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Product limits">
+                            <field name="limit_ids" context="{'default_parameter_char_product_id': active_id,
+                                'default_name': product_id,
+                                 'default_operator_from':'>',
+                                 'default_type_alert':'limit',
+                                 'default_state':'unconclusive'}">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="operator_from" required="1"/>
+                                    <field name="limit_value_from"/>
+                                    <field name="operator_to"/>
+                                    <field name="limit_value_to"/>
+                                    <field name="type_alert"/>
+                                    <field name="state" optional="show"/>
+                                    <field name="message" optional="show"/>
+                                    <field name="parameter_char_product_id" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record id="lims_parameter_char_product_tree" model="ir.ui.view">
+        <field name="name">Parameter Product</field>
+        <field name="model">lims.parameter.char.product</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_id"/>
+                <field name="method_param_charac_id"/>
+                <field name="rel_matrix_id" optional="show"/>
+                <field name="accreditation" optional="show"/>
+                <field name="accreditation_ids" widget="many2many_tags" optional="show"/>
+                <field name="report_limit_value"/>
+                <field name="reference"/>
+                <field name="comment"/>
+                <field name="limit_ids" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_parameter_char_product_search">
+        <field name="name">Parameter Product</field>
+        <field name="model">lims.parameter.char.product</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="product_id"/>
+                <field name="method_param_charac_id"/>
+                <field name="rel_matrix_id"/>
+                <field name="report_limit_value"/>
+                <field name="accreditation" optional="show"/>
+                <field name="reference"/>
+                <field name="comment"/>
+                <separator/>
+                <group string="Group By">
+                    <filter name="product_id" context="{'group_by': 'product_id'}"/>
+                    <filter name="method_param_charac_id" context="{'group_by': 'method_param_charac_id'}"/>
+                    <filter name="report_limit_value" context="{'group_by': 'report_limit_value'}"/>
+                    <filter name="accreditation" context="{'group_by': 'accreditation'}"/>
+                    <filter name="accreditation_ids" context="{'group_by': 'accreditation_ids'}"/>
+                    <filter name="reference" context="{'group_by': 'reference'}"/>
+                    <filter name="comment" context="{'group_by': 'comment'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_parameter_char_product_action'>
+        <field name="name">Parameter Char Product</field>
+        <field name="res_model">lims.parameter.char.product</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new  parameter char product.
+            </p><p>
+            You can define several.
+        </p>
+        </field>
+    </record>
+
+    <menuitem name="Product characteristic parameter" action="lims_parameter_char_product_action" parent="lims_base.limit_submenu"
+              id="lims_parameter_char_product_menu" sequence="20"/>
+</odoo>

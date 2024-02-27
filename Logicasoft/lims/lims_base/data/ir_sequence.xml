@@ -1,0 +1,25 @@
+<odoo noupdate="1">
+        <record id="sequence_analysis" model="ir.sequence">
+            <field name="name">Analysis</field>
+            <field name="code">lims.analysis</field>
+            <field eval="6" name="padding"/>
+        </record>
+
+        <record id="sequence_analysis_request" model="ir.sequence">
+            <field name="name">Analysis Request</field>
+            <field name="code">lims.analysis.request</field>
+            <field eval="6" name="padding"/>
+        </record>
+
+        <record id="sequence_batch" model="ir.sequence">
+            <field name="name">Batch</field>
+            <field name="code">lims.batch</field>
+            <field eval="6" name="padding"/>
+        </record>
+
+        <record id="sequence_sop" model="ir.sequence">
+            <field name="name">Test</field>
+            <field name="code">lims.sop</field>
+            <field eval="6" name="padding"/>
+        </record>
+</odoo>

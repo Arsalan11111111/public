@@ -1,0 +1,700 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* form_followup
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-27 13:35+0000\n"
+"PO-Revision-Date: 2022-10-27 13:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: form_followup
+#: model:mail.template,body_html:form_followup.form_followup_validity_alert_mail_template
+msgid ""
+"\n"
+"            \n"
+"                <p>The following form reached/will reach the validity date:</p>\n"
+"            \n"
+"        "
+msgstr ""
+"\n"
+"            \n"
+"                <p>La validité du document suivant est à surveiller:</p>\n"
+"            \n"
+"        "
+
+#. module: form_followup
+#: model:mail.template,body_html:form_followup.form_followup_reception_alert_mail_template
+msgid ""
+"\n"
+"            \n"
+"                <p>The following form requires a confirmation of reception:</p>\n"
+"            \n"
+"        "
+msgstr ""
+"\n"
+"            \n"
+"                <p>Le document suivant requiert une confirmation de réception:</p>\n"
+"            \n"
+"        "
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_kanban
+msgid "<b name=\"recdate\">Reception date:</b>"
+msgstr "<b name=\"recdate\">Date de réception:</b>"
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_kanban
+msgid "<b name=\"reqdate\">Requested date:</b>"
+msgstr "<b name=\"reqdate\">Date de demande:</b>"
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_kanban
+msgid "<b name=\"valdate\">Validity date:</b>"
+msgstr "<b name=\"valdate\">Date de validité:</b>"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_needaction
+msgid "Action Needed"
+msgstr "Nécessite une action"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__active
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__active
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__active
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_state
+msgid "Activity State"
+msgstr "Status de l'Activité"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__rel_group_ids
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__group_ids
+msgid "Allowed Group"
+msgstr "Groupe autorisé"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__add_to_mail_composer
+msgid "Attach to mail"
+msgstr "Joindre au mail"
+
+#. module: form_followup
+#: model:ir.model,name:form_followup.model_ir_attachment
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: form_followup
+#: model:ir.actions.server,name:form_followup.check_late_reception_form_followup_ir_actions_server
+#: model:ir.cron,cron_name:form_followup.check_late_reception_form_followup
+#: model:ir.cron,name:form_followup.check_late_reception_form_followup
+msgid "Check and remind late reception form followups"
+msgstr ""
+"Vérifie et envoie des rappels (aux followers) pour la confirmation de "
+"reception de document (form followup)"
+
+#. module: form_followup
+#: model:ir.actions.server,name:form_followup.check_late_validity_form_followup_ir_actions_server
+#: model:ir.cron,cron_name:form_followup.check_late_validity_form_followup
+#: model:ir.cron,name:form_followup.check_late_validity_form_followup
+msgid "Check and remind late validity form followups"
+msgstr ""
+"Vérifie et envoie des rappels (aux followers) pour alerter la validité de "
+"documents (form followup)"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__rel_color
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__color
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__comment
+msgid "Comment"
+msgstr "Commentaires"
+
+#. module: form_followup
+#: model:ir.model,name:form_followup.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: form_followup
+#: model:ir.model,name:form_followup.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: form_followup
+#: model:ir.ui.menu,name:form_followup.form_followup_configuration_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model,name:form_followup.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__create_uid
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__create_uid
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__create_uid
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__create_date
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__create_date
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__create_date
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__delay_reception
+msgid "Delay reception"
+msgstr "Délai de réception"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__delay_validity
+msgid "Delay validity"
+msgstr "Délai de validité"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__display_name
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__display_name
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__display_name
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__document_folder_id
+msgid "Document Folder"
+msgstr "Espace de travail"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__doc_name
+msgid "Document Name"
+msgstr "Nom du document"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__document_tag_ids
+msgid "Document Tags"
+msgstr "Étiquettes du document"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__type_id
+msgid "Document type"
+msgstr "Type de document"
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_search
+msgid "Expired"
+msgstr "Expiré"
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.extended_res_settings
+msgid ""
+"Fill with stages where validity and reception mail notifications should be "
+"send..."
+msgstr ""
+"Ajoutez les statuts pour lesquels des mails de rappel doivent être envoyés "
+"pour la validité/reception du document..."
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_ir_attachment__folder_id
+msgid "Folder"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__followup_ids
+msgid "Followups"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.actions.act_window,name:form_followup.form_followup_action
+#: model:ir.actions.act_window,name:form_followup.form_followup_calendar_recdate_action
+#: model:ir.actions.act_window,name:form_followup.form_followup_calendar_valdate_action
+#: model:ir.model,name:form_followup.model_form_followup
+#: model:ir.module.category,name:form_followup.module_form_followup
+#: model:ir.ui.menu,name:form_followup.form_followup_menu
+#: model_terms:ir.ui.view,arch_db:form_followup.extended_res_settings
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_form
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_graph
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_list
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_pivot
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_recdate_calendar_view
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_valdate_calendar_view
+#: model_terms:ir.ui.view,arch_db:form_followup.product_template_form
+#: model_terms:ir.ui.view,arch_db:form_followup.res_partner_form
+msgid "Form Followup"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.actions.act_window,name:form_followup.form_followup_stage_action
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_stage_form
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_stage_tree
+msgid "Form Followup Stage"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.actions.act_window,name:form_followup.form_followup_tag_action
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_tag_form
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_tag_tree
+msgid "Form Followup Tag"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.actions.act_window,name:form_followup.form_followup_type_action
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_type_form
+msgid "Form Followup Type"
+msgstr ""
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_type_tree
+msgid "Form Followup type"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_product_product__form_followup_ids
+#: model:ir.model.fields,field_description:form_followup.field_product_template__form_followup_ids
+#: model:ir.model.fields,field_description:form_followup.field_res_partner__form_followup_ids
+#: model:ir.model.fields,field_description:form_followup.field_res_users__form_followup_ids
+#: model:ir.ui.menu,name:form_followup.root_form_followup
+msgid "Form Followups"
+msgstr ""
+
+#. module: form_followup
+#: model:mail.template,name:form_followup.form_followup_reception_alert_mail_template
+msgid "Form followup - reception alert"
+msgstr ""
+
+#. module: form_followup
+#: model:mail.template,name:form_followup.form_followup_validity_alert_mail_template
+msgid "Form followup - validity alert"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_res_company__send_mail_followup_stage_ids
+#: model:ir.model.fields,field_description:form_followup.field_res_config_settings__rel_send_mail_followup_stage_ids
+msgid "Form followup send mails stage(s)"
+msgstr ""
+
+#. module: form_followup
+#: model:mail.template,subject:form_followup.form_followup_reception_alert_mail_template
+msgid "Form reception alert ({{ object.name }})"
+msgstr "Alert de réception du document ({{ object.name }})"
+
+#. module: form_followup
+#: model:mail.template,subject:form_followup.form_followup_validity_alert_mail_template
+msgid "Form validity alert ({{ object.name }})"
+msgstr "Alert de validité du document ({{ object.name }})"
+
+#. module: form_followup
+#: model:ir.ui.menu,name:form_followup.form_followup_menu_form
+msgid "Forms"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.ui.menu,name:form_followup.form_followup_menu_calendar_recdate
+msgid "Forms Calendar (Reception)"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.ui.menu,name:form_followup.form_followup_menu_calendar_valdate
+msgid "Forms Calendar (Validity)"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.ui.menu,name:form_followup.form_followup_stage_menu
+msgid "Forms Stage"
+msgstr "Étapes"
+
+#. module: form_followup
+#: model:ir.ui.menu,name:form_followup.form_followup_tag_menu
+msgid "Forms Tag"
+msgstr "Étiquettes"
+
+#. module: form_followup
+#: model:ir.ui.menu,name:form_followup.form_followup_type_menu
+msgid "Forms Type"
+msgstr "Types"
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__id
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__id
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__id
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__id
+msgid "ID"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__message_needaction
+#: model:ir.model.fields,help:form_followup.field_form_followup__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, de nouveaux messages demandent votre attention."
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__message_has_error
+#: model:ir.model.fields,help:form_followup.field_form_followup__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si actif, certains messages ont une erreur de livraison."
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_is_follower
+msgid "Is Follower"
+msgstr "Est un abonné"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup____last_update
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage____last_update
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag____last_update
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__last_sign_date
+msgid "Last Signature Date"
+msgstr "Date de la dernière signature"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__write_uid
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__write_uid
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__write_uid
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__write_date
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__write_date
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__write_date
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__send_mail_flag
+msgid "Mail flag"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__mail_reception
+msgid "Mail reception"
+msgstr "Email réception"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__mail_validity
+msgid "Mail validity"
+msgstr "Email validité"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: form_followup
+#: model:res.groups,name:form_followup.group_manager
+msgid "Manager"
+msgstr "Gestionnaire"
+
+#. module: form_followup
+#: model:res.groups,comment:form_followup.group_user
+msgid "May consult form followup"
+msgstr "Peut consulter le suivi de document (form followup)"
+
+#. module: form_followup
+#: model:res.groups,comment:form_followup.group_manager
+msgid "May manage form followup"
+msgstr "Peut gérer le suivi de document(form followup)"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur d'envoi du message"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Échéance de mon activité"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__name
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__name
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_tag__name
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__name
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_form
+msgid "Name"
+msgstr "Nom"
+
+#. module: form_followup
+#: code:addons/form_followup/models/form_followup.py:0
+#, python-format
+msgid "New"
+msgstr "Nouveau"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de l'Activité à Venir"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé d'activité suivant"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type d'Activités à Venir"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de messages exigeant une action"
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec des erreurs d'envoi"
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Nombre de messages non lus"
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.product_template_form
+#: model_terms:ir.ui.view,arch_db:form_followup.res_partner_form
+msgid "OPEN"
+msgstr "OUVRIR"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__partner_id
+#: model:ir.ui.menu,name:form_followup.partner_view_form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_search
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__product_tmpl_id
+#: model:ir.ui.menu,name:form_followup.product_view_form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_search
+msgid "Product"
+msgstr "Article"
+
+#. module: form_followup
+#: model:ir.model,name:form_followup.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__recdate
+msgid "Reception date"
+msgstr "Date de réception"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__reqdate
+msgid "Requested date"
+msgstr "Date de demande"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__activity_user_id
+msgid "Responsible User"
+msgstr "Responsable"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_search
+msgid "Search Form Followup"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_stage__sequence
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__sequence
+#: model:ir.model.fields,field_description:form_followup.field_form_followup_type__sequence_id
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: form_followup
+#: code:addons/form_followup/models/form_followup.py:0
+#: code:addons/form_followup/models/form_followup.py:0
+#, python-format
+msgid "Show Form"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__stage_id
+msgid "Stage"
+msgstr "Étape"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__start_date
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : la date d'échéance est déjà dépassée\n"
+"Aujourd'hui : la date d'activité est aujourd'hui\n"
+"Planifiée : activités futures"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__tag_ids
+#: model:ir.model.fields,field_description:form_followup.field_ir_attachment__tag_ids
+msgid "Tags"
+msgstr "Étiquettes"
+
+#. module: form_followup
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_search
+msgid "Type"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_unread
+msgid "Unread Messages"
+msgstr "Messages non lus"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Compteur de messages non lus"
+
+#. module: form_followup
+#: model:res.groups,name:form_followup.group_user
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__valdate
+#: model_terms:ir.ui.view,arch_db:form_followup.form_followup_search
+msgid "Validity date"
+msgstr "Date de validité"
+
+#. module: form_followup
+#: model:ir.model.fields,field_description:form_followup.field_form_followup__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: form_followup
+#: model:ir.model.fields,help:form_followup.field_form_followup__website_message_ids
+msgid "Website communication history"
+msgstr "Historique de communication du site web"
+
+#. module: form_followup
+#: model:ir.model,name:form_followup.model_form_followup_stage
+msgid "form.followup.stage"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model,name:form_followup.model_form_followup_tag
+msgid "form.followup.tag"
+msgstr ""
+
+#. module: form_followup
+#: model:ir.model,name:form_followup.model_form_followup_type
+msgid "form.followup.type"
+msgstr ""

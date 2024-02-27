@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="lims_analysis_request_report_parser">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="analysis_request" t-value="doc"/>
+                <t t-set="company" t-value="doc.labo_id.company_id"/>
+                <t t-call="lims_base.lims_external_layout">
+                    <div class="page">
+                        <style>
+                            td:first-child{ font-weight: bold }
+                        </style>
+
+                        <div style="font-size:40px;text-align:center;font-weight: bold;">
+                            Road Map
+                        </div>
+
+                        <ul style="list-style:none">
+                            <li style="padding-bottom: 3px">
+                                <div style="font-size:30px;font-weight: bold;padding-bottom: 3px">Request</div>
+                                <div style="font-size:20px;font-weight: bold;padding-bottom: 3px" t-esc="analysis_request.name"/>
+                                <table class="table table-bordered" name="request_information">
+                                    <tbody>
+                                        <tr>
+                                            <td>Customer</td>
+                                            <td><span t-esc="analysis_request.partner_id.name"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Order Date</td>
+                                            <td><span t-esc="analysis_request.request_date"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Customer order reference</td>
+                                            <td><span t-esc="analysis_request.customer_order_ref"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Register Date</td>
+                                            <t t-set="analysis_ordered" t-value="analysis_request.analysis_ids.sorted(key=lambda analysis_id: analysis_id.create_date)"/>
+                                            <td><span t-if="analysis_ordered" t-esc="analysis_ordered[0].create_date.strftime('%Y-%m-%d %H:%M:%S')"/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+
+                            <p>
+                                <div style="font-size:20px;font-weight: bold;padding-bottom: 3px;">Comments</div>
+                                <div t-esc="analysis_request.comment"/>
+                            </p>
+
+                            <li>
+                                <div style="font-size:30px;font-weight: bold;padding-bottom: 3px">Samples</div>
+                                <table class="table table-bordered" name="sample_information">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Samples</th>
+                                            <th>Groups</th>
+                                            <th>Method</th>
+                                            <th>Comments</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="get_analysis(analysis_request)" t-as="analysis_id">
+                                            <t t-foreach="analysis_id.pack_ids" t-as="pack_id">
+                                                <t t-foreach="pack_id.parameter_ids.mapped('method_id')" t-as="method_id">
+                                                    <tr>
+                                                        <td style="font-weight: normal;"><span t-esc="analysis_id.sample_name"/></td>
+                                                        <td><span t-esc="analysis_id.name"/></td>
+                                                        <td><span t-field="pack_id.name"/></td>
+                                                        <td><span t-field="method_id.name"/></td>
+                                                        <td><span t-esc="analysis_id.note"/></td>
+                                                    </tr>
+                                                </t>
+                                            </t>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="lims_analysis_request_report_action" model="ir.actions.report">
+        <field name="name">Report Analysis Request</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_base.lims_analysis_request_report_parser</field>
+    </record>
+
+</odoo>

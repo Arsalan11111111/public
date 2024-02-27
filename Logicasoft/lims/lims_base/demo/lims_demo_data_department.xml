@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--        Deactivate security rule for add department-->
+        <record id="lims_base.lims_rule_department" model="ir.rule">
+            <field name="active" eval="0"/>
+        </record>
+
+        <!-- create department-->
+        <record id="demo_department_1" model="lims.department">
+            <field name="name">Demo Department 1</field>
+            <field name="labo_id" ref="demo_laboratory"/>
+        </record>
+        <record id="demo_department_2" model="lims.department">
+            <field name="name">Demo Department 2</field>
+            <field name="labo_id" ref="demo_laboratory"/>
+        </record>
+
+        <!-- assign administrator to department-->
+        <record id="base.user_admin" model="res.users">
+            <field name="department_ids"
+                   eval="[(6,0,(ref('lims_base.default_department'),ref('lims_base.demo_department_1'),ref('lims_base.demo_department_2')))]"/>
+        </record>
+        <!-- assign lims_demo user to department-->
+        <record id="lims_base.user_lims_demo" model="res.users">
+            <field name="department_ids"
+                   eval="[(6,0,(ref('lims_base.default_department'),ref('lims_base.demo_department_1'),ref('lims_base.demo_department_2')))]"/>
+        </record>
+
+        <!-- Re Activate security rule for add department-->
+        <record id="lims_base.lims_rule_department" model="ir.rule">
+            <field name="active" eval="1"/>
+        </record>
+    </data>
+</odoo>

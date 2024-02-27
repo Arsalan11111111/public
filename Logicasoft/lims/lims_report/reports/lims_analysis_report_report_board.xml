@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="analysis_report_board_template_partner_information">
+        <t t-set="doc" t-value="doc.with_context({'lang': report_lang})"/>
+        <p name="partner_information">
+            <div class="row">
+                <div class="col-7"/>
+                <div class="col-4 border">
+                    <b>
+                        <span t-field="doc.partner_id.name"/>
+                        <br/>
+                        <span t-field="doc.partner_id.street"/>
+                        <t t-if="doc.partner_id.street2">
+                            <span t-field="doc.partner_id.street2"/>
+                        </t>
+                        <br/>
+                        <span t-field="doc.partner_id.zip"/>
+                        <span t-field="doc.partner_id.city"/>
+                        <br/>
+                        <span t-field="doc.customer_ref"/>
+                    </b>
+                </div>
+                <div class="col-1"/>
+            </div>
+        </p>
+        <p name="date_information">
+            <div class="row">
+                <div class="offset-7 col-5">
+                    <span t-esc="datetime.date.today().strftime('%d')"/>
+                    <span t-esc="get_month(datetime.date.today().strftime('%-m'))"/>
+                    <span t-esc="datetime.date.today().strftime('%Y')"/>
+                </div>
+            </div>
+        </p>
+    </template>
+
+
+    <template id="analysis_report_board_template_request_information">
+        <div class="row" name="request_information">
+            <div class="col-3">
+                <b>Request number :</b>
+            </div>
+            <div class="col-9">
+                <span t-field="doc.analysis_request_id"/>
+            </div>
+        </div>
+        <div class="row" t-if="doc.customer_ref or doc.analysis_request_id.customer_ref">
+            <div class="col-3">
+                <b>Customer reference :</b>
+            </div>
+            <div class="col-9">
+                <t t-if="doc.customer_ref">
+                    <span t-field="doc.customer_ref"/>
+                </t>
+                <t t-elif="doc.analysis_request_id.customer_ref">
+                    <span t-field="doc.analysis_request_id.customer_ref"/>
+                </t>
+            </div>
+        </div>
+        <div class="row" t-if="doc.analysis_request_id.customer_order_ref">
+            <div class="col-3">
+                <b>Order reference :</b>
+            </div>
+            <div class="col-9">
+                <t>
+                    <span t-field="doc.analysis_request_id.customer_order_ref"/>
+                </t>
+            </div>
+        </div>
+    </template>
+
+    <template id="analysis_report_board_template_board">
+        <t t-foreach="all_board" t-as="board">
+            <div style="font-size: 14px;">
+                <t t-set="analysis1" t-value="board[0]" t-if="len(board) &gt; 0"/>
+                <t t-set="analysis2" t-value="board[1]" t-if="len(board) &gt; 1"/>
+                <t t-set="analysis3" t-value="board[2]" t-if="len(board) &gt; 2"/>
+                <t t-set="analysis4" t-value="board[3]" t-if="len(board) &gt; 3"/>
+                <t t-set="analysis1" t-value="" t-if="len(board) &lt; 1"/>
+                <t t-set="analysis2" t-value="" t-if="len(board) &lt; 2"/>
+                <t t-set="analysis3" t-value="" t-if="len(board) &lt; 3"/>
+                <t t-set="analysis4" t-value="" t-if="len(board) &lt; 4"/>
+                <t t-set="th_width" t-value="'18%' if analysis4 else '24%'"/>
+
+                <table class="table table-bordered" style="width: 100%; table-layout: fixed;page-break-inside:avoid;">
+                    <thead>
+                        <tr style="font-weight:bold">
+                            <th width="16%">
+                                <span style="color:grey;">
+                                    <small>Sample # / Sample name</small>
+                                </span>
+                            </th>
+                            <th align="center" t-att-width="th_width" t-if="analysis1">
+                                <span t-field="analysis1.name"/>
+                                <t t-if="analysis1.name != analysis1.sample_name">
+                                    /
+                                    <span t-field="analysis1.sample_name"/>
+                                </t>
+                            </th>
+                            <th align="center" t-att-width="th_width" t-if="analysis2">
+                                <span t-field="analysis2.name"/>
+                                <t t-if="analysis2.name != analysis2.sample_name">
+                                    /
+                                    <span t-field="analysis2.sample_name"/>
+                                </t>
+                            </th>
+                            <th align="center" t-att-width="th_width" t-if="analysis3">
+                                <span t-field="analysis3.name"/>
+                                <t t-if="analysis3.name != analysis3.sample_name">
+                                    /
+                                    <span t-field="analysis3.sample_name"/>
+                                </t>
+                            </th>
+                            <th align="center" width="18%%" t-if="analysis4">
+                                <span t-field="analysis4.name"/>
+                                /
+                                <span t-field="analysis4.sample_name"/>
+                            </th>
+                        </tr>
+                    </thead>
+                    <t name="date_info">
+                        <tr t-if="get_all_fields_empty(doc,'date_sample_receipt')">
+                            <td>
+                                <b>Date Sample Receipt</b>
+                            </td>
+                            <td t-if="analysis1">
+                                <span t-field="analysis1.date_sample_receipt"/>
+                            </td>
+                            <td t-if="analysis2">
+                                <span t-field="analysis2.date_sample_receipt"/>
+                            </td>
+                            <td t-if="analysis3">
+                                <span t-field="analysis3.date_sample_receipt"/>
+                            </td>
+                            <td t-if="analysis4">
+                                <span t-field="analysis4.date_sample_receipt"/>
+                            </td>
+                        </tr>
+                        <tr t-if="get_all_fields_empty(doc,'date_start') and get_all_fields_empty(doc,'date_done')">
+                            <td>
+                                <b>Date Analysis</b>
+                            </td>
+                            <td t-if="analysis1">From
+                                <span t-field="analysis1.date_start"/>
+                                To
+                                <span t-field="analysis1.date_done"/>
+                            </td>
+                            <td t-if="analysis2">From
+                                <span t-field="analysis2.date_start"/>
+                                To
+                                <span t-field="analysis2.date_done"/>
+                            </td>
+                            <td t-if="analysis3">From
+                                <span t-field="analysis3.date_start"/>
+                                To
+                                <span t-field="analysis3.date_done"/>
+                            </td>
+                            <td t-if="analysis4">From
+                                <span t-field="analysis4.date_start"/>
+                                To
+                                <span t-field="analysis4.date_done"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td t-att-colspan="len(board)+1">
+                                <b>General Parameter</b>
+                            </td>
+                        </tr>
+                    </t>
+                    <t t-set="all_parameter_print_board" t-value="set_all_parameter_print_board(board)"/>
+                    <t t-foreach="all_parameter_print_board" t-as="parameter_print">
+                        <tr>
+                            <td>
+                                <span t-field="parameter_print.print_name"/>
+                            </td>
+                            <td align="center" t-if="analysis1">
+                                <t t-set="result" t-value="get_value(analysis1, parameter_print)"/>
+                                <t t-call="lims_report.analysis_report_board_template_result"/>
+                            </td>
+                            <td align="center" t-if="analysis2">
+                                <t t-set="result" t-value="get_value(analysis2, parameter_print)"/>
+                                <t t-call="lims_report.analysis_report_board_template_result"/>
+                            </td>
+                            <td align="center" t-if="analysis3">
+                                <t t-set="result" t-value="get_value(analysis3, parameter_print)"/>
+                                <t t-call="lims_report.analysis_report_board_template_result"/>
+                            </td>
+                            <td align="center" t-if="analysis4">
+                                <t t-set="result" t-value="get_value(analysis4, parameter_print)"/>
+                                <t t-call="lims_report.analysis_report_board_template_result"/>
+                            </td>
+                        </tr>
+                    </t>
+                    <tr name="conclusion_block" t-if="doc.option_print_remark and get_all_fields_empty(doc,'state', 'unconclusive')"  align="center">
+                        <td align="left">Conclusion</td>
+                        <td t-if="analysis1">
+                            <span t-if="analysis1.state != 'unconclusive'" t-field="analysis1.state"/>
+                        </td>
+                        <td t-if="analysis2 and analysis2.state != 'unconclusive'">
+                            <span t-if="analysis2.state != 'unconclusive'" t-field="analysis2.state"/>
+                        </td>
+                        <td t-if="analysis3 and analysis3.state != 'unconclusive'">
+                            <span t-if="analysis3.state != 'unconclusive'" t-field="analysis3.state"/>
+                        </td>
+                        <td t-if="analysis4 and analysis4.state != 'unconclusive'">
+                            <span t-if="analysis4.state != 'unconclusive'" t-field="analysis4.state"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </t>
+    </template>
+
+    <template id="analysis_report_board_template_result">
+        <t t-if="result">
+            <t t-set="methods" t-value="add_method(methods, result)"/>
+            <t t-if="result['limit_state'] != 'conform'">
+                <t t-set="has_not_conform" t-value="True"/>
+            </t>
+            <t t-if="not result.get('is_null') or doc.option_print_null_value">
+                <t t-if="result['limit_state'] == 'not_conform' and doc.option_print_state">
+                   <t t-set="legends_items" t-value="set_legends_items(legends_items, result['limit_state'])"/>
+                </t>
+                <span t-esc="result['value']" t-att-class="result.get('html_class')" name="result_value"/>
+                <span t-esc="result['uom']" t-att-class="result.get('html_class')"/>
+                <t t-if="doc.option_print_u and result.get('u')" name="u_part">
+                <small style="color:grey;">
+                    <span>±</span>
+                    <span t-esc="result.get('u')"/>
+                </small>
+            </t>
+            </t>
+            <t t-if="result['accreditation'] == 'inta'">
+                <sup>I</sup>
+            </t>
+            <t t-if="result['accreditation'] == 'intna'">
+                <sup>II</sup>
+            </t>
+            <t t-if="result['accreditation'] == 'exta'">
+                <sup>III</sup>
+            </t>
+            <t t-if="result['accreditation'] == 'extna'">
+                <sup>IV</sup>
+            </t>
+            <t t-set="legends_items"
+               t-value="set_legends_items(legends_items, result.get('accreditation'))"/>
+            <t t-set="accreditation"
+               t-value="set_accreditation(accreditation, result)"/>
+            <t t-if="result['limit_message']">
+                <t t-set="all_comment"
+                   t-value="set_all_comment(all_comment, result['limit_message'])"/>
+                <sup>(<span t-esc="all_comment.index(result['limit_message']) + 1"/>)
+                </sup>
+            </t>
+            <t t-if="doc.option_print_comment_result">
+                <t t-if="result['comment']">
+                    <t t-set="all_comment"
+                       t-value="set_all_comment(all_comment, result['comment'])"/>
+                    <sup>(<span t-esc="all_comment.index(result['comment']) + 1"/>)
+                    </sup>
+                </t>
+            </t>
+            <t t-if="result.get('sop_id_comment') and doc.option_print_sop_id_comment">
+                <t t-set="all_html_comment"
+                   t-value="set_all_comment(all_html_comment, result['sop_id_comment'])"/>
+                <sup>(
+                    <span t-esc="chr(all_html_comment.index(result['sop_id_comment']) + 97)"/>
+                    )
+                </sup>
+            </t>
+        </t>
+    </template>
+
+    <template id="analysis_report_board_template_auxiliary_content">
+        <t t-if="legends_items or all_comment or all_limit_message or all_html_comment != []"
+               name="legend_part">
+            <br/>
+            <div class="row">
+                <div class="col-12">
+                    <b>Legend :</b>
+                    <br/>
+                    <p t-if="'inta' in legends_items">
+                        <sup>I</sup>
+                        Accredited Parameter
+                    </p>
+                    <p t-if="'intna' in legends_items">
+                        <sup>II</sup>
+                        Non Accredited Parameter
+                    </p>
+                    <p t-if="'exta' in legends_items">
+                        <sup>III</sup>
+                        Subcontracted Parameter (Accredited)
+                    </p>
+                    <p t-if="'extna' in legends_items">
+                        <sup>IV</sup>
+                        Subcontracted Parameter (Non Accredited)
+                    </p>
+                    <p t-if="'not_conform' in legends_items">
+                        <span class="result_not_conform">Results not conform</span>
+                    </p>
+                    <t t-if="all_comment">
+                        <i t-if="all_comment">
+                            <b>Comment(s) :</b>
+                        </i>
+                        <br/>
+                        <t t-set="i" t-value="1"/>
+                        <t t-foreach="all_comment" t-as="comment">
+                            <sup>(<span t-esc="i"/>)
+                            </sup>
+                            <span t-esc="comment"/>
+                            <br/>
+                            <t t-set="i" t-value="i+1"/>
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </t>
+            <t t-if="doc.option_print_comment_method and all_html_comment != []">
+                    <div class="col-12">
+                        <div class="row">
+                            <p><i><b>Test(s)'s Comment(s) :</b></i></p>
+                            <br/>
+                            <t t-set="j" t-value="1"/>
+                        </div>
+                        <t t-foreach="all_html_comment" t-as="html_comment">
+                            <div class="row">
+                                <sup>(<span t-esc="chr(j+96)"/>)</sup>
+                                <span t-esc="html_comment"/>
+                                <t t-set="j" t-value="j+1"/>
+                            </div>
+                        </t>
+                    </div>
+
+            </t>
+
+        <t t-if="doc.option_print_comment_method and methods and get_method_comments(methods)">
+             <div class="col-12">
+                <div class="row">
+                <i>Comment(s) Method(s) :</i>
+                <br/>
+                <t t-foreach="set(methods)" t-as="method_id">
+                    <t t-if="method_id.comment">
+                    <div style="padding-left: 1cm">
+                        <span style="text-decoration: underline">
+                            <t t-esc="method_id.name"/>
+                        </span>
+                        :
+                        <span class="nonewline" t-out="method_id.comment"/>
+                    </div>
+                    </t>
+                </t>
+                </div>
+            </div>
+        </t>
+        <t t-if="not is_empty_html_field(doc.comment) and doc.option_print_comment" name="comment">
+            <br/>
+            <div class="row" style="page-break-inside:avoid;">
+                <div class="col-12" style="border: 1px solid black;">
+                    <b>Comment(s) :</b>
+                    <br/>
+                    <span t-out="doc.comment"/>
+                </div>
+            </div>
+        </t>
+        <t t-if="not is_empty_html_field(doc.remark) and doc.option_print_remark" name="remark">
+            <br/>
+            <div class="row" style="page-break-inside:avoid;">
+                <div class="col-12" style="border: 1px solid black;">
+                    <b>Remark(s) :</b>
+                    <br/>
+                    <span t-out="doc.remark"/>
+                </div>
+            </div>
+        </t>
+        <br/>
+        <t t-set="laboratory_id" t-value="doc.laboratory_id.with_context(lang=report_lang)"/>
+        <t t-if="'inta' in legends_items and accreditation or doc.option_print_general_information and not is_empty_html_field(laboratory_id.note_report)">
+        <div class="row" style="page-break-inside:avoid;" name="accreditation">
+            <div class="col-3">
+                <t t-if="'inta' in legends_items and accreditation">
+                    <t t-foreach="accreditation" t-as="accr">
+                        <p>
+                            <br/>
+                            <img t-if="accr.logo" t-att-src="'data:image/png;base64,%s' %accr.logo.decode('utf-8')" style="max-height: 13mm;"/>
+                            <br/>
+                            <t t-esc="accr.name"/>
+                            <t t-esc="accr.info"/>
+                        </p>
+                    </t>
+                </t>
+            </div>
+            <div t-if="doc.option_print_general_information and laboratory_id.note_report"
+                 class="col-9" style="border: 1px solid black;" >
+                <b>General information</b>
+                <span t-out="laboratory_id.note_report"/>
+            </div>
+        </div>
+        </t>
+        <br/>
+        <div class="row" style="page-break-inside:avoid" name="laboratory_note_report">
+            <div class="col-3"/>
+            <div class="col-9" name="report_comments">
+                <t t-if="doc.state == 'draft'">
+                    <span t-out="laboratory_id.note_report_draft"/>
+                </t>
+                <t t-if="doc.state in ['validated','sent']">
+                    <span t-out="laboratory_id.note_report_validated"/>
+                </t>
+                <t t-if="doc.state == 'cancel'">
+                    <span t-out="laboratory_id.note_report_cancelled"/>
+                </t>
+            </div>
+        </div>
+    </template>
+
+    <template id="lims_report.analysis_report_board_template">
+        <t t-call="lims_base.lims_external_layout">
+            <div class="page">
+                <style type="text/css">
+                    table, th, td {
+                    border: 1px solid black !important;
+                    }
+                    .nonewline p:first-child{
+                    display: inline;
+                    }
+                    .result_not_conform {
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                </style>
+                <!--                By definition 1 board = 3 analysis maximum-->
+                <t t-set="all_board" t-value="set_all_board(doc)"/>
+                <t t-set="out_of_time" t-value="False"/>
+                <t t-set="legends_items" t-value="[]"/>
+                <t t-set="accreditation" t-value="[]"/>
+                <t t-set="methods" t-value="[]"/>
+                <t t-set="all_comment" t-value="[]"/>
+                <t t-set="all_html_comment" t-value="[]"/>
+                <t t-set="state_not_coform" t-value="False"/>
+
+                <t t-call="lims_report.analysis_report_board_template_partner_information"/>
+                <t t-call="lims_report.analysis_report_template_title"/>
+                <t t-call="lims_report.analysis_report_board_template_request_information"/>
+                <t t-call="lims_report.analysis_report_board_template_board"/>
+                <t t-call="lims_report.analysis_report_board_template_auxiliary_content"/>
+                <t t-call="lims_report.analysis_report_template_img"/>
+                <t t-call="lims_report.analysis_report_template_signatory"/>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="lims_report.analysis_report_board">
+        <t t-call="web.html_container">
+            <t t-foreach="doc_ids" t-as="doc">
+                <t t-set="company" t-value="doc.laboratory_id.company_id"/>
+                <t t-set="report_lang" t-value="get_lang(doc)"/>
+                <t t-call="lims_report.analysis_report_board_template"
+                   t-lang="report_lang"/>
+            </t>
+        </t>
+    </template>
+
+    <record id="lims_analysis_report_report_board" model="ir.actions.report">
+        <field name="name">Analysis Report Table (H)</field>
+        <field name="model">lims.analysis.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_report.analysis_report_board</field>
+        <field name="report_file">lims_report.analysis_report_board</field>
+        <field name="attachment">('REP '+(object.name or '').replace('/','')+'.pdf')</field>
+    </record>
+
+</odoo>

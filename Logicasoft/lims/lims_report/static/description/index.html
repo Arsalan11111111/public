@@ -1,0 +1,336 @@
+<section class="oe_container">
+    <div class="oe_row">
+        <h1>Lims Report</h1>
+        <blockquote data-o-mail-quote="1">
+            <p>New menu:</p>
+            <ol class="arabic simple">
+                <li>Report --&gt; Analysis Report</li>
+                <li>Master Data --&gt; report --&gt; Parameter print and Parameter Print Group</li>
+            </ol>
+            <p>New models:</p>
+            <ol class="arabic">
+                <li>
+                    <dl class="first docutils">
+                        <dt>Analysis Report</dt>
+                        <dd>
+                            <ul class="first last">
+                                <li><p class="first">Version: The version of the report</p>
+                                </li>
+                                <li><p class="first">Print Annex: Box checked if the annexe need to be show on the
+                                    report</p>
+                                </li>
+                                <li><p class="first">Print Delay: Box checked if the delay need to be show on the
+                                    report</p>
+                                </li>
+                                <li><p class="first">Print Remark: Box checked if the remark need to be show on the
+                                    report</p>
+                                </li>
+                                <li><p class="first">Print Uncertainty: Box checked if the uncertainty need to be show
+                                    on the report</p>
+                                </li>
+                                <li><p class="first">Print LOD: Box checked if the LOD need to be show on the report</p>
+                                </li>
+                                <li><p class="first">Print Standard: Box checked if the standard need to be show on the
+                                    report</p>
+                                </li>
+                                <li><p class="first">Print Comment: Box checked if the comment need to be show on the
+                                    report</p>
+                                </li>
+                                <li><p class="first">Print Standard Method: Box checked if the standard method need to
+                                    be show on the report</p>
+                                </li>
+                                <li><p class="first">Print LOQ: Box checked if the LOQ need to be show on the report</p>
+                                </li>
+                                <li>
+                                    <dl class="first docutils">
+                                        <dt>Standard Information</dt>
+                                        <dd>
+                                            <ul class="first last simple">
+                                                <li>Analysis Request: (See lims base --&gt; section Analysis request)
+                                                </li>
+                                                <li>Customer:</li>
+                                                <li>Laboratory: (See lims base --&gt; section lLaboratory)</li>
+                                                <li>Report Name: Name of the report</li>
+                                                <li>Replace Report:</li>
+                                                <li>Title: Title of the report</li>
+                                                <li>Ref.Customer: Reference of the customer</li>
+                                                <li>Report Date: The date of the report when it's created</li>
+                                                <li>Date sent: The date of the report when it's sent</li>
+                                                <li>Signatory 01 and 02: Person who signed the report</li>
+                                                <li>Image 01, 02, 03: Upload until 3 image</li>
+                                                <li>Text Image 01, 02, 03: Text related to the image</li>
+                                                <li>Comment: A commentary</li>
+                                                <li>Remark: A remark</li>
+                                                <li>Report Line (See section Analysis Report Line)</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Analysis report line</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Name: It's the name of the report (It's related to the name of a Analysis Report)
+                                </li>
+                                <li>Analysis: (See section analysis)</li>
+                                <li>State: (See lims base --&gt; section Analysis State) This state is equal to the
+                                    Analysis State
+                                </li>
+                                <li>Stage: (See lims base --&gt; section Analysis Stage)</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Parameter Print</dt>
+                        <dd>
+                            <ul class="first last">
+                                <li><p class="first">Name: Name of the parameter</p>
+                                </li>
+                                <li><p class="first">Print Name: The display name of the parameter</p>
+                                </li>
+                                <li><p class="first">Sequence: Number used to sort all parameter</p>
+                                </li>
+                                <li><p class="first">method: (See lims base --&gt; section Method)</p>
+                                </li>
+                                <li><p class="first">Not check Max value in report: Box checked if the max value is not
+                                    check in the report</p>
+                                </li>
+                                <li><p class="first">Subcontracting Print Option: Related to the Subcontracting Print
+                                    Option of the first Parameter Characteristic of the Parameter print</p>
+                                </li>
+                                <li><p class="first">Not check LOQ in report: Box checked if the LOQ doesn't need to be
+                                    check in the report</p>
+                                </li>
+                                <li><p class="first">Accreditation Type: Type of accreditation</p>
+                                </li>
+                                <li><p class="first">Uom: this is the Unity of measure (related to the uom of the first
+                                    Parameter Characteristic (see below))</p>
+                                </li>
+                                <li><p class="first">report note:</p>
+                                </li>
+                                <li>
+                                    <dl class="first docutils">
+                                        <dt>Parameters</dt>
+                                        <dd>
+                                            <ul class="first last simple">
+                                                <li>Parameter: (See lims base --&gt; section Parameter)</li>
+                                                <li>Parameter Characteristics: (See lims base --&gt; section Parameter
+                                                    Characteristic)
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li><p class="first">Parameter Print Group (See section Parameter Print Group)</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Parameter Print Group</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>print Title: Box checked if the title need to be show on the report</li>
+                                <li>Print name: Display name for the parameter</li>
+                                <li>Parent: The Parameter group can a child of an another Parameter group</li>
+                                <li>Parameter print: (See section Parameter Print)</li>
+                                <li>Children: The parameter group can be the child of another Parameter group</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ol>
+            <p>New field:</p>
+            <ol class="arabic">
+                <li>
+                    <dl class="first docutils">
+                        <dt>Analysis</dt>
+                        <dd>
+                            <ul class="first last">
+                                <li><p class="first">is locked:Box checked if the analysis is locked and cannot be
+                                    modified</p>
+                                </li>
+                                <li><p class="first">date report Sent: It's the date when the report is sent</p>
+                                </li>
+                                <li><p class="first">time_to_report: It's the difference between Date Report Sent and
+                                    Date Sample Receipt</p>
+                                </li>
+                                <li>
+                                    <dl class="first docutils">
+                                        <dt>Results</dt>
+                                        <dd>
+                                            <ul class="first last">
+                                                <li>
+                                                    <dl class="first docutils">
+                                                        <dt>Analysis Result and Analysis Sel Result</dt>
+                                                        <dd>
+                                                            <ul class="first last simple">
+                                                                <li>Print On report: Box checked if this result need to
+                                                                    be show on the report
+                                                                </li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl class="first docutils">
+                                                        <dt>Computed Results</dt>
+                                                        <dd>
+                                                            <ul class="first last simple">
+                                                                <li>Print On report: Box checked if this result need to
+                                                                    be show on the report
+                                                                </li>
+                                                            </ul>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Analysis Request</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Date report Sent: It's the date when the report is sent</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Laboratory</dt>
+                        <dd>
+                            <ul class="first last">
+                                <li>
+                                    <dl class="first docutils">
+                                        <dt>Report</dt>
+                                        <dd>
+                                            <ul class="first last simple">
+                                                <li>Sequence Report: it's the sequence for the report's name</li>
+                                                <li>Default Analysis Report: Analysis report by default</li>
+                                                <li>Lock analysis from reports: lock the analysis when it goal a stage
+                                                </li>
+                                                <li>Note report when draft: Display a note when the report goal the
+                                                    'draft' stage
+                                                </li>
+                                                <li>Note report when validated: Display a note when the report goal the
+                                                    'Validated' stage
+                                                </li>
+                                                <li>Note report when cancelled: Display a note when the report goal the
+                                                    'Cancelled' stage
+                                                </li>
+                                                <li>Note report: Display a note</li>
+                                                <li>Text for subcontracted: A text</li>
+                                                <li>Default signatory 1 and 2: person who signed the report by default
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Parameter Characteristic</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Parameter print: (See section Parameter print)</li>
+                                <li>Subcontracting print option: Selection between With result and Without result</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Parameter</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Parameter Print: (See section Parameter Print)</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ol>
+            <p>New features:</p>
+            <ol class="arabic">
+                <li>
+                    <dl class="first docutils">
+                        <dt>Analysis</dt>
+                        <dd>
+                            <ul class="first last">
+                                <li><p class="first">1 Smart button:</p>
+                                    <blockquote data-o-mail-quote="1">
+                                        <ul class="simple">
+                                            <li>Report: Display a list of Report (See section Analysis Report) including
+                                                the analysis
+                                            </li>
+                                        </ul>
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Analysis Report</dt>
+                        <dd>
+                            <ul class="first last">
+                                <li>
+                                    <dl class="first docutils">
+                                        <dt>7 Smart button:</dt>
+                                        <dd>
+                                            <ul class="first last simple">
+                                                <li>Print preview HTML: Display an html format of the report before the
+                                                    print
+                                                </li>
+                                                <li>Print Preview PDF: Display an pdf format of the report before the
+                                                    print
+                                                </li>
+                                                <li>Print: Print in pdf format</li>
+                                                <li>Send by email: Send an email with the report (not possible in cancel
+                                                    and draft state)
+                                                </li>
+                                                <li>Send draft: SEnd zn email with the report</li>
+                                                <li>Validate: Set the state of the report to 'validated'</li>
+                                                <li>Cancel: Set the state of the report to 'cancelled'</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Analysis Request</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Create Report: Create a report</li>
+                                <li>Reports: Display a list of Report including the request</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ol>
+        </blockquote>
+    </div>
+</section>

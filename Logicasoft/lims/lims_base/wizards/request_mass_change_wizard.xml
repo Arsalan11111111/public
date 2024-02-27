@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="request_mass_change_wizard_form" model="ir.ui.view">
+        <field name="name">Request Mass Change</field>
+        <field name="model">request.mass.change.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="state"/>
+                    </group>
+                    <group>
+                        <field name="line_ids" nolabel="1">
+                            <tree string="">
+                                <field name="request_id"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="save_mass_change" string="Save" type="object"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

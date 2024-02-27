@@ -1,0 +1,1167 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-13 15:10+0000\n"
+"PO-Revision-Date: 2023-10-13 15:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_parameter_pack__working_day
+msgid ""
+"\n"
+"    Number of working days for this service,\n"
+"    When generating a quote, the longest number of working days found for the packs in the request will be indicated.\n"
+"    (Ignore configuration of 0 days)\n"
+"    "
+msgstr ""
+"\n"
+"    Nombre de jours ouvrables pour ce service,\n"
+"    Lors de la génération d'un devis, le plus grand nombre de jours ouvrables trouvés pour les packs dans la demande sera indiqué.\n"
+"( Ignore la configuration de 0 jours)\n"
+"    "
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_res_partner__type
+#: model:ir.model.fields,help:lims_sale.field_res_users__type
+msgid ""
+"- Contact: Use this to organize the contact details of employees of a given company (e.g. CEO, CFO, ...).\n"
+"- Invoice Address : Preferred address for all invoices. Selected by default when you invoice an order that belongs to this company.\n"
+"- Delivery Address : Preferred address for all deliveries. Selected by default when you deliver an order that belongs to this company.\n"
+"- Private: Private addresses are only visible by authorized users and contain sensitive data (employee home addresses, ...).\n"
+"- Other: Other address for the company (e.g. subsidiary, ...)"
+msgstr ""
+"- Contact : utilisez-le pour organiser les coordonnées des employés d'une entreprise donnée (par exemple, CEO, CFO, ...).\n"
+"- Adresse de facturation : Adresse préférée pour toutes les factures. Sélectionnée par défaut lorsque vous facturez une commande qui appartient à cette société.\n"
+"- Adresse d'expédition : Adresse préférée pour toutes les livraisons. Sélectionnée par défaut lorsque vous livrez une commande appartenant à cette société.\n"
+"- Privé : Les adresses privées ne sont visibles que par les utilisateurs autorisés et contiennent des données sensibles (adresses personnelles des employés, ...).\n"
+"- Autre : Autre adresse de l'entreprise (par ex. filiale, ...)"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "<b>Legend :</b><br/>"
+msgstr "<b>Légende :</b><br/>"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "<b>Parameters :</b><br/>"
+msgstr "<b>Paramètres:</b><br/>"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "<span style=\"text-align:center;\">-</span>"
+msgstr ""
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.portal_analysis_page
+#: model_terms:ir.ui.view,arch_db:lims_sale.portal_request_page
+msgid ""
+"<strong class=\"text-muted\">\n"
+"                        Order #\n"
+"                    </strong>"
+msgstr ""
+"<strong class=\"text-muted\">\n"
+"                        Commande #\n"
+"                    </strong>"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_form
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_form
+msgid "<strong>Don't forget to update the SO when necessary !</strong>"
+msgstr ""
+"<strong>N’oubliez pas de mettre à jour la commande si nécessaire !</strong>"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_method_parameter_characteristic.py:0
+#, python-format
+msgid ""
+"A product must be configured on parameter characteristic {} or its parameter"
+" in order for it to be billable"
+msgstr ""
+"Un article doit être configuré sur la caractéristique de paramètre {} ou son"
+" paramètre pour que celle-ci soit facturable"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__accreditation_ids
+msgid "Accreditations"
+msgstr "Accréditations"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_add_parameters_request
+msgid "Add Parameter Request"
+msgstr "Ajouter Paramètre Demande"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_add_parameters_wizard
+msgid "Add parameters"
+msgstr "Ajouter Paramètre"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_form
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_sample_form
+msgid "Additional pack of packs"
+msgstr "Groupe de groupes additionnel"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_form
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_sample_form
+msgid "Additional packs"
+msgstr "Groupes additionnel"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_request_product_pack_from
+msgid "Additional selling packs"
+msgstr "Packs de vente additionnels"
+
+#. module: lims_sale
+#. odoo-javascript
+#: code:addons/lims_sale/static/src/xml/parameters_helper.xml:0
+#, python-format
+msgid ""
+"Additional selling packs; Works only if a sample with their legislation will"
+" be generated."
+msgstr ""
+"Packs de vente additionnels ; ne fonctionne que si un échantillon de leur "
+"législation est généré."
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_res_partner__type
+#: model:ir.model.fields,field_description:lims_sale.field_res_users__type
+msgid "Address Type"
+msgstr "Type d'adresse"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__allow_additional_pack_invoiced
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request_sample__allow_additional_pack_invoiced
+#: model:ir.model.fields,field_description:lims_sale.field_lims_parameter_pack__allow_additional_pack_invoiced
+#: model:ir.model.fields,field_description:lims_sale.field_lims_request_product_pack__allow_additional_pack_invoiced
+msgid "Allow Additional Pack Invoiced"
+msgstr "Autoriser la facturation d'un pack additionnel"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_parameter_pack__is_additional_invoiced
+#: model_terms:ir.ui.view,arch_db:lims_sale.res_config_settings_view_form
+msgid ""
+"Allows parameter packs to be invoiced without generating the results in the "
+"analysis."
+msgstr ""
+"Permet de facturer les packs de paramètres sans générer les résultats dans "
+"l'analyse."
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_res_config_settings__additional_pack_invoiced
+msgid "Allows you to add packs only to be invoiced"
+msgstr "Permet d'ajouter des packs seulement pour être facturés"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request__amount_untaxed
+msgid "Amount Untaxed"
+msgstr "Montant non taxé"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.res_config_settings_view_form
+msgid "An additional configuration is present in the parameter pack."
+msgstr ""
+"Une configuration supplémentaire est présente dans le pack de paramètres."
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_analysis
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__analysis_ids
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__analysis_id
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__analysis_ids
+msgid "Analysis"
+msgstr "Échantillons"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.sale_order_portal_template
+msgid "Analysis #"
+msgstr "Analyse #"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_analysis_compute_result
+msgid "Analysis Compute Result"
+msgstr "Résultat calculé"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__analysis_request_ids
+msgid "Analysis Request"
+msgstr "Demandes"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_analysis_request_sample
+msgid "Analysis Request Sample"
+msgstr "Échantillon de la demande"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_analysis_sel_result
+msgid "Analysis Selection Result"
+msgstr "Résultat de sélection"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/sale_order.py:0
+#, python-format
+msgid "Analysis request"
+msgstr "Demande"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_analysis_text_result
+msgid "Analysis text result"
+msgstr "Résultat texte"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__section_model
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__section_model
+msgid "Base sale order sections on "
+msgstr "Baser les sections des commandes sur "
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.confirm_create_order_request_form
+msgid ""
+"Be careful, there is already at least one sale order, this action will "
+"cancel and replace all existing sale order."
+msgstr ""
+"Attention, il y a déjà au moins un bon de commande, cette action va annuler "
+"et remplacer tout bon de commande existant."
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_method_parameter_characteristic__billable
+#: model:ir.model.fields,field_description:lims_sale.field_lims_parameter_pack__billable
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_method_parameter_characteristic_search
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_parameter_pack_search
+msgid "Billable"
+msgstr "Facturable"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.confirm_create_order_form
+#: model_terms:ir.ui.view,arch_db:lims_sale.confirm_create_order_request_form
+#: model_terms:ir.ui.view,arch_db:lims_sale.create_analysis_request_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_product_product__nb_method_param_charac
+#: model:ir.model.fields,field_description:lims_sale.field_product_template__nb_method_param_charac
+msgid "Charac. Param."
+msgstr ""
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.sale_order_form
+msgid "Client Order Ref"
+msgstr "Réf de commande client"
+
+#. module: lims_sale
+#: model:ir.actions.server,name:lims_sale.action_compute_costing
+msgid "Compute Costing"
+msgstr "Calcul des Coûts"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.create_analysis_request_wizard_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_sale
+#: model:ir.actions.act_window,name:lims_sale.confirm_create_order_action
+#: model:ir.model,name:lims_sale.model_confirm_create_order_wizard
+msgid "Confirm Create Order"
+msgstr "Confirmer la Création de la Commande"
+
+#. module: lims_sale
+#: model:ir.actions.act_window,name:lims_sale.confirm_create_order_request_action
+#: model:ir.model,name:lims_sale.model_confirm_create_order_request_wizard
+msgid "Confirm Create Order Request"
+msgstr "Confirmer création commande via les demandes"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis.py:0
+#, python-format
+msgid "Confirm create sale order"
+msgstr "Confirmer la création de commande"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.confirm_create_order_form
+#: model_terms:ir.ui.view,arch_db:lims_sale.confirm_create_order_request_form
+msgid "Continue"
+msgstr "Continuer"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__cost
+msgid "Cost"
+msgstr "Coût"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__costing_ids
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_form
+msgid "Costing"
+msgstr "Calcul des coûts"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis.py:0
+#, python-format
+msgid ""
+"Costing line has either no product or its product is deactivated. Reactivate"
+" or change product in order to create a sale order"
+msgstr ""
+"Soit une ligne de coût n'a pas de produit, soit son produit est archivé. "
+"Réactivez ou changez de produit pour créer un bon de commande"
+
+#. module: lims_sale
+#: model:ir.actions.server,name:lims_sale.action_create_sale_order
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_form
+msgid "Create Sale Order"
+msgstr "Créer Bon de Commande"
+
+#. module: lims_sale
+#: model:ir.actions.server,name:lims_sale.action_create_sale_order_request
+msgid "Create Sale Order Request"
+msgstr "Créer ordre de vente via les demandes"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/sale_order.py:0
+#: model_terms:ir.ui.view,arch_db:lims_sale.sale_order_form
+#, python-format
+msgid "Create analysis request"
+msgstr "Créer demande d'analyse"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_create_analysis_request_wizard
+msgid "Create analysis request wizard"
+msgstr "Créer demande d'analyse wizard"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__create_uid
+msgid "Created by"
+msgstr "Créer par "
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__create_date
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__create_date
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard__create_date
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__create_date
+msgid "Created on"
+msgstr "Créer le"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__rel_currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__customer_ref
+msgid "Customer Ref"
+msgstr "Référence Client"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__partner_contact_ids
+msgid "Customer contacts"
+msgstr "Contacts client"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_parameter_pack__so_section_name
+msgid ""
+"Define text for the SO's section,\n"
+" if empty the section will take the name of this group for this article."
+msgstr ""
+"Définit le texte pour la section du bon de  commande client,\n"
+" si vide la section prendra le nom de ce groupe pour cet article."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_parameter_pack__billable
+msgid ""
+"Defines whether when generating a sell order, this parameter group will "
+"generate an item line."
+msgstr ""
+"Défini, à la génération d'une commande de vente, si ce groupe de paramètres "
+"va générer une ligne de vente."
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__display_name
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__display_name
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard__display_name
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__display_warning
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request__display_warning
+msgid "Display Warning"
+msgstr "Afficher l'alerte"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "Estimated time for report delivery:"
+msgstr "Délai estimé pour la livraison du rapport :"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "External Accredited"
+msgstr "Accrédité externe"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "External Not Accredited"
+msgstr "Externe Non Accrédité"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__id
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__id
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard__id
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis__pricelist_id
+msgid ""
+"If the analysis comes from a request, the price list will be linked to the "
+"request. Otherwise, the default price list will be the one defined for the "
+"customer; in this case the price list can be modified if the analysis is not"
+" indicated as 'to do'"
+msgstr ""
+"Si l'analyse provient d'une demande, la liste de prix sera celle liée à la "
+"demande. Sinon la liste de prix par défaut sera celle définie par le client "
+"et pourra être modifiée si l'analyse n'est pas indiquée comme 'à faire' ou "
+"plus"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_sale_order__print_parameters
+msgid ""
+"If this is checked, this will add on the sale order's pdf a table under each"
+" sale order lines that summarize information about parameter involved in "
+"that line,  such as his method, his standard, his loq, etc..."
+msgstr ""
+"Si cette case est cochée, cela ajoutera au pdf du bon de commande un tableau"
+" sous chaque ligne de bon de commande qui résume les informations sur le "
+"paramètre impliqué dans cette ligne, comme sa méthode, sa norme, son loq, "
+"etc..."
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis.py:0
+#, python-format
+msgid "Individuals articles"
+msgstr "Articles individuels"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "Internal Accredited"
+msgstr "Accrédité Interne"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "Internal Not Accredited"
+msgstr "Interne Non Accrédité"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request__invoice_count
+msgid "Invoice(s)"
+msgstr "Facture(s)"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_form
+#, python-format
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_parameter_pack__is_additional_invoiced
+msgid "Is Additional Invoiced"
+msgstr "Facturable en additionnel"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_sale_order__accreditation_ids
+msgid ""
+"It add before the note of the sale order's pdf a list of accreditations with"
+" their logos and their names."
+msgstr ""
+"Il ajoute avant la note du pdf du bon de commande une liste d'accréditations"
+" avec leurs logos et leurs noms."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis_request__pricelist_id
+msgid ""
+"It helps to defined specific prices for products. If you changes the client,"
+" his pricelist will take over."
+msgstr ""
+"Il aide à définir des prix spécifiques pour les produits. Si vous changez de"
+" client, sa liste de prix prendra le relais."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis_request__invoice_to_id
+msgid "It will be the customer of the order."
+msgstr "Ce sera le client de la commande."
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.res_config_settings_view_form
+msgid "LIMS sale"
+msgstr ""
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "LOQ"
+msgstr ""
+
+#. module: lims_sale
+#: model:ir.model.fields.selection,name:lims_sale.selection__res_partner__type__laboratory
+msgid "Labo"
+msgstr "Laboratoire"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_laboratory
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard____last_update
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard____last_update
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard____last_update
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__write_date
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__write_date
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard__write_date
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_analysis_costing
+msgid "Lims Analysis Costing"
+msgstr "Calcul des coûts pour l'analyse Lims"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "Method"
+msgstr "Méthode"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__method_param_charac_ids
+msgid "Method Param Charac"
+msgstr "Caract de param de méthode"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/product_product.py:0
+#: code:addons/lims_sale/models/product_template.py:0
+#: model:ir.model,name:lims_sale.model_lims_method_parameter_characteristic
+#, python-format
+msgid "Method Parameter Characteristic"
+msgstr "paramètre de caractéristique de méthode"
+
+#. module: lims_sale
+#: model:res.groups,name:lims_sale.salesman_group
+msgid "Minimal Lims Salesman"
+msgstr "LIMS ventes (minimal)"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__nb_analysis
+msgid "NB Analysis"
+msgstr "Nombre d'échantillon"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__nb_request
+msgid "Nb Request"
+msgstr "Nb demandes"
+
+#. module: lims_sale
+#: model:ir.actions.act_window,name:lims_sale.lims_action_quotation_form
+#: model:ir.actions.act_window,name:lims_sale.lims_action_quotation_tree
+msgid "New Quotation"
+msgstr "Nouveau devis"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard__text
+msgid "Note"
+msgstr ""
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_analysis_numeric_result
+msgid "Numerical analysis result"
+msgstr "Résultat numérique"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_report_parser
+msgid "Offer"
+msgstr "Offre"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis.py:0
+#, python-format
+msgid "One of your analysis don't have a laboratory"
+msgstr "Une de vos analyses n'a pas de laboratoire"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis.py:0
+#, python-format
+msgid "Only one client must be present into that selection"
+msgstr "Cette action ne peut concerner qu'un client à la fois"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_res_config_settings__additional_pack_invoiced
+msgid ""
+"Only when this option is used, it will be possible when adding packs and "
+"parameters to add it only to the billing. In addition, it will be necessary "
+"to make the pack as: invoice supplement."
+msgstr ""
+"Seulement lorsque cette option est utilisée, il sera possible, lors de "
+"l'ajout de packs et de paramètres, de les ajouter uniquement à la "
+"facturation. De plus, il sera nécessaire de rendre le pack en tant que : "
+"Facturable en additionnel."
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__sale_order_id
+msgid "Order"
+msgstr "Commande"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.portal_analyses_table
+#: model_terms:ir.ui.view,arch_db:lims_sale.portal_my_requests
+msgid "Order #"
+msgstr "Commande #"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_sample_form
+msgid "Order lines"
+msgstr "Lignes de commande"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__pack_ids
+msgid "Pack"
+msgstr "Groupe"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis__pack_invoiced_ids
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis__pack_of_pack_invoiced_ids
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis_request_sample__pack_invoiced_ids
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis_request_sample__pack_of_pack_invoiced_ids
+msgid "Pack that will only be invoiced, and not generate on the analyses"
+msgstr "Pack qui sera uniquement facturé, et non généré sur les analyses"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_request_product_pack__pack_invoiced_ids
+msgid ""
+"Pack that will only be invoiced, and not generate on the analyses; An "
+"analysis with this legislation must be generated to add the sales "
+"supplements"
+msgstr ""
+"Pack qui sera uniquement facturé, et non généré sur les analyses ; Une "
+"analyse avec cette législation doit être générée pour ajouter les "
+"suppléments de vente."
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_product_product__nb_pack
+#: model:ir.model.fields,field_description:lims_sale.field_product_template__nb_pack
+msgid "Packs"
+msgstr "Groupes"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__pack_invoiced_ids
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request_sample__pack_invoiced_ids
+#: model:ir.model.fields,field_description:lims_sale.field_lims_request_product_pack__pack_invoiced_ids
+msgid "Packs invoiced"
+msgstr "Groupe facturés"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__pack_of_pack_invoiced_ids
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request_sample__pack_of_pack_invoiced_ids
+msgid "Packs of packs invoiced"
+msgstr "Groupe de groupes facturés"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/product_product.py:0
+#: code:addons/lims_sale/models/product_template.py:0
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order_line__parameter_ids
+#, python-format
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/product_product.py:0
+#: code:addons/lims_sale/models/product_template.py:0
+#: model:ir.model,name:lims_sale.model_lims_parameter_pack
+#, python-format
+msgid "Parameter Pack"
+msgstr "Groupe de Paramètres"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_laboratory.py:0
+#, python-format
+msgid "Parameter pack"
+msgstr "Groupe de paramètres"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_method_parameter_characteristic__rel_parameter_product
+msgid "Parameter's product"
+msgstr "Produit du paramètre"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_product_product__nb_parameter
+#: model:ir.model.fields,field_description:lims_sale.field_product_template__nb_parameter
+msgid "Parameters"
+msgstr "Paramètres"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_method_parameter_characteristic__sale_price
+msgid "Price at which the product is sold to customers."
+msgstr "Prix auquel l'article est vendu aux clients."
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__pricelist_id
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request__pricelist_id
+msgid "Pricelist"
+msgstr "Liste de prix"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__print_parameters
+msgid "Print Parameter on PDF ?"
+msgstr "Imprimer les paramètres sur le PDF ?"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_product_template
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__product_id
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_method_parameter_characteristic_search
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_parameter_pack_search
+msgid "Product"
+msgstr "Produit"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_product_product
+msgid "Product Variant"
+msgstr "Variante de produit"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_sample_form
+msgid "Public sale price"
+msgstr "Prix de vente public"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__qty
+msgid "Qty"
+msgstr "Quantité"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request__invoice_to_id
+msgid "Quotation/invoice Contact"
+msgstr "Contact Devis/facture"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__order_id
+msgid "Ref PO"
+msgstr "Réf. PO"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_analysis_request
+#: model:ir.model.fields,field_description:lims_sale.field_account_bank_statement_line__analysis_request_id
+#: model:ir.model.fields,field_description:lims_sale.field_account_move__analysis_request_id
+#: model:ir.model.fields,field_description:lims_sale.field_account_payment__analysis_request_id
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__analysis_request_id
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order_line__request_id
+msgid "Request"
+msgstr "Demande"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.sale_order_portal_template
+msgid "Request #"
+msgstr "Demande #"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_lims_request_product_pack
+msgid "Request Product Pack"
+msgstr "Demande de groupe de produit"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_laboratory.py:0
+#, python-format
+msgid "Request samples"
+msgstr "Échantillons"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__request_count
+msgid "Request(s)"
+msgstr "Demande(s)"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/sale_order.py:0
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__analysis_request_ids
+#, python-format
+msgid "Requests"
+msgstr "Demandes"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/wizards/create_analysis_request_wizard.py:0
+#, python-format
+msgid ""
+"Requests had already been created from this sale order. Are you sure to "
+"create a new one ?"
+msgstr "Des demandes ont déjà été créées à partir de cette commande client. Êtes-vous sûr d'en créer une nouvelle ?"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__revenue
+msgid "Revenue"
+msgstr "Revenu"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_method_parameter_characteristic_form
+msgid "Sale"
+msgstr "Vente"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request_sample__sale_order_line_ids
+msgid "Sale Orders"
+msgstr "Bons de commande"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_parameter_pack__sale_price
+msgid "Sale Price"
+msgstr "Prix de vente"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_create_analysis_request_wizard__order_id
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request__order_id
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request_sample__rel_order_id
+msgid "Sale order"
+msgstr "Bon de commande"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_request__sale_order_count
+msgid "Sale order count"
+msgstr "Nombre de devis"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_form
+#, python-format
+msgid "Sale orders"
+msgstr "Devis"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid "Sale orders from requests"
+msgstr "Bons de commandes des demande"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_laboratory
+msgid "Sales"
+msgstr "Ventes"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: lims_sale
+#: model:ir.model,name:lims_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Lignes de bon de commande"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_method_parameter_characteristic__sale_price
+msgid "Sales Price"
+msgstr "Prix de vente"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order_line__sample_id
+msgid "Sample"
+msgstr "Échantillon"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/controllers/portal.py:0
+#: code:addons/lims_sale/controllers/portal.py:0
+#, python-format
+msgid "Search in Order"
+msgstr "Recherche dans les commandes"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_laboratory__section_model
+msgid "Section in SO based on"
+msgstr "Sections des commandes basées sur"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_parameter_pack__so_section_name
+msgid "Section name"
+msgstr "Nom de section"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis_costing__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_sale_order__signatory_id
+msgid "Signatory"
+msgstr "Signataire"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__so_exists
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__so_exists
+msgid "So Exists"
+msgstr ""
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid "Some requests have no clients."
+msgstr "Des demandes n'ont pas de clients"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "Standard"
+msgstr ""
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis__total_cost
+msgid "Sum of the cost multiplied by the quantity for each costing line."
+msgstr "Somme des coûts multipliés par la quantité pour chaque ligne de coût."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis__total_revenue
+msgid "Sum of the revenue multiplied by the quantity for each costing line."
+msgstr ""
+"Somme des revenus multipliés par la quantité pour chaque ligne de coût."
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_request_wizard__order_template_id
+#: model:ir.model.fields,field_description:lims_sale.field_confirm_create_order_wizard__order_template_id
+msgid "Template"
+msgstr "Modèle"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis__sale_order_id
+msgid "The most recent sale order linked with this analysis."
+msgstr "L'ordre de vente le plus récent lié à cette analyse."
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis.py:0
+#, python-format
+msgid "There is no pricelist set in at least one analysis"
+msgstr "Il n'y a pas de liste de prix dans au moins une analyse"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid "There is no pricelist set in at least one request"
+msgstr "Il n'y a pas de pricelist dans au moins une des demandes"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid "There is no pricelist set in the request"
+msgstr "Il n'y a pas de liste de prix dans la demande"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid "There is no quotation/invoice contact in the request"
+msgstr "Il n'y a pas de contact devis/facture dans la demande"
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_sale_order__analysis_request_ids
+msgid "This is all the requests that has been builded from this sale order."
+msgstr ""
+"Il s'agit de toutes les demandes qui ont été créées à partir de cette "
+"commande client."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis_request__amount_untaxed
+msgid "This is the amount untaxed of the order."
+msgstr "Il s'agit du montant non-taxé de la commande."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis__rel_currency_id
+msgid "This is the currency present in the company of the laboratory."
+msgstr "C'est la devis présente dans l'entreprise du laboratoire."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_sale_order__analysis_request_id
+#: model:ir.model.fields,help:lims_sale.field_sale_order_line__request_id
+msgid ""
+"This is the most recent request builded from this sale order. If you confirm"
+" the sale order, it will confirm this request."
+msgstr ""
+"Il s'agit de la demande la plus récente créée à partir de cette commande "
+"client. Si vous confirmez l'ordre de vente, il confirmera cette demande."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_analysis_request_sample__rel_order_id
+msgid "This is the order of the request."
+msgstr "C'est l'ordre de la demande."
+
+#. module: lims_sale
+#: model:ir.model.fields,help:lims_sale.field_lims_parameter_pack__sale_price
+msgid "This is the sale price of the product."
+msgstr "C'est le prix de vente du produit."
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.confirm_create_order_form
+msgid "This will cancel all sale order. Continue ?"
+msgstr "Ceci va annuler toutes les commandes. Voulez-vous continuer ?"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid "To group by sample you have to give each one of them a name"
+msgstr "Pour grouper par échantillon vous devez leur donner un nom"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_sample_form
+msgid "Total"
+msgstr ""
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__total_cost
+msgid "Total Cost"
+msgstr "Coût Total"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_analysis__total_revenue
+msgid "Total Revenue"
+msgstr "Revenu Total"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_report_parser
+msgid "Vendor"
+msgstr "Vendeur"
+
+#. module: lims_sale
+#: model:ir.model.fields,field_description:lims_sale.field_lims_parameter_pack__working_day
+msgid "Working Day"
+msgstr "Jour Ouvrable"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_sample_form
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_request_product_pack_from
+msgid "Works only if a sample with their legislation will be generated."
+msgstr ""
+"Ne fonctionne que si un échantillon contenant leur législation est généré."
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid "You can not create a quotation for another company"
+msgstr "Vous ne pouvez pas créer de devis pour une autre société"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid "You can not create a quotation for different company"
+msgstr "Vous ne pouvez pas créer de devis pour une société différente"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/sale_order.py:0
+#, python-format
+msgid ""
+"You can not duplicate if at least one line is linked to an analysis request "
+"or an analysis"
+msgstr ""
+"Vous ne pouvez pas dupliquer si au moins une ligne est liée à une demande "
+"d'analyse ou à une analyse"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis_request.py:0
+#, python-format
+msgid ""
+"You can't create a new quotation because there is at least one invoice "
+"opened."
+msgstr ""
+"Vous ne pouvez pas créer de nouveau devis car au moins une facture est "
+"ouverte."
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis.py:0
+#, python-format
+msgid "You can't make a sale order with analysis from different laboratories"
+msgstr ""
+"Vous ne pouvez pas grouper des échantillons de différents laboratoires sur "
+"une même commande"
+
+#. module: lims_sale
+#. odoo-python
+#: code:addons/lims_sale/models/lims_analysis.py:0
+#, python-format
+msgid "You can't make a sale order with analysis with different pricelists"
+msgstr ""
+"Vous ne pouvez pas faire un devis avec des analyses ayant des listes de prix"
+" différent"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.lims_analysis_request_form
+msgid "create quotation"
+msgstr "créer devis"
+
+#. module: lims_sale
+#: model_terms:ir.ui.view,arch_db:lims_sale.report_saleorder_document
+msgid "working days from sample reception."
+msgstr "jours ouvrés à partir de la réception de l'échantillon."

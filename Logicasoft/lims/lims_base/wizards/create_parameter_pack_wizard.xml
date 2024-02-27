@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="create_parameter_pack_wizard_fom" model="ir.ui.view">
+        <field name="name">Create Parameter Pack Wizard</field>
+        <field name="model">create.parameter.pack.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group string="Parameter">
+                        <field name="line_ids" readonly="1" nolabel="1">
+                            <tree decoration-muted="rel_active == False" decoration-warning="rel_state == 'draft'">
+                                <field name="method_parameter_characteristic_id"/>
+                                <field name="regulation_id"/>
+                                <field name="matrix_id"/>
+                                <field name="laboratory_id"/>
+                                <field name="rel_state"/>
+                                <field name="rel_active" widget="boolean_toggle"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="do_confirm" string="Create Parameter Pack" type="object"/>
+                    <button string="Cancel" name="cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="create_parameter_pack_action" model="ir.actions.act_window">
+        <field name="name">Create Parameter Pack Wizard</field>
+        <field name="res_model">create.parameter.pack.wizard</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

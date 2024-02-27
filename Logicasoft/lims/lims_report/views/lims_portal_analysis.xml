@@ -1,0 +1,78 @@
+<odoo>
+    <template id="portal_analyses_table" inherit_id="lims_base.portal_analyses_table">
+
+        <th name="th_customer_ref" position="after">
+            <th name="th_report_id">
+                Report #
+            </th>
+        </th>
+        <td name="td_customer_ref" position="after">
+            <td name="td_report_id">
+
+                <t t-set="reports" t-value="analysis_id.get_sent_reports()"/>
+                <t t-if="reports">
+                    <t t-set="report_id" t-value="analysis_id.get_sent_reports(get_only_if_one=1)"/>
+                    <t t-if="report_id">
+                        <a t-att-title="report_id.title" t-att-href="report_id.get_portal_url()">
+                            <i class="fa fa-link fa-1x"/>
+                        </a>
+                        <span t-field="report_id.name"/>
+                        <a t-if="report_id.kanban_state != 'blocked' and report_id.message_main_attachment_id and report_id.message_main_attachment_id.datas" t-att-title="report_id.title"
+                           t-att-href="report_id.get_portal_url(report_type='pdf', download=True)">
+                            <i class="fa fa-cloud-download"/>
+                        </a>
+                    </t>
+                    <a t-else="" t-att-href="analysis_id.get_portal_url()" t-att-title="analysis_id.description">
+                        Reports
+                    </a>
+                </t>
+            </td>
+        </td>
+
+    </template>
+
+    <template id="portal_analysis_page_content" inherit_id="lims_base.portal_analysis_page_content">
+        <t t-if="analysis_id.request_id.analysis_ids" position="after">
+            <t t-if="analysis_id.get_sent_reports()" t-call="portal.portal_table">
+                <t t-set="analyses"
+                   t-value="analysis_id.get_sent_reports().analysis_ids.filtered(lambda a: a.id != analysis_id.id)"/>
+                <t t-if="analyses">
+                    <div class="col-12 bg-white pb-1">
+                        <b>
+                            <em>Other analyses in this report:</em>
+                        </b>
+                    </div>
+                    <t t-call="lims_base.portal_analyses_table"/>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_analysis_page" inherit_id="lims_base.portal_analysis_page">
+        <ul name="list_entries" position="inside">
+            <t t-set="reports" t-value="analysis_id.get_sent_reports()"/>
+            <li t-if="reports" class="list-group-item flex-grow-1">
+                <div class="small mb-1">
+                    <strong class="text-muted">
+                        Report #
+                    </strong>
+                </div>
+                <div class="row" t-foreach="reports" t-as="report_id">
+                    <div class="col flex-grow-0 pr-2">
+                        <a t-att-title="report_id.title" t-att-href="report_id.get_portal_url()">
+                            <i class="fa fa-link fa-1x"/>
+                        </a>
+                    </div>
+                    <div class="col pl-0">
+                        <span t-esc="report_id.name"  t-att-title="report_id.title"/>
+                        <a t-if="report_id.kanban_state != 'blocked' and report_id.message_main_attachment_id and report_id.message_main_attachment_id.datas"
+                           t-att-title="report_id.title" t-att-href="report_id.get_portal_url(report_type='pdf', download=True)">
+                            <i class="fa fa-cloud-download"/>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </template>
+</odoo>

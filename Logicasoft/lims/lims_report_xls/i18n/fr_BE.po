@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_report_xls
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-08 12:20+0000\n"
+"PO-Revision-Date: 2022-12-08 12:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Analysis"
+msgstr "Echantillons"
+
+#. module: lims_report_xls
+#: model:ir.actions.report,name:lims_report_xls.analysis_xlsx
+msgid "Analysis export (.xlsx)"
+msgstr "Export d'analyses export (.xlsx)"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Customer"
+msgstr "Client"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Date plan"
+msgstr "Date prévue"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Date start"
+msgstr "Date de début"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Due date"
+msgstr "Date d'échéance"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Matrix"
+msgstr "Matrice"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "No analysis selected"
+msgstr "Aucune analyse sélectionnée"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Reason"
+msgstr "Motif"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Regulation"
+msgstr "Législation"
+
+#. module: lims_report_xls
+#: model:ir.model,name:lims_report_xls.model_report_lims_report_xls_report_analysis_xlsx
+msgid "Report Lims_report_xls Report_analysis_xlsx"
+msgstr ""
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Request"
+msgstr "Demande"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "Stage"
+msgstr "Étape"
+
+#. module: lims_report_xls
+#. odoo-python
+#: code:addons/lims_report_xls/reports/analysis_xlsx.py:0
+#, python-format
+msgid "State"
+msgstr "État"

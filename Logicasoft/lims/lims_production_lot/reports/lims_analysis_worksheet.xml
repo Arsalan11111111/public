@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+     <template id="lims_analysis_worksheet_parser" inherit_id="lims_base.lims_analysis_worksheet_parser">
+        <xpath expr="//div[hasclass('page')]//div[2]//div[4]" position="after">
+            <p t-if="analysis.lot_id">
+                Lot :
+                <span t-field="analysis.lot_id"/>
+            </p>
+        </xpath>
+    </template>
+</odoo>

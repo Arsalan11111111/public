@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="analysis_report_board_vertical_partner_information">
+        <t t-set="address">
+            <address t-field="doc.partner_id"
+                     t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
+            <span t-esc="datetime.date.today().strftime('%Y/%m/%d')"/>
+        </t>
+    </template>
+
+    <template id="analysis_report_board_vertical_request_information">
+        <div class="row" name="request_information">
+            <div class="col-5">
+                <b>Request number :</b>
+            </div>
+            <div class="col-7">
+                <span t-field="doc.analysis_request_id"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <b>Customer reference :</b>
+            </div>
+            <div class="col-7">
+                <span t-field="doc.analysis_request_id.customer_order_ref"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="analysis_report_board_vertical_board">
+        <t t-foreach="all_board" t-as="board">
+            <div style="font-size: 14px;">
+                <t t-set="parameter1" t-value="board[0] if len(board) &gt; 0 else ''"/>
+                <t t-set="parameter2" t-value="board[1] if len(board) &gt; 1 else ''"/>
+                <t t-set="parameter3" t-value="board[2] if len(board) &gt; 2 else ''"/>
+                <t t-set="parameter4" t-value="board[3] if len(board) &gt; 3 else ''"/>
+                <t t-set="th_width" t-value="'18%' if parameter4 else '24%'"/>
+
+                <table class="table table-condensed" style="width: 100%; table-layout: fixed;page-break-inside:avoid;">
+                    <thead>
+                        <tr style="font-weight:bold">
+                            <th width="16%"/>
+                            <th align="center" t-att-width="th_width" t-if="parameter1">
+                                <span t-field="parameter1.print_name"/>
+                            </th>
+                            <th align="center" t-att-width="th_width" t-if="parameter2">
+                                <span t-field="parameter2.print_name"/>
+                            </th>
+                            <th align="center" t-att-width="th_width" t-if="parameter3">
+                                <span t-field="parameter3.print_name"/>
+                            </th>
+                            <th align="center" width="18%" t-if="parameter4">
+                                <span t-field="parameter4.print_name"/>
+                            </th>
+                        </tr>
+                    </thead>
+                    <t t-foreach="doc.report_analysis_line_ids.mapped('analysis_id')" t-as="analysis_id">
+                        <tr>
+                            <td>
+                                <span t-field="analysis_id.name"/>
+                                /
+                                <span t-field="analysis_id.sample_name"/>
+                            </td>
+                            <td align="center" t-if="parameter1">
+                                <t t-set="result" t-value="get_value(analysis_id, parameter1)"/>
+                                <t t-call="lims_report.analysis_report_board_vertical_result"/>
+                            </td>
+                            <td align="center" t-if="parameter2">
+                                <t t-set="result" t-value="get_value(analysis_id, parameter2)"/>
+                                <t t-call="lims_report.analysis_report_board_vertical_result"/>
+                            </td>
+                            <td align="center" t-if="parameter3">
+                                <t t-set="result" t-value="get_value(analysis_id, parameter3)"/>
+                                <t t-call="lims_report.analysis_report_board_vertical_result"/>
+                            </td>
+                            <td align="center" t-if="parameter4">
+                                <t t-set="result" t-value="get_value(analysis_id, parameter4)"/>
+                                <t t-call="lims_report.analysis_report_board_vertical_result"/>
+                            </td>
+                        </tr>
+                    </t>
+                </table>
+            </div>
+        </t>
+    </template>
+
+    <template id="analysis_report_board_vertical_result">
+        <t t-if="result">
+            <t t-set="methods" t-value="add_method(methods, result)"/>
+            <t t-set="accreditation_type" t-value="set_accreditation_type(accreditation_type, result['accreditation'])"/>
+            <t t-if="result['limit_state'] != 'conform'">
+                <t t-set="legends_items" t-value="set_legends_items(legends_items, result['limit_state'])"/>
+            </t>
+            <t t-if="not result.get('is_null') or doc.option_print_null_value">
+                <span t-esc="result['value']" t-att-class="result.get('html_class')" name="result_value"/>
+                <span t-esc="result['uom']" t-att-class="result.get('html_class')"/>
+                <t t-if="result['accreditation'] == 'inta'">
+                    <sup>I</sup>
+                </t>
+                <t t-if="result['accreditation'] == 'intna'">
+                    <sup>II</sup>
+                </t>
+                <t t-if="result['accreditation'] == 'exta'">
+                    <sup>III</sup>
+                </t>
+                <t t-if="result['accreditation'] == 'extna'">
+                    <sup>IV</sup>
+                </t>
+                <t t-if="result['limit_message']">
+                <t t-set="all_comment"
+                   t-value="set_all_comment(all_comment, result['limit_message'])"/>
+                    <sup>(<span t-esc="all_comment.index(result['limit_message']) + 1"/>)</sup>
+                </t>
+                <t t-if="doc.option_print_comment_result">
+                    <t t-if="result['comment']">
+                        <t t-set="all_comment"
+                           t-value="set_all_comment(all_comment, result['comment'])"/>
+                        <sup>(<span t-esc="all_comment.index(result['comment']) + 1"/>)</sup>
+                    </t>
+                </t>
+            </t>
+            <t t-set="legends_items"
+                t-value="set_legends_items(legends_items, result.get('accreditation'))"/>
+            <t t-set="accreditation"
+               t-value="set_accreditation(accreditation, result)"/>
+        </t>
+    </template>
+    
+    <template id="analysis_report_board_vertical_template">
+        <t t-call="lims_base.lims_external_layout">
+            <div class="page">
+                <style type="text/css">
+                    table, th, td {
+                    border: 1px solid black !important;
+                    }
+                    .nonewline p:first-child{
+                    display: inline;
+                    }
+                    .result_not_conform {
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                </style>
+                <t t-call="lims_report.analysis_report_board_vertical_partner_information"/>
+                <t t-call="lims_report.analysis_report_template_title"/>
+                <t t-call="lims_report.analysis_report_board_vertical_request_information"/>
+                <!--                By definition 1 board = 3 analysis maximum-->
+                <t t-set="all_board" t-value="set_all_board(doc)"/>
+                <t t-set="out_of_time" t-value='False'/>
+                <t t-set="accreditation" t-value="[]"/>
+                <t t-set="methods" t-value="[]"/>
+                <t t-set="accreditation_type" t-value="[]"/>
+                <t t-set="all_comment" t-value="[]"/>
+                <t t-set="legends_items" t-value="[]"/>
+
+                <t t-call="lims_report.analysis_report_board_vertical_board"/>
+                <t t-call="lims_report.analysis_report_board_template_auxiliary_content"/>
+                <t t-call="lims_report.analysis_report_template_img"/>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="lims_report.analysis_report_board_vertical">
+        <t t-call="web.html_container">
+            <t t-foreach="doc_ids" t-as="doc">
+                <t t-set="report_lang" t-value="get_lang(doc)"/>
+                <t t-set="company" t-value="doc.laboratory_id.company_id"/>
+                <t t-call="lims_report.analysis_report_board_vertical_template" t-lang="report_lang"/>
+            </t>
+        </t>
+    </template>
+
+    <record id="lims_analysis_report_report_board_vertical" model="ir.actions.report">
+        <field name="name">Analysis Report Table (V)</field>
+        <field name="model">lims.analysis.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_report.analysis_report_board_vertical</field>
+        <field name="print_report_name">'WSBATCH_' + object.name</field>
+        <field name="attachment">('REP '+(object.name or '').replace('/','')+'.pdf')</field>
+    </record>
+
+</odoo>

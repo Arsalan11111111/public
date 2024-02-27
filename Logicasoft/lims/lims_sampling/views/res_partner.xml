@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_partner_form" model="ir.ui.view">
+        <field name="name">Res Partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position='inside'>
+              <t groups="lims_base.user_group">
+                 <button type="object" class="oe_stat_button" icon="fa-map-pin" name="open_sampling_point"
+                         attrs="{'invisible': [('sampling_point_count', '=', 0)]}"
+                         context="{'default_partner_id': active_id}">
+                    <field string="Sampling Point" name="sampling_point_count" widget="statinfo"/>
+                 </button>
+              </t>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,1322 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_spw_tax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-29 13:48+0000\n"
+"PO-Revision-Date: 2022-07-29 13:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_accessibility_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__accessibility_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_accessibility_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_accessibility_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_accessibility_tree
+msgid "Accessibility"
+msgstr "Accessibilité"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_needaction
+msgid "Action Needed"
+msgstr "Nécessite une action"
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_lims_analysis
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__analysis_ids
+msgid "Analysis"
+msgstr "Échantillon"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "Analysis Type"
+msgstr "Type d'analyse"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.assign_campaign
+#: model:ir.model,name:lims_spw_tax.model_assign_campaign_wizard
+msgid "Assign Campaign Wizard"
+msgstr "Assigner une campagne"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_campaign_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__campaign_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__campaign_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__campaign_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__campaign_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__campaign_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_campaign_menu
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_campaign_root
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_configuration
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_search
+msgid "Campaign"
+msgstr "Campagne"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_campaign_produced_action
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_campaign_produced
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_produced_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_produced_tree
+msgid "Campaign Produced"
+msgstr "Campagne produite"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_campaign_treatedmat_action
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_campaign_treatedmat
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_treatedmat_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_treatedmat_tree
+msgid "Campaign Treated Mat"
+msgstr "Matière traitée"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__campaign_ids
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__campaign_ids
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__campaign_ids
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_sampling_point_form
+msgid "Campaigns"
+msgstr "Campagnes"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.assign_campaign_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__sampler_is_check_by_us
+msgid "Check by Us"
+msgstr "Vérifié par le labo"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__flowmeter_is_check_by_us
+msgid "Check by Us "
+msgstr "Vérifié par le labo"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__code
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__code
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point__code
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media__code
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type__code
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type__code
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__code
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment__code
+msgid "Code"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__comment
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_composite_flow
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_composite_flow
+msgid "Composite Flow"
+msgstr "Composite débit"
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.assign_campaign_wizard_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__continuous_debit_measure
+msgid "Continuous debit measurement"
+msgstr "Volume journalier moyen"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_continuous_debit
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_continuous_debit
+msgid "Continuous flow"
+msgstr "En continu"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_control_point_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__control_point_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__control_point_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_control_point_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_control_point_form
+msgid "Control Point"
+msgstr "Point de contrôle qualité"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_control_point_tree
+msgid "Control Points"
+msgstr "Points de contrôle qualité"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__counted
+msgid "Counted"
+msgstr "Dénombré"
+
+#. module: lims_spw_tax
+#: model:ir.actions.server,name:lims_spw_tax.lims_sampling_point_create_visit
+msgid "Create visits from extraction point"
+msgstr "Créer compteurs de visite"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_accessibility__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_other_methodology_description__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__create_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_watertype__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_accessibility__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_other_methodology_description__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__create_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_watertype__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_config_settings__years_create_tax
+msgid "Creation years"
+msgstr "Années à créer"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__partner_id
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_search
+msgid "Customer"
+msgstr "Client"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__sampler_is_customer
+msgid "Customer equipment"
+msgstr "Equipement du client"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__flowmeter_is_customer
+msgid "Customer sampler"
+msgstr "Equipe d'échantillonneur"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_search
+msgid "Date"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__date_from
+msgid "Date From"
+msgstr "À partir de"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__date_plan
+msgid "Date Plan"
+msgstr "Date Prévue"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__date_sample
+msgid "Date Sample"
+msgstr "Date Échantillon"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__date_sample_receipt
+msgid "Date Sample Receipt"
+msgstr "Date Réception Échantillon"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__date_to
+msgid "Date To"
+msgstr "Jusqu'à"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_date_unknown
+msgid "Date Unknown"
+msgstr "Date inconnue"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_day_action
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_day_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_day_form
+msgid "Day"
+msgstr "Jour"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__day_activity_ids
+msgid "Day Activity"
+msgstr "Jours d'activité"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_day_tree
+msgid "Days"
+msgstr "Jours"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__days_activity_count
+msgid "Days Activity Count"
+msgstr "Jours d'activité (comptage)"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__days_discharge_count
+msgid "Days Discharge Count"
+msgstr "Jours de rejet"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_discharge_media_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__discharge_media_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_discharge_media_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_discharge_media_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_discharge_media_tree
+msgid "Discharge Media"
+msgstr "Milieu de rejet"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_discharge_type_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__discharge_type_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_discharge_type_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_discharge_type_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_discharge_type_tree
+msgid "Discharge Type"
+msgstr "Type de rejet"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_discharge_water_type_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__discharge_water_type_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_discharge_water_type_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_discharge_water_type_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_discharge_water_type_tree
+msgid "Discharge Water Type"
+msgstr "Type d'eau de rejet"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_accessibility__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_other_methodology_description__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_watertype__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields.selection,name:lims_spw_tax.selection__spw_tax_campaign__state__done
+msgid "Done"
+msgstr "Fait"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_done_by_client
+msgid "Done by Client"
+msgstr "Fait par le client"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__ecotoxicity
+msgid "Eco Toxicity"
+msgstr "Eco Toxicité"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__nb_employees
+msgid "Employees"
+msgstr "Employées"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__date_end
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__end_date
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__end_index
+msgid "End Index"
+msgstr "Dernier index"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_lims_sampling_point__is_equipment_labo
+msgid "Equipment used to measure debit is from laboratory"
+msgstr "L'équipement utilisé pour mesurer le début vient du laboratoire"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_lims_sampling_point__is_equipment_site
+msgid "Equipment used to measure debit is from site"
+msgstr "L'équipement utilisé pour mesurer le début vient du site"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__export
+msgid "Export"
+msgstr "Exporter"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__partner_address_id
+msgid "Extraction Site"
+msgstr "Site d'extraction"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "Flow measurement"
+msgstr "Mesure du débit"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_note3
+msgid "Flow measurement difficulty"
+msgstr ""
+"Remarques liées aux difficultés ou particularité de l'évaluation du débit"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__flowmeter_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__flowmeter_id
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "Flowmeter"
+msgstr "Débitmètre"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__frequency
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__frequency
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__frequency
+msgid "Frequency"
+msgstr "Fréquence"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_search
+msgid "Group by"
+msgstr "Grouper par"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_accessibility__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_other_methodology_description__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_watertype__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_spw_tax_campaign__message_needaction
+#: model:ir.model.fields,help:lims_spw_tax.field_spw_tax_campaign__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, les nouveaux messages requièrent votre attention."
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_spw_tax_campaign__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si actif, certains messages ont une erreur de livraison."
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_is_follower
+msgid "Is Follower"
+msgstr "Est un abonné"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_equipment_labo
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_equipment_labo
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_equipment_labo
+msgid "Labo"
+msgstr "Laboratoire"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__sampler_asset_id
+msgid "Labo (N° INV)"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__flowmeter_asset_id
+msgid "Labo (N° INV) "
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_accessibility____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_other_methodology_description____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_watertype____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_accessibility__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_other_methodology_description__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__write_uid
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_watertype__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Mise à jour par"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_accessibility__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_other_methodology_description__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__write_date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_watertype__write_date
+msgid "Last Updated on"
+msgstr "Dernière Mise à jour le"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe Principale"
+
+#. module: lims_spw_tax
+#: model:res.groups,name:lims_spw_tax.spw_tax_manager
+msgid "Manager"
+msgstr "Gestionnaire"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur d'envoi du message"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_meter_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__meter_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_meter_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_meter_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_meter_tree
+msgid "Meter"
+msgstr "Mètre"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_meter_reading_action
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_meter_reading_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_meter_reading_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_meter_reading_tree
+msgid "Meter Reading"
+msgstr "Lecture de compteur"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__meter_ids
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__meter_ids
+msgid "Meters"
+msgstr "Mètres"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__meters_reading_ids
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_form
+msgid "Meters Reading"
+msgstr "Lectures compteurs"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_month_action
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_month_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_month_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_month_tree
+msgid "Month"
+msgstr "Mois"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__month_activity_ids
+msgid "Month Activities"
+msgstr "Mois d'Activités"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__month_activity_id
+msgid "Month Activity"
+msgstr "Mois d'Activité"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_accessibility__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_control_point__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_media__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_type__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_discharge_water_type__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_other_methodology_description__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_treatment__name
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_watertype__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__nb_analysis
+msgid "Nb Analysis"
+msgstr "Nombre d'Analyse"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__nb_employees
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__nb_employees
+msgid "Nb Employees"
+msgstr "Nb employés"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__no_com
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__no_com
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__no_com
+msgid "No communicated"
+msgstr "Non communiqué"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__read_by_none
+msgid "None"
+msgstr "Aucun"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__note_txt
+msgid "Note printed on spw tax"
+msgstr "Note imprimée sur la taxe spw"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__nb_campaigns
+msgid "Number Campaigns"
+msgstr "Nombre de Campagnes"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'Actions"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_spw_tax_campaign__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de messages qui demandent une action"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_spw_tax_campaign__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec des erreurs d'envoi"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_spw_tax_campaign__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Nombre de messages non-lus"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_note1
+msgid "Obstruct by taxpayer"
+msgstr "le redevable a entravé la collecte des informations"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields.selection,name:lims_spw_tax.selection__spw_tax_campaign__state__open
+msgid "Open"
+msgstr "Ouvrir"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_note4
+msgid "Other"
+msgstr "Autre"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__other_methodology_description
+msgid "Other Methodology Description"
+msgstr "Spécifier la méthodologie"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__outflow
+msgid "Outflow"
+msgstr "Débit"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__parent_id
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_search
+msgid "Parent"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__partner_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_partner_activity_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__activity_spw_tax_ids
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__activity_spw_tax_ids
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_partner_activity_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_partner_activity_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_partner_activity_tree
+msgid "Partner Activity"
+msgstr "Activité client"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__planned
+msgid "Planned"
+msgstr "Prévu"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_planning
+msgid "Planning"
+msgstr "Planification"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "Preservation Method"
+msgstr "Méthode de préservation"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__produced_mat_ids
+msgid "Produced Mat"
+msgstr "Matière produite"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_form
+msgid "Produced Mats"
+msgstr "Mats produits"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__product_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__product_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_punctual
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_punctual
+msgid "Punctual"
+msgstr "Ponctuel"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__quantity
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__quantity
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__rain_water_presence
+msgid "Rain Water Presence"
+msgstr "Présence d'eau de pluie"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__read_by_customer
+msgid "Read By Customer"
+msgstr "Lu par le client"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__read_by_labo
+msgid "Read By Labo"
+msgstr "Lu par Labo"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__readingby_id
+msgid "Reading By"
+msgstr "Relevé par"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__reference
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__reference
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__rel_reference
+msgid "Reference"
+msgstr "Référence"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_refrigerated_transport
+msgid "Refrigerated Transport"
+msgstr "Transport Réfrigéré"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "Remarks"
+msgstr "Remarques"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "SPW Tax"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_graph
+msgid "SPW Tax Campaign"
+msgstr "Campagne SPW tax"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__spw_tax_watertype_id
+msgid "SPW Water Type"
+msgstr "SPW Type eau"
+
+#. module: lims_spw_tax
+#: model:ir.module.category,name:lims_spw_tax.spw_tax
+msgid "SWP Tax"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "Sample Identification"
+msgstr "Échantillonnage"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_sample_equipment_labo
+msgid "Sample Labo"
+msgstr "Matériel, Labo"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_sample_equipment_site
+msgid "Sample Site"
+msgstr "Matériel, Site après vérification"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__sampler_id
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "Sampler"
+msgstr "Échantillonneur"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_form
+msgid "Samplin Point"
+msgstr "Point de Prélèvement"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__sampling_point_ids
+msgid "Samplin point"
+msgstr "Point de prélèvement"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__sampling_comment
+msgid "Sampling Comment"
+msgstr "Commentaire de Prélèvement"
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_lims_sampling_point
+msgid "Sampling Point"
+msgstr "Point de Prélèvement"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__sampling_volume
+msgid "Sampling Volume (l)"
+msgstr "Volume du Prélèvement (l)"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_note2
+msgid "Sampling difficulty"
+msgstr "Remarques liées aux difficultés ou particularités du prélévement"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__sampling_equipment_id
+msgid "Sampling equipment"
+msgstr "Équipement du prélèvement"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_lims_sampling_point__is_sampling_equipment_site
+msgid "Sampling equipment used if from site"
+msgstr "L'équipement d'échantillonnage utilisé vient du site"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_lims_sampling_point__is_sampling_equipment_labo
+msgid "Sampling equipment used is from laboratory"
+msgstr "L'équipement d'échantillonnage utilisé vient du laboratoire"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__is_sampling_point
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__is_sampling_point
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__sampling_point_id
+msgid "Sampling point"
+msgstr "Point de prélèvement"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_day__sequence
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_month__sequence
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_partner_activity__sequence
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_visit_cpt__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_campaign_site_id_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_assign_campaign_wizard__site_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_equipment_site
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_equipment_site
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_equipment_site
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__site_id
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter__site_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_campaign_site_id_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_search
+msgid "Site"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__sampling_spill_number
+msgid "Spill N°"
+msgstr "Rejet N°"
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_accessibility
+msgid "Spw Tax Accessibility model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_campaign_produced
+msgid "Spw Tax Campaign Produced model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_campaign_treatedmat
+msgid "Spw Tax Campaign Treatemat model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_campaign
+msgid "Spw Tax Campaign model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_control_point
+msgid "Spw Tax Control Point model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_day
+msgid "Spw Tax Day model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_discharge_media
+msgid "Spw Tax Discharge Media model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_discharge_type
+msgid "Spw Tax Discharge Type model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_discharge_water_type
+msgid "Spw Tax Discharge Water model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_meter_reading
+msgid "Spw Tax Meter Reading model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_meter
+msgid "Spw Tax Meter model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_month
+msgid "Spw Tax Month model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_other_methodology_description
+msgid "Spw Tax Other Methodology Description Model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_partner_activity
+msgid "Spw Tax Partner Activity model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_treatment
+msgid "Spw Tax Treatment model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_visit_cpt
+msgid "Spw Tax Visit Cpt model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model,name:lims_spw_tax.model_spw_tax_watertype
+msgid "Spw Tax Watertype model"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__date
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__start_date
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_meter_reading__start_index
+msgid "Start Index"
+msgstr "Premier index"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__state
+msgid "State"
+msgstr "État"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_statement
+msgid "Statement"
+msgstr "Relevé"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_statement_A1
+msgid "Statement A1"
+msgstr "Relevé A1"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_statement_A2
+msgid "Statement A2"
+msgstr "Relevé A2"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_statement_B
+msgid "Statement B"
+msgstr "Relevé B"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__street_number
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__street_number
+msgid "Street number"
+msgstr "N° Rue"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_supervision
+msgid "Supervision"
+msgstr "Surveillance"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_search
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_sampling_point_form
+msgid "Tax"
+msgstr "Taxe"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.res_partner_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_search
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_tree
+msgid "Tax Campaign"
+msgstr "Campagne Taxe"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__tax_contact
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__tax_contact
+msgid "Tax Contact"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__cpt_tax_ids
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_visit_cpt_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_visit_cpt_tree
+msgid "Tax Frequency"
+msgstr "Fréquence Taxe"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_product_product__tax_mat
+#: model:ir.model.fields,field_description:lims_spw_tax.field_product_template__tax_mat
+msgid "Tax Mat"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_watertype_action
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_watertype_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_watertype_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_watertype_tree
+msgid "Tax Water Type"
+msgstr "Tax Type d'eau"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__taxe
+msgid "Taxe"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_time_composite
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_time_composite
+msgid "Time Composite"
+msgstr "Composite temps"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__treated_mat_ids
+msgid "Treated Mat"
+msgstr "Matière Traitée"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_campaign_form
+msgid "Treated Mats"
+msgstr "Matière Traitée"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_treatment_action
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__treatment_id
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_treatment_menu
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_treatment_form
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.spw_tax_treatment_tree
+msgid "Treatment"
+msgstr "Traitement"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__type
+msgid "Type"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_produced__uom
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign_treatedmat__uom
+msgid "UOM"
+msgstr "Unité de mesure"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_under_seal
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_under_seal
+msgid "Under seal"
+msgstr "Sous scellé"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_under_seal_debit
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_under_seal_debit
+msgid "Under seal debit"
+msgstr "Débit sous scellé"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_unread
+msgid "Unread Messages"
+msgstr "Messages Non-lus"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Compteur de messages non-lus"
+
+#. module: lims_spw_tax
+#: model:res.groups,name:lims_spw_tax.spw_tax_user
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: lims_spw_tax
+#: model:ir.actions.act_window,name:lims_spw_tax.spw_tax_visit_cpt_action
+#: model:ir.ui.menu,name:lims_spw_tax.spw_tax_visit_cpt_menu
+msgid "Visit Cpt"
+msgstr "Cpt visites"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_spw_tax_campaign__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,help:lims_spw_tax.field_res_config_settings__years_create_tax
+msgid ""
+"Will create visit cpt for indicated years. Write years separated by ;. 'Ex. "
+"2017;2018;2019'"
+msgstr ""
+"Les compteurs de visite seront créées pour les années indiquées. Veuillez séparer les années par des ;. 'Ex. "
+"2017;2018;2019'"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_partner__nb_workers
+#: model:ir.model.fields,field_description:lims_spw_tax.field_res_users__nb_workers
+#: model:ir.model.fields,field_description:lims_spw_tax.field_spw_tax_campaign__nb_workers
+msgid "Workers"
+msgstr "Travailleurs"
+
+#. module: lims_spw_tax
+#: code:addons/lims_spw_tax/wizards/assign_campaign_wizard.py:0
+#, python-format
+msgid "You can only assign analysis with the same site to the same campaign"
+msgstr ""
+"Vous ne pouvez attribuer une analyse avec le même site qu'à la même campagne"
+
+#. module: lims_spw_tax
+#: code:addons/lims_spw_tax/models/spw_tax_meter_reading.py:0
+#, python-format
+msgid "You can't add the same meter twice"
+msgstr "Vous ne pouvez pas ajouter deux fois le même compteur"
+
+#. module: lims_spw_tax
+#: code:addons/lims_spw_tax/wizards/assign_campaign_wizard.py:0
+#, python-format
+msgid "You can't assign a campaign to analysis without extraction site"
+msgstr ""
+"Vous ne pouvez pas attribuer une campagne à l'analyse sans site d'extraction"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "continuous debit"
+msgstr "débit continu"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "counter debit"
+msgstr "Relevé de compteur"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_debit_other_estimate
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_debit_other_estimate
+msgid "debit other estimate"
+msgstr "Autre estimation de débit"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.res_config_settings_view_form
+msgid "lims SPW Tax"
+msgstr "lims SPW Taxe"
+
+#. module: lims_spw_tax
+#: model_terms:ir.ui.view,arch_db:lims_spw_tax.lims_analysis_form
+msgid "other debit"
+msgstr "Autre estimation"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__other_debit_measure
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__sampling_other_debit_measure
+msgid "other debit measurement"
+msgstr "Mesure de débit"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__sampling_other_methodology_description
+msgid "other methodology description"
+msgstr "Spécifier la méthodologie"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__statement_date_end
+msgid "statement end date"
+msgstr "date de fin de relevé"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__statement_index_end
+msgid "statement end index"
+msgstr "index de fin de relevé"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__is_statement_spill_counter
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_sampling_point__is_sampling_statement_spill_counter
+msgid "statement spill counter"
+msgstr "Relevé du compteur de rejet"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__statement_date_start
+msgid "statement start date"
+msgstr "date de début de relevé"
+
+#. module: lims_spw_tax
+#: model:ir.model.fields,field_description:lims_spw_tax.field_lims_analysis__statement_index_start
+msgid "statement start index"
+msgstr "index de début de relevé"

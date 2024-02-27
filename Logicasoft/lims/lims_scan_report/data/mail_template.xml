@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="scan_anomaly_report_mail_template" model="mail.template">
+        <field name="name">Anomaly report mail</field>
+        <field name="subject">Scan anomaly report</field>
+        <field name="model_id" ref="lims_base.model_lims_analysis"/>
+        <field name="email_from">{{ user.email }}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html">
+            <![CDATA[
+Some anomalies have been encountered during the scan of received SOPS. See attached report.
+]]>
+        </field>
+    </record>
+
+</odoo>
