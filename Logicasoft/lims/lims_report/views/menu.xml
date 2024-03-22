@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
-
-    <menuitem parent="lims_base.menu_root" id="lims_report_submenu" name="Report" sequence="300"/>
-    <menuitem parent="lims_report.lims_report_submenu" id="lims_report_config_submenu" name="Configuration" sequence="100"/>
-
-</odoo>

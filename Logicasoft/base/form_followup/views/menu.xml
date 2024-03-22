@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-
-        <menuitem name="Form Followups" id="root_form_followup" web_icon="form_followup,static/img/icon.png"/>
-
-        <menuitem name="Configuration" parent="root_form_followup" sequence="20" id="form_followup_configuration_menu" groups="base.group_user"/>
-
-</odoo>

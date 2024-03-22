@@ -1,9 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_sop_scan_batch_wizard_user,sop.scan.batch.wizard user,lims_scan.model_sop_scan_batch_wizard,lims_base.user_group,1,1,1,0
-access_sop_scan_batch_wizard_line_user,sop.scan.batch.wizard.line user,lims_scan.model_sop_scan_batch_wizard_line,lims_base.user_group,1,1,1,1
-access_sop_scan_receipt_wizard_user,sop.scan.receipt.wizard user,lims_scan.model_sop_scan_receipt_wizard,lims_base.user_group,1,1,1,0
-access_sop_scan_receipt_wizard_line_user,sop.scan.receipt.wizard.line user,lims_scan.model_sop_scan_receipt_wizard_line,lims_base.user_group,1,1,1,1
-access_sop_scan_wip_wizard_user,sop.scan.wip.wizard user,lims_scan.model_sop_scan_wip_wizard,lims_base.user_group,1,1,1,0
-access_sop_scan_wip_wizard_user_line,sop.scan.wip.wizard.line user,lims_scan.model_sop_scan_wip_wizard_line,lims_base.user_group,1,1,1,1
-
-access_report_sop,access_report_sop user,lims_scan.model_report_sop,lims_base.user_group,1,1,1,1

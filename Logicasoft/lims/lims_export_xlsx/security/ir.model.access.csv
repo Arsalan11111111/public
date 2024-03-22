@@ -1,5 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_lims_excel_template_manager,lims.excel.template manager,model_lims_excel_template,lims_base.manager_group,1,1,1,1
-access_lims_excel_template_user,lims.excel.template user,model_lims_excel_template,lims_base.user_group,1,0,0,0
-access_create_excel_file_user,create.excel.file.wizard user,model_create_excel_file_wizard,lims_base.user_group,1,1,1,1
-

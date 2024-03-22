@@ -1,3 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_lims_analysis_notification_manager,lims.analysis.notification manager,lims_notification.model_lims_analysis_notification,lims_base.manager_group,1,1,1,1
-access_lims_analysis_notification_result_state_manager,lims.analysis.notification.result.state manager,lims_notification.model_lims_analysis_notification_result_state,lims_base.manager_group,1,0,0,0

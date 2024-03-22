@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <template id="render_mail_browser" name="Render: Mail Browser">
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <title>Odoo Mail</title>
-        <t t-raw="content"/>
-    </template>
-</odoo>

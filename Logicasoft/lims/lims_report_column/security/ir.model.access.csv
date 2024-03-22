@@ -1,9 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_table_rows_viewer,table.rows viewer,model_table_rows,lims_base.viewer_group,1,0,0,0
-access_table_cols_viewer,table.cols viewer,model_table_cols,lims_base.viewer_group,1,0,0,0
-
-access_table_rows_user,table.rows user,model_table_rows,lims_base.user_group,1,1,1,0
-access_table_cols_user,table.cols user,model_table_cols,lims_base.user_group,1,1,1,0
-
-access_table_rows_manager,table.rows manager,model_table_rows,lims_base.manager_group,1,1,1,1
-access_table_cols_manager,table.cols manager,model_table_cols,lims_base.manager_group,1,1,1,1
