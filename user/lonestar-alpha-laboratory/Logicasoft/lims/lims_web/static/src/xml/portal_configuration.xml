@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <div t-name="lims_web.lims_portal_configuration" class="o_lims_portal_configuration">
+        <div class="form-group form-check">
+            <div>
+                <h5>General</h5>
+                <label class="o_switch">
+                    <input type="checkbox" class="o_switch_lims_config" data-name="portal_access" data-page="" data-type="portal" checked="checked"/>
+                    <span/>
+                    <span class="mr-2">Enable portal access (no page will be accessible)</span>
+                </label>
+                <h6>Disabled pages</h6>
+                <table class="table table-striped">
+                    <tbody t-if="inactivePages.length">
+                        <t t-foreach="inactivePages" t-as="inactivePage">
+                            <tr>
+                                <td><t t-esc="inactivePage.name"/></td>
+                                <td>
+                                    <a href="#" class="o_remove_inactive_page text-danger" t-att-data-id="inactivePage.id"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                    <t t-if="!inactivePages.length">
+                        <div class="alert alert-info mb-0" role="alert">
+                            <i class="fa fa-info-circle"></i> No page is deactivated
+                        </div>
+                    </t>
+                </table>
+            </div>
+            <div t-if="fields.length">
+                <h5>Current page</h5>
+                <label class="o_switch">
+                    <input type="checkbox" class="o_switch_lims_config" t-att-data-name="page" t-att-data-page="page" data-type="page" checked="checked"/>
+                    <span/>
+                    <span class="mr-2">Enable access to this page</span>
+                </label>
+                <label class="o_switch">
+                    <input type="checkbox" class="o_switch_lims_config" data-name="download_reports" t-att-data-page="page" data-type="portal" checked="checked"/>
+                    <span/>
+                    <span class="mr-2">Allow users to download reports</span>
+                </label>
+                <label class="o_switch">
+                    <input type="checkbox" class="o_switch_lims_config" data-name="export_data_xlsx" t-att-data-page="page" data-type="portal" checked="checked"/>
+                    <span/>
+                    <span class="mr-2">Allow user to export data (XLSX file)</span>
+                </label>
+                <h6>Fields</h6>
+                <p>
+                    <button class="btn btn-secondary w-100" type="button" data-toggle="collapse" data-target="#config_fields" aria-expanded="false" aria-controls="config_fields">
+                        Show/Hide fields
+                    </button>
+                </p>
+                <div class="collapse" id="config_fields">
+                    <div class="card card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Active</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="fields" t-as="field">
+                                    <tr>
+                                        <td>
+                                            <t t-esc="field.label"/>
+                                        </td>
+                                        <td>
+                                            <label class="o_switch">
+                                                <input type="checkbox" class="o_switch_lims_config" t-att-data-name="field.input" data-type="field" t-att-data-page="page" checked="checked"/>
+                                                <span/>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div t-if="options.length">
+                    <h6>Options</h6>
+                    <p>
+                        <button class="btn btn-secondary w-100" type="button" data-toggle="collapse" data-target="#config_options" aria-expanded="false" aria-controls="config_options">
+                           Show/Hide options
+                        </button>
+                    </p>
+                    <div class="collapse" id="config_options">
+                        <div class="card card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="options" t-as="option">
+                                        <tr>
+                                            <td>
+                                                <t t-esc="option.label"/>
+                                            </td>
+                                            <td>
+                                                <label class="o_switch">
+                                                    <input type="checkbox" class="o_switch_lims_config" t-att-data-name="option.name" t-att-data-parent="option.field" data-type="option" t-att-data-page="page" checked="checked"/>
+                                                    <span/>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</templates>

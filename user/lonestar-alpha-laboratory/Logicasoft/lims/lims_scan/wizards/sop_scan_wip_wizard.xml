@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="sop_scan_wip_wizard_form" model="ir.ui.view">
+        <field name="name">WIP test</field>
+        <field name="model">sop.scan.wip.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <script>
+                        $(document).ready(function() {
+                            $('.my-focus-field').focus();
+                            $('.my-focus-field')[0].addEventListener('keydown', function (e) {
+                                if (e.keyCode === 13) {
+                                    $('.my-focus-field').blur();
+                                    $('.my-focus-field').focus();
+                                }
+                            });
+                        });
+                    </script>
+                    <div attrs="{'invisible': [('error_message', '=', False)]}" style="color:red">
+                        <field name="error_message" readonly="1"/>
+                    </div>
+                    <h1>Scan test here</h1>
+                    <field name="sop_name" class="my-focus-field" default_focus="1"/>
+                    <field name="line_ids" nolabel="1">
+                        <tree editable="bottom" create="0" delete="1">
+                            <field name="sop_id" force_save="1" readonly="1"
+                                   domain="[('rel_type','in',['todo','wip'])]" options="{'no_create': True}"/>
+                            <field name="analysis_id" readonly="1"/>
+                            <field name="method_id" readonly="1"/>
+                            <field name="next_stage_id" readonly="1"/>
+                        </tree>
+                    </field>
+                </sheet>
+                <footer>
+                    <button name="do_confirm" string="Confirm" type="object"/>
+                    <button name="cancel" special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sop_scan_wip_wizard_action" model="ir.actions.act_window">
+        <field name="name">WIP test</field>
+        <field name="res_model">sop.scan.wip.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

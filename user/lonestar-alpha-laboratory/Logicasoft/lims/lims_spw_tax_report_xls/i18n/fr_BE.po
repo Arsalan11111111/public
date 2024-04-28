@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_spw_tax_report_xls
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-19 10:06+0000\n"
+"PO-Revision-Date: 2021-07-19 10:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_lims_analysis
+msgid "Analysis"
+msgstr "Echantillon"
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_lims_analysis_result
+msgid "Analysis Result"
+msgstr "Résultat d'analyse d'échantillon"
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_analysis__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_analysis_result__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_sampling_point__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_report_lims_spw_tax_report_xls_report_tax_analysis_xlsx__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_report_lims_spw_tax_report_xls_report_tax_xlsx__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_res_partner__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign_produced__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign_treatedmat__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_meter__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_meter_reading__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_partner_activity__display_name
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_visit_cpt__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_analysis__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_analysis_result__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_sampling_point__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_report_lims_spw_tax_report_xls_report_tax_analysis_xlsx__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_report_lims_spw_tax_report_xls_report_tax_xlsx__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_res_partner__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign_produced__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign_treatedmat__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_meter__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_meter_reading__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_partner_activity__id
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_visit_cpt__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.actions.report,name:lims_spw_tax_report_xls.analysis_xlsx
+msgid "Industrial waste analysis report"
+msgstr "Rapport d'analyse des rejets industriels"
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_analysis____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_analysis_result____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_lims_sampling_point____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_report_lims_spw_tax_report_xls_report_tax_analysis_xlsx____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_report_lims_spw_tax_report_xls_report_tax_xlsx____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_res_partner____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign_produced____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_campaign_treatedmat____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_meter____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_meter_reading____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_partner_activity____last_update
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_spw_tax_visit_cpt____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_report_lims_spw_tax_report_xls_report_tax_analysis_xlsx__nb_row
+#: model:ir.model.fields,field_description:lims_spw_tax_report_xls.field_report_lims_spw_tax_report_xls_report_tax_xlsx__nb_row
+msgid "Nb Row"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.actions.report,name:lims_spw_tax_report_xls.campaign_xlsx
+msgid "Print to XLSX"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_report_lims_spw_tax_report_xls_report_tax_analysis_xlsx
+msgid "Report Lims_spw_analysis_report_xls Report_tax_xlsx model"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_report_lims_spw_tax_report_xls_report_tax_xlsx
+msgid "Report Lims_spw_tax_report_xls Report_tax_xlsx model"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_lims_sampling_point
+msgid "Sampling Point"
+msgstr "Point de Prélèvement"
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_spw_tax_campaign_produced
+msgid "Spw Tax Campaign Produced model"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_spw_tax_campaign_treatedmat
+msgid "Spw Tax Campaign Treatemat model"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_spw_tax_campaign
+msgid "Spw Tax Campaign model"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_spw_tax_meter_reading
+msgid "Spw Tax Meter Reading model"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_spw_tax_meter
+msgid "Spw Tax Meter model"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_spw_tax_partner_activity
+msgid "Spw Tax Partner Activity model"
+msgstr ""
+
+#. module: lims_spw_tax_report_xls
+#: model:ir.model,name:lims_spw_tax_report_xls.model_spw_tax_visit_cpt
+msgid "Spw Tax Visit Cpt model"
+msgstr ""

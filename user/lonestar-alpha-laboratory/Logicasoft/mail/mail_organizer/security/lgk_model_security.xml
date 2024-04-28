@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="mail_organizer_remover" model="res.groups">
+        <field name="name">Can delete e-mail of everybody</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+    <record id="mail_organizer_view_sent_menu" model="res.groups">
+        <field name="name">View sent menu</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="lims_sop_form_view">
+        <field name="name">Test</field>
+        <field name="model">lims.sop</field>
+        <field name="inherit_id" ref="lims_base.lims_sop_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_plan']" position="after">
+                <field name="rel_sampling_point_id" attrs="{'invisible':[('rel_sampling_point_id', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

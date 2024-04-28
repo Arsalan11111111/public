@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="analysis_cancel_wizard_form" model="ir.ui.view">
+        <field name="name">Cancel Analysis</field>
+        <field name="model">analysis.cancel.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="comment" placeholder="Cancel reason must be filled."/>
+                        <p colspan="2">This will cancel all tests and results linked to this analysis. Continue ?</p>
+                        <field name="analysis_ids" nolabel="1" colspan="2" readonly="1">
+                            <tree name="analysis_ids_tree">
+                                <field name="name" readonly="1"/>
+                                <field name="sample_name" readonly="1" optional="show"/>
+                                <field name="request_id" readonly="1" optional="show"/>
+                                <field name="partner_id" readonly="1" optional="show"/>
+                                <field name="assigned_to" readonly="1" optional="show"/>
+                                <field name="rel_type" readonly="1" optional="show"/>
+                                <field name="state" readonly="1" optional="show"/>
+                            </tree>
+                            <form name="analysis_ids_form">
+                                <group name="analysis_ids_form_group">
+                                    <field name="name" readonly="1"/>
+                                    <field name="sample_name" readonly="1"/>
+                                    <field name="request_id" readonly="1"/>
+                                    <field name="partner_id" readonly="1"/>
+                                    <field name="assigned_to" readonly="1"/>
+                                    <field name="rel_type" readonly="1"/>
+                                    <field name="state" readonly="1"/>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="confirm_cancel" string="Continue" type="object"/>
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="analysis_cancel_wizard_action" model="ir.actions.act_window">
+        <field name="name">Cancel Analysis</field>
+        <field name="res_model">analysis.cancel.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="analysis_mass_change_wizard_form" model="ir.ui.view">
+        <field name="name">Analysis Mass Change</field>
+        <field name="model">analysis.mass.change.wizard</field>
+        <field name="inherit_id" ref="lims_base.analysis_mass_change_wizard_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//group[1]" position="inside">
+                <field name="equipment_ids" widget="many2many_tags"/>
+                <field name="reagent_ids" widget="many2many_tags"/>
+
+                <field name="first_edit_equipment" invisible="1"/>
+                <field name="first_edit_reagent" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//sheet//group[2]//field[@name='line_ids']//tree" position="inside">
+                <field name="equipment_ids" widget="many2many_tags" optional="show"/>
+                <field name="reagent_ids" widget="many2many_tags" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

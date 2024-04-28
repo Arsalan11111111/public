@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="inherit_purchase_order_form" model="ir.ui.view">
+        <field name="name">inherit.purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//header" position="inside">
+                <button name="fully_billed" type="object"
+                        string="Fully Billed"
+                        class="oe_highlight"
+                        attrs="{'invisible':['|',('invoice_status','!=','to invoice'),('invoice_count', '=', 0)]}"/>
+                        <field name="invoice_status" invisible="1"/>
+
+
+
+                <button name="action_check_lock_pass" type="object"
+                        string="Change Date"
+                        class="oe_highlight"
+                        attrs="{'invisible':[('state','!=','purchase'),('check_lock_pass','!=',True)]}"/>
+                <field name="check_lock_pass" invisible="1"/>
+            </xpath>
+
+
+        </field>
+
+
+    </record>
+
+
+
+    
+
+</odoo>

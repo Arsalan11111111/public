@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_laboratory_portal,lims.laboratory.portal,lims_base.model_lims_laboratory,base.group_portal,1,0,0,0
+access_request_portal,lims.request.portal,lims_base.model_lims_analysis_request,base.group_portal,1,0,0,0
+access_analysis_portal,lims.analysis.portal,lims_base.model_lims_analysis,base.group_portal,1,0,0,0
+access_lims_portal_configuration_portal,lims.portal.configuration,lims_web.model_lims_portal_configuration,base.group_portal,1,0,0,0
+access_lims_portal_configuration_designer,lims.portal.configuration,lims_web.model_lims_portal_configuration,website.group_website_designer,1,1,1,1

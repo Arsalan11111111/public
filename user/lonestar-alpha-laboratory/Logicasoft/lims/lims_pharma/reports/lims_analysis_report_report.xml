@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="analysis_report_template_result" inherit_id="lims_report.analysis_report_template_result">
+        <xpath expr="//span[@name='result_value']" position="attributes">
+            <attribute name="t-esc">
+                get_value(doc, result)
+            </attribute>
+        </xpath>
+    </template>
+
+</odoo>

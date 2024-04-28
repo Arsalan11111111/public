@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem name="Sampling Point"
+              parent="lims_base.lims_configuration_submenu"
+              id="sampling_point_submenu" sequence="941"/>
+    <menuitem name="Sampling Point"
+          parent="lims_base.lims_master_data_submenu"
+          id="sampling_point_master_data_submenu" sequence="41"/>
+</odoo>

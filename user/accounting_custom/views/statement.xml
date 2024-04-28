@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="account_bank_statement_line_tree_inherit" model="ir.ui.view">
+        <field name="name">Account Bank Statement Line Form Inherit</field>
+        <field name="model">account.bank.statement.line</field>
+        <field name="inherit_id" ref="account_accountant.view_bank_statement_line_form_bank_rec_widget" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="analytic_accounts_id" widget="analytic_distribution"/>
+            </xpath>
+            
+        </field>
+    </record>
+    
+</odoo>

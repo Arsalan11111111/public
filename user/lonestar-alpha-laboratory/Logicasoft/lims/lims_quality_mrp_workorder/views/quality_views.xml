@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="quality_check_view_form">
+        <field name="name">quality.check.view.form</field>
+        <field name="inherit_id" ref="quality_control.quality_check_view_form"/>
+        <field name="model">quality.check</field>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="create_analysis_with_finished_lot" string="Create Analysis with finished lot" class="oe_highlight" type="object" groups="stock.group_production_lot"
+                        attrs="{'invisible': ['|', '|', '|', '|', ('production_id', '=', False), ('rel_lims_for_analysis', '=', False), ('rel_point_id_create_analysis', '=', False), ('rel_production_code', '!=', 'mrp_operation'), ('finished_lot_id', '=', False)]}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='finished_lot_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,534 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-05 01:09+0000\n"
+"PO-Revision-Date: 2024-01-05 01:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis__rel_detailed_type
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis_request_sample__rel_detailed_type
+#: model:ir.model.fields,help:lims_stock.field_stock_move_lot_wizard__rel_product_detailed_type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Un produit stockable est un produit dont on gère le stock. L'application \"Inventaire\" doit être installée. \n"
+"Un produit consommable, d'un autre côté, est un produit pour lequel le stock n'est pas géré.\n"
+"Un service est un produit immatériel que vous fournissez."
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_lot.py:0
+#: code:addons/lims_stock/models/stock_lot.py:0
+#: code:addons/lims_stock/models/stock_move.py:0
+#: code:addons/lims_stock/models/stock_picking.py:0
+#: code:addons/lims_stock/wizards/stock_move_lot_wizard.py:0
+#: model:ir.model,name:lims_stock.model_lims_analysis
+#: model:ir.model.fields,field_description:lims_stock.field_stock_lot__analysis_ids
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_line__analysis_ids
+#: model_terms:ir.ui.view,arch_db:lims_stock.view_picking_form
+#, python-format
+msgid "Analysis"
+msgstr "Echantillon(s)"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_picking_type__analysis_category_id
+msgid "Analysis Category"
+msgstr "Catégorie d'Echantillon"
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_lims_analysis_request_sample
+msgid "Analysis Request Sample"
+msgstr "Échantillon de la demande"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_picking__analysis_states
+msgid "Analysis States"
+msgstr "États d'analyse"
+
+#. module: lims_stock
+#: model_terms:ir.ui.view,arch_db:lims_stock.stock_move_lot_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__rel_company_id
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_lot.py:0
+#, python-format
+msgid "Compute Result"
+msgstr ""
+
+#. module: lims_stock
+#: model_terms:ir.ui.view,arch_db:lims_stock.stock_move_lot_wizard_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_create_analysis_wizard
+#: model:ir.model.fields,field_description:lims_stock.field_stock_picking__rel_create_analysis
+#: model:ir.model.fields,field_description:lims_stock.field_stock_picking_type__create_analysis
+#: model_terms:ir.ui.view,arch_db:lims_stock.view_picking_form
+msgid "Create Analysis"
+msgstr "Créer Analyse"
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_create_analysis_wizard_line
+msgid "Create Analysis Line"
+msgstr "Ligne Créer Échantillon"
+
+#. module: lims_stock
+#: model:ir.actions.server,name:lims_stock.action_create_analysis
+msgid "Create analysis"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__create_date
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_picking_type__analysis_category_id
+msgid ""
+"Defines the analysis category when generating with this type of operation"
+msgstr ""
+"Définit la catégorie d'analyse lors de la génération avec ce type "
+"d'opération."
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__display_name
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__qty_done
+msgid "Done"
+msgstr "Fait"
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis__rel_tracking
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis_request_sample__rel_tracking
+#: model:ir.model.fields,help:lims_stock.field_stock_move_lot_wizard__rel_product_tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Assure la tracabilité d'un article stockable dans votre entrepôt"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__id
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__id
+msgid "ID"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_picking__analysis_states
+msgid ""
+"If among all the analysis linked to the move lines of these stock moves "
+"without package, if they are all 'conform'/'not conform', this field will "
+"get 'conform'/'not conform' value respectively. Nonetheless, If they are "
+"some 'conform' and 'not conform', it will be 'both' value."
+msgstr ""
+"Si parmi toutes les analyses liées aux lignes de mouvement de ces mouvements"
+" de stock non colisés, si elles sont toutes 'conformes'/'non conformes', ce "
+"champ prendra respectivement la valeur 'conforme'/'non conforme'. Néanmoins,"
+" si il y a des valeurs 'conformes' et 'non conformes', ce sera la valeur "
+"'les deux'."
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__laboratory_id
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_picking_type__laboratory_company_id
+msgid "Laboratory Company"
+msgstr "Laboratoire de l'entreprise"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard____last_update
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__write_date
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_lot__rel_lims_for_analysis
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move__rel_lims_for_analysis
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_line__rel_lims_for_analysis
+msgid "Lims For Analysis"
+msgstr "Analyse pour Lims"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_create_analysis_wizard__line_ids
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__line_ids
+msgid "Line"
+msgstr "Ligne"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__link_id
+msgid "Link"
+msgstr "Lien"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move__lock_button
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_line__lock_button
+msgid "Lock Button"
+msgstr "Bouton de verrouillage"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/lims_analysis_request.py:0
+#: model:ir.model.fields,field_description:lims_stock.field_create_analysis_wizard_line__lot_id
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis__lot_id
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_compute_result__rel_lot_id
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_numeric_result__rel_lot_id
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_request_sample__lot_id
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_result__rel_lot_id
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_sel_result__rel_lot_id
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_text_result__rel_lot_id
+#: model:ir.model.fields,field_description:lims_stock.field_lims_sop__rel_lot_id
+#: model_terms:ir.ui.view,arch_db:lims_stock.lims_analysis_search
+#: model_terms:ir.ui.view,arch_db:lims_stock.lims_sop_search
+#, python-format
+msgid "Lot"
+msgstr ""
+
+#. module: lims_stock
+#: model_terms:ir.ui.view,arch_db:lims_stock.lims_analysis_worksheet_parser
+msgid "Lot :"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_stock_lot
+msgid "Lot/Serial"
+msgstr "Lot/Série"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__lot_id
+msgid "Lot/serial number"
+msgstr "Lot/numéro de série"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_request__nb_lot
+msgid "Lots"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__move_line_id
+msgid "Move Line"
+msgstr "Ligne de mouvement"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_lot__nb_analysis
+#: model:ir.model.fields,field_description:lims_stock.field_stock_picking__nb_analysis
+msgid "Nb Analysis"
+msgstr "NB Analyse"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_lot__nb_compute_result
+msgid "Nb Compute Result"
+msgstr "NB Résult calc"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_lot__nb_result
+msgid "Nb Result"
+msgstr "NB Résult"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_lot__nb_sel_result
+msgid "Nb Sel Result"
+msgstr "NB Résult sel"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_lot__nb_text_result
+msgid "Nb Text Result"
+msgstr "Nb Result texte"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard_line__nbr_sample
+msgid "Nbr Sample"
+msgstr "Nbr Echantillon"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_move_line.py:0
+#, python-format
+msgid "No laboratory found for this company."
+msgstr "Pas de laboratoire trouvé pour cette société."
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_lot.py:0
+#: code:addons/lims_stock/models/stock_move_line.py:0
+#, python-format
+msgid "No product inserted"
+msgstr "Pas de produit inséré"
+
+#. module: lims_stock
+#: model_terms:ir.ui.view,arch_db:lims_stock.view_picking_form
+msgid ""
+"Open all the analysis linked to the move lines of these stock moves without "
+"package"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Type de transfert"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_move_line.py:0
+#, python-format
+msgid "Picking should be at least 'Ready'."
+msgstr "Le transfert doit être au moins à l'état 'Prêt'."
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__rel_product_id
+#: model_terms:ir.ui.view,arch_db:lims_stock.lims_analysis_search
+#: model_terms:ir.ui.view,arch_db:lims_stock.lims_sop_search
+msgid "Product"
+msgstr "Article"
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements d'article (Ligne de mouvement de stock)"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis__rel_detailed_type
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_request_sample__rel_detailed_type
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__rel_product_detailed_type
+msgid "Product Type"
+msgstr "Type de produit"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_lot.py:0
+#: code:addons/lims_stock/models/stock_move_line.py:0
+#, python-format
+msgid "Product have boolean 'Lims For Analysis' uncheck"
+msgstr "Le produit a la case 'Analyse pour Lims' décochée"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_lot.py:0
+#: code:addons/lims_stock/models/stock_move_line.py:0
+#, python-format
+msgid "Product have no matrix"
+msgstr "Le produit n'a pas de matrice"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__rel_quantity_done
+msgid "Quantity Done"
+msgstr "Quantité traitée"
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_lims_analysis_request
+msgid "Request"
+msgstr "Demande"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_lot.py:0
+#: model:ir.model,name:lims_stock.model_lims_analysis_result
+#, python-format
+msgid "Result"
+msgstr "Résultat"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_lot.py:0
+#, python-format
+msgid "Sel Result"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_stock_move
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__stock_move_id
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_move.py:0
+#, python-format
+msgid "Stock Move Lot"
+msgstr "Lot du mouvement de stock"
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_stock_move_lot_wizard
+msgid "Stock Move Lot Wizard"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_stock_move_lot_wizard_line
+msgid "Stock Move Lot Wizard Line"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_lims_sop
+msgid "Test"
+msgstr ""
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_lot.py:0
+#, python-format
+msgid "Text Result"
+msgstr ""
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_move__rel_lims_for_analysis
+msgid "The button 'Lims for analysis' linked with the product."
+msgstr "Le bouton 'Lims pour analyse' lié au produit."
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis__lot_id
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis_compute_result__rel_lot_id
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis_numeric_result__rel_lot_id
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis_request_sample__lot_id
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis_result__rel_lot_id
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis_sel_result__rel_lot_id
+#: model:ir.model.fields,help:lims_stock.field_lims_analysis_text_result__rel_lot_id
+#: model:ir.model.fields,help:lims_stock.field_lims_sop__rel_lot_id
+msgid ""
+"The lot is only accessible to products that are marked as stockable and can "
+"be tracked by lot or serial number."
+msgstr ""
+"Le lot n'est accessible qu'aux produits qui sont marqués comme stockables et"
+" qui peuvent être suivis par le numéro de lot ou de série."
+
+#. module: lims_stock
+#. odoo-python
+#: code:addons/lims_stock/models/stock_move.py:0
+#: code:addons/lims_stock/wizards/stock_move_lot_wizard.py:0
+#, python-format
+msgid "There is no move's lines."
+msgstr "Il n'y a pas de lignes de mouvement."
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_move__lock_button
+msgid ""
+"This is checked if the analysis on these move lines are not all cancelled."
+msgstr ""
+"Ceci est coché si les analyses sur ces lignes de mouvement ne sont pas "
+"toutes annulées."
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_lot__rel_lims_for_analysis
+#: model:ir.model.fields,help:lims_stock.field_stock_move_line__rel_lims_for_analysis
+msgid ""
+"This is checked to make eligible the product and all his variants inside the"
+" LIMS flow's process."
+msgstr ""
+"Ceci est coché pour rendre éligible le produit et toutes ses variantes dans "
+"le processus du flux LIMS."
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_picking__rel_create_analysis
+msgid "This is the 'Create Analysis' button of his picking type."
+msgstr "Il s'agit du bouton 'Créer une analyse' de son type de prélèvement."
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_move_lot_wizard__rel_company_id
+msgid "This is the company of the stock move."
+msgstr "C'est la société du mouvement de stock."
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_move_lot_wizard__rel_product_id
+msgid "This is the product of the stock move."
+msgstr "C'est le produit du mouvement de stock."
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_move_lot_wizard__rel_quantity_done
+msgid "This is the quantity done of the stock move."
+msgstr "C'est la quantité traitée du mouvement de stock."
+
+#. module: lims_stock
+#: model_terms:ir.ui.view,arch_db:lims_stock.stock_move_lot_wizard_form
+msgid "Total sample"
+msgstr "Nombre d'échantillons total"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis__rel_tracking
+#: model:ir.model.fields,field_description:lims_stock.field_lims_analysis_request_sample__rel_tracking
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__rel_product_tracking
+msgid "Tracking"
+msgstr "Suivi"
+
+#. module: lims_stock
+#: model:ir.model,name:lims_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: lims_stock
+#: model:ir.model.fields,field_description:lims_stock.field_stock_move_lot_wizard__rel_product_uom
+msgid "UoM"
+msgstr "UdM"
+
+#. module: lims_stock
+#: model:product.template,name:lims_stock.demo_lims_product_inventory_2_product_template
+msgid "Waste water (after fabrication)"
+msgstr "Eaux usées (après fabrication)"
+
+#. module: lims_stock
+#: model:product.template,name:lims_stock.demo_lims_product_inventory_1_product_template
+msgid "Water for dilution (distilled)"
+msgstr "Eau pour la dilution (distillée)"
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_picking_type__create_analysis
+msgid ""
+"activates the possibility of making a product analysis if it is subjected to"
+" this operation."
+msgstr ""
+"active la possibilité de faire une analyse du produit s'il est soumis à "
+"cette opération."
+
+#. module: lims_stock
+#: model:ir.model.fields,help:lims_stock.field_stock_picking_type__laboratory_company_id
+msgid ""
+"defines which laboratory will do the analysis, it must be linked to an "
+"operation of the same company."
+msgstr ""
+"définit le laboratoire qui fera l'analyse, il doit être lié à une opération "
+"de la même entreprise."
+
+#. module: lims_stock
+#: model_terms:ir.ui.view,arch_db:lims_stock.view_picking_type_form
+msgid "lims"
+msgstr ""

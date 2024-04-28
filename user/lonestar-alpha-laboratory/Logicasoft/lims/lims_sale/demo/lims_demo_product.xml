@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="product.product" id="demo_lims_product_1">
+            <field name="name">Water hardness analysis</field>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="lims_for_analysis" eval="True"/>
+            <field name="detailed_type">service</field>
+            <field name="lst_price">25.32</field>
+            <field name="standard_price">13.22</field>
+            <field name="categ_id" ref="product.product_category_3"/>
+        </record>
+        <record model="product.product" id="demo_lims_product_2">
+            <field name="name">Ca2+</field>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="lims_for_analysis" eval="True"/>
+            <field name="detailed_type">service</field>
+            <field name="lst_price">20.21</field>
+            <field name="standard_price">6.10</field>
+            <field name="categ_id" ref="product.product_category_3"/>
+        </record>
+        <record model="product.product" id="demo_lims_product_3">
+            <field name="name">Mg2+</field>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="lims_for_analysis" eval="True"/>
+            <field name="detailed_type">service</field>
+            <field name="lst_price">15.11</field>
+            <field name="standard_price">7.12</field>
+            <field name="categ_id" ref="product.product_category_3"/>
+        </record>
+        <record model="product.product" id="demo_lims_product_4">
+            <field name="name">Water visual aspect</field>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="lims_for_analysis" eval="True"/>
+            <field name="detailed_type">service</field>
+            <field name="lst_price">7.22</field>
+            <field name="standard_price">3.72</field>
+            <field name="categ_id" ref="product.product_category_3"/>
+        </record>
+        <record model="product.product" id="demo_lims_product_5">
+            <field name="name">Moisture content</field>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="sale_ok" eval="True"/>
+            <field name="purchase_ok" eval="True"/>
+            <field name="lims_for_analysis" eval="True"/>
+            <field name="detailed_type">service</field>
+            <field name="lst_price">30.01</field>
+            <field name="standard_price">16.22</field>
+            <field name="categ_id" ref="product.product_category_3"/>
+        </record>
+    </data>
+</odoo>

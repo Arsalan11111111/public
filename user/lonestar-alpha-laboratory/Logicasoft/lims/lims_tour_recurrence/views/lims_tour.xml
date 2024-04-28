@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="open_tour_recurrence_wizard" model="ir.actions.act_window">
+        <field name="name">Create recurrence for this tour</field>
+        <field name="res_model">tour.recurrence.wizard</field>
+        <field name="binding_model_id" ref="lims_tour.model_lims_tour"/>
+        <field name="view_mode">form</field>
+        <field name="context">{
+            'default_tour_id': active_id,
+        }</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form View -->
+    <record model="ir.ui.view" id="spw_tax_campaign_form">
+        <field name="name">Tax Campaign</field>
+        <field name="model">spw.tax.campaign</field>
+        <field name="arch" type="xml">
+            <form string="Tax Campaign">
+                <header>
+                    <field name="state" widget="statusbar" clickable="True"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="buttons">
+                        <button name="button_list_analysis" type="object" class="oe_stat_button" icon="fa-flask">
+                            <field name="nb_analysis" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="id" invisible="1"/>
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="parent_id"/>
+                        </group>
+                        <group>
+                            <field name="export"/>
+                        </group>
+                    </group>
+                    <group attrs="{'invisible':[('type', '=', 'view')]}">
+                        <field name="date"/>
+                        <field name="date_end"/>
+                        <field name="partner_id" invisible="context.get('make_site_invisible', False)"/>
+                        <field name="site_id" invisible="context.get('make_site_invisible', False)"/>
+                        <field name="nb_employees"/>
+                        <field name="nb_workers"/>
+                        <field name="no_com"/>
+                    </group>
+                    <notebook attrs="{'invisible':[('type', '=', 'view')]}">
+                        <page string="Samplin Point">
+                            <field name="sampling_point_ids" widget="many2many_list"> <!-- domain="[('partner_owner_id', '=', site_id)]"> -->
+                                <tree>
+                                    <field name="name" />
+                                    <field name="frequency" />
+                                    <field name="matrix_id" />
+                                    <field name="date_last_analysis" widget="date" />
+                                    <field name="rel_status_last_analysis"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Meters Reading">
+                            <field name="meters_reading_ids" widget="many2many_list" context="{'default_campaign_id': id}">
+                                <tree editable="top">
+                                    <field name="campaign_id" invisible="1"/>
+                                    <field name="meter_id" domain="[('site_id', '=', parent.site_id)]"/>
+                                    <field name="rel_reference"/>
+                                    <field name="readingby_id"/>
+                                    <field name="start_date"/>
+                                    <field name="start_index"/>
+                                    <field name="end_date"/>
+                                    <field name="end_index"/>
+                                    <field name="outflow"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Treated Mats">
+                            <field name="treated_mat_ids" widget="one2many" context="{'default_campaign_id': id}">
+                                <tree editable="top">
+                                    <field name="campaign_id" invisible="1"/>
+                                    <field name="product_id" domain="[('tax_mat', '=', True)]" context="{'default_tax_mat': True}"/>
+                                    <field name="quantity"/>
+                                    <field name="uom"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Produced Mats">
+                            <field name="produced_mat_ids" widget="one2many" context="{'default_campaign_id': id}">
+                                <tree editable="top">
+                                    <field name="campaign_id" invisible="1"/>
+                                    <field name="product_id" domain="[('tax_mat', '=', True)]" context="{'default_tax_mat': True}"/>
+                                    <field name="quantity"/>
+                                    <field name="uom"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+     <!-- Tree View -->
+    <record model="ir.ui.view" id="spw_tax_campaign_tree">
+        <field name="name">Tax Campaign</field>
+        <field name="model">spw.tax.campaign</field>
+        <field name="arch" type="xml">
+            <tree string="Tax Campaign">
+                <field name="name" />
+                <field name="date" />
+                <field name="date_end"/>
+                <field name="partner_id" />
+                <field name="site_id"/>
+                <field name="export"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search View -->
+     <record model="ir.ui.view" id="spw_tax_campaign_search">
+        <field name="name">Tax Campaign</field>
+        <field name="model">spw.tax.campaign</field>
+        <field name="arch" type="xml">
+            <search string="Tax Campaign">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="site_id"/>
+                <group string="Group by">
+                    <filter name="date" string="Date" context="{'group_by':'date'}"/>
+                    <filter name="parent" string="Parent" context="{'group_by': 'parent_id'}"/>
+                    <filter name="customer" string="Customer" context="{'group_by': 'partner_id'}"/>
+                    <filter name="site" string="Site" context="{'group_by': 'site_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- SPW Tax Campaign Calendar View -->
+    <record model="ir.ui.view" id="spw_tax_campaign_calendar">
+        <field name="name">SPW Tax Campaign Calendar</field>
+        <field name="model">spw.tax.campaign</field>
+        <field name="arch" type="xml">
+            <calendar date_start="date" color="partner_id" date_stop="date_end">
+                <field name="name"/>
+                <field name="site_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- SPW Tax Campaign Graph View -->
+    <record model="ir.ui.view" id="spw_tax_campaign_graph">
+        <field name="name">SPW Tax Campaign</field>
+        <field name="model">spw.tax.campaign</field>
+        <field name="arch" type="xml">
+            <graph string="SPW Tax Campaign" type="pie">
+            </graph>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_campaign_action">
+        <field name="name">Campaign</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.campaign</field>
+        <field name="view_mode">tree,form,calendar,graph</field>
+    </record>
+
+    <menuitem id="spw_tax_campaign_menu"
+              name="Campaign"
+              parent="spw_tax_campaign_root"
+              sequence="150"
+              action="spw_tax_campaign_action" />
+
+</odoo>

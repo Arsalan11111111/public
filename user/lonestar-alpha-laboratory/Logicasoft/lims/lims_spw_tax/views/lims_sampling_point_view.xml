@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record model="ir.ui.view" id="lims_sampling_point_form">
+        <field name="name">Lims sampling point</field>
+        <field name="model">lims.sampling.point</field>
+        <field name="inherit_id" ref="lims_sampling.lims_sampling_point_form"/>
+        <field name="arch" type="xml">
+            <data groups="lims_spw_tax.spw_tax_user">
+                <div name="buttons" position="inside">
+                    <button type="object"
+                            class="oe_stat_button"
+                            name="button_list_campaign"
+                            icon="fa-newspaper-o"
+                            string="Campaigns"/>
+                </div>
+                <field name="partner_id" position="after">
+                    <field name="tax"/>
+                </field>
+                <xpath expr="//group[2]" position="after">
+                    <notebook>
+                        <page string="Tax" attrs="{'invisible': [('tax', '=', False)]}">
+                            <group>
+                                <group col="4" colspan="4">
+                                    <field name="reference" String="N°"/>
+                                    <field name="sampling_spill_number"/>
+                                    <field name="discharge_water_type_id"/>
+                                    <field name="discharge_type_id"/>
+                                    <field name="rain_water_presence"/>
+                                    <field name="treatment_id"/>
+                                    <field name="control_point_id"/>
+                                    <field name="flowmeter_id"/>
+                                    <field name="sampler_id"/>
+                                    <field name="discharge_media_id"/>
+                                    <field name="frequency"/>
+                                </group>
+                                <group col="4" colspan="4">
+                                    <field name="is_sampling_under_seal"/>
+                                    <field name="is_sampling_punctual"/>
+                                    <field name="is_sampling_time_composite"/>
+                                    <field name="is_sampling_composite_flow"/>
+                                    <field name="is_sampling_continuous_debit"/>
+                                    <field name="is_sampling_equipment_labo"/>
+                                    <field name="is_sampling_equipment_site"/>
+                                    <field name="is_sampling_statement_spill_counter"/>
+                                    <field name="is_sampling_debit_other_estimate"/>
+                                    <field name="sampling_other_methodology_description"/>
+                                    <field name="is_sampling_under_seal_debit"/>
+
+                                </group>
+                                <field name="comment"/>
+                                <field name="cpt_tax_ids" widget="one2many" context="{'default_extraction_point_id': active_id, 'default_planned': frequency}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="lims_sampling_point_create_visit" model="ir.actions.server">
+        <field name="name">Create visits from extraction point</field>
+        <field name="model_id" ref="model_lims_sampling_point"/>
+        <field name="binding_model_id" ref="model_lims_sampling_point"/>
+        <field name="state">code</field>
+        <field name="code">records.create_visit_cpt()</field>
+    </record>
+</odoo>

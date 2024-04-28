@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Tree View -->
+    <record model="ir.ui.view" id="lims_analysis_request_tree">
+        <field name="name">Analysis Request</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_request_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="decoration-danger">is_commercial_out_of_time</attribute>
+                <attribute name="decoration-warning">state in ('accepted', 'in_progress') and commercial_warning_date &lt; now and commercial_lead_date &gt; now</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='date_plan']" position="after">
+                <field name="commercial_lead_date" readonly="1" optional="hide"
+                       decoration-danger="is_commercial_out_of_time"
+                       decoration-warning="state in ('accepted', 'in_progress') and commercial_warning_date &lt; now and commercial_lead_date &gt; now"/>
+                <field name="commercial_warning_date" readonly="1" invisible="1"/>
+                <field name="is_commercial_out_of_time" readonly="1" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- search View -->
+    <record model="ir.ui.view" id="lims_analysis_request_search">
+        <field name="name">Analysis Request</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_request_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="after">
+                <filter name="commercial_lead_date_today" string="Commercial Today"
+                        domain="[('commercial_lead_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')), ('commercial_lead_date', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]"/>
+                <filter name="commercial_lead_date_week" string="Commercial This week"
+                        domain="[('commercial_lead_date','&lt;=', (context_today() + relativedelta(weeks=0, weekday=6)).strftime('%Y-%m-%d')),('commercial_lead_date','&gt;',(context_today() - relativedelta(weeks=1, weekday=6)).strftime('%Y-%m-%d'))]"/>
+                <filter name="commercial_warning_date_overdue" string="Commercial Warning"
+                        domain="[('commercial_warning_date', '&lt;', datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')),('commercial_lead_date', '&gt;', datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')),('state', 'not in', ['draft', 'done','report', 'cancel'])]"/>
+                <filter name="commercial_lead_date_overdue" string="Commercial Overdue"
+                        domain="[('commercial_lead_date', '&lt;', datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')),('state', 'not in', ['draft', 'done','report', 'cancel'])]"/>
+                <separator/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

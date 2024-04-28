@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="lims_analysis_form_view">
+        <field name="name">Analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_form"/>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="rel_detailed_type" readonly="1" invisible="1"/>
+                <field name="rel_tracking" readonly="1" invisible="1"/>
+                <field name="lot_id" domain="[('product_id', '=', product_id)]"
+                       attrs="{'readonly': ['|',('rel_tracking', '=', 'none'), ('rel_detailed_type', '!=', 'product')]}"
+                       context="{'default_product_id': product_id, 'default_company_id': allowed_company_ids[0]}"
+                       options="{'no_create':True}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_tree">
+        <field name="name">Analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_tree"/>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="lot_id" domain="[('product_id', '=', product_id)]" optional="show" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_search">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_search"/>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='request_id']" position="after">
+                <field name="product_id"/>
+                <field name="lot_id"/>
+            </xpath>
+            <xpath expr="//filter[@name='matrix']" position="after">
+                <filter name="product_id" string="Product" context="{'group_by': 'product_id'}"/>
+                <filter name="lot_id" string="Lot" context="{'group_by': 'lot_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

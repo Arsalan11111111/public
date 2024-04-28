@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_method_parameter_characteristic_form" model="ir.ui.view">
+        <field name="name">Parameter characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_form"/>
+        <field name="arch" type="xml">
+            <field name="parameter_id" position="after">
+                <field name="parameter_print_id"
+                       context="{'default_print_name': tech_name}"/>
+            </field>
+            <field name="accreditation" position="after">
+                <field name="subcontracting_print_option"/>
+            </field>
+            <field name="uom" position="after">
+                <field name="report_limit_value"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="lims_method_parameter_characteristic_tree" model="ir.ui.view">
+        <field name="name">Parameter characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_tree"/>
+        <field name="arch" type="xml">
+            <field name="uom" position="after">
+                <field name="report_limit_value" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

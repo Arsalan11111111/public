@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_quality_mrp_workorder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-04 23:15+0000\n"
+"PO-Revision-Date: 2024-01-04 23:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_quality_mrp_workorder
+#: model_terms:ir.ui.view,arch_db:lims_quality_mrp_workorder.quality_check_view_form
+#: model_terms:ir.ui.view,arch_db:lims_quality_mrp_workorder.view_quality_check_wizard
+msgid "Create Analysis with finished lot"
+msgstr "Créer une analyse avec un lot fini"
+
+#. module: lims_quality_mrp_workorder
+#: model:ir.model.fields,field_description:lims_quality_mrp_workorder.field_quality_check_wizard__rel_finished_lot_id
+msgid "Finished Lot/Serial"
+msgstr ""
+
+#. module: lims_quality_mrp_workorder
+#: model:ir.model,name:lims_quality_mrp_workorder.model_quality_check
+msgid "Quality Check"
+msgstr "Contrôle qualité"
+
+#. module: lims_quality_mrp_workorder
+#: model:ir.model,name:lims_quality_mrp_workorder.model_quality_check_wizard
+msgid "Wizard for Quality Check Pop Up"
+msgstr "Wizard pour le popup de contrôle qualité"

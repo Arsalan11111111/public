@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_laboratory_lims_report" model="ir.ui.view">
+        <field name="name">Laboratory </field>
+        <field name="model">lims.laboratory</field>
+        <field name="inherit_id" ref="lims_base.lims_laboratory_form"/>
+        <field name="arch" type="xml">
+            <group name="batch_group" position="after">
+                <group string="Tour" colspan="2">
+                    <field name="seq_tour_id"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

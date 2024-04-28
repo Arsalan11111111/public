@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="print_qweb_label_wizard_form" model="ir.ui.view">
+        <field name="name">Print Qweb Label</field>
+        <field name="model">print.qweb.label.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>Print test Label</h1>
+                    <field name="analysis_id" invisible="1"/>
+                    <notebook>
+                        <page>
+                            <field name="line_ids" nolabel="1">
+                                <tree create="false" editable="bottom">
+                                    <field name="sop_id" invisible="1"/>
+                                    <field name="analysis_id" readonly="1"/>
+                                    <field name="deactivate_container" invisible="1"/>
+                                    <field name="nb_print" attrs="{'readonly': [('deactivate_container', '=', False)]}"
+                                           force_save="True"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button string="Print Label" type="object" name="print_label" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="print_qweb_label_wizard_action" model="ir.actions.act_window">
+        <field name="name">Print Qweb Label</field>
+        <field name="res_model">print.qweb.label.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+</odoo>

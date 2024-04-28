@@ -1,0 +1,206 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_product_equipment_sample
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-05 09:50+0000\n"
+"PO-Revision-Date: 2023-12-05 09:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,help:lims_product_equipment_sample.field_lims_reagent_stock__rel_detailed_type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Un produit stockable est un produit dont on gère le stock. L'application \"Inventaire\" doit être installée. \n"
+"Un produit consommable est un produit pour lequel le stock n'est pas géré.\n"
+"Un service est un produit immatériel que vous fournissez."
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__active
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model,name:lims_product_equipment_sample.model_lims_analysis
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_maintenance_equipment_search_view
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_reagent_stock_search_view
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__origin_analysis_id
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__origin_analysis_id
+msgid "Analysis"
+msgstr "Échantillon"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model,name:lims_product_equipment_sample.model_analysis_mass_change_wizard
+msgid "Analysis Mass Change"
+msgstr "Modification de masse analyse"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model,name:lims_product_equipment_sample.model_analysis_mass_change_wizard_line
+msgid "Analysis Mass Change Line"
+msgstr "Ligne de modification de masse analyse"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__comment
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_maintenance_equipment_search_view
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__create_uid
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__create_date
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__display_name
+msgid "Display Name"
+msgstr "Nom Affiché"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,help:lims_product_equipment_sample.field_lims_reagent_stock__rel_tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Assurez la traçabilité d'un produit stocké dans votre entrepôt."
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__equipment_id
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_maintenance_equipment_search_view
+msgid "Equipment"
+msgstr "Équipement"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_analysis_mass_change_wizard__equipment_ids
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_analysis_mass_change_wizard_line__equipment_ids
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_analysis__analysis_equipments_ids
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_sop__sop_equipments_ids
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_analysis_form
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_sop_form
+msgid "Equipments"
+msgstr "Équipements"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_analysis_mass_change_wizard__first_edit_equipment
+msgid "First Edit Equipment"
+msgstr "Première édition équipement"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_analysis_mass_change_wizard__first_edit_reagent
+msgid "First Edit Reagent"
+msgstr "Première édition réactif"
+
+#. module: lims_product_equipment_sample
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_maintenance_equipment_search_view
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_reagent_stock_search_view
+msgid "Group By"
+msgstr "Grouper par"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__id
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__id
+msgid "ID"
+msgstr ""
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__write_uid
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Mise à jour par"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__write_date
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__write_date
+msgid "Last Updated on"
+msgstr "Dernière Mise à jour le"
+
+#. module: lims_product_equipment_sample
+#: model:ir.actions.act_window,name:lims_product_equipment_sample.lims_maintenance_equipment_action
+#: model:ir.ui.menu,name:lims_product_equipment_sample.lims_maintenance_equipment_menu
+msgid "LIMS equipment"
+msgstr "Équipement LIMS"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model,name:lims_product_equipment_sample.model_lims_maintenance_equipment
+msgid "LIMS maintenance equipment"
+msgstr "Équipement de maintenance LIMS"
+
+#. module: lims_product_equipment_sample
+#: model:ir.actions.act_window,name:lims_product_equipment_sample.lims_reagent_stock_action
+#: model:ir.model,name:lims_product_equipment_sample.model_lims_reagent_stock
+#: model:ir.ui.menu,name:lims_product_equipment_sample.lims_reagent_stock_menu
+msgid "LIMS reagent stock"
+msgstr "Réactifs LIMS"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__lot_id
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_reagent_stock_search_view
+msgid "Lot"
+msgstr ""
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__rel_equipment_id_model
+msgid "Model"
+msgstr "Modèle"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__product_id
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_reagent_stock_search_view
+msgid "Product"
+msgstr "Produit"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__rel_detailed_type
+msgid "Product Type"
+msgstr "Type de Produit"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_analysis_mass_change_wizard__reagent_ids
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_analysis_mass_change_wizard_line__reagent_ids
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_analysis__analysis_reagent_ids
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_sop__sop_reagent_ids
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_analysis_form
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_sop_form
+msgid "Reagents"
+msgstr "Réactifs"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__rel_equipment_id_serial_no
+msgid "Serial Number"
+msgstr "Numéro de Série"
+
+#. module: lims_product_equipment_sample
+#: model:ir.model,name:lims_product_equipment_sample.model_lims_sop
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_maintenance_equipment__origin_sop_id
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__origin_sop_id
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_maintenance_equipment_search_view
+#: model_terms:ir.ui.view,arch_db:lims_product_equipment_sample.lims_reagent_stock_search_view
+msgid "Test"
+msgstr ""
+
+#. module: lims_product_equipment_sample
+#: model:ir.model.fields,field_description:lims_product_equipment_sample.field_lims_reagent_stock__rel_tracking
+msgid "Tracking"
+msgstr "Suivi"

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="lims_sop_worksheet" inherit_id="lims_base.lims_sop_worksheet">
+        <xpath expr="//thead//tr[1]//th[1]" position="attributes">
+            <attribute name="colspan">5</attribute>
+        </xpath>
+
+        <xpath expr="//tbody//tr[1]//td[1]" position="after">
+            <td>Dil. Fact.</td>
+        </xpath>
+
+        <xpath expr="//t[@name='result_num_loop']//tr[1]//td[1]" position="after">
+            <td>
+                <span t-field="result.dilution_factor"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//t[@name='result_sel_loop']//tr[1]//td[1]" position="after">
+            <td>
+                /
+            </td>
+        </xpath>
+
+        <xpath expr="//t[@name='result_calc_loop']//tr[1]//td[1]" position="after">
+            <td>
+                /
+            </td>
+        </xpath>
+
+        <xpath expr="//t[@name='result_text_loop']//tr[1]//td[1]" position="after">
+            <td>
+                /
+            </td>
+        </xpath>
+    </template>
+
+</odoo>

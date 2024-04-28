@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_parameter_char_partner_inherit_tree" model="ir.ui.view">
+        <field name="name">Parameter Char Partner</field>
+        <field name="model">lims.parameter.char.partner</field>
+        <field name="inherit_id" ref="lims_partner_limit.lims_parameter_char_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="sampling_point_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="lims_parameter_char_partner_inherit_form" model="ir.ui.view">
+        <field name="name">Parameter Char Partner</field>
+        <field name="model">lims.parameter.char.partner</field>
+        <field name="inherit_id" ref="lims_partner_limit.lims_parameter_char_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="sampling_point_id"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

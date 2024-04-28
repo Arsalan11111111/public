@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//span[hasclass('page')]/.." position="before">
+            <t t-if="from_lon_report" t-call="lon_lims.all_inta_accreditations"/>
+        </xpath>
+
+        <xpath expr="//span[hasclass('topage')]/.." position="attributes">
+            <attribute name="class">""</attribute>
+            <attribute name="style">font-size:10px; color:black !important</attribute>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.name']/.." position="attributes">
+            <attribute name="class">""</attribute>
+            <attribute name="style">font-size:10px; color:black !important</attribute>
+        </xpath>
+    </template>
+
+    <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//span[hasclass('page')]/.." position="before">
+            <t t-if="from_lon_report" t-call="lon_lims.all_inta_accreditations"/>
+        </xpath>
+
+        <xpath expr="//span[hasclass('page')]/.." position="attributes">
+            <attribute name="style">font-size:10px; color:black !important</attribute>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.name']/.." position="attributes">
+            <attribute name="class">""</attribute>
+            <attribute name="style">font-size:10px; color:black !important</attribute>
+        </xpath>
+    </template>
+
+    <template id="external_layout_bold" inherit_id="web.external_layout_bold">
+        <xpath expr="//div[3]//div[1]" position="before">
+            <t t-if="from_lon_report" t-call="lon_lims.all_inta_accreditations"/>
+        </xpath>
+
+        <xpath expr="//div[3]//ul[1]" position="attributes">
+            <attribute name="style">font-size:10px</attribute>
+        </xpath>
+
+        <xpath expr="//div[@name='div_name_in_footer']//div[1]//div[1]" position="attributes">
+            <attribute name="style">font-size:10px; color:black !important</attribute>
+        </xpath>
+    </template>
+
+    <template id="external_layout_striped" inherit_id="web.external_layout_striped">
+        <xpath expr="//span[hasclass('page')]/.." position="before">
+            <t t-if="from_lon_report" t-call="lon_lims.all_inta_accreditations"/>
+        </xpath>
+
+        <xpath expr="//span[hasclass('page')]/.." position="attributes">
+            <attribute name="class">""</attribute>
+            <attribute name="style">font-size:10px; color:black !important</attribute>
+        </xpath>
+
+        <xpath expr="//span[@t-field='o.name']/.." position="attributes">
+            <attribute name="class">""</attribute>
+            <attribute name="style">font-size:10px; color:black !important</attribute>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form -->
+    <record model="ir.ui.view" id="spw_tax_watertype_form">
+        <field name="name">Tax Water Type</field>
+        <field name="model">spw.tax.watertype</field>
+        <field name="arch" type="xml">
+            <form string="Tax Water Type">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="spw_tax_watertype_tree">
+        <field name="name">Tax Water Type</field>
+        <field name="model">spw.tax.watertype</field>
+        <field name="arch" type="xml">
+            <tree string="Tax Water Type">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_watertype_action" >
+        <field name="name">Tax Water Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.watertype</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="spw_tax_watertype_menu"
+              name="Tax Water Type"
+              parent="spw_tax_configuration"
+              action="spw_tax_watertype_action"/>
+</odoo>

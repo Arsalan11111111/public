@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+     <template id="lims_analysis_request_report_parser" inherit_id="lims_base.lims_analysis_request_report_parser">
+         <xpath expr="//table[@name='request_information']//tr[1]" position="after">
+            <tr>
+                <td>Vendor</td>
+                <td>
+                    <span t-if="analysis_request.salesperson" t-field="analysis_request.salesperson"/>
+                    <span t-elif="analysis_request.order_id" t-field="analysis_request.order_id.user_id"/>
+                </td>
+            </tr>
+         </xpath>
+
+         <xpath expr="//table[@name='request_information']//tr[1]" position="before">
+            <tr>
+                <td>Offer</td>
+                <td><span t-esc="analysis_request.order_id.name"/></td>
+            </tr>
+         </xpath>
+    </template>
+</odoo>

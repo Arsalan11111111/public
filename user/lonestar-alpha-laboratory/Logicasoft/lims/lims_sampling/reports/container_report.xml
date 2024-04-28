@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="container_report_parser" inherit_id="lims_base.container_report_parser">
+        <xpath expr="//table[@id='table_analysis']/thead/tr/th[3]" position="before">
+            <th>Sampling Point</th>
+            <th>Location</th>
+        </xpath>
+
+        <xpath expr="//table[@id='table_analysis']/tbody/t/tr/td[3]" position="before">
+            <td><span t-if="analysis.sampling_point_id" t-field="analysis.sampling_point_id.name"/></td>
+             <td><span t-if="analysis.location_id" t-field="analysis.location_id.name"/></td>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="signature_section">
+        <div class="last-page" style="font-size: 15px;">
+            <div class="text-center" style="margin-top:15px;">
+                <div>
+                    <div class="row" style="margin-bottom: 10px">
+                        <div class="col-4 text-center">
+                            ........................................
+                            <br/>
+                            <strong>
+                              Prepared By 
+                            </strong><br/><br/><br/>
+                            <strong>Date: ____________________</strong>
+                        </div>
+                        <div class="col-4 text-center">
+                            ........................................
+                            <br/>
+                            <strong>
+                              Verified By 
+                            </strong><br/><br/><br/>
+                            <strong>Date: ____________________</strong>
+                        </div>
+                        <div class="col-4 text-center">
+                            ........................................
+                            <br/>
+                            <strong>
+                                Authorized Signatory
+                            </strong><br/><br/><br/>
+                            <strong>Date: ____________________</strong>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div style="border-bottom: 3px solid #00afc4;"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <table class="table table-borderless"
+                           style="font-size:10px;">
+                        <thead>
+                            <tr>
+                                <th class="text-center">
+                                    <strong>
+                                        <i>
+                                            <img src="/purchase_reports/static/description/email.png"
+                                                 style="max-height: 10px;"/>
+                                        </i>
+                                        <span t-field="o.company_id.email"/>
+                                    </strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>
+                                        <i>
+                                            <img src="/purchase_reports/static/description/phone.png"
+                                                 style="max-height: 10px;"/>
+                                        </i>
+                                        <span t-field="o.company_id.phone"/>
+                                        <span t-field="o.company_id.mobile"/>
+                                    </strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>
+                                        <i>
+                                            <img src="/purchase_reports/static/description/location.png"
+                                                 style="max-height: 10px;"/>
+                                        </i>
+                                        <span style="text-align: center;">
+                                            Sultanate of Oman, Muscat
+                                        </span>
+                                    </strong>
+                                </th>
+                                <th class="text-center">
+                                    <strong>
+                                        <i>
+                                            <img src="/purchase_reports/static/description/website.png"
+                                                 style="max-height: 10px;"/>
+                                        </i>
+                                        <span t-field="o.company_id.website"/>
+                                    </strong>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="custom_layout">
+        <t t-if="not o" t-set="o" t-value="doc"/>
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id"/>
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+        </t>
+        <div t-attf-class="header o_company_#{company.id}_layout"
+             t-att-style="report_header_style">
+            <div class="row">
+                <div class="col-6">
+                    <img t-if="company.logo"
+                         t-att-src="image_data_uri(company.logo)"
+                         style="max-height:60px;width:400px;" alt="Logo"/>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <div style="border-bottom: 3px solid #00afc4;"/>
+                </div>
+            </div>
+        </div>
+        <div t-attf-class="article o_report_layout_standard o_company_#{company.id}_layout {{  'o_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}"
+             t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % company.layout_background_image.decode('utf-8') if company.layout_background_image and company.layout_background == 'Custom' else '/base/static/img/bg_background_template.jpg' if company.layout_background == 'Geometric' else ''}});"
+             t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+             t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <t t-out="0"/>
+        </div>
+        <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout"
+             style="margin-bottom:90px;">
+            <t t-call="purchase_reports.signature_section"/>
+            <div class="text-center">
+                <div t-if="report_type == 'pdf'">Page:
+                    <span class="page"/>/
+                    <span class="topage"/>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="purchase_template">
+        <t t-call="purchase_reports.custom_layout">
+            <div class="page">
+                <h1 class="text-center" style="font-size:20px">
+                    <strong>Purchase Order</strong>
+                </h1>
+                <table class="table table-borderless" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th class="text-left">
+                                <div 
+                                style="text-align:left;border-style:solid;border-color: #1c1c1c;border-width:2px; padding-left:10px;">
+                                    <strong>Supplier Name: </strong>
+                                    <span t-field="o.partner_id.name"/>
+                                    <br/>
+                                    <strong>VATIN: </strong>
+                                    <span t-if="o.partner_id.vat" t-field="o.partner_id.vat"/>
+                                    <br/>
+                                    <strong>
+                                        Street:
+                                        <t t-if="o.partner_id.street">
+                                            <span t-field="o.partner_id.street"/>
+                                        </t>
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        Street 2: 
+                                        <t t-if="o.partner_id.street2">
+                                            <span t-field="o.partner_id.street2"/>
+                                        </t>
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        City: 
+                                        <t t-if="o.partner_id.city">
+                                            <span t-field="o.partner_id.city"/>
+                                        </t>
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        State: 
+                                        <t t-if="o.partner_id.state_id">
+                                            <span t-field="o.partner_id.state_id.name"/>
+                                        </t>
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        Country: 
+                                        <t t-if="o.partner_id.country_id">
+                                            <span t-field="o.partner_id.country_id.name"/>
+                                        </t>
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        Email: 
+                                        <t t-if="o.partner_id.email">
+                                            <span t-field="o.partner_id.email"/>
+                                        </t>
+                                    </strong>
+                                    <br/>
+                                    <strong>
+                                        Tel: 
+                                        <t t-if="o.partner_id.phone">
+                                            <span t-field="o.partner_id.phone"/>
+                                        </t>
+                                    </strong>
+                                    <br/>
+                                </div>
+                            </th>
+                            <th class="text-left" style="width: 50%;">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr style="border: 2px solid #1c1c1c;">
+                                            <th style="border: 2px solid #1c1c1c; " class="text-start">LPO No.
+                                            </th>
+                                            <td style="border: 2px solid #1c1c1c;" class=" text-start">
+                                                <t t-esc="o.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 2px solid #1c1c1c;">
+                                            <th style="border: 2px solid #1c1c1c;" class="text-start">Date
+                                            </th>
+                                            <td style="border: 2px solid #1c1c1c;" class="text-start">
+                                                <t t-esc="o.date_order"/>
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 2px solid #1c1c1c;">
+                                            <th style="border: 2px solid #1c1c1c;" class="text-start">Supplier's
+                                                Ref.
+                                            </th>
+                                            <td style="border: 2px solid #1c1c1c;" class="text-start">
+                                                <t t-esc="o.partner_ref"/>
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 2px solid #1c1c1c;">
+                                            <th style="border: 2px solid #1c1c1c;" class="text-start">Department.
+                                            </th>
+                                            <td style="border: 2px solid #1c1c1c;" class="text-start">
+                                                <t t-esc="o.analytic_name"/>
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 2px solid #1c1c1c;">
+                                            <th style="border: 2px solid #1c1c1c;" class="text-start">Contact
+                                                Person
+                                            </th>
+                                            <td style="border: 2px solid #1c1c1c;" class="text-start">
+                                                <t t-esc="o.user_id.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 2px solid #1c1c1c;">
+                                            <th style="border: 2px solid #1c1c1c;" 
+                                            class="text-start">Payment Terms
+                                            </th>
+                                            <td style="border: 2px solid #1c1c1c;" class="text-start">
+                                                <t t-esc="o.payment_term_id.name"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+                <!-- <h2 class="text-left">
+                    <strong>Please Supply The Following</strong>
+                </h2> -->
+                <table class="table table-bordered" name="invoice_line_table">
+                    <thead style="display: table-row-group">
+                        <tr style="border: 2px solid #1c1c1c;">
+                            <th name="th_seq" class="text-center">S.No.</th>
+                            <th name="th_product_no" class="text-center">
+                                <span>Product No.</span>
+                            </th>
+                            <th name="th_description" class="text-center">
+                                <span>Description</span>
+                            </th>
+                            <th name="th_unit" class="text-center">
+                                <span>Unit</span>
+                            </th>
+                            <th name="th_quantity" class="text-center">
+                                <span>Quantity</span>
+                            </th>
+                            <th name="th_price_unit" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                <span>Unit Price</span>
+                            </th>
+                            <th name="th_discount" class="text-center">
+                                <span>Disc.%</span>
+                            </th>
+                            <th name="th_subtotal" class="text-end">
+                                <span>Total Price</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="seq" t-value="1"/>
+                        <t t-set="current_subtotal" t-value="0"/>
+                        <t t-foreach="o.order_line" t-as="line">
+                            <tr style="border: 2px solid #1c1c1c;" t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                <t t-if="not line.display_type">
+                                    <td class="text-center">
+                                        <span t-esc="seq"/>
+                                        <t t-set="seq" t-value="seq+1"/>
+                                    </td>
+                                    <td id="code" class="text-center">
+                                        <span t-field="line.product_id.default_code"/>
+                                    </td>
+                                    <td id="product" class="text-left">
+                                        <span t-field="line.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.product_uom"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-field="line.product_qty"/>
+                                        <span t-field="line.product_uom.name" groups="uom.group_uom"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="line.price_unit"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="line.discount"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="line.price_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                    </td>
+                                </t>
+                                <t t-if="line.display_type == 'line_section'">
+                                    <td colspan="99" id="section">
+                                        <span t-field="line.name"/>
+                                    </td>
+                                    <t t-set="current_section" t-value="line"/>
+                                    <t t-set="current_subtotal" t-value="0"/>
+                                </t>
+                                <t t-if="line.display_type == 'line_note'">
+                                    <td colspan="99" id="note">
+                                        <span t-field="line.name" style="font-size: 11px;"/>
+                                    </td>
+                                </t>
+                            </tr>
+                        </t>
+                        <tr style="border: 2px solid #1c1c1c;" class="is-subtotal text-end">
+                            <td colspan="7" id="amount_total" class="text-start">
+                                <strong>Total Amount</strong>
+                            </td>
+                            <td>
+                                <span t-esc="o.amount_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 2px solid #1c1c1c;" class="is-subtotal text-end">
+                            <td colspan="7" id="discount" class="text-start">
+                                <strong>Less: Discount @</strong>
+                            </td>
+                            <td>
+                                <span t-esc="str(sum(o.order_line.mapped('discount'))) +'%'"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 2px solid #1c1c1c;" class="is-subtotal text-end">
+                            <td colspan="7" id="amount_untaxed" class="text-start">
+                                <strong>Total Payable Amount Before Vat</strong>
+                            </td>
+                            <td>
+                                <span t-esc="o.amount_untaxed" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 2px solid #1c1c1c;" class="is-subtotal text-end">
+                            <td colspan="99" id="amount_in_word" class="text-start">
+                                <strong>Amount In Word</strong>
+                                <span t-esc="o.get_amount_in_word(o.amount_total)"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-start">
+                    <strong style="text-decoration:underline;">Terms and
+                        Conditions.
+                    </strong>
+                    <br/>
+
+                    <p t-field="o.notes" class="mt-4"/>
+                    <div class="oe_structure"/>
+                </div>
+                <br/>
+                <div class="text-start">
+                    <strong class="ml-10">
+                        <span t-esc="o.qa_text"/>
+                    </strong>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="purchase_order_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="purchase_reports.purchase_template"/>
+                <!-- <p style="page-break-after: always;"/> -->
+            </t>
+        </t>
+    </template>
+</odoo>

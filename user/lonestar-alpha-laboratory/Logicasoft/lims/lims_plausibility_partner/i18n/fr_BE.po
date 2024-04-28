@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_plausibility_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-05 14:54+0000\n"
+"PO-Revision-Date: 2021-08-05 14:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_plausibility_partner
+#: model:ir.model.fields,field_description:lims_plausibility_partner.field_lims_method_parameter_characteristic_limit_partner__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_plausibility_partner
+#: model:ir.model.fields,field_description:lims_plausibility_partner.field_lims_method_parameter_characteristic_limit_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: lims_plausibility_partner
+#: model:ir.model.fields,field_description:lims_plausibility_partner.field_lims_method_parameter_characteristic_limit_partner____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_plausibility_partner
+#: model:ir.model,name:lims_plausibility_partner.model_lims_method_parameter_characteristic_limit_partner
+msgid "Method Parameter Characteristic Limit Partner"
+msgstr "Limite Paramètre Partenaire"
+
+#. module: lims_plausibility_partner
+#: code:addons/lims_plausibility_partner/models/lims_method_parameter_characteristic_limit_partner.py:0
+#, python-format
+msgid "Plausibility"
+msgstr "Plausibilité"
+
+#. module: lims_plausibility_partner
+#: model:ir.model.fields.selection,name:lims_plausibility_partner.selection__lims_method_parameter_characteristic_limit_partner__type_alert__plausibility
+msgid "Plausible"
+msgstr ""
+
+#. module: lims_plausibility_partner
+#: model:ir.model.fields,field_description:lims_plausibility_partner.field_lims_method_parameter_characteristic_limit_partner__type_alert
+msgid "Type"
+msgstr ""

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.module.category" id="module_category_lims">
+        <field name="name">Lims</field>
+        <field name="sequence">105</field>
+    </record>
+
+    <record model="ir.module.category" id="module_category_lims_base">
+        <field name="name">Lims</field>
+        <field name="parent_id" ref="lims_base.module_category_lims"/>
+        <field name="sequence">10</field>
+    </record>
+
+    <record model="ir.module.category" id="module_category_lims_extra_right">
+        <field name="name">Lims (Extra Rights)</field>
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="viewer_group" model="res.groups">
+        <field name="name">Viewer</field>
+        <field name="category_id" ref="lims_base.module_category_lims_base"/>
+    </record>
+
+    <record id="user_group" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="lims_base.module_category_lims_base"/>
+        <field name="implied_ids" eval="[(4, ref('lims_base.viewer_group'))]"/>
+    </record>
+
+    <record id="manager_group" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="lims_base.module_category_lims_base"/>
+        <field name="implied_ids" eval="[(4, ref('lims_base.user_group'))]"/>
+    </record>
+
+    <record id="lims_admin_group" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="lims_base.module_category_lims_base"/>
+        <field name="implied_ids" eval="[(4, ref('lims_base.manager_group'))]"/>
+    </record>
+
+    <record id="validator1_group" model="res.groups">
+        <field name="category_id" ref="lims_base.module_category_lims_extra_right"/>
+        <field name="name">Lims validation (1st)</field>
+        <field name="implied_ids" eval="[(4, ref('lims_base.user_group'))]"/>
+    </record>
+
+    <record id="validator2_group" model="res.groups">
+        <field name="name">Lims validation (2nd)</field>
+        <field name="category_id" ref="lims_base.module_category_lims_extra_right"/>
+        <field name="implied_ids" eval="[(4, ref('lims_base.user_group'))]"/>
+    </record>
+
+    <record id="self_sop_group" model="res.groups">
+        <field name="name">Validate SOP filled self</field>
+        <field name="category_id" ref="lims_base.module_category_lims_extra_right"/>
+        <field name="implied_ids" eval="[(4, ref('lims_base.user_group'))]"/>
+    </record>
+
+    <record id="group_delete_results" model="res.groups">
+        <field name="name">Delete results</field>
+        <field name="category_id" ref="lims_base.module_category_lims_extra_right"/>
+        <field name="implied_ids" eval="[(4, ref('lims_base.lims_admin_group'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_laboratory_admin">
+        <field name="name">lims_base.lims_laboratory_admin</field>
+        <field name="model_id" search="[('model','=','lims.laboratory')]" model="ir.model"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('lims_base.lims_admin_group'))]"/>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_laboratory_user">
+        <field name="name">lims_base.lims_laboratory_all</field>
+        <field name="model_id" search="[('model','=','lims.laboratory')]" model="ir.model"/>
+        <field name="domain_force">[('res_users_ids','=',user.id)]</field>
+        <field name="groups" eval="[(4, ref('lims_base.viewer_group'))]"/>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_analysis_request">
+        <field name="name">lims_base.lims_analysis_request</field>
+        <field name="model_id" search="[('model','=','lims.analysis.request')]" model="ir.model"/>
+        <field name="global" eval="False"/>
+        <field name="domain_force">[('labo_id.res_users_ids','=',user.id)]</field>
+        <field name="groups" eval="[(4, ref('lims_base.viewer_group'))]"/>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_analysis_numeric_result">
+        <field name="name">lims_base.lims_analysis_numeric_result</field>
+        <field name="model_id" search="[('model','=','lims.analysis.numeric.result')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="perm_read"   eval="0"/>
+        <field name="perm_write"  eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">['|',('rel_labo_users_ids','=',user.id), ('rel_dept_user_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_analysis_sel_result">
+        <field name="name">lims_base.lims_analysis_sel_result</field>
+        <field name="model_id" search="[('model','=','lims.analysis.sel.result')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="perm_read"   eval="0"/>
+        <field name="perm_write"  eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">['|',('rel_labo_users_ids','=',user.id), ('rel_dept_user_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_analysis_compute_result">
+        <field name="name">lims_base.lims_analysis_compute_result</field>
+        <field name="model_id" search="[('model','=','lims.analysis.compute.result')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="perm_read"   eval="0"/>
+        <field name="perm_write"  eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">['|',('rel_labo_users_ids','=',user.id), ('rel_dept_user_ids','=',user.id)]</field>
+    </record>
+
+     <record model="ir.rule" id="lims_rule_analysis_text_result">
+        <field name="name">lims_base.lims_analysis_text_result</field>
+        <field name="model_id" search="[('model','=','lims.analysis.text.result')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+         <field name="perm_read"  eval="0"/>
+        <field name="perm_write"  eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">[('rel_labo_users_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_analysis">
+        <field name="name">lims_base.lims_analysis</field>
+        <field name="model_id" search="[('model','=','lims.analysis')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="perm_read"   eval="0"/>
+        <field name="perm_write"  eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">[('rel_labo_users_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_batch">
+        <field name="name">lims_base.lims_batch</field>
+        <field name="model_id" search="[('model','=','lims.batch')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('rel_labo_id.res_users_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_department_admin">
+        <field name="name">lims_base.lims_department</field>
+        <field name="model_id" search="[('model','=','lims.laboratory')]" model="ir.model"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('lims_base.lims_admin_group'))]"/>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_department">
+        <field name="name">lims_base.lims_department</field>
+        <field name="model_id" search="[('model','=','lims.department')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('rel_labo_users_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_method">
+        <field name="name">lims_base.lims_method</field>
+        <field name="model_id" search="[('model','=','lims.method')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('rel_labo_users_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_method_parameter_characteristic">
+        <field name="name">lims_base.lims_method_parameter_characteristic</field>
+        <field name="model_id" search="[('model','=','lims.method.parameter.characteristic')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('laboratory_id.res_users_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_parameter_pack">
+        <field name="name">lims_base.lims_parameter_pack</field>
+        <field name="model_id" search="[('model','=','lims.parameter.pack')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('labo_id.res_users_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_rule_sop">
+        <field name="name">lims_base.lims_sop</field>
+        <field name="model_id" search="[('model','=','lims.sop')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="perm_read"   eval="0"/>
+        <field name="perm_write"  eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">['|',('rel_labo_users_ids','=',user.id), ('rel_dept_user_ids','=',user.id)]</field>
+    </record>
+
+    <record model="ir.rule" id="lims_work_instruction">
+        <field name="name">lims_base.lims_work_instruction</field>
+        <field name="model_id" search="[('model','=','lims.work.instruction')]" model="ir.model"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('laboratory_ids.res_users_ids','=',user.id)]</field>
+    </record>
+
+    <!--Portal rules-->
+    <record id="lims_request_rule_portal" model="ir.rule">
+        <field name="name">Portal Personal Lims Request</field>
+        <field name="model_id" ref="lims_base.model_lims_analysis_request"/>
+        <field name="domain_force">[('message_partner_ids','child_of',[user.commercial_partner_id.id])]</field>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+    </record>
+    <record id="lims_analysis_rule_portal" model="ir.rule">
+        <field name="name">Portal Personal Lims Analysis</field>
+        <field name="model_id" ref="lims_base.model_lims_analysis"/>
+        <field name="domain_force">[('message_partner_ids','child_of',[user.commercial_partner_id.id])]</field>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+    </record>
+</odoo>

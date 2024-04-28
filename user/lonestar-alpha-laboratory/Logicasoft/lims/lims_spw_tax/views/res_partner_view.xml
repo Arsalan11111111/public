@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="res_partner_form">
+        <field name="name">Partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//group[@name='sale']" position="inside">
+                    <field name="tax_contact"/>
+                    <field name="is_sampling_point"/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Tax Campaign" attrs="{'invisible': [('is_sampling_point', '=', False)]}">
+                        <group col="4">
+                            <field name="nb_employees"/>
+                            <field name="nb_workers"/>
+                            <field name="no_com"/>
+                        </group>
+                        <group col="4">
+                            <field name="code"/>
+                            <field name="frequency" invisible="1"/>
+                        </group>
+                        <label for="campaign_ids"/>
+                        <field name="campaign_ids" context="{'default_site_id': active_id, 'default_partner_id': parent_id, 'make_site_invisible': True}"/>
+                        <label for="meter_ids"/>
+                        <field name="meter_ids" context="{'default_site_id': active_id, 'make_site_invisible': True}"/>
+                        <label for="activity_spw_tax_ids"/>
+                        <field name="activity_spw_tax_ids" context="{'default_partner_id': active_id, 'make_site_invisible': True}"/>
+                    </page>
+                </xpath>
+
+            </data>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_search">
+        <field name="name">Partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//search" position="inside">
+                    <field name="is_sampling_point"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_campaign_site_id_action" >
+        <field name="name">Site</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_is_sampling_point': True}</field>
+    </record>
+
+    <menuitem id="spw_tax_campaign_site_id_menu"
+                  name="Site"
+                  parent="spw_tax_campaign_root"
+                  action="lims_spw_tax.spw_tax_campaign_site_id_action" />
+
+</odoo>

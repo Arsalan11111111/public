@@ -1,0 +1,173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_quality_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-04 23:03+0000\n"
+"PO-Revision-Date: 2024-01-04 23:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_quality_control
+#. odoo-python
+#: code:addons/lims_quality_control/models/quality_check.py:0
+#: code:addons/lims_quality_control/models/quality_check.py:0
+#: code:addons/lims_quality_control/models/quality_check.py:0
+#: model:ir.model,name:lims_quality_control.model_lims_analysis
+#: model_terms:ir.ui.view,arch_db:lims_quality_control.quality_check_view_form
+#, python-format
+msgid "Analysis"
+msgstr "Échantillons"
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_point__analysis_category_id
+msgid "Analysis Category"
+msgstr "Catégorie d'analyse"
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check__analysis_ids
+msgid "Analysis created"
+msgstr "Échantillons créés"
+
+#. module: lims_quality_control
+#: model_terms:ir.ui.view,arch_db:lims_quality_control.quality_check_view_form
+#: model_terms:ir.ui.view,arch_db:lims_quality_control.view_quality_check_wizard
+msgid "Create Analysis"
+msgstr "Créer échantillon"
+
+#. module: lims_quality_control
+#: model_terms:ir.ui.view,arch_db:lims_quality_control.quality_check_view_form
+#: model_terms:ir.ui.view,arch_db:lims_quality_control.view_quality_check_wizard
+msgid "Create Analysis from stock"
+msgstr "Créer échantillon depuis le stock"
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check__rel_point_id_create_analysis
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check_wizard__rel_point_id_create_analysis
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_point__create_analysis
+msgid "Create analysis"
+msgstr "Créer une analyse"
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_lims_analysis__create_from_qc
+msgid "Create from quality check"
+msgstr ""
+
+#. module: lims_quality_control
+#: model_terms:ir.ui.view,arch_db:lims_quality_control.quality_point_view_form
+msgid "Lims"
+msgstr ""
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check__rel_lims_for_analysis
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check_wizard__rel_lims_for_analysis
+msgid "Lims For Analysis"
+msgstr "Analyse pour Lims"
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check_wizard__rel_lot_id
+msgid "Lot/Serial"
+msgstr "Lot/Numéro de série"
+
+#. module: lims_quality_control
+#. odoo-python
+#: code:addons/lims_quality_control/models/quality_check.py:0
+#, python-format
+msgid "No product inserted"
+msgstr "Aucuns produits insérés"
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check__nb_analysis
+msgid "Numbers of analysis created"
+msgstr "Nombre d'échantillons créés"
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check_wizard__rel_picking_id
+msgid "Picking"
+msgstr ""
+
+#. module: lims_quality_control
+#: model:ir.model,name:lims_quality_control.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements de produit (Ligne de mouvement de stock)"
+
+#. module: lims_quality_control
+#. odoo-python
+#: code:addons/lims_quality_control/models/quality_check.py:0
+#, python-format
+msgid "Product have boolean 'Lims For Analysis' uncheck"
+msgstr "Le produit a la case 'Analyse pour Lims' décochée"
+
+#. module: lims_quality_control
+#. odoo-python
+#: code:addons/lims_quality_control/models/quality_check.py:0
+#, python-format
+msgid "Product have no matrix"
+msgstr "Le produit n'a pas de matrice"
+
+#. module: lims_quality_control
+#: model:ir.model,name:lims_quality_control.model_mrp_production
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check_wizard__rel_production_id
+msgid "Production Order"
+msgstr "Ordre de fabrication"
+
+#. module: lims_quality_control
+#: model:ir.model,name:lims_quality_control.model_quality_check
+msgid "Quality Check"
+msgstr "Contrôle qualité"
+
+#. module: lims_quality_control
+#: model:ir.model,name:lims_quality_control.model_quality_point
+msgid "Quality Control Point"
+msgstr "Point de contrôle qualité"
+
+#. module: lims_quality_control
+#. odoo-python
+#: code:addons/lims_quality_control/models/quality_check.py:0
+#, python-format
+msgid "The 'Create analysis' boolean is unchecked on control point."
+msgstr "Le booléan 'Créer une analyse' est décoché sur le 'Point de contrôle' lié."
+
+#. module: lims_quality_control
+#. odoo-python
+#: code:addons/lims_quality_control/models/quality_check.py:0
+#, python-format
+msgid ""
+"There are more than one stock's moves on the stock's picking using the "
+"product '{}'."
+msgstr ""
+"Il y a plus d'un mouvement de stock sur le stock picking utilisant le "
+"produit '{}'."
+
+#. module: lims_quality_control
+#: model:ir.model.fields,help:lims_quality_control.field_quality_check__rel_lims_for_analysis
+#: model:ir.model.fields,help:lims_quality_control.field_quality_check_wizard__rel_lims_for_analysis
+msgid ""
+"This is checked to make eligible the product and all his variants inside the"
+" LIMS flow's process."
+msgstr ""
+
+#. module: lims_quality_control
+#: model:ir.model,name:lims_quality_control.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: lims_quality_control
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check__rel_picking_code
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check__rel_production_code
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check_wizard__rel_picking_code
+#: model:ir.model.fields,field_description:lims_quality_control.field_quality_check_wizard__rel_production_code
+msgid "Type of Operation"
+msgstr "Type d'opération"
+
+#. module: lims_quality_control
+#: model:ir.model,name:lims_quality_control.model_quality_check_wizard
+msgid "Wizard for Quality Check Pop Up"
+msgstr "Wizard pour le popup de contrôle qualité"

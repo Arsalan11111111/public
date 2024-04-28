@@ -1,0 +1,328 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_stock_finder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-15 12:58+0000\n"
+"PO-Revision-Date: 2023-12-15 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"<b>11 +- 2 </b><small>Search between 9 and 13 (limits included)</small>"
+msgstr ""
+"<b>11 +- 2 </b><small>Recherche entre 9 et 13 (limites incluses)</small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"<b>12 % 50 </b><small>Search between 6 and 18 (limits included)</small>"
+msgstr ""
+"<b>12 % 50 </b><small>Recherche entre 6 et 18 (limites incluses)</small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"<b>12 &lt;= x &lt; 15 </b><small>Search between 12 (included) and 15 "
+"(excluded)</small>"
+msgstr ""
+"<b>12 &lt;= x &lt; 15 </b><small>Recherche entre 12 (inclus) et 15 "
+"(exclu)</small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"<b>Limpid </b><small>Search all result with selected value name have "
+"'Limpid' ex: values can be 'Limpid' and 'Not Limpid' (Case sensitive)! "
+"</small>"
+msgstr ""
+"<b>Limpid </b><small>Rechercher tous les résultats dont le nom de la valeur "
+"sélectionnée contient 'Limpide' ex : les valeurs peuvent être 'Limpide' et "
+"'Non Limpide' (sensible à la casse) ! </small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"<b>Limpid;Hazy </b><small>same as above, but selected value have 'Limpid' or"
+" 'Hazy'</small>"
+msgstr ""
+"<b>Limpide;Trouble </b><small>comme ci-dessus, mais les valeurs "
+"sélectionnées ont 'Limpide' ou 'Trouble'</small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"<b>green </b><small>Searches for results containing the defined character "
+"string 'green' (Case nonsensitive)!</small>"
+msgstr ""
+"<b>vert </b><small>Recherche les résultats contenant la chaîne de caractères"
+" définie 'vert' (insensible à la casse) !</small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "<b>x &gt; 15 </b><small>Search above 15 (excluded)</small>"
+msgstr "<b>x &gt; 15 </b><small>Recherche supérieure à 15 (exclue)</small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "<b>x &gt;= 14 </b><small>Search above 14 (included)</small>"
+msgstr "<b>x &gt;= 14 </b><small>Recherche au-dessus de 14 (inclus)</small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "About analysis"
+msgstr "À propos des analyses"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "About lots"
+msgstr "À propos des lots"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "About stock lines"
+msgstr "À propos des lignes de stock"
+
+#. module: lims_stock_finder
+#: model:ir.model,name:lims_stock_finder.model_lims_analysis
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__analysis_ids
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Analysis"
+msgstr "Échantillons"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Available quantity"
+msgstr "Quantité disponible"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__create_uid
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__create_date
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__criteria
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__criteria_ids
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Criteria"
+msgstr "Critères"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__criteria_evaluated
+msgid "Criteria Evaluated"
+msgstr "Critères évalués"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__display_name
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Documentation"
+msgstr "Documentation"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__finder_id
+msgid "Finder"
+msgstr "Recherche"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "For numeric [Nu] and compute [Ca] results:"
+msgstr "Pour les résultats numériques [Nu] et calcul [Ca] :"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "For selection [Se] results:"
+msgstr "Pour les résultats sélection [Se] :"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "For text [Tx] results:"
+msgstr "Pour les résultats texte [Tx] :"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__rel_format
+msgid "Format"
+msgstr "Format"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "How to use criteria"
+msgstr "Comment utiliser les critères"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__id
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria____last_update
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__write_uid
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__write_date
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"Lots are selected as soon as at least one analysis meets the applied "
+"criteria."
+msgstr ""
+"Les lots sont sélectionnés à partir du moment où au moins une analyse répond"
+" aux critères appliqués."
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Minimal quantity"
+msgstr "Quantité minimale"
+
+#. module: lims_stock_finder
+#. odoo-python
+#: code:addons/lims_stock_finder/models/lims_analysis.py:0
+#, python-format
+msgid ""
+"No analysis found with all criteria! Last criteria tested : [{}] with value "
+"[{}]"
+msgstr ""
+"Aucune analyse n'a été trouvée avec tous les critères ! Dernier critère "
+"testé :  [{}] avec la valeur [{}]"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"Note: <small>The criteria must contain at least one possible result value in"
+" order to operate.</small>"
+msgstr ""
+"Note: <small>Les critères doivent contenir au moins une valeur de résultat "
+"possible pour fonctionner.</small>"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid ""
+"Only samples in second validation are considered, regardless of conformity"
+msgstr ""
+"Seuls les échantillons en seconde validation sont considérés, indépendamment"
+" de la conformité."
+
+#. module: lims_stock_finder
+#: model:ir.model,name:lims_stock_finder.model_lims_parameter
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__parameter_id
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__product_ids
+msgid "Product"
+msgstr "Article"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Products"
+msgstr "Articles"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__quantity
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: lims_stock_finder
+#: model:ir.model,name:lims_stock_finder.model_stock_quant
+msgid "Quants"
+msgstr "Quants"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__rel_result_value_ids
+msgid "Result Value"
+msgstr "Valeur de résultats"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__state
+msgid "State"
+msgstr "État"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,field_description:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__stock_quant_ids
+msgid "Stock Quant"
+msgstr "Quant de stock"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Stock lines with a quantity &lt; 1 are not considered."
+msgstr ""
+"Les lignes de stocks avec une quantité &lt; 1 ne sont pas considérées."
+
+#. module: lims_stock_finder
+#: model:ir.model,name:lims_stock_finder.model_lims_stock_finder_quant_finder_criteria
+msgid "Stock quant finder criteria"
+msgstr "Critères de recherche de Quant de stock"
+
+#. module: lims_stock_finder
+#: model:ir.model,name:lims_stock_finder.model_lims_stock_finder_quant_finder_wizard
+msgid "Stock quant finder wizard"
+msgstr "Assistant de recherche de Quant de stock"
+
+#. module: lims_stock_finder
+#: model_terms:ir.ui.view,arch_db:lims_stock_finder.stock_quant_finder_wizard
+msgid "Stock quants"
+msgstr "Quant de stock"
+
+#. module: lims_stock_finder
+#: model:ir.actions.act_window,name:lims_stock_finder.stock_quant_finder_wizard_action
+msgid "Stock search"
+msgstr "Recherche de stock"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,help:lims_stock_finder.field_lims_stock_finder_quant_finder_wizard__quantity
+msgid "The minimal quantity to be present in filtered list"
+msgstr "La quantité minimale devant être présente dans la liste filtrée"
+
+#. module: lims_stock_finder
+#: model:ir.model.fields,help:lims_stock_finder.field_lims_stock_finder_quant_finder_criteria__state
+msgid "This is the state of the conformity of that result."
+msgstr "C'est l'état de conformité de ce résultat."

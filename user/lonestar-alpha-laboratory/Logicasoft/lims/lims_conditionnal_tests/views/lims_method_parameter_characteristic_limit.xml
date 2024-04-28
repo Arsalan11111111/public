@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model='ir.ui.view' id='lims_method_parameter_charac_limit_form'>
+        <field name="name">Method Parameter Characteristic Limit</field>
+        <field name="model">lims.method.parameter.characteristic.limit</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_charac_limit_form"/>
+        <field name="arch" type="xml">
+            <field name="method_param_charac_id" widget="many2many_tags" position="after">
+                <field name="pack_ids"/>
+            </field>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_method_parameter_charac_limit_tree'>
+        <field name="name">Method Parameter Characteristic Limit</field>
+        <field name="model">lims.method.parameter.characteristic.limit</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_charac_limit_tree"/>
+        <field name="arch" type="xml">
+            <field name="method_param_charac_id" position="after">
+                <field name="pack_ids" widget="many2many_tags" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

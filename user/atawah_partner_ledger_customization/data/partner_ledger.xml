@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--    <record id="partner_ledger_report" model="account.report">-->
+    <!--        <field name="name">Partner Ledger</field>-->
+    <!--        <field name="filter_show_draft" eval="True"/>-->
+    <!--        <field name="filter_account_type" eval="True"/>-->
+    <!--        <field name="filter_partner" eval="True"/>-->
+    <!--        <field name="filter_unfold_all" eval="True"/>-->
+    <!--        <field name="filter_unreconciled" eval="True"/>-->
+    <!--        <field name="filter_period_comparison" eval="False"/>-->
+    <!--        <field name="filter_multi_company">selector</field>-->
+    <!--        <field name="default_opening_date_filter">this_year</field>-->
+    <!--        <field name="search_bar" eval="True"/>-->
+    <!--        <field name="load_more_limit" eval="80"/>-->
+    <!--        <field name="custom_handler_model_id" ref="account_reports.model_account_partner_ledger_report_handler"/>-->
+    <!--        <field name="main_template">account_reports.template_partner_ledger_report</field>-->
+    <!--        <field name="line_template">account_reports.line_template_partner_ledger_report</field>-->
+    <!--        <field name="load_more_limit" eval="80"/>-->
+    <!--        <field name="column_ids">-->
+
+    <!--            <record id="partner_ledger_report_teva" model="account.report.column">-->
+    <!--                <field name="name">teva</field>-->
+    <!--                <field name="expression_label">teva</field>-->
+    <!--                <field name="figure_type">none</field>-->
+    <!--            </record>-->
+
+
+    <!--        </field>-->
+    <!--    </record>-->
+
+
+    <!--    <record id="partner_ledger_report_extension_inherited" model="ir.ui.view">-->
+    <!--        <field name="name">account.report.partner.ledger.inherited</field>-->
+    <!--        <field name="model">account.report</field>-->
+    <!--        <field name="inherit_id" ref="account_reports.model_account_partner_ledger_report_handler"/>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <field name="column_ids" position="after">-->
+    <!--                -->
+    <!--            </field>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+
+    <record id="partner_ledger_report_teva2" model="account.report.column">
+        <field name="name">lpo</field>
+        <field name="expression_label">lpo</field>
+        <field name="figure_type">none</field>
+    </record>
+
+    <data noupdate="1">
+        <record id="ovs_project_Preview2" model="account.report">
+            <field name="name">account.report</field>
+            <field name="column_ids"
+                   eval="[Command.link(ref('atawah_partner_ledger_customization.partner_ledger_report_teva2'))]"/>
+
+        </record>
+    </data>
+</odoo>

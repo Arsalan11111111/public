@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_method_parameter_characteristic_form'>
+        <field name="name">Method Parameter Characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='lims_method_parameter_characteristic_form']" position="inside">
+                <group>
+                    <separator string="." style="color: white"/>
+                    <field name="symbol"/>
+                    <field name="parameter_type_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form -->
+    <record model="ir.ui.view" id="spw_tax_meter_reading_form">
+        <field name="name">Meter Reading</field>
+        <field name="model">spw.tax.meter.reading</field>
+        <field name="arch" type="xml">
+            <form string="Meter Reading">
+                <sheet>
+                    <group>
+                        <field name="meter_id"/>
+                        <field name="campaign_id"/>
+                        <field name="readingby_id"/>
+                        <field name="start_date"/>
+                        <field name="start_index"/>
+                        <field name="end_date"/>
+                        <field name="end_index"/>
+                        <field name="outflow"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="spw_tax_meter_reading_tree">
+        <field name="name">Meter Reading</field>
+        <field name="model">spw.tax.meter.reading</field>
+        <field name="arch" type="xml">
+            <tree string="Meter Reading">
+                <field name="meter_id"/>
+                <field name="rel_reference"/>
+                <field name="campaign_id"/>
+                <field name="readingby_id"/>
+                <field name="start_date"/>
+                <field name="start_index"/>
+                <field name="end_date"/>
+                <field name="end_index"/>
+                <field name="outflow"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_meter_reading_action" >
+        <field name="name">Meter Reading</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.meter.reading</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="spw_tax_meter_reading_menu"
+              name="Meter Reading"
+              parent="spw_tax_configuration"
+              action="spw_tax_meter_reading_action"/>
+</odoo>

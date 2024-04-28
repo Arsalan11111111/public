@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="lims_laboratory_form">
+        <field name="name">Laboratory</field>
+        <field name="model">lims.laboratory</field>
+        <field name="inherit_id" ref="lims_base.lims_laboratory_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='timing']" position="after">
+                <group string="Delays" colspan="2">
+                    <field name="default_technical_lead_time" widget="float_time" colspan="2"/>
+                    <field name="default_technical_warning_time" widget="float_time" colspan="2"/>
+                    <field name="date_for_compute_warning_time" colspan="2"/>
+                    <field name="date_end_for_compute_warning_time" colspan="2"/>
+                    <field name="delay_result_stage_ids" colspan="2" widget="many2many_tags"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

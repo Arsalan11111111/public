@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- demo for NU + CA-->
+        <record model="lims.parameter.char.product" id="demo_parameter_char_product_1">
+            <field name="product_id" ref="demo_lims_product_limit_2"/>
+            <field name="method_param_charac_id" ref="lims_base.demo_method_parameter_characteristic_3"/>
+            <field name="accreditation">inta</field>
+            <field name="accreditation_ids" eval="[(6,0,[ref('lims_base.demo_accreditation_1')])]"/>
+            <field name="report_limit_value">35 > Ca</field>
+            <field name="comment">Ca in river</field>
+            <field name="reference">CA-RIV</field>
+        </record>
+        <record model="lims.parameter.char.product" id="demo_parameter_char_product_2">
+            <field name="product_id" ref="demo_lims_product_limit_2"/>
+            <field name="method_param_charac_id" ref="lims_base.demo_method_parameter_characteristic_4"/>
+            <field name="accreditation">inta</field>
+            <field name="accreditation_ids" eval="[(6,0,[ref('lims_base.demo_accreditation_1')])]"/>
+            <field name="report_limit_value">25 > Mg</field>
+            <field name="comment">Mg in river</field>
+            <field name="reference">Mg-RIV</field>
+        </record>
+        <record model="lims.parameter.char.product" id="demo_parameter_char_product_3">
+            <field name="product_id" ref="demo_lims_product_limit_2"/>
+            <field name="method_param_charac_id" ref="lims_base.demo_method_parameter_characteristic_5"/>
+            <field name="accreditation">inta</field>
+            <field name="accreditation_ids" eval="[(6,0,[ref('lims_base.demo_accreditation_1')])]"/>
+            <field name="report_limit_value">60 > Mg + Ca</field>
+            <field name="comment">Hardness in river water</field>
+            <field name="reference">HAR-RIV</field>
+        </record>
+        <!-- demo for SE-->
+        <record model="lims.parameter.char.product" id="demo_parameter_char_product_4">
+            <field name="product_id" ref="demo_lims_product_limit_1"/>
+            <field name="method_param_charac_id" ref="lims_base.demo_method_parameter_characteristic_2"/>
+            <field name="accreditation">intna</field>
+            <field name="report_limit_value">Must be limpid</field>
+            <field name="comment">Visual aspect for iceberg water</field>
+            <field name="reference">VIS-ICB</field>
+        </record>
+    </data>
+</odoo>

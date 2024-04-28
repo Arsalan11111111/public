@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="create_batch_wizard_form" model="ir.ui.view">
+        <field name="name">Batch</field>
+        <field name="model">create.batch.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="1">
+                        <field name="department_id" invisible="True"/>
+                        <field name="laboratory_id" invisible="True"/>
+                        <field name="batch_id"  string="Add to an existing batch" placeholder="Add to an existing batch"
+                               domain="[('rel_department_id', '=', department_id), ('rel_labo_id', '=', laboratory_id), ('state', 'in', ['draft', 'todo', 'wip'])]"
+                               context="{'default_rel_laboratory_id': laboratory_id, 'default_rel_department_id': department_id}"
+                        />
+                    </group>
+                    <footer>
+                        <button string="Create Batch" type="object" name="do_create_batch" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="create_batch_wizard_action" model="ir.actions.act_window">
+        <field name="name">Batch</field>
+        <field name="res_model">create.batch.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+</odoo>

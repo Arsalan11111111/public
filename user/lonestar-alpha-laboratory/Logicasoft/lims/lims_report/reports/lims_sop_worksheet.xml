@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="lims_sop_worksheet" inherit_id="lims_base.lims_sop_worksheet">
+        <xpath expr="//tbody//tr[1]//td[2]" position="after">
+            <td>Criteria</td>
+        </xpath>
+
+        <xpath expr="//t[@name='result_num_loop']//tr[1]//td[2]" position="after">
+            <td>
+                <span t-field="result.report_limit_value"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//t[@name='result_sel_loop']//tr[1]//td[2]" position="after">
+            <td>
+                <span t-field="result.report_limit_value"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//t[@name='result_calc_loop']//tr[1]//td[2]" position="after">
+            <td>
+                <span t-field="result.report_limit_value"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//t[@name='result_text_loop']//tr[1]//td[2]" position="after">
+            <td>
+                <span t-field="result.report_limit_value"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form -->
+    <record model="ir.ui.view" id="spw_tax_accessibility_form">
+        <field name="name">Accessibility</field>
+        <field name="model">spw.tax.accessibility</field>
+        <field name="arch" type="xml">
+            <form string="Accessibility">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="spw_tax_accessibility_tree">
+        <field name="name">Accessibility</field>
+        <field name="model">spw.tax.accessibility</field>
+        <field name="arch" type="xml">
+            <tree string="Accessibility">
+                    <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_accessibility_action" >
+        <field name="name">Accessibility</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.accessibility</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="spw_tax_accessibility_menu"
+              name="Accessibility"
+              parent="spw_tax_configuration"
+              action="spw_tax_accessibility_action"/>
+</odoo>

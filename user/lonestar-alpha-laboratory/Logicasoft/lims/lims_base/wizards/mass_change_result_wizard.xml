@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="mass_change_result_form" model="ir.ui.view">
+        <field name="name">Mass Change Result Wizard</field>
+        <field name="model">mass.change.result.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="1">
+                        <field name="nb_analysis_result_ids" invisible="1"/>
+                        <field name="analysis_result_ids" nolabel="1" readonly="1"  attrs="{'invisible': [('nb_analysis_result_ids', '=', 0)]}"/>
+                        <field name="nb_analysis_sel_result_ids" invisible="1"/>
+                        <field name="analysis_sel_result_ids" nolabel="1" readonly="1" attrs="{'invisible': [('nb_analysis_sel_result_ids', '=', 0)]}">
+                            <tree>
+                                <field name="rel_request_id" readonly="1"/>
+                                <field name="analysis_id" readonly="1"/>
+                                <field name="rel_sample_name" readonly="1"/>
+                                <field name="rel_type" invisible="1"/>
+                                <field name="method_param_charac_id" readonly="1"/>
+                                <field name="value_ids" invisible="1"/>
+                                <field name="value_id" readonly="1"/>
+                                <field name="comment"/>
+                                <field name="date_start" readonly="1"/>
+                                <field name="state" readonly="1"/>
+                                <field name="stage_id" readonly="1" options="{'no_open': True}"/>
+                                <field name="pack_id" readonly="1"/>
+                                <field name="is_rework" invisible="1"/>
+                            </tree>
+                        </field>
+                        <field name="nb_analysis_compute_result_ids" invisible="1"/>
+                        <field name="analysis_compute_result_ids" nolabel="1" readonly="1" attrs="{'invisible': [('nb_analysis_compute_result_ids', '=', 0)]}"/>
+                        <field name="nb_analysis_text_result_ids" invisible="1"/>
+                        <field name="analysis_text_result_ids" nolabel="1" readonly="1"
+                               attrs="{'invisible': [('nb_analysis_text_result_ids', '=', 0)]}"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Validate" type="object" name="do_validate" class="oe_highlight" groups="lims_base.manager_group"/>
+                    <button string="Second Validate" type="object" name="do_second_validate" class="oe_highlight" groups="lims_base.manager_group"/>
+                    <button string="Rework" type="object" name="do_rework" class="oe_highlight"/>
+                    <button string="Cancel" type="object" name="do_cancel" class="oe_highlight"/>
+                    or
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="mass_change_result_action" model="ir.actions.act_window">
+        <field name="name">Mass Change Result Wizard</field>
+        <field name="res_model">mass.change.result.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

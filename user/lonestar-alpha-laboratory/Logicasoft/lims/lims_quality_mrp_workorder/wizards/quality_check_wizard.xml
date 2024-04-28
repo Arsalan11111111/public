@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_quality_check_wizard" model="ir.ui.view">
+        <field name="name">quality_check_wizard</field>
+        <field name="model">quality.check.wizard</field>
+        <field name="inherit_id" ref="quality_control.view_quality_check_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_lot']//group[@name='right']" position="inside">
+                <field name="rel_finished_lot_id"/>
+            </xpath>
+
+            <xpath expr="//button[@name='create_analysis_from_stock_move']" position="after">
+                <button name="create_analysis_with_finished_lot" string="Create Analysis with finished lot" class="oe_highlight" type="object"
+                        attrs="{'invisible': ['|', '|', '|', '|', ('rel_lims_for_analysis', '=', False), ('rel_point_id_create_analysis', '=', False), ('rel_production_id', '=', False), ('rel_production_code', '!=', 'mrp_operation'), ('rel_finished_lot_id', '=', False)]}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

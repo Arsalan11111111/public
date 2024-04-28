@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="lims_external_layout">
+        <!-- Lims report will use standard company layouts by default. This template is meant to give to opportunity
+        for specific modules to change the layout of all external lims reports -->
+        <t t-call="web.external_layout"><t t-out="0"/></t>
+    </template>
+
+    <template id="lims_internal_layout">
+        <!-- Lims report will use standard company layouts by default. This template is meant to give to opportunity
+        for specific modules to change the layout of all internal lims reports -->
+        <t t-call="web.internal_layout"><t t-out="0"/></t>
+    </template>
+
+</odoo>

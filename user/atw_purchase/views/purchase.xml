@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="inherit_purchase_order_form" model="ir.ui.view">
+        <field name="name">Purchase Form Inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <div name="date_planned_div" position="after">
+                <label for="analytic_accounts_id"/>
+                <div name="analytic_accounts_div" class="o_row">
+                    <field name="analytic_accounts_id" 
+                    widget="many2many_tags"
+                    attrs="{'readonly': [('state', 'not in', ('draft', 'sent', 'to approve', 'purchase'))]}"/>
+                </div>
+            </div>
+
+            <button name='action_rfq_send' position="before">
+                <field name="need_approval" invisible="1"/>
+                <field name="need_second_approval" invisible="1"/>
+                
+                <button name="request_first_approval" 
+                type="object" 
+                attrs="{'invisible': ['|', ('need_approval', '=', False), ('state', 'not in', ['draft', 'sent'])]}" 
+                string="Request of Approval" 
+                class="oe_highlight" data-hotkey="f"/>
+                
+                <button name="request_second_approval" 
+                type="object" 
+                attrs="{'invisible': ['|', ('need_second_approval', '=', False), ('state', '!=', 'first_approval_requested')]}" 
+                string="Final Approval Request" 
+                class="oe_highlight" data-hotkey="g"/>
+                
+                <button name="approve_request" 
+                type="object" 
+                states="first_approval_requested,second_approval_requested" 
+                string="Approve Request" 
+                class="oe_highlight" data-hotkey="g"/>
+                
+                <button name="button_confirm" 
+                type="object" 
+                states="approved" 
+                string="Confirm Order" 
+                context="{'validate_analytic': True}" 
+                class="oe_highlight" 
+                id="approved_confirm" data-hotkey="h"/>
+            </button>
+        </field>
+    </record>
+    
+    <record id="inherit_purchase_order_tree" model="ir.ui.view">
+        <field name="name">Purchase Tree Inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_kpis_tree" />
+        <field name="arch" type="xml">
+            <field name="date_planned" position="after">
+                <field name="analytic_accounts_id" widget="many2many_tags"/>
+                <field name="analytic_name" />
+            </field>
+        </field>
+    </record>
+
+    <record id="purchase_search_by_group_form_view_analytic" model="ir.ui.view">
+
+        <field name="name">group.search.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+        <field name="arch" type="xml">
+
+                <filter name="order_date" position="after"> 
+                    <filter string="Analytic" name="analytic_name" domain="[]" context="{'group_by': 'analytic_name'}"/>
+                </filter> 
+        </field> 
+    </record> 
+</odoo>

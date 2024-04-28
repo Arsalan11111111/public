@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="hr_payroll.hr_menu_salary_attachments"
+        name="Salary Attachments"
+        action="hr_payroll.hr_salary_attachment_action"
+        parent="hr_payroll.menu_hr_payroll_employees_root"
+        groups="hr_payroll.group_hr_payroll_user,hr_payroll.group_hr_payroll_manager"
+        sequence="35"/>
+</odoo>

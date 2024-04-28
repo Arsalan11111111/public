@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="analysis_report_template" inherit_id="lims_report.analysis_report_template">
+        <xpath expr="//style[@name='lims_style']" position="inside">
+            *{
+                color: black !important;
+                font-size: <t t-esc="doc.fontsize"/>px !important;
+            }
+        </xpath>
+    </template>
+
+    <template id="analysis_report_template_partner_information" inherit_id="lims_report.analysis_report_template_partner_information">
+        <xpath expr="//p[@name='partner_information']" position="replace"/>
+    </template>
+
+    <template id="analysis_report_template_date_information" inherit_id="lims_report.analysis_report_template_date_information">
+        <xpath expr="//p[@name='date_information']" position="replace"/>
+    </template>
+
+    <template id="analysis_report_template_title" inherit_id="lims_report.analysis_report_template_title">
+        <xpath expr="//p[1]//div[1]" position="attributes">
+            <attribute name="style"/>
+        </xpath>
+    </template>
+
+    <template id="analysis_report_template_sample_information" inherit_id="lims_report.analysis_report_template_sample_information">
+        <xpath expr="//p[@name='sampling_information']" position="replace">
+            <style type="text/css">
+                .title_information{
+                    font-size: 16px !important;
+                    font-weight: bold;
+                    text-align: left;
+                }
+            </style>
+            <p name="sampling_information">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="title_information">CUSTOMER INFORMATION</div>
+                        <div>
+                            Customer name: <span t-field="analysis_id.partner_id"/>
+                        </div>
+                        <div t-if="analysis_id.partner_id.contact_address and len(analysis_id.partner_id.contact_address.strip())&gt;0">
+                            Customer address: <span t-field="analysis_id.partner_id.contact_address"/>
+                        </div>
+                        <div t-if="analysis_id.partner_id.phone or analysis_id.partner_id.mobile">
+                            Contact details: <span t-if="analysis_id.partner_id.phone">Tel :</span> <span t-field="analysis_id.partner_id.phone"/> / <span t-if="analysis_id.partner_id.mobile">Mobile :</span> <span t-field="analysis_id.partner_id.mobile"/>
+                        </div>
+                        <div t-if="analysis_id.customer_ref">
+                            Customer ref: <span t-field="analysis_id.customer_ref"/>
+                        </div>
+                        <div t-if="analysis_id.intercessor_farmer_id">
+                            Intercessor/Farmer: <span t-field="analysis_id.intercessor_farmer_id"/>
+                        </div>
+                        <div t-if="analysis_id.intercessor_farmer_id.agricultural_possession">
+                            Agricultural possession: <span t-field="analysis_id.intercessor_farmer_id.agricultural_possession"/>
+                        </div>
+                        <div t-if="analysis_id.partner_id.id_civil">
+                            Civil ID: <span t-field="analysis_id.partner_id.id_civil"/>
+                        </div>
+                        <div t-if="analysis_id.vehicle_number">
+                            DEC or Vehicle Number: <span t-field="analysis_id.vehicle_number"/>
+                        </div>
+
+                        <br/>
+
+                        <div class="title_information">LABORATORY INFORMATION</div>
+                        <div>
+                            Request ref: <span t-field="analysis_id.request_id"/>
+                        </div>
+                        <div>
+                            Analysis number: <span t-field="analysis_id.name"/>
+                        </div>
+                        <div>
+                            Sample date receipt: <span t-field="analysis_id.date_sample_receipt" t-options='{"format": "dd/MM/yyyy HH:mm"}'/>
+                        </div>
+                        <div>
+                            Date analysis start: <span t-field="analysis_id.date_start" t-options='{"format": "dd/MM/yyyy HH:mm"}'/>
+                        </div>
+                        <div>
+                            Date reported: <span t-field="analysis_id.date_report" t-options='{"format": "dd/MM/yyyy HH:mm"}'/>
+                        </div>
+                        <div t-if="analysis_id.testing_done_by_id">
+                            Testing done by: <span t-field="analysis_id.testing_done_by_id"/>
+                        </div>
+                        <div t-if="analysis_id.results_reviewed_by_id">
+                            Results reviewed by: <span t-field="analysis_id.results_reviewed_by_id"/>
+                        </div>
+                        <div t-if="analysis_id.results_approved_by_id">
+                            Results approved by: <span t-field="analysis_id.results_approved_by_id"/>
+                        </div>
+                        <div>
+                            Testing location: <span t-field="analysis_id.testing_location"/>
+                        </div>
+                        <div>
+                            Test method deviation: <span t-field="analysis_id.test_method_deviation"/>
+                        </div>
+                        <div t-if="doc.previous_analysis_report_id">
+                             <b>This report cancels and replaces the report :</b> <span t-field="doc.previous_analysis_report_id"/>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <t t-if="analysis_id.project_name_id">
+                            <div class="title_information">PROJECT INFORMATION</div>
+                            <div>
+                                Name: <span t-field="analysis_id.project_name_id"/>
+                            </div>
+                            <div>
+                                Client: <span t-field="analysis_id.project_name_id.client"/>
+                            </div>
+                            <div>
+                                Contractor: <span t-field="analysis_id.project_name_id.main_contractor"/>
+                            </div>
+                            <div>
+                                Consultant: <span t-field="analysis_id.project_name_id.main_consultant"/>
+                            </div>
+                            <div>
+                                Subcontractor: <span t-field="analysis_id.project_name_id.subcontractor_id"/>
+                            </div>
+
+                            <br/>
+                        </t>
+
+                        <div class="title_information">SAMPLE INFORMATION</div>
+                        <div>
+                            Sample name: <span t-field="analysis_id.sample_name"/>
+                        </div>
+                        <div t-if="analysis_id.description">
+                            Sample description: <span t-field="analysis_id.description"/>
+                        </div>
+                        <div>
+                            Source of sample: <span t-field="analysis_id.sample_origin_id"/>
+                        </div>
+                        <div t-if="analysis_id.quantity_of_sample">
+                            Quantity of sample: <span t-field="analysis_id.quantity_of_sample"/>
+                        </div>
+                        <div>
+                            Matrix: <span t-field="analysis_id.matrix_id"/>
+                        </div>
+                        <div>
+                            Product: <span t-field="analysis_id.product_id"/>
+                        </div>
+                        <div>
+                            Product category: <span t-field="analysis_id.product_id.categ_id.name"/>
+                        </div>
+                        <div t-if="analysis_id.sample_condition_id">
+                            Sample condition: <span t-field="analysis_id.sample_condition_id"/>
+                        </div>
+                        <div>
+                            Sampled by:
+                            <t t-if="analysis_id.external_sampling">
+                                Customer
+                            </t>
+                            <t t-else="">
+                                <span t-field="analysis_id.id_sampled_by"/>
+                            </t>
+                        </div>
+                        <div>
+                            Sampling location: <span t-field="analysis_id.location_id"/>
+                        </div>
+                        <div t-if="analysis_id.date_sample">
+                            Sampling date: <span t-field="analysis_id.date_sample" t-options='{"format": "dd/MM/yyyy HH:mm"}'/>
+                        </div>
+                        <div t-if="analysis_id.sampling_method">
+                            Sampling method: <span t-field="analysis_id.sampling_method"/>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        </xpath>
+    </template>
+
+    <template id="analysis_report_template_result" inherit_id="lims_report.analysis_report_template_result">
+        <xpath expr="//t[@name='print_group_loop']//table[1]//thead[1]" position="attributes">
+            <attribute name="style">border-top: 2px solid black</attribute>
+        </xpath>
+
+        <xpath expr="//td[@name='parameter_td']//t[1]//t[1]//sup[1]" position="attributes">
+            <attribute name="t-if">doc.option_print_accreditation</attribute>
+        </xpath>
+
+        <xpath expr="//td[@name='parameter_td']//t[1]//t[2]//sup[1]" position="attributes">
+            <attribute name="t-if">doc.option_print_accreditation</attribute>
+        </xpath>
+
+        <xpath expr="//td[@name='parameter_td']//t[1]//t[3]//sup[1]" position="attributes">
+            <attribute name="t-if">doc.option_print_accreditation</attribute>
+        </xpath>
+
+        <xpath expr="//td[@name='parameter_td']//t[1]//t[4]//sup[1]" position="attributes">
+            <attribute name="t-if">doc.option_print_accreditation</attribute>
+        </xpath>
+
+        <xpath expr="//span[@name='result_value']" position="attributes">
+            <attribute name="t-att-class">result.get('html_class') if doc.option_print_nonconformity else result.get('html_class', '').replace('result_not_conform', '')</attribute>
+        </xpath>
+
+        <xpath expr="//t[@name='print_title']/.." position="before">
+            <xpath expr="//t[@name='section_name_and_introduction']" position="move"/>
+        </xpath>
+
+        <xpath expr="//t[@name='section_name_and_introduction']" position="attributes">
+            <attribute name="t-if">print_section and print_group_first</attribute>
+        </xpath>
+    </template>
+
+    <template id="analysis_report_template_auxiliary_content" inherit_id="lims_report.analysis_report_template_auxiliary_content">
+        <xpath expr="//t[@name='comment']//div[1]//div[1]" position="attributes">
+            <attribute name="style"/>
+        </xpath>
+
+        <xpath expr="//t[@name='remark']//div[1]//div[1]" position="attributes">
+            <attribute name="style"/>
+        </xpath>
+
+        <xpath expr="//t[@name='legend_part']" position="attributes">
+            <attribute name="t-if">(legends_items or all_comment or all_html_comment != []) and doc.option_print_accreditation</attribute>
+        </xpath>
+
+        <xpath expr="//t[@name='legend_part']//span[hasclass('result_not_conform')]" position="attributes">
+            <attribute name="t-if">doc.option_print_nonconformity</attribute>
+        </xpath>
+
+        <xpath expr="//div[@name='accreditation']" position="replace"/>
+
+        <xpath expr="//t[@name='legend_part']//div[hasclass('row')]" position="attributes">
+            <attribute name="style">margin-bottom:5mm</attribute>
+        </xpath>
+
+        <xpath expr="//t[@name='comment_method']//div[hasclass('row')]" position="attributes">
+            <attribute name="style">margin-bottom:5mm</attribute>
+        </xpath>
+
+        <xpath expr="//t[@name='sample_comment']//div[hasclass('row')]" position="attributes">
+            <attribute name="style">margin-bottom:5mm</attribute>
+        </xpath>
+
+        <xpath expr="//t[@name='conclusion']//div[hasclass('row')]" position="attributes">
+            <attribute name="style">page-break-inside:avoid; margin-bottom:5mm</attribute>
+        </xpath>
+
+        <xpath expr="//t[@name='comment']//div[hasclass('row')]" position="attributes">
+            <attribute name="style">page-break-inside:avoid; margin-bottom:5mm</attribute>
+        </xpath>
+
+        <xpath expr="//t[@name='remark']//div[hasclass('row')]" position="attributes">
+            <attribute name="style">page-break-inside:avoid; margin-bottom:5mm</attribute>
+        </xpath>
+    </template>
+
+    <template id="analysis_report_template_signatory" inherit_id="lims_report.analysis_report_template_signatory">
+        <xpath expr="//t[@name='signatory']" position="after">
+            <div class="row" t-if="doc.option_print_general_information and analysis_id.laboratory_id.note_report">
+                <div class="col-12 html_comment">
+                    <br/>
+                    <b>General information</b>
+                    <span t-out="analysis_id.laboratory_id.note_report"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="all_inta_accreditations">
+        <t t-set="inta_accreditations" t-value="get_all_inta_accreditations(doc)"/>
+        <div class="row" style="page-break-inside:avoid;" name="accreditation" t-if="inta_accreditations and doc.option_print_accreditation">
+            <div class="col-12">
+                <ul style="list-style: none">
+                    <t t-foreach="inta_accreditations" t-as="accr">
+                        <li style="float: left; padding-right: 10px">
+                            <img t-if="accr.logo" t-att-src="'data:image/png;base64,%s' %accr.logo.decode('utf-8')" style="max-height: 1cm;"/>
+                        </li>
+                    </t>
+                </ul>
+            </div>
+        </div>
+    </template>
+
+    <record id="lims_report.lims_analysis_report_report" model="ir.actions.report">
+        <field name="paperformat_id" ref="lon_lims.lon_portrait_paperformat"/>
+    </record>
+</odoo>

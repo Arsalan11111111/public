@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="create_analysis_sampling_wizard_form">
+        <field name="name">Create Analysis</field>
+        <field name="model">create.analysis.wizard.sampling</field>
+        <field name="inherit_id" ref="lims_sampling.create_analysis_sampling_wizard_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='do_create_analysis']" position="after">
+                 <button name="do_creation_analysis_and_tour" string="Create and add in tour" type="object" class="oe_highlight"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

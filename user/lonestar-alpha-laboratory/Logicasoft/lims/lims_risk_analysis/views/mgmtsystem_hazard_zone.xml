@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="mgmtsystem_hazard_zone_form" model="ir.ui.view">
+        <field name="name">Hazard zone</field>
+        <field name="model">mgmtsystem.hazard.zone</field>
+        <field name="inherit_id" ref="mgmtsystem_risk_analysis.mgmtsystem_hazard_zone_form"/>
+        <field name="arch" type="xml">
+            <div name="button-box" position="inside">
+                <button name="action_open_analysis" type="object" class="oe_stat_button" icon="fa-flask">
+                    <span>Analyses</span>
+                </button>
+            </div>
+            <notebook position="inside">
+                <page name="sampling_points" string="Sampling points">
+                    <field name="sampling_point_ids"/>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

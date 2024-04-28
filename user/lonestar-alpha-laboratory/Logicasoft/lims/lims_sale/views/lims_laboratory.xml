@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_laboratory" model="ir.ui.view">
+        <field name="name">Laboratory</field>
+        <field name="model">lims.laboratory</field>
+        <field name="inherit_id" ref="lims_base.lims_laboratory_form"/>
+        <field name="arch" type="xml">
+            <group name="left_group" position="inside">
+                <group name="sale_group" string="Sales" colspan="2">
+                    <field name="section_model" colspan="2"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

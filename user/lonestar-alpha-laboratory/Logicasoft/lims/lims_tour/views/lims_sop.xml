@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="lims_sop_search_view">
+        <field name="name">Lims SOP</field>
+        <field name="model">lims.sop</field>
+        <field name="inherit_id" ref="lims_base.lims_sop_search"/>
+        <field name="arch" type="xml">
+            <filter name="ready" position="before">
+                <filter name="filter_rel_is_on_site" domain="[('rel_is_on_site','=',True)]"/>
+            </filter>
+            <xpath expr="//group" position="inside">
+                <filter name="group_by_tour_id" context="{'group_by': 'tour_id'}"/>
+                <filter name="group_by_rel_is_on_site" string="On site" context="{'group_by': 'rel_is_on_site'}"/>
+            </xpath>
+            <field name="batch_id" position="after">
+                <field name="tour_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_sop_tree">
+        <field name="name">Test</field>
+        <field name="model">lims.sop</field>
+        <field name="inherit_id" ref="lims_base.lims_sop_tree"/>
+        <field name="arch" type="xml">
+            <field name="batch_id" position="after">
+                <field name="tour_id" readonly="1" optional="hide"/>
+                <field name="rel_is_on_site" readonly="1" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_sop_form">
+        <field name="name">Test</field>
+        <field name="model">lims.sop</field>
+        <field name="inherit_id" ref="lims_base.lims_sop_form"/>
+        <field name="arch" type="xml">
+            <field name="batch_id" position="after">
+                <field name="tour_id" attrs="{'invisible': [('tour_id', '=', False)]}" readonly="1"/>
+                <field name="rel_is_on_site" attrs="{'invisible': [('rel_is_on_site', '=', False)]}" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

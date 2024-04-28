@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="salesman_group" model="res.groups">
+        <field name="name">Minimal Lims Salesman</field>
+         <field name="category_id" ref="lims_base.module_category_lims_base"/>
+    </record>
+    <record id="lims_base.viewer_group" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('lims_sale.salesman_group'))]"/>
+    </record>
+    <record id="sales_team.group_sale_salesman" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('salesman_group'))]"/>
+    </record>
+</odoo>

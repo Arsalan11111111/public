@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_analysis_tree" model="ir.ui.view">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="before">
+                <field name="rel_product_category_id" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="lims_analysis_form" model="ir.ui.view">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position='after'>
+                <field name="intercessor_farmer_id"/>
+            </xpath>
+
+            <xpath expr="//group[@name='sample_information']//field[@name='regulation_id']" position='after'>
+                <field name="sample_origin_id"/>
+                <field name="quantity_of_sample"/>
+            </xpath>
+
+            <xpath expr="//group[@name='sample_information']" position='inside'>
+                <group string="Project information">
+                    <field name="project_name_id"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//field[@name='partner_contact_ids']" position='after'>
+                <field name="vehicle_number"/>
+            </xpath>
+
+            <xpath expr="//field[@name='sample_condition_id']" position='after'>
+                <field name="sampling_brought_by"/>
+                <field name="sampling_method"/>
+            </xpath>
+
+            <xpath expr="//field[@name='laboratory_id']" position='after'>
+                <field name="testing_location"/>
+            </xpath>
+
+            <xpath expr="//field[@name='assigned_to']" position='after'>
+                <field name="testing_done_by_id"/>
+                <field name="results_reviewed_by_id"/>
+                <field name="results_approved_by_id"/>
+                <field name="test_method_deviation"/>
+            </xpath>
+
+            <xpath expr="//field[@name='product_id']" position="before">
+                <field name="rel_product_category_id"/>
+            </xpath>
+
+            <xpath expr="//field[@name='external_sampling']" position="after">
+                <field name="id_sampled_by"/>
+            </xpath>
+
+            <xpath expr="//field[@name='result_num_ids']//tree" position="inside">
+                <field name="rel_analysis_rel_type" invisible="1"/>
+                <field name="is_reason_required" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='result_sel_ids']//tree" position="inside">
+                <field name="rel_analysis_rel_type" invisible="1"/>
+                <field name="is_reason_required" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='result_compute_ids']//tree" position="inside">
+                <field name="rel_analysis_rel_type" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='result_text_ids']//tree" position="inside">
+                <field name="rel_analysis_rel_type" invisible="1"/>
+                <field name="is_reason_required" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='result_num_ids']//field[@name='report_limit_value']" position="attributes">
+                <attribute name="attrs">{'readonly': [('rel_analysis_rel_type', 'in', ['validated2', 'cancel'])]}</attribute>
+                <attribute name="readonly">0</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='result_sel_ids']//field[@name='report_limit_value']" position="attributes">
+                <attribute name="attrs">{'readonly': [('rel_analysis_rel_type', 'in', ['validated2', 'cancel'])]}</attribute>
+                <attribute name="readonly">0</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='result_compute_ids']//field[@name='report_limit_value']" position="attributes">
+                <attribute name="attrs">{'readonly': [('rel_analysis_rel_type', 'in', ['validated2', 'cancel'])]}</attribute>
+                <attribute name="readonly">0</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='result_text_ids']//field[@name='report_limit_value']" position="attributes">
+                <attribute name="attrs">{'readonly': [('rel_analysis_rel_type', 'in', ['validated2', 'cancel'])]}</attribute>
+                <attribute name="readonly">0</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='result_num_ids']//field[@name='result_reason_id']" position="attributes">
+                <attribute name="attrs">{
+                    'required': [('is_reason_required', '=', True)],
+                    'readonly': [('rel_type', 'not in', ['done','validated'])]
+                    }
+                </attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='result_sel_ids']//field[@name='result_reason_id']" position="attributes">
+                <attribute name="attrs">{
+                    'required': [('is_reason_required', '=', True)],
+                    'readonly': [('rel_type', 'not in', ['done','validated'])]
+                    }
+                </attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='result_text_ids']//field[@name='result_reason_id']" position="attributes">
+                <attribute name="attrs">{
+                    'required': [('is_reason_required', '=', True)],
+                    'readonly': [('rel_type', 'not in', ['done','validated'])]
+                    }
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="lims_analysis_search" model="ir.ui.view">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="rel_product_category_id"/>
+            </xpath>
+
+            <xpath expr="//group[@name='group_by']" position="inside">
+                <filter name="rel_product_category_id" string="Product category" context="{'group_by': 'rel_product_category_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model='ir.ui.view' id='lims_analysis_calendar'>
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <calendar color="laboratory_id" date_start="date_plan" mode="month" quick_add="false">
+                <field name="display_calendar"/>
+                <field name="laboratory_id" filters="1"/>
+                <field name="rel_type" filters="1"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_analysis_graph'>
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <graph string="Analysis">
+                <field name="date_plan" type="col"/>
+            </graph>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_analysis_pivot'>
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <pivot>
+
+            </pivot>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record model='ir.ui.view' id='lims_analysis_tree'>
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <tree name="lims_analysis_tree" default_order="id desc" multi_edit="1">
+                <header>
+                    <button name="assign_analysis_to_self" string="Assign To Me" context="{'from_tree_view': True}"
+                            type="object"
+                            title="Assigns the test to the active user, if the test is not assigned and is not done or more."/>
+                    <button name="do_cancel_wizard" string="Cancel" context="{'from_tree_view': True}" type="object"
+                            title="Deletes analyses which are in one of its states: 'Draft', 'Plan', WIP, 'ToDo'"/>
+                </header>
+                <field name="name" decoration-bf="1"/>
+                <field name="product_id" domain="[('lims_for_analysis', '=', True)]" optional="show"
+                       attrs="{'readonly': ['|','|', ('request_id', '!=', False),
+                        ('nb_sop', '>', 0),('rel_type','not in',['plan','draft','wip'])]}"/>
+                <field name="sample_name" optional="hide"/>
+                <field name="request_id" optional="show"/>
+                <field name="partner_id" optional="show" widget="many2one_avatar"
+                       attrs="{'readonly':[('is_duplicate','=',True)]}"/>
+                <field name="partner_contact_ids" widget="many2many_tags" optional="hide"
+                       domain="[('parent_id', '=', partner_id)]"
+                       attrs="{'readonly':[('partner_id','=',False)]}"/>
+                <field name="category_id" optional="hide"/>
+                <field name="due_date" optional="show"
+                       decoration-danger="rel_type in ('plan', 'todo','wip') and due_date &lt; now"/>
+                <field name="date_plan" optional="show" required="1"/>
+                <field name="date_sample" optional="show"/>
+                <field name="date_sample_receipt" optional="hide"/>
+                <field name="date_sample_begin" optional="hide"/>
+                <field name="external_sampling" optional="hide"
+                       attrs="{'readonly':[('is_duplicate','=',True)]}"/>
+                <field name="sampler_id" optional="hide" widget="many2one_avatar"
+                       attrs="{'readonly':['|', ('is_duplicate','=',True), ('external_sampling', '=', True)]}"/>
+                <field name="reception_deviation" optional="hide"/>
+                <field name="note" optional="hide"
+                       attrs="{'readonly':[('is_duplicate','=',True)], 'required': [('reception_deviation', '=', True)]}"/>
+                <field name="date_start" optional="hide" readonly="1"/>
+                <field name="date_done" optional="hide" readonly="1"/>
+                <field name="date_validation2" optional="hide" string="Date Second Validation" readonly="1"/>
+                <field name="date_report" optional="hide" readonly="1"/>
+                <field name="laboratory_id" optional="hide" readonly="1"/>
+                <field name="rel_matrix_type_id" optional="hide"/>
+                <field name="matrix_id" optional="hide" readonly="1"/>
+                <field name="regulation_id" optional="hide" readonly="1"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
+                <field name="tag_ids" optional="show" options="{'color_field': 'color'}" widget="many2many_tags"/>
+                <field name="assigned_to" optional="hide" widget="many2one_avatar_user"/>
+                <field name="write_uid" optional="hide" widget="many2one_avatar_user"/>
+                <field name="write_date" optional="hide" widget="datetime"/>
+                <field name="rel_type" optional="show" string="Stage" widget="badge"
+                       decoration-success="rel_type in ['validated1','validated2']"
+                       decoration-muted="rel_type in ['plan']" decoration-warning="rel_type in ['wip']"
+                       decoration-info="rel_type in ['todo']" decoration-danger="rel_type in ['cancel']"
+                       decoration-primary="rel_type in ['done']"/>
+                <field name="state" optional="show" decoration-success="state == 'conform'"
+                       decoration-danger="state == 'not_conform'" decoration-muted="state in ['init','unconclusive']"
+                       widget="badge" readonly="1"/>
+                <field name="nb_sop" invisible="1" readonly="1"/>
+                <field name="is_duplicate" invisible="1" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record model="ir.ui.view" id="lims_analysis_form">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <form duplicate="0">
+                <header>
+                    <field name="rel_type" invisible="1"/>
+                    <button name="do_plan" string="Plan" attrs="{'invisible': [('rel_type', '!=', 'draft')]}"
+                            class="oe_highlight" type="object"/>
+                    <button name="do_todo" string="TODO" attrs="{'invisible': [('rel_type', '!=', 'plan')]}"
+                            class="oe_highlight" type="object"/>
+                    <button groups="lims_base.validator2_group" name="do_validation2" string="Second Validation"
+                            id="do_validation2_top"
+                            attrs="{'invisible': [('rel_type', '!=', 'validated1')]}" class="oe_highlight"
+                            type="object"/>
+                    <button string="Duplicate" name="duplicate" type="object" class="oe_highlight"/>
+                    <button name="do_cancel_wizard" string="Cancel"
+                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"
+                            class="oe_highlight" type="object"/>
+                    <button name="do_cancel_wizard_and_rework" string="Cancel and rework"
+                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"
+                            class="oe_highlight" type="object"
+                            context="{'do_rework': True}"/>
+                    <button type="object" name="do_print_preview_html" string="Preview HTML"/>
+                    <button type="object" name="do_print_preview_pdf" string="Preview PDF"/>
+                    <button type="object" name="do_print" class="oe_stat_button" string="Print"/>
+                    <field name="stage_id" widget="statusbar" options="{'fold_field': 'is_fold'}"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="open_analysis_sop" type="object" class="oe_stat_button" icon="fa-bars">
+                            <field name="nb_sop" widget="statinfo"/>
+                        </button>
+                        <button name="print_label" string="Print Label" type="object" class="oe_stat_button"
+                                icon="fa-print"/>
+                        <button name="print_container" string="Print Container" type="object" class="oe_stat_button"
+                                icon="fa-print"/>
+                    </div>
+                    <group>
+                        <group name="upper_left_group">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" class="oe_inline"/>
+                            </h1>
+                            <field name="sample_name"/>
+                            <field name="description" attrs="{'readonly':[('is_duplicate','=',True)]}"/>
+                        </group>
+                        <group name="upper_right_group">
+                            <field name="parent_id" attrs="{'readonly':[('is_duplicate','=',True)]}"
+                                   domain="[('id', '!=', id)]" options="{'no_create': True}"/>
+                            <field name="priority" widget="priority"/>
+                        </group>
+                    </group>
+                    <group name="lims_analysis_form">
+                        <group name="sample_information" col="1">
+                            <group string="Sample information">
+                                <field name="matrix_id_domain_ids" invisible="1"/>
+                                <field name="matrix_id" domain="[('id', 'in', matrix_id_domain_ids)]"
+                                       attrs="{'readonly':['|', '|', '|', '|', ('is_duplicate','=',True),
+                                       ('result_num_ids', '!=', []), ('result_sel_ids', '!=', []),
+                                       ('result_compute_ids', '!=', []), ('result_text_ids', '!=', [])]}"/>
+                                <field name="product_id" domain="[('lims_for_analysis', '=', True), ('matrix_id', '=', matrix_id)]"
+                                       attrs="{'readonly': ['|','|', ('request_id', '!=', False), ('nb_sop', '>', 0),('rel_type','not in',['plan','draft','wip'])]}"
+                                       context="{'default_lims_for_analysis':1}"/>
+                                <field name="regulation_id_domain_ids" invisible="1"/>
+                                <field name="regulation_id" attrs="{'readonly':[('is_duplicate','=',True)]}"
+                                       required="1"
+                                       domain="[('id', 'in', regulation_id_domain_ids)]"/>
+                            </group>
+                            <group name="sampling_information" string="Sampling information">
+                                <field name="date_plan" required="1"/>
+                                <field name="due_date"/>
+                                <field name="date_sample_receipt"/>
+                                <field name="date_sample"/>
+                            </group>
+                            <group>
+                                <field name="reception_deviation"/>
+                                <field name="note" attrs="{'readonly':[('is_duplicate','=',True)],
+                                'required': [('reception_deviation', '=', True)]}"/>
+                                <field name="sample_condition_id"/>
+                            </group>
+                        </group>
+                        <group name="general_information" col="1">
+                            <group string="General information" name="information">
+                                <field name="laboratory_id" attrs="{'readonly':['|', '|', ('is_duplicate','=',True),
+                                ('request_id', '!=', False), ('nb_sop', '>', 0)]}"/>
+                                <field name="partner_id" attrs="{'readonly':[('is_duplicate','=',True)]}"
+                                       widget="many2one_avatar"/>
+                                <field name="partner_contact_ids" domain="[('parent_id', '=', partner_id)]"
+                                       widget="many2many_tags"
+                                       context="{'default_parent_id':partner_id}"/>
+                                <field name="category_id"/>
+                                <field name="request_id" attrs="{'invisible': [('request_id', '=', False)]}"/>
+                                <field name="assigned_to"/>
+                                <field name="state" readonly="1" widget="badge"
+                                       decoration-success="state == 'conform'"
+                                       decoration-danger="state == 'not_conform'"
+                                       decoration-info="state == 'unconclusive'"/>
+                                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            </group>
+                        </group>
+                        <div name="js_wizard" attrs="{'invisible': ['|','|', ('id', '=', False), ('matrix_id', '=', False), ('rel_type', '=', 'cancel')]}">
+                            <widget name="lims_parameter_helper" class="oe_highlight"/>
+                        </div>
+                    </group>
+                    <notebook name="main_notebook">
+                        <page name="numerical_results" string="Numerical results"
+                              attrs="{'invisible': [('result_num_ids', '=', [])]}">
+                            <field name="result_num_ids" width="100%" nolabel="1">
+                                <tree create="false" limit="300" editable="bottom"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform' and not is_alert"
+                                      decoration-warning="state in ['conform','unconclusive'] and is_alert"
+                                      context="{'default_analysis_id': active_id}">
+                                    <button name="get_form_view_of_result" icon="fa-arrow-right"
+                                            type="object" title="numeric_result"/>
+                                    <field name="rel_manage_accreditation" invisible="1"/>
+                                    <field name="sop_id" readonly="1" widget="many2one" optional="show"/>
+                                    <field name="rel_type" invisible="1"/>
+                                    <field name="method_param_charac_id"
+                                           attrs="{'readonly': True}"
+                                           optional="show"/>
+                                    <field name="value" attrs="{'readonly': [('rel_change_result', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="rel_change_result" invisible="1"/>
+                                    <field name="uom_id" optional="show" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                                    <field name="is_null" attrs="{'readonly': [('rel_change_result', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="corrected_value" readonly="1" optional="show"/>
+                                    <field name="rel_change_loq" invisible="1"/>
+                                    <field name="loq" attrs="{'readonly': [('rel_change_loq', '=', False)]}"
+                                           optional="hide"/>
+                                    <field name="corrected_loq" readonly="1" optional="hide"/>
+                                    <field name="mloq" attrs="{'readonly': [('rel_change_loq', '=', False)]}"
+                                           optional="hide"/>
+                                    <field name="corrected_mloq" readonly="1" optional="hide"/>
+                                    <field name="is_alert" invisible="1"/>
+                                    <field name="dilution_factor"
+                                           attrs="{'readonly': [('rel_change_result', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="result_reason_id" attrs="{'required': [('rel_change_result', '=', True), ('rel_type', 'in', ['done','validated'])],
+                                            'readonly': [('rel_type', 'not in', ['done','validated'])]}"
+                                    />
+                                    <field name="comment" optional="show"/>
+                                    <field name="show" optional="show"/>
+                                    <field name="print_on_report" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="change" optional="show"/>
+                                    <field name="accreditation" groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="accreditation_ids" widget="many2many_tags"
+                                           groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}"
+                                           optional="show"/>
+                                    <field name="pack_id" invisible="1"/>
+                                    <field name="is_rework" invisible="1"/>
+                                    <button string="History" name="open_wizard_history" type="object"
+                                            icon="fa-bar-chart-o"/>
+                                    <button name="open_rework" string="Rework" type="object" icon="fa-refresh"
+                                            attrs="{'invisible': ['|', ('rel_type', 'not in',
+                                                    ['done', 'validated']), ('is_rework', '=', True)]}"/>
+                                    <button name="open_cancel" string="Cancel" type="object"
+                                            icon="fa-times-circle"
+                                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Computed results" name="computed_results"
+                              attrs="{'invisible': [('result_compute_ids', '=', [])]}">
+                            <field name="result_compute_ids">
+                                <tree create="false" editable="bottom" limit="300"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform' and not is_alert"
+                                      decoration-warning="state in ['conform','unconclusive'] and is_alert"
+                                >
+                                    <button name="get_form_view_of_result" icon="fa-arrow-right"
+                                            type="object" title="compute_result"/>
+                                    <field name="analysis_id" invisible="1"/>
+                                    <field name="rel_manage_accreditation" invisible="1"/>
+                                    <field name="sop_id" readonly="1" widget="many2one" optional="show"/>
+                                    <field name="rel_sample_name" readonly="1" optional="show"/>
+                                    <field name="rel_type" invisible="1"/>
+                                    <field name="method_param_charac_id" attrs="{'readonly': True}"
+                                           domain="[('format', '=', 'ca')]" optional="show"/>
+                                    <field name="formula" readonly="1" optional="show"/>
+                                    <field name="value" readonly="1" optional="show"/>
+                                    <field name="uom_id" optional="show" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                                    <field name="rel_change_result" invisible="1"/>
+                                    <field name="comment" optional="show"/>
+                                    <field name="show" optional="show"/>
+                                    <field name="print_on_report" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="change" optional="show"/>
+                                    <field name="accreditation" groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="accreditation_ids" widget="many2many_tags"
+                                           groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}" optional="show"/>
+                                    <field name="pack_id" invisible="1"/>
+                                    <field name="is_alert" invisible="1"/>
+                                    <button string="History" name="open_wizard_history" type="object"
+                                            icon="fa-bar-chart-o"/>
+                                    <button name="open_cancel" string="Cancel" type="object" icon="fa-times-circle"
+                                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page name="comments" string="Comments">
+                            <label for="internal_comment"/>
+                            <field name="internal_comment"
+                                   placeholder="Write here your internal comments (will not be printed on analysis reports)"
+                            />
+                            <separator/>
+                            <label for="external_comment"/>
+                            <field name="external_comment"
+                                   placeholder="Write here your external comments (will be printed on analysis reports)"
+                            />
+                        </page>
+                        <page string="Parameters" name="parameters">
+                            <group colspan="2">
+                                <field name="method_param_charac_ids" nolabel="1" colspan="2">
+                                    <tree create="0" no_open="1"
+                                          decoration-success="state=='validated'"
+                                          decoration-warning="state=='draft'"
+                                          decoration-danger="state=='cancelled'">
+                                        <field name="tech_name" string="Parameters" readonly="1"/>
+                                        <field name="regulation_id" optional="hide" readonly="1"/>
+                                        <field name="matrix_id" optional="hide" readonly="1"/>
+                                        <field name="state" optional="hide" readonly="1"/>
+                                        <field name="active" optional="hide" readonly="1"/>
+                                    </tree>
+                                </field>
+                                <field name="pack_ids" nolabel="1" widget="many2many" colspan="2">
+                                    <tree create="0" no_open="1"
+                                          decoration-success="state=='validated'"
+                                          decoration-warning="state=='draft'"
+                                          decoration-danger="state=='cancelled'">
+                                        <field name="name" string="Packs" readonly="1"/>
+                                        <field name="regulation_id" optional="hide" readonly="1"/>
+                                        <field name="matrix_id" optional="hide" readonly="1"/>
+                                        <field name="state" optional="hide" readonly="1"/>
+                                        <field name="active" optional="hide" readonly="1"/>
+                                    </tree>
+                                </field>
+                                <field name="pack_of_pack_ids" nolabel="1" colspan="2">
+                                    <tree create="0" no_open="1"
+                                          decoration-success="state=='validated'"
+                                          decoration-warning="state=='draft'"
+                                          decoration-danger="state=='cancelled'">
+                                        <field name="name" string="Packs of pack" readonly="1"/>
+                                        <field name="regulation_id" optional="hide" readonly="1"/>
+                                        <field name="matrix_id" optional="hide" readonly="1"/>
+                                        <field name="state" optional="hide" readonly="1"/>
+                                        <field name="active" optional="hide" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page name="analysis_status" string="More information">
+                            <group name="analysis_status_group">
+                                <group string="Analysis information" name="analysis_information">
+                                    <field name="date_start" readonly="1"/>
+                                    <field name="date_done" readonly="1"/>
+                                    <field name="analysis_duration"/>
+                                    <field name="analysis_duration_time" widget="float_time"/>
+                                    <field name="analysis_time" widget="float_time"/>
+                                    <field name="date_report" readonly="1"/>
+                                </group>
+                                <group name="analysis_status_right">
+                                    <field name="id" groups="base.group_no_one"/>
+                                    <field name="analysis_out_of_time"/>
+                                    <field name="change"/>
+                                    <field name="reason_id"/>
+                                    <field name="cancel_reason" attrs="{'invisible': [('rel_type', '!=', 'cancel')]}"/>
+                                    <field name="date_sample_begin"/>
+                                    <field name="rel_matrix_type_id" readonly="1"/>
+                                    <field name="address"/>
+                                    <field name="is_duplicate" readonly="1"/>
+                                    <field name="is_incomplete"/>
+                                    <field name="all_sop_received"/>
+                                    <field name="dilution_factor" readonly="1"/>
+                                    <field name="customer_ref" attrs="{'readonly':[('is_duplicate','=',True)]}"/>
+                                    <field name="external_sampling"/>
+                                    <field name="sampler_id" widget="many2one_avatar"
+                                           attrs="{'readonly':[('is_duplicate','=',True)],
+                                                                 'invisible': [('external_sampling','=',True)]}"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                    <notebook name="second_notebook">
+                        <page string="Select results" name="select_results"
+                              attrs="{'invisible': [('result_sel_ids', '=', [])]}">
+                            <field name="result_sel_ids" nolabel="1">
+                                <tree create="false" editable="bottom" limit="300"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform'">
+                                    <button name="get_form_view_of_result" icon="fa-arrow-right"
+                                            type="object" title="sel_result"/>
+                                    <field name="analysis_id" invisible="1"/>
+                                    <field name="rel_manage_accreditation" invisible="1"/>
+                                    <field name="sop_id" readonly="1" optional="show" widget="many2one"/>
+                                    <field name="rel_type" invisible="1"/>
+                                    <field name="method_param_charac_id"
+                                           attrs="{'readonly': True}" optional="show"/>
+                                    <field name="rel_parameter_id" invisible="1"/>
+                                    <field name="value_ids" invisible="1"/>
+                                    <field name="value_id" attrs="{'readonly': [('rel_change_result', '=', False)]}"
+                                           domain="[('id', 'in', value_ids)]" optional="show"
+                                           options="{'no_quick_create':True}"
+                                           context="{'rel_parameter_id': rel_parameter_id}"/>
+                                    <field name="uom_id" optional="hide" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                                    <field name="rel_change_result" invisible="1"/>
+                                    <field name="result_reason_id" attrs="{'required':[('rel_change_result', '=', True), ('rel_type', 'in', ['done','validated'])],
+                                        'readonly': [('rel_type', 'not in', ['done','validated'])]}"
+                                    />
+                                    <field name="comment" optional="show"/>
+                                    <field name="show" optional="show"/>
+                                    <field name="print_on_report" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="change" optional="show"/>
+                                    <field name="accreditation" groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="accreditation_ids" widget="many2many_tags"
+                                           groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="state" readonly="1" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}"
+                                           optional="show"/>
+                                    <field name="is_rework" invisible="1"/>
+                                    <button string="History" name="open_wizard_history" type="object"
+                                            icon="fa-bar-chart-o"/>
+                                    <button name="open_rework" string="Rework" type="object" icon="fa-refresh"
+                                            attrs="{'invisible': ['|', ('rel_type', 'not in', ['done', 'validated']), ('is_rework', '=', True)]}"/>
+                                    <button string="Cancel" name="open_cancel" type="object"
+                                            icon="fa-times-circle"
+                                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Text results" name="text_results"
+                              attrs="{'invisible': [('result_text_ids', '=', [])]}">
+                            <field name="result_text_ids" nolabel="1">
+                                <tree create="false" editable="bottom" limit="300"
+                                      decoration-danger="state=='not_conform'"
+                                      decoration-success="state=='conform'" default_order="id desc">
+                                    <button name="get_form_view_of_result" icon="fa-arrow-right"
+                                            type="object" title="text_result"/>
+                                    <field name="analysis_id" invisible="1"/>
+                                    <field name="rel_manage_accreditation" invisible="1"/>
+                                    <field name="sop_id" widget="many2one" readonly="1"/>
+                                    <field name="rel_type" invisible="1"/>
+                                    <field name="method_param_charac_id"
+                                           attrs="{'readonly': True}"/>
+                                    <field name="value" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                                    <field name="uom_id" optional="hide" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                                    <field name="rel_change_result" invisible="1"/>
+                                    <field name="result_reason_id" attrs="{'required': [('rel_change_result', '=', True), ('rel_type', 'in', ['done','validated'])],
+                                        'readonly': [('rel_type', 'not in', ['done','validated'])]}"/>
+                                    <field name="comment" optional="show"/>
+                                    <field name="show" optional="show"/>
+                                    <field name="print_on_report" optional="show"/>
+                                    <field name="date_start" readonly="1" optional="show"/>
+                                    <field name="change" optional="show"/>
+                                    <field name="accreditation" groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="accreditation_ids" widget="many2many_tags"
+                                           groups="lims_base.manager_group"
+                                           attrs="{'readonly': [('rel_manage_accreditation', '=', False)]}"
+                                           optional="show"/>
+                                    <field name="state" optional="show"/>
+                                    <field name="stage_id" readonly="1" options="{'no_open': True}"
+                                           optional="show"/>
+                                    <field name="is_rework" invisible="1"/>
+                                    <button string="History" name="open_wizard_history" type="object"
+                                            icon="fa-bar-chart-o"/>
+                                    <button name="open_rework" string="Rework" type="object" icon="fa-refresh"
+                                            attrs="{'invisible': ['|', ('rel_type', 'not in', ['done', 'validated']), ('is_rework', '=', True)]}"/>
+                                    <button string="Cancel" name="open_cancel" type="object"
+                                            icon="fa-times-circle"
+                                            attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <button groups="lims_base.validator2_group" name="do_validation2" string="Second Validation"
+                                attrs="{'invisible': [('rel_type', '!=', 'validated1')]}" class="oe_highlight"
+                                id="do_validation2_end"
+                                type="object"/>
+                    </group>
+                    <div attrs="{'invisible': [('result_num_ids', '!=', [])]}" class="alert alert-info" role="alert">
+                        <i>No Numeric result for this element</i>
+                    </div>
+                    <div attrs="{'invisible': [('result_sel_ids', '!=', [])]}" class="alert alert-info" role="alert">
+                        <i>No Selective result for this element</i>
+                    </div>
+                    <div attrs="{'invisible': [('result_compute_ids', '!=', [])]}" class="alert alert-info"
+                         role="alert">
+                        <i>No Compute result for this element</i>
+                    </div>
+                    <div attrs="{'invisible': [('result_text_ids', '!=', [])]}" class="alert alert-info"
+                         role="alert">
+                        <i>No Text result for this element</i>
+                    </div>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_activity">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <activity string="Activity">
+                <templates>
+                    <div t-name="activity-box">
+                        <div>
+                            <field name="name" display="full"/>
+                            <field name="sample_name" display="full"/>
+                            <field name="date_sample" display="full"/>
+                        </div>
+                    </div>
+                </templates>
+            </activity>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_search">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name"/>
+                <field name="sample_name"/>
+                <field name="sop_ids"/>
+                <field name="request_id"/>
+                <field name="category_id"/>
+                <field name="customer_ref"/>
+                <field name="partner_id"/>
+                <field name="state"/>
+                <field name="stage_id"/>
+                <field name="rel_type"/>
+                <field name="product_id"/>
+                <group string="Filter">
+                    <filter name="report_done" string="Report Done" domain="[('date_report', '!=', False)]"/>
+                    <filter name="report_to_do" string="Report To Do" domain="[('date_report', '=', False)]"/>
+                    <filter name="with_cancel_reason" string="With cancel reason"
+                            domain="[('cancel_reason', '!=', False), ('cancel_reason', '!=', '')]"/>
+                    <separator/>
+                    <filter name="this_month_due_date" string="This Month (due date)"
+                            domain="[('due_date','&lt;',(context_today() + relativedelta(months=1)).strftime('%Y-%m-01')),('due_date','&gt;=',time.strftime('%Y-%m-01'))]"/>
+                    <filter name="this_week_due_date" string="This Week (due date)"
+                            domain="[('due_date','&lt;=', (context_today() + relativedelta(weeks=0, weekday=6)).strftime('%Y-%m-%d')),('due_date','&gt;',(context_today() - relativedelta(weeks=1, weekday=6)).strftime('%Y-%m-%d'))]"/>
+                    <filter name="today_due_date" string="Today (due date)"
+                            domain="[('due_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')), ('due_date', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]"/>
+                    <filter name="until_today_due_date" string="Until Today (due date)"
+                            domain="[('due_date','&lt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="from_today_due_date" string="From Today (due date)"
+                            domain="[('due_date','&gt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <separator/>
+                    <filter name="this_month_date_plan" string="This Month (date plan)"
+                            domain="[('date_plan','&lt;',(context_today() + relativedelta(months=1)).strftime('%Y-%m-01')),('due_date','&gt;=',time.strftime('%Y-%m-01'))]"/>
+                    <filter name="this_week_date_plan" string="This Week (date plan)"
+                            domain="[('date_plan','&lt;=', (context_today() + relativedelta(weeks=0, weekday=6)).strftime('%Y-%m-%d')),('date_plan','&gt;',(context_today() - relativedelta(weeks=1, weekday=6)).strftime('%Y-%m-%d'))]"/>
+                    <filter name="today_date_plan" string="Today (date plan)"
+                            domain="[('date_plan', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')), ('date_plan', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]"/>
+                    <filter name="until_today_date_plan" string="Until Today (date plan)"
+                            domain="[('date_plan','&lt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="from_today_date_plan" string="From Today (date plan)"
+                            domain="[('date_plan','&gt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                </group>
+                <separator/>
+                <group name="stage_filters">
+                    <filter name="draft_stage" string="Draft" domain="[('rel_type','=','draft')]"/>
+                    <filter name="plan_stage" string="Plan" domain="[('rel_type','=','plan')]"/>
+                    <filter name="todo_stage" string="Todo" domain="[('rel_type','=','todo')]"/>
+                    <filter name="wip_stage" string="Wip" domain="[('rel_type','=','wip')]"/>
+                    <filter name="done_stage" string="Done" domain="[('rel_type','=','done')]"/>
+                    <filter name="validated1_stage" string="1st Validation" domain="[('rel_type','=','validated1')]"/>
+                    <filter name="validated2_stage" string="2nd Validation" domain="[('rel_type','=','validated2')]"/>
+                    <filter name="cancel_stage" string="Cancelled" domain="[('rel_type','=','cancel')]"/>
+                </group>
+                <group name="group_by" string="Group By">
+                    <filter name="date_plan" string="Date Plan" context="{'group_by': 'date_plan'}"/>
+                    <filter name="date_done" string="Date Done" context="{'group_by': 'date_done'}"/>
+                    <filter name="stage" string="Stage" context="{'group_by': 'stage_id'}"/>
+                    <filter name="category" string="Category" context="{'group_by': 'category_id'}"/>
+                    <filter name="reason" string="Reason" context="{'group_by': 'reason_id'}"/>
+                    <filter string="Matrix Type" name="matrix type" context="{'group_by': 'rel_matrix_type_id'}"/>
+                    <filter name="matrix" string="Matrix" context="{'group_by': 'matrix_id'}"/>
+                    <filter name="partner" string="Partner" context="{'group_by': 'partner_id'}"/>
+                    <filter name="parent" string="Parent" context="{'group_by': 'parent_id'}"/>
+                    <filter name="assigned_to" string="Assigned to" context="{'group_by': 'assigned_to'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_analysis_action'>
+        <field name="name">Analysis</field>
+        <field name="res_model">lims.analysis</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form,pivot,graph,calendar,activity</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new analysis.
+            </p>
+            <p>
+                You can define several.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action open label qweb wizard-->
+    <record id="open_print_qweb_label_wizard" model="ir.actions.act_window">
+        <field name="name">Print Label</field>
+        <field name="res_model">print.qweb.label.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis"/>
+        <field name="domain">[('rel_labo_users_ids','=',uid)]</field>
+        <field name="context">{'default_analysis_id': active_id}</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="open_print_qweb_container_wizard" model="ir.actions.act_window">
+        <field name="name">Print Container</field>
+        <field name="res_model">print.qweb.container.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis"/>
+        <field name="domain">[]</field>
+        <field name="context">{'default_analysis_id': active_id}</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="analysis_mass_change_wizard" model="ir.actions.act_window">
+        <field name="name">Mass Change</field>
+        <field name="res_model">analysis.mass.change.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis"/>
+        <field name="domain">['|', ('res_model_id', '=', False), ('res_model_id.model', '=', 'project.task')]</field>
+        <field name="context">{'default_res_model': 'project.task'}</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem action="lims_analysis_action" parent="lims_analysis_submenu" id="lims_analysis_menu" sequence="10"/>
+</odoo>

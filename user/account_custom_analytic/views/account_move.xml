@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="account_move_inherit" model="ir.ui.view">
+        <field name="name">Account Move Inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="analytic_distribution"
+                       widget="analytic_distribution"/>
+                <field name="analytic_name" force_save="1" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='invoice_line_ids']" position="attributes">
+                <attribute name="context">{'default_analytic_distribution':analytic_distribution,
+                                           'default_move_type': context.get('default_move_type'),
+                                           'journal_id': journal_id,
+                                           'default_partner_id': commercial_partner_id,
+                                           'default_currency_id': currency_id or company_currency_id,
+                                           'default_display_type': 'product',
+                                           'quick_encoding_vals': quick_encoding_vals,}</attribute>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

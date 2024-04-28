@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_analysis_report_form_view" model="ir.ui.view">
+        <field name="name">Analysis Report</field>
+        <field name="model">lims.analysis.report</field>
+        <field name="inherit_id" ref="lims_report.lims_analysis_report_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='Auxiliary']" position="inside">
+                <group>
+                    <field name="option_print_accreditation" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                    <field name="option_print_nonconformity" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//field[@name='previous_analysis_report_id']" position="after">
+                <field name="fontsize"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="stock_quant_finder_wizard" model="ir.ui.view">
+        <field name="name">Stock quant finder</field>
+        <field name="model">lims_stock_finder.quant.finder.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                        <group name="configuration">
+                            <field name="quantity" string="Available quantity" placeholder="Minimal quantity"/>
+                            <field name="product_ids" default_focus="1" string="Products"
+                                   domain="[('lims_for_analysis', '=', True)]"
+                                   options="{'no_create':True, 'no_edit': True}" no_label="True">
+                                <tree>
+                                    <field name="default_code"/>
+                                    <field name="name"/>
+                                    <field name="lst_price"/>
+                                    <field name="qty_available"/>
+                                    <field name="uom_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group>
+
+                        </group>
+
+                    <notebook>
+                        <page string="Criteria" name="criteria_ids">
+                            <field name="criteria_ids">
+                                <tree editable="bottom" decoration-danger="parameter_id and (criteria or state) and not criteria_evaluated">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="parameter_id" required="1" options="{'no_create':True, 'no_edit': True}"/>
+                                    <field name="criteria" attrs="{'readonly': [('state', '!=', False)]}"/>
+                                    <field name="state" optional="show" />
+                                    <field name="rel_format" optional="show"/>
+                                    <field name="rel_result_value_ids" widget="many2many_tags" optional="show" options="{'no_create':True, 'no_edit': True, 'color_field': 'color'}"/>
+                                    <field name="criteria_evaluated" optional="hide"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Stock quants" name="stock_quant_ids">
+                            <field name="stock_quant_ids"
+                                   options="{'no_create':True, 'no_edit': True}">
+                                    <tree>
+                                        <field name="location_id" readonly="True" optional="show"/>
+                                        <field name="product_id" readonly="True"/>
+                                        <field name="lot_id" readonly="True"/>
+                                        <field name="available_quantity" readonly="True" optional="show" decoration-bf="True"/>
+                                        <field name="quantity" readonly="True" optional="show"/>
+                                    </tree>
+                            </field>
+                        </page>
+                        <page string="Analysis" name="analysis_ids">
+                            <field name="analysis_ids"
+                                   options="{'no_create':True, 'no_edit': True}">
+                                <tree>
+                                    <field name="name" readonly="True"/>
+                                    <field name="sample_name" readonly="True" optional="hide"/>
+                                    <field name="product_id" readonly="True"/>
+                                    <field name="lot_id" readonly="True" optional="show"/>
+                                    <field name="partner_id" readonly="True" widget="many2one_avatar" optional="show"/>
+                                    <field name="date_sample" readonly="True" optional="show"/>
+                                    <field name="tag_ids" readonly="True" widget="many2many_tags" optional="show"/>
+                                    <field name="state" readonly="True" optional="show"/>
+                                    <field name="stage_id" readonly="True" optional="hide"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Documentation">
+                            <h3>About analysis</h3>
+                            <p>Only samples in second validation are considered, regardless of conformity</p>
+                            <h3>About stock lines</h3>
+                            <p>Stock lines with a quantity &lt; 1 are not considered.</p>
+                            <h3>About lots</h3>
+                            <p>Lots are selected as soon as at least one analysis meets the applied criteria.</p>
+                            <h3>How to use criteria</h3>
+                            <ol>
+                                <li>
+                                    For numeric [Nu] and compute [Ca] results:
+                                </li>
+                                <ul>
+                                    <li><b>x > 15 </b><small>Search above 15 (excluded)</small></li>
+                                    <li><b>x >= 14 </b><small>Search above 14 (included)</small></li>
+                                    <li><b>12 &lt;= x &lt; 15 </b><small>Search between 12 (included) and 15 (excluded)</small></li>
+                                    <li><b>11 +- 2 </b><small>Search between 9 and 13 (limits included)</small></li>
+                                    <li><b>12 % 50 </b><small>Search between 6 and 18 (limits included)</small></li>
+                                </ul>
+                                <li>
+                                    For selection [Se] results:
+                                </li>
+                                <ul>
+                                    <li><b>Limpid </b><small>Search all result with selected value name have 'Limpid' ex: values can be 'Limpid' and 'Not Limpid' (Case sensitive)! </small></li>
+                                    <li><b>Limpid;Hazy </b><small>same as above, but selected value have 'Limpid' or 'Hazy'</small></li>
+                                    <li>Note: <small>The criteria must contain at least one possible result value in order to operate.</small></li>
+                                </ul>
+                                <li>
+                                    For text [Tx] results:
+                                </li>
+                                <ul>
+                                    <li><b>green </b><small>Searches for results containing the defined character string 'green' (Case nonsensitive)!</small></li>
+                                </ul>
+                            </ol>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button name="find" type="object" string="Confirm"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="stock_quant_finder_wizard_action" model="ir.actions.act_window">
+        <field name="name">Stock search</field>
+        <field name="res_model">lims_stock_finder.quant.finder.wizard</field>
+        <field name="binding_model_id" ref="stock.model_stock_quant"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

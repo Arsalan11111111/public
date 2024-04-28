@@ -1,0 +1,47 @@
+<odoo>
+    <template id="portal_report_page_content" inherit_id="lims_report.portal_report_page_content" priority="31">
+        <t t-if="report_id.report_analysis_line_ids" position="after">
+            <t t-call="lims_attachment_report.portal_report_attachment_table"/>
+        </t>
+    </template>
+
+    <template id="portal_report_attachment_table">
+        <t t-set="attachments" t-value="report_id.get_public_attachment_ids()"/>
+        <style>
+            .lims_table_small_row{
+            line-height:0.2em !important;
+            }
+        </style>
+        <t t-if="attachments and report_id.kanban_state != 'blocked'" t-call="portal.portal_table">
+            <thead>
+                <tr>
+                    <th name="th_attachment_name">Attachment(s)</th>
+                    <th name="th_attachment_description">Description</th>
+                </tr>
+            </thead>
+            <tbody class="lims_table_small_row font-weight-light font-italic">
+                <div t-if="report_id and report_id.message_main_attachment_id and report_id.message_main_attachment_id.datas">
+                    <td class="text-right">
+                        <a t-att-title="report_id.title" t-att-href="report_id.get_portal_url(report_type='pdf', download=True)">
+                            <b><i class="fa fa-cloud-download"/> <t t-esc="report_id.message_main_attachment_id.name"/></b>
+                        </a>
+                    </td>
+                    <td>
+                        <span t-esc="report_id.message_main_attachment_id.description"/>
+                    </td>
+                </div>
+                <tr t-foreach="attachments" t-as="attachment" class="lims_table_small_row"
+                    t-if="report_id and attachment != report_id.message_main_attachment_id">
+                    <td class="text-right">
+                        <a t-att-href="attachment.url" target="_blank">
+                            <span><i class='fa fa-download'/> <t t-esc="attachment.name"/></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span t-esc="attachment.description"/>
+                    </td>
+                </tr>
+            </tbody>
+        </t>
+    </template>
+</odoo>

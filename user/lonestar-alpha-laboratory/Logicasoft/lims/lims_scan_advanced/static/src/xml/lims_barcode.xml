@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="lims_main_menu">
+        <div class="o_stock_barcode_main_menu_container o_app_switcher_background">
+            <div class="o_stock_barcode_main_menu">
+                <h1>Barcode Scanning</h1>
+                <img src="/barcodes/static/img/barcode.png"/>
+                <p/>
+                <button class="button_receipt_sop btn btn-primary btn-sm">Receipt SOP</button><div/>
+                <button class="button_wip_sop btn btn-primary btn-sm">WIP SOP</button><div/>
+                <button class="button_create_batch_sop btn btn-primary btn-sm">Create batch from SOP</button>
+            </div>
+        </div>
+    </t>
+
+</templates>

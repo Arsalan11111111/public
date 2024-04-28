@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mail_organizer_form" model="ir.ui.view">
+        <field name="name">Mail Organizer Wizard</field>
+        <field name="model">mail.organizer</field>
+        <field name="arch" type="xml">
+            <form string="Mail Organizer Form">
+                <field name="message_id" invisible="1" />
+                <field name="email_from" invisible="1" />
+                <group col="4" colspan="2">
+                    <field name="author_id" />
+                    <field name="subject" />
+                    <field name="model" />
+                    <field name="res" />
+                    <field name="new_model" widget="reference"/>
+                </group>
+                <footer>
+                    <button name="confirm" string="Assign" type="object"  class="oe_highlight" />
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

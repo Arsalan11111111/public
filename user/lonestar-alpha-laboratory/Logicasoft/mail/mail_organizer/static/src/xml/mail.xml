@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-extend="mail.widget.Thread.Message" name="organizer_icons">
+        <t t-jquery=".o_thread_message_reply" t-operation="after">
+            <i class="fa fa-tag o_thread_icon o_assign" t-att-data-message-id="message.getID()" title="Assign To"/>
+            <i class="fa fa-trash o_thread_icon o_remove" t-att-data-message-id="message.getID()" title="Remove"/>
+        </t>
+    </t>
+</templates>

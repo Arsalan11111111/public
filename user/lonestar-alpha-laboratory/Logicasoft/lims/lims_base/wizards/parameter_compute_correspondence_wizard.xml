@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Wizard form -->
+    <record id="parameter_compute_correspondence_wizard_form" model="ir.ui.view">
+        <field name="name">parameter.compute.correspondence.wizard.form</field>
+        <field name="model">parameter.compute.correspondence.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="characteristic_id"/>
+                        <field name="correspondence_ids">
+                            <tree delete="false" create="false" editable="bottom">
+                                <field name="method_param_charac_id"/>
+                                <field name="correspondence"/>
+                                <field name="value_test"/>
+                            </tree>
+                        </field>
+                        <field name="use_function"/>
+                    </group>
+                    <group>
+                        <field name="formula"/>
+                        <field name="formula_result"/>
+                        <field name="message_error" attrs="{'invisible': [('message_error', '==', '')]}"
+                               style="color:red"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="save_formula" type="object" string="Copy formula and back" class="oe_highlight"/>
+                    <button string="Back without saving formula" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

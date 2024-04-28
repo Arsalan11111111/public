@@ -1,0 +1,130 @@
+<section class="oe_container">
+    <div class="oe_row">
+        <h1>LIMS Control Chart</h1>
+        <p>Lims is a management system of laboratory data.</p>
+        <p>This module need to be use with LIMS Base by Logicasoft</p>
+        <ul>
+            <li><h2 class="first">Structures :</h2>
+                <blockquote data-o-mail-quote="1">
+                    <ul>
+                        <li><h3 class="first">New Model :</h3>
+                            <blockquote data-o-mail-quote="1">
+                                <ul>
+                                    <li><p class="first">Lims control chart line</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            Object on Method Parameter Characteristic, lines can be define as
+                                            <ul>
+                                                <li>Target</li>
+                                                <li>Limit+1</li>
+                                                <li>Limit-1</li>
+                                                <li>Limit+2</li>
+                                                <li>Limit-2</li>
+                                                <li>Measure : <small>Can be define in object but not use as template by
+                                                    the module (useless)</small></li>
+                                            </ul>
+                                        </blockquote>
+                                    </li>
+                                    <li><p class="first">Lims control chart point</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            When a result is created, all lines defined in Method Parameter
+                                            Characteristic will be copied to the result.
+                                            Method Parameter The characteristic must be marked as "Control card" on its
+                                            configuration.
+                                            <small> Note: Only the measure type point will not be copied to the result.
+                                                It will be created when a numerical result has been entered.</small>
+                                        </blockquote>
+                                    </li>
+                                    <li>
+                                        <p class="first">this module add new menu</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <ul>
+                                                <li>Master Data > Control Chart Points</li>
+                                                <li>Master Data > Control Chart Lines</li>
+                                                <li>Control Chart <small>New root menu for the lims</small></li>
+                                                <li>Control Chart > Control Chart Graph</li>
+                                            </ul>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </blockquote>
+                        </li>
+                        <li><h3 class="first">Altered Model :</h3>
+                            <blockquote data-o-mail-quote="1">
+                                <ul>
+                                    <li><p class="first">Lims Method Parameter Characteristic, Format : NU</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <p>Boolean : is_control_chart <small></small></p>
+                                            <p>control chart lines : several can be define, an created on the from
+                                                view</p>
+                                            <p>There are a field with the sum of control chart point<small>Only the
+                                                measure 'type'</small></p>
+                                        </blockquote>
+                                    </li>
+                                    <li><p class="first">Lims analysis result, Format : NU</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <p>New mechanism : when a result from a Lims Method Parameter Characteristic
+                                                marked as <em>Control Chart</em>, all the control chart lines define
+                                                will be copied on the result, except the lines with <b>measure</b>
+                                                type.</p>
+                                            <p>New mechanism : when an operator insert a result, the result will create
+                                                a control chart point.
+                                            </p>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </blockquote>
+                        </li>
+                    </ul>
+                </blockquote>
+            </li>
+            <li><h2 class="first">Configuration :</h2>
+                <blockquote data-o-mail-quote="1">
+                    <h3>In menu Master Data > Parameter Characteristic</h3>
+                    <p>In tree view : the field 'is_control_chart' <em>Control Chart</em> is displayed <small>Only for
+                        the Parameter with format Nu</small></p>
+                    <p>In from View : the field 'Toggle' 'is_control_chart' <em>Control Chart</em> is displayed</p>
+                    <p>When <em>Control Chart</em> is True, a Control Chart notebook is visible</p>
+                    <p>In this notebook, it is possible to define the different lines for the control card.</p>
+                </blockquote>
+            </li>
+            <li><h2 class="first">Usage :</h2>
+                <ul>
+                    <li>
+                        <blockquote data-o-mail-quote="1">
+                            <h3>In menu Master Data > Parameter Characteristic</h3>
+                            <p>In tree view : the field 'is_control_chart' <em>Control Chart</em> is displayed <small>
+                                Only
+                                for
+                                the Parameter with format Nu</small></p>
+                            <p>In from View : the field 'Toggle' 'is_control_chart' <em>Control Chart</em> is
+                                displayed</p>
+                            <p>When <em>Control Chart</em> is True, a Control Chart notebook is visible</p>
+                            <p>In this notebook, it is possible to define the different lines for the control card.</p>
+                        </blockquote>
+                    </li>
+                    <li>
+                        <blockquote data-o-mail-quote="1">
+                            <h3>In menu Control Chart > Control Chart Graph</h3>
+                            <p>All Lims Method Parameter Characteristic with <em>Control Chart</em> is displayed</p>
+                            <p>The control chart graph can be displayed with the button <i class="fa fa-area-chart" aria-hidden="true"> on each 'Lims Method Parameter Characteristic'</i>
+</p>
+                        </blockquote>
+                    </li>
+
+                    <li>
+                        <blockquote data-o-mail-quote="1">
+                            <h3>In menu Master Data > Control Chart Points</h3>
+                            <p>All Control chart point, are displayed</p>
+                        </blockquote>
+                    </li>
+                    <li>
+                        <blockquote data-o-mail-quote="1">
+                            <h3>In menu Master Data > Control Chart Lines</h3>
+                            <p>All Control chart line, are displayed</p>
+                        </blockquote>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>

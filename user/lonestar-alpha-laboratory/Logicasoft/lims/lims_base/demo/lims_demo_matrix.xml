@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.matrix" id="demo_matrix_1">
+            <field name="name">Food generic</field>
+            <field name="description">Valid for generic food</field>
+            <field name="active">1</field>
+            <field name="type_id" ref="lims_base.demo_matrix_type_1"/>
+        </record>
+        <record model="lims.matrix" id="demo_matrix_2">
+            <field name="name">Water</field>
+            <field name="description">Valid for generic liquid</field>
+            <field name="active">1</field>
+            <field name="type_id" ref="lims_base.demo_matrix_type_2"/>
+        </record>
+    </data>
+</odoo>

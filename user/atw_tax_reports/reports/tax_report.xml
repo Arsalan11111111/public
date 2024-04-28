@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <!-- Excel report action -->
+        <report id="tax_report" 
+        model="wizard.tax.report" 
+        string="Tax Report" 
+        report_type="xlsx" 
+        name="atw_tax_reports.tax_report.xlsx" 
+        file="Tax Report" 
+        menu="False" 
+        attachment_use="True" />
+    </data>
+</odoo>

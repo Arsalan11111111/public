@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="lims_batch_form_inherit_view">
+        <field name="name">Batch</field>
+        <field name="model">lims.batch</field>
+        <field name="inherit_id" ref="lims_base.lims_batch_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page[@name='operator']" position="after">
+                <page name="Equipment" string="Equipment">
+                    <field name="batch_equipments_ids" nolabel="True">
+                        <tree name="lims_batch_equipment_tree" editable="bottom">
+                            <field name="equipment_id"
+                                   domain="[('active', '=', True),('laboratory_state', '=', 'in_service'), ('is_laboratory', '=', True), '|', ('laboratory_id', '=', parent.rel_labo_id), ('laboratory_id', '=', False)]"
+                                   context="{'default_is_laboratory': 1, 'default_laboratory_id': parent.rel_labo_id, 'default_laboratory_state': 'in_service'}"
+                                   can_create="true" can_write="true"/>
+                            <field name="comment"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

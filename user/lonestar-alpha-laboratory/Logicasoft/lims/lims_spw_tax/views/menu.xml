@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="spw_tax_configuration"
+              name="Campaign"
+              sequence="947"
+              parent="lims_base.lims_configuration_submenu"
+              />
+
+    <menuitem id="spw_tax_campaign_root"
+                  name="Campaign"
+                  parent="lims_base.menu_root"
+                  sequence="146" />
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_analysis_request_form" model="ir.ui.view">
+        <field name="name">Analysis Request</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="intercessor_farmer_id"/>
+            </xpath>
+
+            <xpath expr="//group[@name='lims_analysis_request_infos']" position="after">
+                <group>
+                    <group string="Project information">
+                        <field name="project_name_id"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.matrix.type" id="demo_matrix_type_1">
+            <field name="name">Food</field>
+        </record>
+        <record model="lims.matrix.type" id="demo_matrix_type_2">
+            <field name="name">Water</field>
+        </record>
+        <record model="lims.matrix.type" id="demo_matrix_type_3">
+            <field name="name">Other</field>
+        </record>
+    </data>
+</odoo>

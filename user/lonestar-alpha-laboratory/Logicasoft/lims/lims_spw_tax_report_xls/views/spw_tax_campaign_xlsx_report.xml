@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_spw_tax_report_xls.campaign_xlsx" model="ir.actions.report">
+        <field name="name">Print to XLSX</field>
+        <field name="model">spw.tax.campaign</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">lims_spw_tax_report_xls.report_tax_xlsx</field>
+        <field name="report_file">spw_tax_campaign</field>
+        <field name="attachment_use">False</field>
+    </record>
+</odoo>

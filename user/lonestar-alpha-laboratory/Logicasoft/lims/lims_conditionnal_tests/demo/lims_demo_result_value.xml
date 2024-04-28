@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.result.value" id="lims_base.lims_result_value_5">
+            <field name="pack_ids" eval="[(6,0,[ref('lims_base.demo_parameter_pack_3')])]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_report_lot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-02 13:22+0000\n"
+"PO-Revision-Date: 2023-02-02 13:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_report_lot
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"                <b>Expiration date:</b>"
+msgstr ""
+"<br/>\n"
+"                <b>Date d'expiration:</b>"
+
+#. module: lims_report_lot
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"                <b>Lot:</b>"
+msgstr ""
+
+#. module: lims_report_lot
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.analysis_report_template_sample_information
+msgid ""
+"<br/>\n"
+"                <b>Product:</b>"
+msgstr ""
+"<br/>\n"
+"                <b>Produit:</b>"
+
+#. module: lims_report_lot
+#: model:ir.model,name:lims_report_lot.model_report_lims_report_lims_analysis_base_report_parser
+msgid "Base analysis report parser"
+msgstr "Parseur de rapport d'analyse de base"
+
+#. module: lims_report_lot
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.create_report_product_lot_wiazrd_form_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_report_lot
+#: model:ir.actions.act_window,name:lims_report_lot.create_report_product_lot_wiazrd_action
+msgid "Create a report from product lot"
+msgstr "Créer un rapport à partir du lot de produit"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_lims_analysis_report__lot_ids
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.create_report_product_lot_wiazrd_form_view
+msgid "Lot"
+msgstr ""
+
+#. module: lims_report_lot
+#: model:ir.model,name:lims_report_lot.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lot/N° série"
+
+#. module: lims_report_lot
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.lims_analysis_report_form_view
+msgid "Lots"
+msgstr ""
+
+#. module: lims_report_lot
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.create_report_product_lot_wiazrd_form_view
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.lims_analysis_report_form_view
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: lims_report_lot
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.create_report_product_lot_wiazrd_form_view
+#: model_terms:ir.ui.view,arch_db:lims_report_lot.lims_analysis_report_form_view
+msgid "Print with this lot."
+msgstr "Imprimer avec ce lot."
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__rel_product_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__product_lot_id
+msgid "Product Lot"
+msgstr "Lot de produit"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__rel_product_template_id
+msgid "Product Template"
+msgstr "Modèle de produit"
+
+#. module: lims_report_lot
+#: model:ir.model,name:lims_report_lot.model_lims_analysis_report
+#: model:ir.model.fields,field_description:lims_report_lot.field_create_report_product_lot_wizard__rel_report_id
+#: model:ir.model.fields,field_description:lims_report_lot.field_stock_production_lot__report_id
+msgid "Report"
+msgstr "Rapport"
+
+#. module: lims_report_lot
+#: model:ir.model.fields,field_description:lims_report_lot.field_lims_analysis_report__is_report_validator
+#: model:ir.model.fields,field_description:lims_report_lot.field_stock_production_lot__is_report_validator
+msgid "Report validator"
+msgstr "Valideur de rapport"
+
+#. module: lims_report_lot
+#: model:ir.model,name:lims_report_lot.model_create_report_product_lot_wizard
+msgid "Wizard for create a report from a validated lims report"
+msgstr ""
+"Assistant pour la création d'un rapport à partir d'un rapport lims validé"

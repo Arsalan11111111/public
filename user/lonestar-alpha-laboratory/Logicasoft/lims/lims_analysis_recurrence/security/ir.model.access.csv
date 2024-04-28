@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_analysis_recurrence_wizard,access_analysis_recurrence_wizard,model_analysis_recurrence_wizard,lims_base.user_group,1,0,0,0
+access_analysis_recurrence_wizard_manager,access_analysis_recurrence_wizard_manager,model_analysis_recurrence_wizard,lims_base.lims_admin_group,1,1,1,1
+

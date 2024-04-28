@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+  <!--
+    <record id="test_warning_disable_01" model="ir.warning.disable">
+        <field name="name"><![CDATA[Two fields (%s, %s) of %s have the same label: %s.]]></field>
+    </record>
+
+    <record id="test_warning_disable_02" model="ir.warning.disable">
+        <field name="name"><![CDATA[Comparing apples and oranges: %r == %r (%s:%s)]]></field>
+    </record>
+
+    <record id="test_warning_disable_03" model="ir.warning.disable">
+        <field name="name"><![CDATA[The model %s has no _description]]></field>
+    </record>
+
+    <record id="test_warning_disable_04" model="ir.warning.disable">
+        <field name="name"><![CDATA[Invalid XML: %s]]></field>
+        <field name="args"><![CDATA[img.*tag must have an alt value]]></field>
+    </record>
+
+    <record id="test_warning_disable_05" model="ir.warning.disable">
+        <field name="name"><![CDATA[Invalid view %s definition in %s
+%s]]></field>
+        <field name="args"><![CDATA[asset/asset_view.xml]]></field>
+    </record>
+
+    <record id="test_warning_disable_06" model="ir.warning.disable">
+        <field name="name"><![CDATA[%s: selection=%r overrides existing selection; use selection_add instead]]></field>
+    </record>
+
+    <record id="test_warning_disable_07" model="ir.warning.disable">
+        <field name="name"><![CDATA[Error-prone use of @class in view %s (%s): use the hasclass(*classes) function to filter elements by their classes]]></field>
+    </record>
+
+    <record id="test_warning_disable_08" model="ir.warning.disable">
+        <field name="name"><![CDATA[Deprecated call to decimal_precision.get_precision(<application>), use digits=<application> instead]]></field>
+    </record>
+
+    <record id="test_warning_disable_09" model="ir.warning.disable">
+        <field name="name"><![CDATA[Field %s: parameter %r is not longer supported; %s]]></field>
+    </record>
+  -->
+
+</odoo>

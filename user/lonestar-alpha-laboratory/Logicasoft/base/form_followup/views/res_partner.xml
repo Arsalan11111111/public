@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="res_partner_form">
+        <field name="name">Partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Form Followup" groups="form_followup.group_user">
+                    <field name="form_followup_ids" widget="one2many_list" context="{'default_partner_id': active_id}">
+                        <tree editable="bottom" colors="red:valdate &lt; current_date;">
+                            <field name="type_id"/>
+                            <field name="product_tmpl_id"/>
+                            <field name="reqdate"/>
+                            <field name="recdate"/>
+                            <field name="valdate"/>
+                            <button name="open_line" type="object" class="oe_highlight" string="OPEN"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+    <menuitem name="Partner" parent="root_form_followup" sequence="16" id="partner_view_form_followup" action="contacts.action_contacts"/>
+</odoo>

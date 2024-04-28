@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="batch_mass_change_wizard_form" model="ir.ui.view">
+        <field name="name">Batch Mass Change</field>
+        <field name="model">batch.mass.change.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="state"/>
+                        <field name="assigned_to"/>
+                        <field name="date"/>
+                    </group>
+                    <group>
+                        <field name="line_ids" nolabel="1">
+                            <tree string="" editable="bottom">
+                                <field name="batch_id"/>
+                                <field name="state"/>
+                                <field name="assigned_to"/>
+                                <field name="date"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="do_confirm" string="Confirm" type="object"/>
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

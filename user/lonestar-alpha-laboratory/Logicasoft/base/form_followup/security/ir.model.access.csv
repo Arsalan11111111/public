@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_form_followup_user","form_followup.user","model_form_followup","form_followup.group_user",1,0,0,0
+"access_form_followup_manager","form_followup.manager","model_form_followup","form_followup.group_manager",1,1,1,1
+"access_form_followup_type_manager","form_followup_type.manager","model_form_followup_type","form_followup.group_manager",1,1,1,1
+"access_form_followup_stage_manager","form_followup_stage.manager","model_form_followup_stage","form_followup.group_manager",1,1,1,1
+"access_form_followup_stage_group_system","form_followup_stage.base.group_system","model_form_followup_stage","base.group_system",1,1,1,1
+"access_form_followup_tag_manager","form_followup_tag.manager","model_form_followup_tag","form_followup.group_manager",1,1,1,1

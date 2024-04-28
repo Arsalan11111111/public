@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="inherit_account_bank_statement_line_tree" model="ir.ui.view">
+        <field name="name">inherit.account.bank.statement.line.tree</field>
+        <field name="model">account.bank.statement.line</field>
+        <field name="inherit_id"
+               ref="account_accountant.view_bank_statement_line_tree_bank_rec_widget"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="context">{'res_partner_search_mode':
+                    'customer', 'show_address': 1, 'show_vat': True}
+                </attribute>
+                <attribute name="options">{&quot;always_reload&quot;: True}
+                </attribute>
+            </xpath>
+
+            <!--            context="{'res_partner_search_mode': 'customer', 'show_address': 1, 'show_vat': True}"-->
+            <!--            options="{&quot;always_reload&quot;: True}"-->
+        </field>
+    </record>
+
+    <record id="inherit_account_bank_statement_line_form" model="ir.ui.view">
+        <field name="name">inherit.account.bank.statement.line.form</field>
+        <field name="model">account.bank.statement.line</field>
+        <field name="inherit_id"
+               ref="account_accountant.view_bank_statement_line_form_bank_rec_widget"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <lable>Delivery Address</lable>
+                <div class="d-flex">
+                    <field name="partner_delivery_address_id"/>
+                    <field name="child_delivery_address_id"/>
+                </div>
+
+                <field name="ref"/>
+                <field name="cheque_no"/>
+
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="inherit_account_bank_statement_line_tree" model="ir.ui.view">
+        <field name="name">inherit.account.bank.statement.line.tree</field>
+        <field name="model">account.bank.statement.line</field>
+        <field name="inherit_id"
+               ref="account_accountant.view_bank_statement_line_tree_bank_rec_widget"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date']" position="before">
+                <field name="ref"/>
+                <field name="cheque_no"/>
+                <field name="invoices" invisible="1" force_save="1"/>
+                <field name="second_account_id" invisible="1" force_save="1"/>
+                <button name="get_old" type="object" string="Get Old"
+                        class="oe_highlight" invisible="1"/>
+                <button name="get_old_check" type="object"
+                        string="Get Old Check" class="oe_highlight"
+                        invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="partner_delivery_address_id"/>
+                <field name="child_delivery_address_id"/>
+            </xpath>
+
+        </field>
+    </record>
+
+
+    <record id="account_bank_statement_line_sequence" model="ir.sequence">
+        <field name="name">account.bank.statement.line</field>
+        <field name="code">account.bank.statement.line</field>
+        <field name="prefix">ABSL/</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="inherit_account_bank_statement_line_search" model="ir.ui.view">
+        <field name="name">inherit.account.bank.statement.line.search</field>
+        <field name="model">account.bank.statement.line</field>
+        <field name="inherit_id"
+               ref="account_accountant.view_bank_statement_line_search_bank_rec_widget"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="partner_delivery_address_id"/>
+                <field name="child_delivery_address_id"/>
+                <field name="ref"/>
+                <field name="cheque_no"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

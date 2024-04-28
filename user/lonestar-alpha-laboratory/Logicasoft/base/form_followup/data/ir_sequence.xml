@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="sequence_form_followup" model="ir.sequence">
+        <field name="name">Default Production Order</field>
+        <field name="code">form.followup</field>
+        <field name="prefix">DOC/</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>

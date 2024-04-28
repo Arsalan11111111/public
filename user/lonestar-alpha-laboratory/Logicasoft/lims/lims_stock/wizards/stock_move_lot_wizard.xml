@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="stock_move_lot_wizard_form" model="ir.ui.view">
+        <field name="name">Stock Move Lot Wizard</field>
+        <field name="model">stock.move.lot.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="stock_move_id" invisible="1"/>
+                        <field name="rel_product_id"/>
+                        <field name="rel_product_tracking" invisible="1"/>
+                        <field name="rel_product_detailed_type" invisible="1"/>
+                        <field name="rel_company_id" invisible="1"/>
+                        <field name="laboratory_id" domain="[('company_id','=',rel_company_id)]"/>
+
+                        <label for="rel_quantity_done"/>
+                        <div class="o_row">
+                            <span><field name="rel_quantity_done" nolabel="1"/></span>
+                            <span><field name="rel_product_uom" nolabel="1"/></span>
+                        </div>
+
+                    </group>
+                    <group>
+                        <field name="line_ids" nolabel="1" colspan="2">
+                            <tree editable="bottom" create="false">
+                                <field name="link_id" invisible="1"/>
+                                <field name="move_line_id" readonly="1" force_save="1" optional="hide"/>
+                                <field name="lot_id" readonly="1" force_save="1" attrs="{'column_invisible': ['|', ('parent.rel_product_tracking', '=', 'none'), ('parent.rel_product_detailed_type','!=','product')]}" optional="show"/>
+                                <field name="qty_done" readonly="1" force_save="1" optional="show"/>
+                                <field name="nbr_sample" sum="Total sample"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="confirm" string="Confirm" type="object"/>
+                    <button string="Cancel" name="cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.sampling.point.location" id="lims_demo_sampling_point_location_1">
+            <field name="name">Demo sampling point location</field>
+            <field name="description">This is an example</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="lims_analysis_text_result_form">
+        <field name="name">Analysis Text Result</field>
+        <field name="model">lims.analysis.text.result</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <sheet>
+                    <group col="6" name="general_information" string="general Information">
+                        <field name="active" readonly="True"/>
+                        <field name="analysis_id" readonly="True"/>
+                        <field name="value" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                        <field name="uom_id" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                        <field name="comment"/>
+                        <field name="date_start" readonly="True"/>
+                        <field name="date_result" readonly="True"/>
+                        <field name="is_rework" readonly="True"/>
+                        <field name="method_param_charac_id" readonly="True"/>
+                        <field name="rel_department_id"/>
+                        <field name="rel_laboratory_id"/>
+                        <field name="rel_matrix_id"/>
+                        <field name="method_id" readonly="True"/>
+                        <field name="rel_partner_id"/>
+                        <field name="state" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                        <field name="stage_id" readonly="True"/>
+                        <field name="rel_type"/>
+                        <field name="user_id" readonly="True"/>
+                        <field name="sop_id" readonly="True"/>
+                        <field name="pack_id" readonly="True"/>
+                        <field name="show"/>
+                        <field name="rel_request_id"/>
+                        <field name="rel_batch_id"/>
+                        <field name="rel_change_result"/>
+                        <field name="rel_date_sample"/>
+                        <field name="change" readonly="True"/>
+                        <field name="rel_manage_accreditation"/>
+                        <field name="display_name_for_history" readonly="True"/>
+                        <field name="result_reason_id"/>
+                    </group>
+                    <group col="6" name="other_information" string="Other Information">
+                        <field name="show"/>
+                        <field name="rel_request_id"/>
+                        <field name="rel_batch_id"/>
+                        <field name="rel_change_result"/>
+                        <field name="rel_date_sample"/>
+                        <field name="change" readonly="True"/>
+                        <field name="accreditation" readonly="True"/>
+                        <field name="rel_manage_accreditation"/>
+                        <field name="result_reason_id" attrs="{'required': [('rel_change_result', '=', True), ('rel_type', 'in', ['done','validated'])], 'readonly': [('rel_type', 'not in', ['done','validated'])]}"/>
+                    </group>
+                    <notebook>
+                        <page string="Result log">
+                            <field name="result_log_ids" readonly="True" nolabel="1"/>
+                        </page>
+                        <page string="Organisms">
+                            <group>
+                                <field name="accreditation" readonly="True"/>
+                            </group>
+                            <field name="accreditation_ids" readonly="True" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_analysis_text_result_tree'>
+        <field name="name">Analysis Text Result</field>
+        <field name="model">lims.analysis.text.result</field>
+        <field name="arch" type="xml">
+            <tree create="false" multi_edit="1" editable="top"
+                  decoration-danger="state=='not_conform'"
+                  decoration-success="state=='conform'"
+                  default_order="sop_id desc">
+                <button name="get_form_view_of_result" icon="fa-arrow-right" type="object" title="text_result"
+                        groups="lims_base.manager_group"/>
+                <field name="analysis_id" readonly="1" decoration-bf="1"/>
+                <field name="rel_batch_id" optional="show"/>
+                <field name="rel_request_id" optional="show"/>
+                <field name="sop_id" readonly="1" optional="show"/>
+                <field name="rel_change_result" invisible="1"/>
+                <field name="method_param_charac_id" attrs="{'readonly': True}" optional="show"/>
+                <field name="method_id" readonly="1"/>
+                <field name="value" attrs="{'readonly': [('rel_change_result', '=', False)]}" optional="show"
+                       decoration-bf="1"/>
+                <field name="uom_id" optional="hide" attrs="{'readonly': [('rel_change_result', '=', False)]}"/>
+                <field name="result_reason_id" attrs="{'required': [('rel_change_result', '=', True), ('rel_type', 'in', ['done','validated'])],
+                 'readonly': [('rel_type', 'not in', ['done','validated'])]}"/>
+                <field name="comment" optional="show"/>
+                <field name="show" optional="show"/>
+                <field name="print_on_report" optional="show"/>
+                <field name="date_start" readonly="1" optional="show"/>
+                <field name="date_result" readonly="1" optional="hide"/>
+                <field name="rel_matrix_id" readonly="1" optional="hide"/>
+                <field name="rel_laboratory_id" readonly="1" optional="hide"/>
+                <field name="rel_department_id" readonly="1" optional="hide"/>
+                <field name="rel_partner_id" readonly="1" optional="hide" widget="many2one_avatar"/>
+                <field name="user_id" optional="hide" readonly="1" widget="many2one_avatar_user"/>
+                <field name="change" optional="show"/>
+                <field name="write_uid" optional="hide" widget="many2one_avatar_user" readonly="1"/>
+                <field name="write_date" optional="hide" widget="datetime" readonly="1"/>
+                <field name="rel_type" string="Stage" options="{'no_open': True}" optional="show" readonly="1"
+                       widget="badge" decoration-success="rel_type in ['validated']"
+                       decoration-primary="rel_type in ['done']"
+                       decoration-danger="rel_type in ['cancel']" decoration-muted="rel_type in ['plan', 'rework']"
+                       decoration-info="rel_type in ['todo']" decoration-warning="rel_type in ['wip']"/>
+                <field name="state" optional="show"
+                       attrs="{'readonly': [('rel_change_result', '=', False)]}" class="lims_state_init_hide"/>
+                <field name="stage_id" readonly="1" invisible="1" options="{'no_open': True}"/>
+                <field name="pack_id" invisible="1"/>
+                <field name="is_rework" invisible="1"/>
+                <button string="History" name="open_wizard_history" type="object" icon="fa-bar-chart-o"/>
+                <button name="open_rework" string="Rework" type="object" icon="fa-refresh"
+                        attrs="{'invisible': ['|', ('rel_type', 'not in', ['done', 'validated']), ('is_rework', '=', True)]}"/>
+                <button name="open_cancel" string="Cancel" type="object" icon="fa-times-circle"
+                        attrs="{'invisible': [('rel_type', '=', 'cancel')]}"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_analysis_text_result_graph_history'>
+        <field name="name">Analysis Result</field>
+        <field name="model">lims.analysis.text.result</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="value" type="row"/>
+                <field name="method_param_charac_id" type="col"/>
+            </graph>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_analysis_text_result_calendar'>
+        <field name="name">Analysis Text Result</field>
+        <field name="model">lims.analysis.text.result</field>
+        <field name="arch" type="xml">
+            <calendar color="rel_laboratory_id" date_start="rel_date_sample" mode="month" create="false">
+                <field name="method_param_charac_id"/>
+                <field name="rel_laboratory_id" filters="1"/>
+                <field name="rel_department_id" filters="1"/>
+                <field name="rel_type" filters="1"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_text_result_search">
+        <field name="name">Analysis Text Result</field>
+        <field name="model">lims.analysis.text.result</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="analysis_id"/>
+                <field name="rel_request_id"/>
+                <field name="method_param_charac_id"/>
+                <field name="method_id"/>
+                <field name="sop_id"/>
+                <field name="rel_batch_id"/>
+                <field name="rel_matrix_id"/>
+                <field name="rel_department_id"/>
+                <group name="groupby" string="Group By">
+                    <filter name="analysis" string="Analysis" context="{'group_by': 'analysis_id'}"/>
+                    <filter name="date_start" string="Date Start" context="{'group_by': 'date_start'}"/>
+                    <filter name="parameter" string="Parameter" context="{'group_by': 'method_param_charac_id'}"/>
+                    <filter name="batch" string="Batch" context="{'group_by': 'rel_batch_id'}"/>
+                    <filter name="department" string="Department" context="{'group_by': 'rel_department_id'}"/>
+                    <filter name="matrix" string="Matrix" context="{'group_by': 'rel_matrix_id'}"/>
+                    <filter name="method" string="Method" context="{'group_by': 'method_id'}"/>
+                    <filter name="partner" string="Partner" context="{'group_by': 'rel_partner_id'}"/>
+                    <filter name="user" string="User" context="{'group_by': 'user_id'}"/>
+                    <filter name="stage" string="Stage" context="{'group_by': 'stage_id'}"/>
+                    <filter name="pack" string="Pack" context="{'group_by': 'pack_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>>
+
+    <record model='ir.actions.act_window' id='lims_analysis_text_result_action'>
+        <field name="name">Result Text</field>
+        <field name="res_model">lims.analysis.text.result</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,calendar,form</field>
+        <field name="domain">[('rel_labo_users_ids','=',uid)]</field>
+    </record>
+
+    <menuitem action="lims_analysis_text_result_action" parent="lims_sop_worksheet_submenu"
+              id="lims_analysis_text_result_menu" sequence="30"/>
+
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.module.category" id="spw_tax">
+        <field name="name">SWP Tax</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record model="res.groups" id="spw_tax_user">
+        <field name="name">User</field>
+        <field name="category_id" ref="spw_tax"/>
+    </record>
+
+    <record model="res.groups" id="spw_tax_manager">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="spw_tax" />
+        <field name="implied_ids" eval="[(4, ref('spw_tax_user'))]" />
+        <field name="users" eval="[(4, ref('base.user_root'))]" />
+    </record>
+
+</odoo>

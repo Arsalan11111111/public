@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_contract_form_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="grades"/>
+                <field name="bank_account_id" readonly="1"/>
+            </xpath>
+
+            <xpath expr="//sheet//notebook//page[@name='information']//group[@name='salary_info']//group[@name='salary']//label[@for='wage']"
+                   position="before">
+
+                <field name="gross_salary"/>
+            </xpath>
+            <xpath expr="//sheet//notebook//page[@name='information']//group[@name='salary_info']//group[@name='salary']"
+                   position="inside">
+
+                <label for="airticket" attrs="{'invisible': [('country_code', '!=', 'OM')]}"/>
+                <div class="o_row" name="airticket" attrs="{'invisible': [('country_code', '!=', 'OM')]}">
+                    <field name="airticket" nolabel="1"/>
+                    <span>/ month</span>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

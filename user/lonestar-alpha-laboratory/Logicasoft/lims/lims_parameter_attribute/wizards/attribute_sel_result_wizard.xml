@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="attribute_sel_result_form" model="ir.ui.view">
+        <field name="name">Attribute Sel Result Wizard</field>
+        <field name="model">attribute.sel.result.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="1">
+                        <field name="rel_analysis_id" readonly="1" options="{'no_open': True}"/>
+                        <field name="rel_sop_id" readonly="1" options="{'no_open': True}"/>
+                        <field name="sel_result_id" readonly="1" options="{'no_open': True}"/>
+                        <field name="rel_parameter_id" readonly="1" options="{'no_open': True}"/>
+
+                        <field name="value_id" readonly="1" options="{'no_open': True}"/>
+                        <field name="line_ids">
+                            <tree editable="bottom" create="0" delete="0">
+                                <field name="sel_result_id" readonly="1" invisible="1"/>
+                                <field name="attribute_type_id" readonly="1" invisible="1"/>
+                                <field name="attribute_id" readonly="1"/>
+                                <field name="attribute_value_id"
+                                       options="{'no_create':True,'no_edit':True, 'no_open':True}"
+                                       domain="[('id','in', attribute_type_values_ids)]"/>
+                                <field name="attribute_type_values_ids" readonly="1" invisible="1"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Confirm" name="create_attributes_on_result" type="object" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="attribute_sel_result_action" model="ir.actions.act_window">
+        <field name="name">Attribute Sel Result Wizard</field>
+        <field name="res_model">attribute.sel.result.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

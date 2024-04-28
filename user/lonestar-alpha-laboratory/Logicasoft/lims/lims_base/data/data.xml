@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <!-- Decimal Precision -->
+    <record id="analysis_result" model="decimal.precision">
+        <field name="name">Analysis Result</field>
+        <field name="digits">5</field>
+    </record>
+
+    <!-- Lims Analysis Category -->
+    <record id="internal_analysis_category" model="lims.analysis.category">
+        <field name="name">Internal</field>
+    </record>
+
+    <record id="external_analysis_category" model="lims.analysis.category">
+        <field name="name">External</field>
+    </record>
+
+    <!-- Lims Request Category -->
+    <record id="internal_request_category" model="lims.request.category">
+        <field name="name">Internal</field>
+    </record>
+
+    <record id="external_request_category" model="lims.request.category">
+        <field name="name">External</field>
+    </record>
+
+    <!-- Lims Laboratory -->
+    <record id="default_laboratory" model="lims.laboratory">
+        <field name="name">Default Laboratory</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="default_laboratory">True</field>
+        <field name="default_request_category_id" ref="external_request_category"/>
+        <field name="seq_request_id" ref="sequence_analysis_request"/>
+        <field name="default_analysis_category_id" ref="external_analysis_category"/>
+        <field name="seq_analysis_id" ref="sequence_analysis"/>
+        <field name="nb_print_sop_label">0</field>
+        <field name="seq_sop_id" ref="sequence_sop"/>
+        <field name="seq_batch_id" ref="sequence_batch"/>
+    </record>
+
+    <record id="default_department" model="lims.department">
+        <field name="name">Default Department</field>
+        <field name="active">1</field>
+        <field name="labo_id" ref="lims_base.default_laboratory"/>
+    </record>
+
+    <!-- Lims Analysis Stage -->
+    <record id="draft_analysis_stage" model="lims.analysis.stage">
+        <field name="name">Draft</field>
+        <field name="type">draft</field>
+        <field name="is_fold">1</field>
+    </record>
+
+    <record id="plan_analysis_stage" model="lims.analysis.stage">
+        <field name="name">Plan</field>
+        <field name="type">plan</field>
+        <field name="is_fold">1</field>
+    </record>
+
+    <record id="todo_analysis_stage" model="lims.analysis.stage">
+        <field name="name">To Do</field>
+        <field name="type">todo</field>
+    </record>
+
+    <record id="wip_analysis_stage" model="lims.analysis.stage">
+        <field name="name">WIP</field>
+        <field name="type">wip</field>
+    </record>
+
+    <record id="done_analysis_stage" model="lims.analysis.stage">
+        <field name="name">Done</field>
+        <field name="type">done</field>
+    </record>
+
+    <record id="validated1_analysis_stage" model="lims.analysis.stage">
+        <field name="name">Validated</field>
+        <field name="type">validated1</field>
+    </record>
+
+    <record id="validated2_analysis_stage" model="lims.analysis.stage">
+        <field name="name">Second Validation</field>
+        <field name="type">validated2</field>
+    </record>
+
+    <record id="cancel_analysis_stage" model="lims.analysis.stage">
+        <field name="name">Cancel</field>
+        <field name="type">cancel</field>
+        <field name="is_fold">1</field>
+    </record>
+
+    <!-- Lims Result Stage -->
+    <record id="draft_result_stage" model="lims.result.stage">
+        <field name="name">Draft</field>
+        <field name="type">draft</field>
+    </record>
+
+    <record id="plan_result_stage" model="lims.result.stage">
+        <field name="name">Plan</field>
+        <field name="type">plan</field>
+    </record>
+
+    <record id="todo_result_stage" model="lims.result.stage">
+        <field name="name">To Do</field>
+        <field name="type">todo</field>
+    </record>
+
+    <record id="wip_result_stage" model="lims.result.stage">
+        <field name="name">WIP</field>
+        <field name="type">wip</field>
+    </record>
+
+    <record id="rework_result_stage" model="lims.result.stage">
+        <field name="name">Rework</field>
+        <field name="type">rework</field>
+    </record>
+
+    <record id="done_result_stage" model="lims.result.stage">
+        <field name="name">Done</field>
+        <field name="type">done</field>
+    </record>
+
+    <record id="validated_result_stage" model="lims.result.stage">
+        <field name="name">Validated</field>
+        <field name="type">validated</field>
+    </record>
+
+    <record id="cancel_result_stage" model="lims.result.stage">
+        <field name="name">Cancel</field>
+        <field name="type">cancel</field>
+    </record>
+
+    <!-- Lims Method Stage -->
+    <record id="method_draft_stage" model="lims.method.stage">
+        <field name="sequence" eval="10"/>
+        <field name="name">Draft</field>
+        <field name="is_default" eval="1"/>
+        <field name="type">draft</field>
+        <field name="active" eval="1"/>
+        <field name="is_fold">1</field>
+    </record>
+
+    <record id="method_plan_stage" model="lims.method.stage">
+        <field name="sequence" eval="20"/>
+        <field name="name">Plan</field>
+        <field name="is_default" eval="1"/>
+        <field name="type">plan</field>
+        <field name="active" eval="1"/>
+        <field name="is_fold">1</field>
+    </record>
+
+    <record id="method_todo_stage" model="lims.method.stage">
+        <field name="sequence" eval="30"/>
+        <field name="name">ToDo</field>
+        <field name="is_default" eval="1"/>
+        <field name="type">todo</field>
+        <field name="active" eval="1"/>
+    </record>
+
+    <record id="method_wip_stage" model="lims.method.stage">
+        <field name="sequence" eval="40"/>
+        <field name="name">WIP</field>
+        <field name="is_default" eval="1"/>
+        <field name="type">wip</field>
+        <field name="active" eval="1"/>
+    </record>
+
+    <record id="method_done_stage" model="lims.method.stage">
+        <field name="sequence" eval="50"/>
+        <field name="name">Done</field>
+        <field name="is_default" eval="1"/>
+        <field name="type">done</field>
+        <field name="active" eval="1"/>
+    </record>
+
+    <record id="method_validated_stage" model="lims.method.stage">
+        <field name="sequence" eval="60"/>
+        <field name="name">Validated</field>
+        <field name="is_default" eval="1"/>
+        <field name="type">validated</field>
+        <field name="active" eval="1"/>
+    </record>
+
+    <record id="method_cancel_stage" model="lims.method.stage">
+        <field name="sequence" eval="70"/>
+        <field name="name">Cancelled</field>
+        <field name="is_default" eval="1"/>
+        <field name="type">cancel</field>
+        <field name="active" eval="1"/>
+        <field name="is_fold">1</field>
+    </record>
+
+    <!-- Ir Config Parameter -->
+    <record id="default_laboratory_config" model="ir.config_parameter">
+        <field name="key">default_laboratory_ids</field>
+        <field name="value" ref="default_laboratory"/>
+    </record>
+
+    <record id="default_department_config" model="ir.config_parameter">
+        <field name="key">default_department_ids</field>
+        <field name="value" ref="default_department"/>
+    </record>
+
+    <record id="analysis_stage_default_config" model="ir.config_parameter">
+        <field name="key">analysis_stage_id</field>
+        <field name="value" ref="plan_analysis_stage"/>
+    </record>
+
+    <record id="sop_stage_default_config" model="ir.config_parameter">
+        <field name="key">sop_stage_id</field>
+        <field name="value">plan</field>
+    </record>
+
+    <record id="is_parameter_and_pack_protected" model="ir.config_parameter">
+        <field name="key">is_parameter_and_pack_protected</field>
+        <field name="value">True</field>
+    </record>
+
+</odoo>

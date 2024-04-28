@@ -1,0 +1,10 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+
+access_lims_network_viewer,access_lims_network viewer,model_lims_network,lims_base.viewer_group,1,0,0,0
+access_lims_subnetwork_viewer,access_lims_subnetwork viewer,model_lims_subnetwork,lims_base.viewer_group,1,0,0,0
+
+access_lims_network_user,access_lims_network user,model_lims_network,lims_base.user_group,1,0,0,0
+access_lims_subnetwork_user,access_lims_subnetwork user,model_lims_subnetwork,lims_base.user_group,1,0,0,0
+
+access_lims_network_manager,access_lims_network manager,model_lims_network,lims_base.manager_group,1,1,1,1
+access_lims_subnetwork_manager,access_lims_subnetwork manager,model_lims_subnetwork,lims_base.manager_group,1,1,1,1

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_edi_export_result_sop" model="ir.actions.report">
+        <field name="binding_model_id" ref="lims_base.model_lims_sop"/>
+        <field name="name">Export Results Lines</field>
+        <field name="model">lims.sop</field>
+        <field name="attachment_use" eval="False"/>
+        <field name="report_type">xlsx</field>
+        <field name="xlsx_library">openpyxl</field>
+        <field name="report_name">lims_export_xlsx.report_edi_export_result_sop</field>
+        <field name="report_file">lims_export_xlsx.report_edi_export_result</field>
+        <field name="print_report_name">'Result_export_%s' % (object.display_name)</field>
+    </record>
+    <record id="report_edi_export_result_analysis" model="ir.actions.report">
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis"/>
+        <field name="name">Export Results Lines</field>
+        <field name="model">lims.analysis</field>
+        <field name="attachment_use" eval="False"/>
+        <field name="report_type">xlsx</field>
+        <field name="xlsx_library">openpyxl</field>
+        <field name="report_name">lims_export_xlsx.report_edi_export_result_analysis</field>
+        <field name="report_file">lims_export_xlsx.report_edi_export_result</field>
+        <field name="print_report_name">'Result_export_%s' % (object.display_name)</field>
+    </record>
+    <record id="report_edi_export_result_request" model="ir.actions.report">
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis_request"/>
+        <field name="name">Export Results Lines</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="attachment_use" eval="False"/>
+        <field name="report_type">xlsx</field>
+        <field name="xlsx_library">openpyxl</field>
+        <field name="report_name">lims_export_xlsx.report_edi_export_result_request</field>
+        <field name="report_file">lims_export_xlsx.report_edi_export_result</field>
+        <field name="print_report_name">'Result_export_%s' % (object.display_name)</field>
+    </record>
+    <record id="report_edi_export_result_numeric" model="ir.actions.report">
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis_numeric_result"/>
+        <field name="name">Export Results Lines</field>
+        <field name="model">lims.analysis.numeric.result</field>
+        <field name="attachment_use" eval="False"/>
+        <field name="report_type">xlsx</field>
+        <field name="xlsx_library">openpyxl</field>
+        <field name="report_name">lims_export_xlsx.report_edi_export_result_numeric</field>
+        <field name="report_file">lims_export_xlsx.report_edi_export_result</field>
+        <field name="print_report_name">'Result_export_%s' % (object.display_name)</field>
+    </record>
+    <record id="report_edi_export_result_compute" model="ir.actions.report">
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis_compute_result"/>
+        <field name="name">Export Results Lines</field>
+        <field name="model">lims.analysis.compute.result</field>
+        <field name="attachment_use" eval="False"/>
+        <field name="report_type">xlsx</field>
+        <field name="xlsx_library">openpyxl</field>
+        <field name="report_name">lims_export_xlsx.report_edi_export_result_compute</field>
+        <field name="report_file">lims_export_xlsx.report_edi_export_result</field>
+        <field name="print_report_name">'Result_export_%s' % (object.display_name)</field>
+    </record>
+    <record id="report_edi_export_result_selection" model="ir.actions.report">
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis_sel_result"/>
+        <field name="name">Export Results Lines</field>
+        <field name="model">lims.analysis.sel.result</field>
+        <field name="attachment_use" eval="False"/>
+        <field name="report_type">xlsx</field>
+        <field name="xlsx_library">openpyxl</field>
+        <field name="report_name">lims_export_xlsx.report_edi_export_result_selection</field>
+        <field name="report_file">lims_export_xlsx.report_edi_export_result</field>
+        <field name="print_report_name">'Result_export_%s' % (object.display_name)</field>
+    </record>
+    <record id="report_edi_export_result_text" model="ir.actions.report">
+        <field name="binding_model_id" ref="lims_base.model_lims_analysis_text_result"/>
+        <field name="name">Export Results Lines</field>
+        <field name="model">lims.analysis.text.result</field>
+        <field name="attachment_use" eval="False"/>
+        <field name="report_type">xlsx</field>
+        <field name="xlsx_library">openpyxl</field>
+        <field name="report_name">lims_export_xlsx.report_edi_export_result_text</field>
+        <field name="report_file">lims_export_xlsx.report_edi_export_result</field>
+        <field name="print_report_name">'Result_export_%s' % (object.display_name)</field>
+    </record>
+
+</odoo>

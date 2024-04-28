@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="inherit_view_account_move_line_filter" model="ir.ui.view">
+        <field name="name">Moveline Search Inherit</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_account_move_line_filter" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="project_name"/>
+            </field>
+            <xpath expr="//group/filter[@name='group_by_move']" position="after">
+                <filter string="Project" 
+                name="project_name" 
+                domain="[]" context="{'group_by':'project_name'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

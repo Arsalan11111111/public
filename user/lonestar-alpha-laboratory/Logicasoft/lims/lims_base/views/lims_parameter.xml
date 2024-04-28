@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_parameter_tree'>
+        <field name="name">Parameter</field>
+        <field name="model">lims.parameter</field>
+        <field name="arch" type="xml">
+            <tree name="lims_parameter_tree">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="ref" optional="show"/>
+                <field name="type_id" optional="show"/>
+                <field name="format" optional="show"/>
+                <field name="result_value_ids" widget="many2many_tags" options="{'color_field': 'color'}" optional="hide"/>
+                <field name="product_id" optional="hide"/>
+                <field name="is_default_print_on_report" optional="hide"/>
+                <field name="parent_id" optional="hide"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_parameter_form">
+        <field name="name">Parameter</field>
+        <field name="model">lims.parameter</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" class="oe_stat_button" icon="fa-list" name="open_result_values"
+                                attrs="{'invisible': [('format', '!=', 'se')]}" string="Results Values">
+                        </button>
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group name="lims_parameter_form">
+                        <group name="lims_parameter_configuration">
+                            <field name="format" attrs="{'required' : True}"/>
+                            <field name="result_value_ids"
+                                   attrs="{'required': [('format', '=', 'se')], 'invisible': [('format', '!=', 'se')]}"
+                                   options="{'no_quick_create':True, 'color_field': 'color'}"
+                                   widget="many2many_tags"
+                                   context="{'default_format': format}"/>
+                            <field name="type_id"/>
+                            <field name="product_id" context="{'default_lims_for_analysis':1}"/>
+                        </group>
+                        <group name="lims_parameter_information">
+                            <field name="ref"/>
+                            <field name="description_1"/>
+                            <field name="description_2"/>
+                            <field name="is_default_print_on_report"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Parameter Characteristics">
+                                <field name="method_param_charac_ids" widget="one2many" nolabel="1" readonly="1">
+                                    <tree>
+                                        <field name="name" optional="show"/>
+                                        <field name="regulation_id" optional="show"/>
+                                        <field name="matrix_id" optional="show"/>
+                                        <field name="format" optional="show"/>
+                                        <field name="method_id" optional="show"/>
+                                        <field name="department_id" optional="show"/>
+                                        <field name="loq" optional="show"/>
+                                        <field name="lod" optional="show"/>
+                                        <field name="ls" optional="show"/>
+                                        <field name="u" optional="show"/>
+                                        <field name="tech_name" optional="show"/>
+                                        <field name="accreditation" optional="show"/>
+                                        <field name="uom" optional="show"/>
+                                    </tree>
+                                </field>
+                        </page>
+                        <page name="note" string="Note">
+                                <field name="note" placeholder="You can add note"/>
+                        </page>
+                        <page name="other_info" string="Other information">
+                            <group name="other_info">
+                                <field name="parent_id" domain="[('id', '!=', id)]" options="{'no_create': True}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_parameter_search">
+        <field name="name">Parameter</field>
+        <field name="model">lims.parameter</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name"/>
+                <field name="ref"/>
+                <field name="type_id"/>
+                <field name="format"/>
+                <field name="result_value_ids"/>
+                <field name="method_param_charac_ids"/>
+                <field name="product_id"/>
+                <field name="is_default_print_on_report"/>
+                <separator/>
+                <filter name="archived" string="Archived" domain="[('active','=',False)]"/>
+                <filter name="se" string="Parameters with selection format" domain="[('format','=','se')]"/>
+                <separator/>
+                <group string="Group By">
+                    <filter name="type" string="Type" context="{'group_by': 'type_id'}"/>
+                    <filter name="format" string="Format" context="{'group_by': 'format'}"/>
+                    <filter name="product_id" string="Product" context="{'group_by': 'product_id'}"/>
+                    <filter name="result_value_ids" string="Result values" context="{'group_by': 'result_value_ids'}"/>
+                    <filter name="active" string="Active" context="{'group_by': 'active'}"/>
+                    <filter name="is_default_print_on_report" context="{'group_by': 'is_default_print_on_report'}"/>
+                    <filter name="sequence" context="{'group_by': 'sequence'}"/>
+                </group>
+           </search>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_parameter_action'>
+        <field name="name">Parameter</field>
+        <field name="res_model">lims.parameter</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to create a new parameter.
+          </p><p>
+            You can define several.
+          </p>
+        </field>
+    </record>
+
+    <menuitem action="lims_parameter_action" parent="lims_master_data_submenu" id="lims_parameter_menu" sequence="10"/>
+</odoo>

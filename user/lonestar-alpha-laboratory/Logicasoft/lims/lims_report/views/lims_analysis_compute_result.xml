@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_analysis_compute_result_form" model="ir.ui.view">
+        <field name="name">Compute Result</field>
+        <field name="model">lims.analysis.compute.result</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_compute_result_form"/>
+        <field name="arch" type="xml">
+            <field name="rel_type" position="before">
+                <field name="print_on_report"/>
+                <field name="report_limit_value" readonly="True"/>
+                <field name="rel_parameter_print" readonly="True"/>
+            </field>
+        </field>
+    </record>
+    <record id="lims_analysis_compute_result_inherit_tree" model="ir.ui.view">
+        <field name="name">Compute Result</field>
+        <field name="model">lims.analysis.compute.result</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_compute_result_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='uom_id']" position="after">
+                <field name="report_limit_value" readonly="True" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="lims_analysis_form" model="ir.ui.view">
+        <field name="name">LIMS Analysis Form</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_form"/>
+        <field name="arch" type="xml">
+            <group name="upper_right_group" position="inside">
+                <field name="rel_project_id" attrs="{'invisible':[('task_id','=',False)]}"/>
+                <field name="task_id"
+                       context="{'default_partner_id': partner_id,'default_user_ids':[uid], 'default_project_id': rel_project_id}"
+                       domain="[('rel_allow_lims_links', '=', True)]"/>
+            </group>
+        </field>
+    </record>
+
+    <record id="lims_analysis_tree" model="ir.ui.view">
+        <field name="name">LIMS Analysis Tree</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='request_id']" position='after'>
+                <field name="rel_project_id" optional="hide"/>
+                <field name="task_id" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_analysis_search">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='request_id']" position="after">
+                <field name="rel_project_id"/>
+                <field name="task_id"/>
+            </xpath>
+            <xpath expr="//filter[@name='assigned_to']" position="after">
+                <filter name="rel_project_id" context="{'group_by': 'rel_project_id'}"/>
+                <filter name="task" string="Task" context="{'group_by': 'task_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="lims_quality_zone_form">
+        <field name="name">Lims Quality Zone Form</field>
+        <field name="model">lims.quality.zone</field>
+        <field name="arch" type="xml">
+            <form string="Quality Zone">
+                <sheet>
+                    <div name="button_box">
+                        <button name="get_all_analysis_view" type="object" class="oe_stat_button" icon="fa-flask">
+                            <field name="total_analysis" widget="statinfo" class="oe_inline"/>
+                        </button>
+                        <button name="get_all_analysis_result_view" type="object" class="oe_stat_button" icon="fa-flask">
+                            <field name="total_result" widget="statinfo" class="oe_inline"/>
+                        </button>
+                        <button name="get_all_analysis_sel_result_view" type="object" class="oe_stat_button" icon="fa-flask">
+                            <field name="total_sel_result" widget="statinfo" class="oe_inline"/>
+                        </button>
+                        <button name="get_all_analysis_compute_result_view" type="object" class="oe_stat_button" icon="fa-flask">
+                            <field name="total_compute_result" widget="statinfo" class="oe_inline"/>
+                        </button>
+                        <button name="get_all_analysis_text_result_view" type="object" class="oe_stat_button" icon="fa-flask">
+                            <field name="total_text_result" widget="statinfo" class="oe_inline"/>
+                        </button>
+                    </div>
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <field name="parent_id"  domain="[('id','!=',id)]"/>
+                        <field name="code"/>
+                        <field name="entity_id" widget="many2one_avatar"/>
+                        <field name="description"/>
+                        <field name="sequence"/>
+                    </group>
+                    <notebook>
+                        <page name="sampling_point" string="Sampling Point">
+                            <field name="sampling_point_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+   <record model="ir.ui.view" id="lims_quality_zone_tree">
+        <field name="name">Lims Quality Zone Tree</field>
+        <field name="model">lims.quality.zone</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="parent_id"/>
+                <field name="entity_id" widget="many2one_avatar"/>
+            </tree>
+        </field>
+   </record>
+
+    <record model='ir.actions.act_window' id='lims_quality_zone_action'>
+        <field name="name">Quality Zone</field>
+        <field name="res_model">lims.quality.zone</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click to create a new quality zone.
+          </p><p>
+            You can define several.
+          </p>
+        </field>
+    </record>
+    <record id="lims_quality_zone_search" model="ir.ui.view">
+       <field name="name">Quality Zone</field>
+       <field name="model">lims.quality.zone</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="entity_id"/>
+                <field name="parent_id"/>
+                <field name="sampling_point_ids"/>
+                <group>
+                    <filter name="code" string="Code" context="{'group_by': 'code'}"/>
+                    <filter name="entity_id" string="Entity" context="{'group_by': 'entity_id'}"/>
+                    <filter name="parent" string="Parent" context="{'group_by': 'parent_id'}"/>
+                </group>
+            </search>
+       </field>
+    </record>
+
+    <menuitem action="lims_quality_zone_action"
+              parent="sampling_point_master_data_submenu"
+              id="lims_quality_zone_menu"
+              sequence="10"/>
+</odoo>

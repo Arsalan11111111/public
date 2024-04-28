@@ -1,0 +1,701 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_product_limit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 08:55+0000\n"
+"PO-Revision-Date: 2023-08-11 08:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_product_limit
+#: model:ir.model.fields.selection,name:lims_product_limit.selection__lims_parameter_char_product__accreditation__intna
+msgid " Internal Not Accredited"
+msgstr " Interne Non Accrédité"
+
+#. module: lims_product_limit
+#: model:lims.parameter.char.product,report_limit_value:lims_product_limit.demo_parameter_char_product_2
+msgid "25 > Mg"
+msgstr ""
+
+#. module: lims_product_limit
+#: model:lims.parameter.char.product,report_limit_value:lims_product_limit.demo_parameter_char_product_1
+msgid "35 > Ca"
+msgstr ""
+
+#. module: lims_product_limit
+#: model:lims.parameter.char.product,report_limit_value:lims_product_limit.demo_parameter_char_product_3
+msgid "60 > Mg + Ca"
+msgstr ""
+
+#. module: lims_product_limit
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.generate_limit_product_variant_wizard_form
+msgid ""
+"<b>\n"
+"                                    <u>This product is inactive</u>\n"
+"                                </b>"
+msgstr ""
+"<b>\n"
+"                                    <u>Ce produit est inactif</u>\n"
+"                                </b>"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__accreditation
+msgid "Accreditation Type"
+msgstr "Type d'Accréditation"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_needaction
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_needaction
+msgid "Action Needed"
+msgstr "Nécessite une action"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__rel_product_active
+msgid "Active"
+msgstr "Actif"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_ids
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_exception_decoration
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activité d'exception de décoration"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_state
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_state
+msgid "Activity State"
+msgstr "État de l'Activité"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_type_icon
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de type d'activité"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__product_product_ids
+msgid "Affected products"
+msgstr "Produits concernés"
+
+#. module: lims_product_limit
+#: model:ir.model,name:lims_product_limit.model_lims_analysis_compute_result
+msgid "Analysis Compute Result"
+msgstr "Résultat calculé"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_attachment_count
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: lims_product_limit
+#: model:lims.parameter.char.product,comment:lims_product_limit.demo_parameter_char_product_1
+msgid "Ca in river"
+msgstr "Ca de l'eau de rivière"
+
+#. module: lims_product_limit
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.generate_limit_product_variant_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.mass_duplicate_product_limit_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_product_limit
+#: model_terms:ir.actions.act_window,help:lims_product_limit.product_product_generate_limit_product_variant_wizard_action
+#: model_terms:ir.actions.act_window,help:lims_product_limit.product_template_generate_limit_product_variant_wizard_action
+msgid "Click to add new parameters."
+msgstr "Cliquez pour ajouter de nouveaux paramètres."
+
+#. module: lims_product_limit
+#: model_terms:ir.actions.act_window,help:lims_product_limit.lims_parameter_char_product_action
+msgid "Click to create a new  parameter char product."
+msgstr "Cliquez pour créer un nouveau produit char de paramètre."
+
+#. module: lims_product_limit
+#: model_terms:ir.actions.act_window,help:lims_product_limit.lims_method_parameter_charac_limit_product_action
+msgid "Click to create a new Method Parameter Characteristic Limit Product."
+msgstr ""
+"Cliquez pour créer une nouvelle Méthode de Limite de Paramètre "
+"Caractéristique d'un Produit."
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__comment
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: lims_product_limit
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.generate_limit_product_variant_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.mass_duplicate_product_limit_wizard_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__create_uid
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__create_uid
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__create_date
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__create_date
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__create_date
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__create_date
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__display_name
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__display_name
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__display_name
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__display_name
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__duplicate_product_limit_line_ids
+msgid "Duplicate Product Limit Line"
+msgstr "Limites de produit dupliquées"
+
+#. module: lims_product_limit
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.mass_duplicate_product_limit_wizard_form
+msgid "Duplicate lines for product"
+msgstr "Dupliquer lignes sur le produit"
+
+#. module: lims_product_limit
+#: model:ir.model.fields.selection,name:lims_product_limit.selection__lims_parameter_char_product__accreditation__exta
+msgid "External Accredited"
+msgstr "Accrédité externe"
+
+#. module: lims_product_limit
+#: model:ir.model.fields.selection,name:lims_product_limit.selection__lims_parameter_char_product__accreditation__extna
+msgid "External Not Accredited"
+msgstr "Externe Non Accrédité"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_follower_ids
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_partner_ids
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_type_icon
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône Font Awesome e.g. fa-tasks"
+
+#. module: lims_product_limit
+#: model:ir.actions.act_window,name:lims_product_limit.product_product_generate_limit_product_variant_wizard_action
+#: model:ir.actions.act_window,name:lims_product_limit.product_template_generate_limit_product_variant_wizard_action
+msgid "Generate product's limits on products variants"
+msgstr "Générer les limites des produits sur les variantes des produits."
+
+#. module: lims_product_limit
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.lims_method_parameter_charac_limit_product_search
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.lims_parameter_char_product_search
+msgid "Group By"
+msgstr "Regroupé par"
+
+#. module: lims_product_limit
+#: model:lims.parameter.char.product,comment:lims_product_limit.demo_parameter_char_product_3
+msgid "Hardness in river water"
+msgstr "Dureté de l'eau de rivière"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__has_message
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__id
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__id
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__id
+msgid "ID"
+msgstr ""
+
+#. module: lims_product_limit
+#: model:product.template,name:lims_product_limit.demo_lims_product_limit_1_product_template
+msgid "Iceberg water"
+msgstr "Eau d'iceberg"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_exception_icon
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_exception_icon
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité d'exception."
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_needaction
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, de nouveaux messages demandent votre attention."
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_has_error
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_has_sms_error
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__message_has_error
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si actif, certains messages ont une erreur de livraison."
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_generate_limit_product_variant_wizard__rel_product_active
+msgid ""
+"If unchecked, it will allow you to hide the product without removing it."
+msgstr ""
+"Si elle n'est pas cochée, elle vous permettra de masquer le produit sans le "
+"supprimer."
+
+#. module: lims_product_limit
+#: model:ir.model.fields.selection,name:lims_product_limit.selection__lims_parameter_char_product__accreditation__inta
+msgid "Internal Accredited"
+msgstr "Accrédité Interne"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_is_follower
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_is_follower
+msgid "Is Follower"
+msgstr "Est un abonné"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard____last_update
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product____last_update
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product____last_update
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard____last_update
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__write_uid
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__write_uid
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Mise à jour par"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__write_date
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__write_date
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__write_date
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__write_date
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__write_date
+msgid "Last Updated on"
+msgstr "Dernière Mise à jour le"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__limit_ids
+msgid "Limit"
+msgstr "Limite"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__limit_value_from
+msgid "Limit Value From"
+msgstr "Valeur Limite De"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__limit_value_to
+msgid "Limit Value To"
+msgstr "Valeur Limite A"
+
+#. module: lims_product_limit
+#: model:ir.model,name:lims_product_limit.model_mass_duplicate_product_limit_wizard_line
+msgid "Line of wizard for mass duplication of product limits"
+msgstr "Ligne d'assistant de duplication en masse des limites de produit"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_main_attachment_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: lims_product_limit
+#. odoo-python
+#: code:addons/lims_product_limit/models/lims_parameter_char_product.py:0
+#: model:ir.actions.server,name:lims_product_limit.action_product_limit_duplicate
+#, python-format
+msgid "Mass duplicate"
+msgstr "Duplication en masse"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__matrix_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__matrix_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__matrix_id
+msgid "Matrix"
+msgstr "Matrice"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message
+msgid "Message"
+msgstr ""
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_has_error
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur d'envoi du message"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_ids
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: lims_product_limit
+#: model:ir.model,name:lims_product_limit.model_lims_method_parameter_characteristic
+msgid "Method Parameter Characteristic"
+msgstr "paramètre de caractéristique de méthode"
+
+#. module: lims_product_limit
+#: model:ir.actions.act_window,name:lims_product_limit.lims_method_parameter_charac_limit_product_action
+#: model:ir.model,name:lims_product_limit.model_lims_method_parameter_characteristic_limit_product
+msgid "Method Parameter Characteristic Limit Product"
+msgstr "Méthode de Limite de Paramètre Caractéristique d'un Produit."
+
+#. module: lims_product_limit
+#: model:lims.parameter.char.product,comment:lims_product_limit.demo_parameter_char_product_2
+msgid "Mg in river"
+msgstr "Mg de l'eau de rivière"
+
+#. module: lims_product_limit
+#: model:lims.parameter.char.product,report_limit_value:lims_product_limit.demo_parameter_char_product_4
+msgid "Must be limpid"
+msgstr "Doit être limpide"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__my_activity_date_deadline
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Ma date limite d'activité"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_date_deadline
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de l'Activité à Venir"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_summary
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé d'activité suivante"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_type_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type d'activités à venir"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_needaction_counter
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_has_error_counter
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_needaction_counter
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_has_error_counter
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec des erreurs d'envoi"
+
+#. module: lims_product_limit
+#: model:ir.model,name:lims_product_limit.model_lims_analysis_numeric_result
+msgid "Numerical analysis result"
+msgstr "Résultat numérique"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__rel_product
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__product_id
+msgid ""
+"Only products for which LIMS (for analysis) is configured are listed. It is "
+"not recommended to create product using this menu."
+msgstr ""
+"Seuls les articles pour lesquels LIMS (pour analyse) est configuré sont "
+"listés. Il est déconseillé de créer un article via ce menu."
+
+#. module: lims_product_limit
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.lims_method_parameter_characteristic_form
+msgid "Open Limit"
+msgstr "Ouvrir Limite"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__operator_from
+msgid "Operator From"
+msgstr "Opérateur De"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__operator_to
+msgid "Operator To"
+msgstr "Opérateur A"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__accreditation_ids
+msgid "Organisms"
+msgstr "Organismes"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__is_option_overwrite
+msgid "Overwrite"
+msgstr "Remplacer"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__rel_method_param_charac
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__method_param_charac_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__method_param_charac_id
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: lims_product_limit
+#. odoo-python
+#: code:addons/lims_product_limit/models/lims_parameter_char_product.py:0
+#: model:ir.actions.act_window,name:lims_product_limit.lims_parameter_char_product_action
+#: model:ir.model,name:lims_product_limit.model_lims_parameter_char_product
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__parameter_char_product_id
+#, python-format
+msgid "Parameter Char Product"
+msgstr "Paramètre Char de Produit"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic__param_product_ids
+msgid "Parameter Product"
+msgstr "Paramètre de Produit"
+
+#. module: lims_product_limit
+#. odoo-python
+#: code:addons/lims_product_limit/wizards/mass_duplicate_product_limit_wizard.py:0
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__parameter_char_product_id
+#, python-format
+msgid "Parameter char product"
+msgstr "Paramètre caractéristique produit"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__rel_product
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__product_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard__product_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__product_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__product_char_limit_ids
+msgid "Product Char Limit"
+msgstr "Produit Char Limit"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__product_product_id
+msgid "Product Product"
+msgstr "Produit Produit"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_generate_limit_product_variant_wizard__product_template_id
+msgid "Product Template"
+msgstr "Modèle de produit"
+
+#. module: lims_product_limit
+#: model:ir.ui.menu,name:lims_product_limit.lims_parameter_char_product_menu
+msgid "Product characteristic parameter"
+msgstr "Paramètre caractéristique produit"
+
+#. module: lims_product_limit
+#: model:ir.ui.menu,name:lims_product_limit.lims_method_parameter_charac_limit_product_menu
+msgid "Product characteristic parameter limit"
+msgstr "Limite paramètre caractéristique produit."
+
+#. module: lims_product_limit
+#. odoo-python
+#: code:addons/lims_product_limit/wizards/generate_limit_product_variant_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.lims_parameter_char_product_form
+#, python-format
+msgid "Product limits"
+msgstr "Limites du produit"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__rel_matrix_id
+msgid "Product's matrix"
+msgstr "Matrice du produit"
+
+#. module: lims_product_limit
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.lims_method_parameter_characteristic_form
+msgid "Products Limit"
+msgstr "Limite Produits"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__reference
+msgid "Reference"
+msgstr "Référence"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_analysis_compute_result__regulation_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_analysis_numeric_result__regulation_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_analysis_result__regulation_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_analysis_sel_result__regulation_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_analysis_text_result__regulation_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__rel_regulation_id
+msgid "Regulation"
+msgstr "Législation"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__report_limit_value
+msgid "Report Limit Value"
+msgstr "Valeur Limite du Rapport"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_user_id
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur Responsable"
+
+#. module: lims_product_limit
+#: model:ir.model,name:lims_product_limit.model_lims_analysis_result
+msgid "Result"
+msgstr "Résultat"
+
+#. module: lims_product_limit
+#: model:product.template,name:lims_product_limit.demo_lims_product_limit_2_product_template
+msgid "River Water"
+msgstr "Eau de rivière"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__message_has_sms_error
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur d'envoi SMS"
+
+#. module: lims_product_limit
+#: model_terms:ir.ui.view,arch_db:lims_product_limit.lims_parameter_char_product_search
+msgid "Search"
+msgstr "Rechercher"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: lims_product_limit
+#. odoo-python
+#: code:addons/lims_product_limit/models/lims_parameter_char_product.py:0
+#, python-format
+msgid "Should be same matrix for all the product involved"
+msgstr "Devrait être la même matrice pour tous les produits concernés"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__state
+msgid "State"
+msgstr "État"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_state
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : la date d'échéance est déjà dépassée\n"
+"Aujourd'hui : la date d'activité est aujourd'hui\n"
+"Planifiée : activités futures"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_generate_limit_product_variant_wizard__is_option_overwrite
+msgid ""
+"This will remove the existing limits and replace them with the limits "
+"defined by the selected product variant."
+msgstr ""
+"Ceci va supprimer les limites existantes et les remplacer par les limites "
+"définies par la variante de produit sélectionnée."
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__type_alert
+msgid "Type"
+msgstr ""
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__activity_exception_decoration
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d'activité d'exception enregistrée"
+
+#. module: lims_product_limit
+#: model:lims.parameter.char.product,comment:lims_product_limit.demo_parameter_char_product_4
+msgid "Visual aspect for iceberg water"
+msgstr "Aspect visuel pour l'eau d'iceberg"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__website_message_ids
+#: model:ir.model.fields,field_description:lims_product_limit.field_lims_parameter_char_product__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,help:lims_product_limit.field_lims_method_parameter_characteristic_limit_product__website_message_ids
+#: model:ir.model.fields,help:lims_product_limit.field_lims_parameter_char_product__website_message_ids
+msgid "Website communication history"
+msgstr "Historique de communication du site web"
+
+#. module: lims_product_limit
+#: model:ir.model.fields,field_description:lims_product_limit.field_mass_duplicate_product_limit_wizard_line__wizard_id
+msgid "Wizard"
+msgstr "Assistant"
+
+#. module: lims_product_limit
+#: model:ir.model,name:lims_product_limit.model_generate_limit_product_variant_wizard
+msgid "Wizard for generate limit in all linked variant"
+msgstr "Assistant pour générer une limite dans toutes les variantes liées"
+
+#. module: lims_product_limit
+#: model:ir.model,name:lims_product_limit.model_mass_duplicate_product_limit_wizard
+msgid "Wizard for mass duplication of product limits"
+msgstr "Assistant de duplication en masse des limites de produit"
+
+#. module: lims_product_limit
+#: model_terms:ir.actions.act_window,help:lims_product_limit.lims_method_parameter_charac_limit_product_action
+#: model_terms:ir.actions.act_window,help:lims_product_limit.lims_parameter_char_product_action
+msgid "You can define several."
+msgstr "Vous pouvez en définir plusieurs."

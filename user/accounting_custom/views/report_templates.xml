@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="accounting_custom.cell_template" inherit_id="account_reports.cell_template">
+        <xpath expr="//table" position="replace">
+            <table style="width:100%;">
+                <tr>
+                    <td t-if="cell.get('info_popup_data')"
+                        style="border-left: 2px black dotted; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; text-align:center !important;">
+                        <a
+                                class="o_account_report_popup fa fa-question-circle"
+                                template="accountReports.ColumnInfoPopupTemplate"
+                                t-att-data="cell['info_popup_data']"
+                                tabindex="1"
+                                role="button"
+                        />
+                    </td>
+
+                    <td t-if="cell.get('edit_popup_data')"
+                        style="border-left: 2px black dotted; padding-left:0; padding-right:0; padding-top:0; padding-bottom:0; text-align:center !important;">
+                        <a
+                                class="o_account_report_popup fa fa-pencil"
+                                template="accountReports.EditColumnTemplate"
+                                t-att-data="cell['edit_popup_data']"
+                                tabindex="-1"
+                                role="button"
+                        />
+                    </td>
+
+
+                    <td t-att-style="'border-left: 2px black dotted; padding-right:0; padding-top:0; padding-bottom:0; ' + (style or 'text-align:center !important;')"
+                        t-att-class="classes">
+                        <t t-if="cell.get('auditable')">
+                            <a
+                                    tabindex="-1"
+                                    action="action_audit_cell"
+                                    title="Audit"
+                                    t-att-data-report_line_id="cell['report_line_id']"
+                                    t-att-data-calling_line_dict_id="calling_line_dict_id"
+                                    t-att-data-column_group_key="cell['column_group_key']"
+                                    t-att-data-expression_label="cell['expression_label']"
+                                    t-out="cell.get('name') or '-'"
+                            />
+                        </t>
+                        <t t-else="">
+                            <span class="o_account_report_column_value" t-out="cell.get('name')"/>
+                        </t>
+                    </td>
+                </tr>
+            </table>
+        </xpath>
+
+    </template>
+
+</odoo>

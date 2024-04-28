@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="analysis_report_template" inherit_id="lims_report.analysis_report_template">
+        <t t-set="accreditation" position="after">
+            <t t-set="conclusions" t-value="{}"/>
+        </t>
+    </template>
+
+    <template id="analysis_report_template_result" inherit_id="lims_report.analysis_report_template_result">
+        <xpath expr="//t[@name='parameter_print_loop']/t[2]" position="inside">
+            <t t-set="conclusions" t-value="get_conclusions(result, conclusions)"/>
+        </xpath>
+    </template>
+
+    <template id="analysis_report_template_auxiliary_content" inherit_id="lims_report.analysis_report_template_auxiliary_content">
+        <xpath expr="//t[@name='conclusion']" position="replace">
+            <t t-if="doc.option_print_conclusion" name="conclusion">
+                <br/>
+                <b>Conclusion :</b>
+                <t t-foreach="conclusions" t-as="conclusion">
+                    <div class="row" style="page-break-inside:avoid;">
+                        <div class="col-12">
+                            With regard to the parameter(s) analyzed, the sample
+                            <t t-if="conclusions[conclusion] != 'not_conform'">
+                                <span style="color:green">
+                                    meets
+                                </span>
+                            </t>
+                            <t t-else="">
+                                <span style="color:red">
+                                    does not meet
+                                </span>
+                            </t>
+                            the standards prescribed by the legislation
+                            <span t-esc="conclusion.name"/>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

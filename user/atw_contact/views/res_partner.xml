@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="inherit_product_view_partner_property_form" model="ir.ui.view">
+        <field name="name">Partner Form Inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="product.view_partner_property_form" />
+        <field name="arch" type="xml">
+            <page name="contact_addresses" position="after">
+                <page string="Terms &amp; Condition" name="terms_condition">
+                    <field name="terms_condition"></field>
+                </page>
+            </page>
+
+            <div name="button_box" position="inside">
+                <button type="object" 
+                class="oe_stat_button" 
+                icon="fa-money" 
+                name="action_view_partner_bank_journal_items" 
+                groups="account.group_account_invoice,account.group_account_readonly" 
+                context="{'default_partner_id': active_id}">
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_text">Payments</span>
+                    </div>
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>

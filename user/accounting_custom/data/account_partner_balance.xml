@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Report columns -->
+    <record id="account_reports.aged_receivable_report_period5" model="account.report.column">
+        <field name="name">121-180</field>
+        <field name="expression_label">period5</field>
+        <field name="sortable" eval="True"/>
+    </record>
+    <record id="account_reports.aged_receivable_report_total" model="account.report.column">
+        <field name="name">181-365</field>
+        <field name="expression_label">period6</field>
+        <field name="sortable" eval="True"/>
+    </record>
+    <record id="aged_receivable_report_period7" model="account.report.column">
+        <field name="name">1 Year - 2 year</field>
+        <field name="expression_label">period7</field>
+        <field name="sortable" eval="True"/>
+        <field name="report_id" ref="account_reports.aged_receivable_report"/>
+    </record>
+    <record id="aged_receivable_report_period8" model="account.report.column">
+        <field name="name">Above 2 Year</field>
+        <field name="expression_label">period8</field>
+        <field name="sortable" eval="True"/>
+        <field name="report_id" ref="account_reports.aged_receivable_report"/>
+    </record>
+
+    <record id="aged_receivable_report_new_total" model="account.report.column">
+        <field name="name">Total</field>
+        <field name="expression_label">total</field>
+        <field name="sortable" eval="True"/>
+        <field name="report_id" ref="account_reports.aged_receivable_report"/>
+    </record>
+
+    <!-- Report Expression -->
+    <record id="aged_receivable_line_period6" model="account.report.expression">
+        <field name="label">period6</field>
+        <field name="engine">custom</field>
+        <field name="formula">_report_custom_engine_aged_receivable</field>
+        <field name="subformula">period6</field>
+        <field name="report_line_id" ref="account_reports.aged_receivable_line"/>
+    </record>
+    <record id="aged_receivable_line_period7" model="account.report.expression">
+        <field name="label">period7</field>
+        <field name="engine">custom</field>
+        <field name="formula">_report_custom_engine_aged_receivable</field>
+        <field name="subformula">period7</field>
+        <field name="report_line_id" ref="account_reports.aged_receivable_line"/>
+    </record>
+    <record id="aged_receivable_line_period8" model="account.report.expression">
+        <field name="label">period8</field>
+        <field name="engine">custom</field>
+        <field name="formula">_report_custom_engine_aged_receivable</field>
+        <field name="subformula">period8</field>
+        <field name="report_line_id" ref="account_reports.aged_receivable_line"/>
+    </record>
+
+</odoo>

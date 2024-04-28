@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="lims_sop_worksheet">
+        <t t-call="web.html_container">
+            <t t-set="analysis_ids" t-value="doc_ids.mapped('analysis_id')"/>
+
+            <t t-foreach="analysis_ids" t-as="analysis_id">
+                <t t-set="company" t-value="analysis_id.laboratory_id.company_id"/>
+                <t t-call="lims_base.lims_internal_layout">
+                    <style>
+                        thead tr{
+                        border: 1px solid;
+                        }
+
+                        tbody td{
+                        border: 1px solid;
+                        text-align: center;
+                        }
+                    </style>
+
+                    <div class="page">
+                        <div class="row">
+                            <div class="col">
+                                <span><b>Worksheet</b></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <span>Request N° : <span t-field="analysis_id.request_id"/></span>
+                            </div>
+                            <div class="col-6">
+                                <span>Customer :<span t-field="analysis_id.partner_id"/></span>
+                            </div>
+                        </div>
+
+                        <table style="width: 100%">
+                            <t t-foreach="analysis_id.sop_ids" t-as="sop_id">
+                                <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    Sample ID : <span t-field="analysis_id.name"/>
+                                                </div>
+                                                <div class="col-4">
+                                                    Test : <span t-field="sop_id.name"/>
+                                                </div>
+                                                <div class="col-4">
+                                                    Method : <span t-field="sop_id.method_id"/>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>Parameter</td>
+                                        <td>Result</td>
+                                        <td>Unit</td>
+                                    </tr>
+
+                                    <t t-foreach="sop_id.result_num_ids" t-as="result" name="result_num_loop">
+                                        <tr>
+                                            <td>
+                                                <span t-field="result.method_param_charac_id.tech_name"/>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <span t-field="result.uom_id"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+
+                                    <t t-foreach="sop_id.result_sel_ids" t-as="result" name="result_sel_loop">
+                                        <tr>
+                                            <td>
+                                                <span t-field="result.method_param_charac_id.tech_name"/>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <span t-field="result.uom_id"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+
+                                    <t t-foreach="sop_id.result_compute_ids" t-as="result" name="result_calc_loop">
+                                        <tr>
+                                            <td>
+                                                <span t-field="result.method_param_charac_id.tech_name"/>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <span t-field="result.uom_id"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+
+                                    <t t-foreach="sop_id.result_text_ids" t-as="result" name="result_text_loop">
+                                        <tr>
+                                            <td>
+                                                <span t-field="result.method_param_charac_id.tech_name"/>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="lims_sop_worksheet_report" model="ir.actions.report">
+        <field name="name">WorkSheet</field>
+        <field name="model">lims.sop</field>
+        <field name="print_report_name">'ws_' + object.name</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_base.lims_sop_worksheet</field>
+        <field name="binding_model_id" ref="lims_base.model_lims_sop"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inherit_res_partner_form" model="ir.ui.view">
+        <field name="name">inherit.res.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="child_vat" placeholder="e.g. BE0477472701"
+                       attrs="{'invisible': [('parent_id','=',False)]}"
+                       string="Tax ID"/>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="attrs">{'invisible':
+                    [('parent_id','!=',False)],'readonly':
+                    [('parent_id','!=',False)]}
+                </attribute>
+
+            </xpath>
+
+            <xpath expr="//notebook/page[last()]" position="after">
+                <page string="Delivery Address">
+
+                    <field name="child_ids" mode="kanban"
+                           context="{'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_lang': lang, 'default_user_id': user_id, 'default_type': 'other'}">
+                        <kanban>
+                            <field name="id"/>
+                            <field name="color"/>
+                            <field name="name"/>
+                            <field name="title"/>
+                            <field name="type"/>
+                            <field name="email"/>
+                            <field name="parent_id"/>
+                            <field name="is_company"/>
+                            <field name="function"/>
+                            <field name="phone"/>
+                            <field name="street"/>
+                            <field name="street2"/>
+                            <field name="zip"/>
+                            <field name="city"/>
+                            <field name="country_id"/>
+                            <field name="mobile"/>
+                            <field name="state_id"/>
+                            <field name="image_128"/>
+                            <field name="avatar_128"/>
+                            <field name="lang"/>
+                            <!-- fields in form x2many view to diminish requests -->
+                            <field name="comment"/>
+                            <field name="display_name"/>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <t t-set="color"
+                                       t-value="kanban_color(record.color.raw_value)"/>
+                                    <div t-att-class="color + (record.title.raw_value == 1 ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
+                                        <div class="o_kanban_image">
+                                            <img alt="Contact image"
+                                                 t-att-src="kanban_image('res.partner', 'avatar_128', record.id.raw_value)"/>
+                                        </div>
+                                        <div class="oe_kanban_details">
+                                            <field name="name"/>
+                                            <div t-if="record.function.raw_value">
+                                                <field name="function"/>
+                                            </div>
+                                            <div t-if="record.email.raw_value">
+                                                <field name="email"
+                                                       widget="email"/>
+                                            </div>
+                                            <div t-if="record.type.raw_value != 'contact'">
+                                                <div>
+                                                    <field name="zip"/>
+                                                    <t t-if="record.city"></t>
+                                                    <field name="city"/>
+                                                </div>
+                                                <field t-if="record.state_id.raw_value"
+                                                       name="state_id"/>
+                                                <t t-if="record.country_id"></t>
+                                                <field name="country_id"/>
+                                            </div>
+                                            <div t-if="record.phone.raw_value">
+                                                Phone:
+                                                <t t-esc="record.phone.value"/>
+                                            </div>
+                                            <div t-if="record.mobile.raw_value">
+                                                Mobile:
+                                                <t t-esc="record.mobile.value"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban>
+                    </field>
+
+
+                </page>
+
+
+            </xpath>
+        </field>
+    </record>
+</odoo>

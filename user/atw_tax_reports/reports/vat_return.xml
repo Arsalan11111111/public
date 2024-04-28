@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <!-- PDF report action -->
+        <record id="vat_return_report" model="ir.actions.report">
+            <field name="name">VAT Return Content</field>
+            <field name="model">wizard.vat.return</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="paperformat_id"
+                ref="atw_tax_reports.paperformat_vat_return" />
+            <field name="report_name">atw_tax_reports.report_vat_return</field>
+            <field name="report_file">atw_tax_reports.report_vat_return</field>
+            <field name="binding_model_id" ref="model_wizard_vat_return" />
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="report_vat_return_document">
+            <t t-call="atw_tax_reports.vat_return_layout">
+                <div class="page text-start">
+
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block;">4.
+                        CONTENT OF VAT RETURN</span>
+
+                    <!--Supplies
+                    in the Sultanate of Oman-->
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block; margin: 15px 0 15px 0;">1.
+                        Supplies in the Sultanate of Oman</span>
+                    <div class="row">
+                        <div class="column" style="width:60%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">Taxable Base (OMR)</strong>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">VAT Due (OMR)</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            1(a) Supplies of goods/services taxed at 5%
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" 
+                            t-esc="'{:.3f}'.format(report_data['inv_five_per_taxable']).replace(',000', '')"/>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;"
+                            t-esc="'{:.3f}'.format(report_data['inv_five_per_tax']).replace(',000', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            1(b) Supplies of goods/services taxed at 0%
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['inv_zero_per_taxable']).replace(',000', '')"/>
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            1(c) Supplies of goods/services tax exempt
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['inv_exempt_taxable']).replace(',000', '')"/>
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            1(d) Supplier of goods, tax levy shifted to recipient inside GCC
+                            (supplies made by you that are subject to Reverse Charge Mechanism)
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            1(e) Supplier of services, tax levy shifted to recipient inside GCC
+                            (supplies made by you that are subject to Reverse Charge Mechanism)
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            1(f) Taxable goods as per profit margin scheme
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                    </div>
+
+                    <!--Purchases
+                    subject to Reverse Charge Mechanism-->
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block; margin: 15px 0 15px 0;">2.
+                        Purchases subject to Reverse Charge Mechanism</span>
+                    <div class="row">
+                        <div class="column" style="width:60%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">Taxable Base (OMR)</strong>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">VAT Due (OMR)</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            2(a) Purchases from the GCC subject ot Reverse Charge Mechanism
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            2(b) Purchases from outside of GCC subject ot Reverse Charge Mechanism
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                    </div>
+
+                    <!--Supplies
+                    to countries outside of Oman-->
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block; margin: 15px 0 15px 0;">3.
+                        Supplies to countries outside of Oman</span>
+                    <div class="row">
+                        <div class="column" style="width:60%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">Taxable Base (OMR)</strong>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">VAT Due (OMR)</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            3(a) Exports
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                    </div>
+
+                    <!--Import
+                    of Goods-->
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block; margin: 15px 0 15px 0;">4.
+                        Import of Goods</span>
+                    <div class="row">
+                        <div class="column" style="width:60%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">Taxable Base (OMR)</strong>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">VAT Due (OMR)</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            4(a) Import of Goods (Postponed payment)
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            4(b) Total goods imported
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+
+                        </div>
+                    </div>
+
+                    <!--Total
+                    VAT Due-->
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block; margin: 15px 0 15px 0;">4.
+                        Total VAT Due</span>
+                    <div class="row">
+                        <div class="column" style="width:60%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">OMR</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            5(a) Total VAT due under (1(a) +1(f) + 2(a) + 2(b) + 4(a))
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['total_vat_due']).replace(',000', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            5(b) Adjustment of VAT due
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                    </div>
+
+                    <!--Input
+                    VAT Credit-->
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block; margin: 15px 0 15px 0;">6.
+                        Input VAT Credit</span>
+                    <div class="row">
+                        <div class="column" style="width:60%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">OMR</strong>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">Recoverable VAT (OMR)</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            6(a) Purchases (except import of goods)
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['bill_five_per_taxable']).replace(',000', '')"/>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['bill_five_per_tax']).replace(',000', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            6(b) Import of Goods
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['bill_import_taxable']).replace(',000', '')"/>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['bill_import_tax']).replace(',000', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            6(c) VAT on Acquisition of fixed assets
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['bill_fix_asset_tax']).replace(',000', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            6(d) Adjustment of input VAT credit
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            6(e) VAT Incurred Pre-Registration
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;">0.000</p>
+                        </div>
+                    </div>
+
+                    <!--Tax
+                    liability calculation-->
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block; margin: 15px 0 15px 0;">7.
+                        Tax liability calculation</span>
+                    <div class="row">
+                        <div class="column" style="width:60%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <strong style="text-align:center;">(OMR)</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            7(a) Total VAT due (5(a) + 5(b))
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['total_vat_due']).replace(',000', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            7(b) Total input VAT Credit (6(a) + 6(b) + 6(c) + 6(d) + 6(e))
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(report_data['total_input_vat_credit']).replace(',000', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column" style="width:60%; margin-top: 10px;">
+                            7(c) Total (7(a) -7(b)
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <t t-if="report_data['tax_liability'] &gt; 0">
+                                <label>
+                                    <i class="fa fa-square-o" />
+                                    <span>Amount Refundable</span>
+                                </label>
+                                <label>
+                                    <i class="fa fa-check-square-o" />
+                                    <span>Amount Payable</span>
+                                </label>
+                            </t>
+                            <t t-elif="report_data['tax_liability'] &lt; 0">
+                                <label>
+                                    <i class="fa fa-check-square-o" />
+                                    <span>Amount Refundable</span>
+                                </label>
+                                <label>
+                                    <i class="fa fa-square-o" />
+                                    <span>Amount Payable</span>
+                                </label>
+                            </t>
+                        </div>
+                        <div class="column" style="width:20%;">
+                            <p style="border: 1px solid black; padding: 5px;" t-esc="'{:.3f}'.format(abs(report_data['tax_liability'])).replace(',000', '')"/>
+                        </div>
+                    </div>
+
+                    <div class="row"> *VAT due must be paid by VAT Return due date through following
+                        payment procedures set by the Tax Authority. <br /> *Please ensure to attach
+                        the required attachments before submitting the VAT Return. </div>
+
+                    <!--Signature-->
+                    <span
+                        style="background-color: black; color: white; padding: 5px; display: block; margin: 15px 0 15px 0;">8.
+                        Signature</span>
+                    <div class="row">
+                        I, THE PRINCIPAL OFFICER, DECLARE THAT ALL THE DATA I STATED IN THIS VAT
+                        RETURN ARE TRUE AND COMPLETE.
+                    </div>
+                    <div class="row">
+                        <div class="column text-start" style="width:30%; margin-top: 30px;">
+                            Date: ______________________________
+                        </div>
+                        <div class="column" style="width:20%;">
+                        </div>
+                        <div class="column text-start" style="width:50%; margin-top: 30px;">
+                            Signature: ________________________________
+                        </div>
+                    </div>
+
+                </div>
+                <style>
+                    .row {
+                    display: flex;
+                    }
+
+                    .column {
+                    flex: 1;
+                    padding: 10px;
+                    }
+
+                    label {
+                    display: block;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 12px;
+                    cursor: pointer;
+                    }
+                </style>
+            </t>
+        </template>
+        <template id="report_vat_return">
+            <t t-call="web.html_container">
+                <t t-call="atw_tax_reports.report_vat_return_document"
+                    t-lang="lang" />
+            </t>
+        </template>
+    </data>
+</odoo>

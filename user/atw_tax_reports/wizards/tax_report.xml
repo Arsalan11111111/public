@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id='wizard_tax_report_form' model='ir.ui.view'>
+            <field name="name">wizard.tax.report.report.form</field>
+            <field name="model">wizard.tax.report</field>
+            <field name="arch" type="xml">
+                <form string="Tax Report">
+                    <group>
+                        <field name="start_date" 
+                        placeholder="Select a start date for the report"
+                        required="True"/>
+                        <field name="end_date" 
+                        placeholder="Select an end date for the report"
+                        required="True"/>
+                        <field name="company_id" invisible="1" />
+                    </group>
+                    <footer>
+                        <button name="print_report" type="object" 
+                        default_focus="1" string="XLS" icon="fa-book" 
+                        class="oe_highlight" />
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='tax_report_act_window'>
+            <field name="name">Tax Report</field>
+            <field name="res_model">wizard.tax.report</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="wizard_tax_report_form" />
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Tax Report (Xls)" 
+        parent="account.account_reports_management_menu" 
+        id="menu_tax_report" 
+        action="tax_report_act_window" 
+        sequence="5" />
+    </data>
+</odoo>

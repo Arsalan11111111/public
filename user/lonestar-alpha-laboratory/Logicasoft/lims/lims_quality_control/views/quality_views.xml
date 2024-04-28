@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="quality_point_view_form">
+        <field name="name">Lims quality view form</field>
+        <field name="inherit_id" ref="quality.quality_point_view_form"/>
+        <field name="model">quality.point</field>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Lims" name="lims">
+                    <group>
+                        <field name="create_analysis"/>
+                        <field name="analysis_category_id"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="quality_check_view_form">
+        <field name="name">Lims quality check view form</field>
+        <field name="inherit_id" ref="quality_control.quality_check_view_form"/>
+        <field name="model">quality.check</field>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <field name="rel_lims_for_analysis" invisible="1"/>
+                <field name="rel_point_id_create_analysis" invisible="1"/>
+                <field name="rel_picking_code" invisible="1"/>
+                <field name="rel_production_code" invisible="1"/>
+                <button name="create_analysis" string="Create Analysis" class="oe_highlight" type="object"
+                        attrs="{'invisible': ['|', '|', '|', ('production_id', '=', False), ('rel_lims_for_analysis', '=', False), ('rel_point_id_create_analysis', '=', False), ('rel_production_code', '!=', 'mrp_operation')]}"/>
+                <button name="create_analysis_from_stock_move" string="Create Analysis from stock" class="oe_highlight"
+                        type="object" attrs="{'invisible': ['|', '|', '|', ('picking_id', '=', False), ('rel_lims_for_analysis', '=', False), ('rel_point_id_create_analysis', '=', False), ('rel_picking_code', '=', 'mrp_operation')]}"
+                />
+            </xpath>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="open_analysis" type="object" icon="fa-flask" class="oe_stat_button">
+                    <field string="Analysis" name="nb_analysis" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='lot_id']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='picking_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('production_id', '!=', False)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='picking_id']/..//field[@name='production_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('picking_id', '!=', False)]}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

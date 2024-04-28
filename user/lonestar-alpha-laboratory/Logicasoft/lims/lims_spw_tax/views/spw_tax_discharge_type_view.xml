@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form -->
+    <record model="ir.ui.view" id="spw_tax_discharge_type_form">
+        <field name="name">Discharge Type</field>
+        <field name="model">spw.tax.discharge.type</field>
+        <field name="arch" type="xml">
+            <form string="Discharge Type">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="spw_tax_discharge_type_tree">
+        <field name="name">Discharge Type</field>
+        <field name="model">spw.tax.discharge.type</field>
+        <field name="arch" type="xml">
+            <tree string="Discharge Type">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_discharge_type_action" >
+        <field name="name">Discharge Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.discharge.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="spw_tax_discharge_type_menu"
+              name="Discharge Type"
+              parent="spw_tax_configuration"
+              action="spw_tax_discharge_type_action"/>
+</odoo>

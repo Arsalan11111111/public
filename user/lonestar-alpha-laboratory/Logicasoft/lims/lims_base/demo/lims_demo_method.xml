@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.method" id="demo_method_1">
+            <field name="name">Water content (food)</field>
+            <field name="active">1</field>
+            <field name="department_id" ref="lims_base.default_department"/>
+            <field name="label_name">Visual aspect description</field>
+            <field name="time">0.08</field>
+            <field name="time_technician">0.15</field>
+        </record>
+
+        <record model="lims.method" id="demo_method_2">
+            <field name="name">Visual water</field>
+            <field name="active">1</field>
+            <field name="department_id" ref="lims_base.demo_department_1"/>
+            <field name="label_name">Visual aspect water description</field>
+            <field name="time">0.06</field>
+            <field name="time_technician">0.12</field>
+        </record>
+        <record model="lims.method" id="demo_method_3">
+            <field name="name">Water hardness</field>
+            <field name="active">1</field>
+            <field name="department_id" ref="lims_base.demo_department_1"/>
+            <field name="standard_ids" eval="[(4, ref('lims_base.demo_standard_1'))]"/>
+            <field name="label_name">Cations water hardness</field>
+            <field name="time">0.26</field>
+            <field name="time_technician">0.32</field>
+        </record>
+
+    </data>
+</odoo>

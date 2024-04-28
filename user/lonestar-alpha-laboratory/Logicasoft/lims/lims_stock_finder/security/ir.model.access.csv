@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_quant_finder_wizard,access_stock_quant_finder_wizard,model_lims_stock_finder_quant_finder_wizard,lims_base.viewer_group,1,1,1,1
+access_stock_quant_finder_criteria,access_stock_quant_finder_criteria,model_lims_stock_finder_quant_finder_criteria,lims_base.viewer_group,1,1,1,1

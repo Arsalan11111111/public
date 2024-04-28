@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--Tree view-->
+    <template id="portal_my_analysis" name="Portal Analysis">
+        <t t-call="portal.portal_layout">
+            <t t-set="no_footer" t-value="True"/>
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="lims_web.portal_my_tree_view_layout">
+                <div class="card-body">
+                    <t t-if="not analysis">
+                        <div class="alert alert-info mb-0" role="alert">
+                            <i class="fa fa-info-circle"></i> There are currently no analysis for your account.
+                        </div>
+                    </t>
+                    <div t-if="analysis" class="panel panel-default">
+                        <div class="table-responsive">
+                            <table class="table table-hover o_portal_my_doc_table bg-white">
+                                <thead>
+                                    <tr class="active">
+                                        <!-- additional column(s) -->
+                                        <th t-if="not portal_rules.get('download_reports')">Report</th>
+                                        <!-- columns from the controller -->
+                                        <t t-foreach="searchbar_inputs" t-as="column">
+                                            <th t-if="not searchbar_inputs[column].get('inactive')">
+                                                <t t-if="searchbar_inputs[column].get('sortable')">
+                                                    <a t-att-href="default_url + '?' + keep_query('*', sortby=searchbar_inputs[column].get('input'))">
+                                                        <t t-esc="searchbar_inputs[column].get('label')"/>
+                                                        <t t-if="sortby == searchbar_inputs[column].get('input')">
+                                                            <i t-att-class="'fa fa-sort-amount-' + order_type + ' text-success'"></i>
+                                                        </t>
+                                                    </a>
+                                                </t>
+                                                <t t-else="">
+                                                    <t t-esc="searchbar_inputs[column].get('label')"/>
+                                                </t>
+                                            </th>
+                                        </t>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="analysis" t-as="record">
+                                        <tr>
+                                            <td t-if="not portal_rules.get('download_reports')">
+                                                <a t-if="record.nb_reports and record.rel_type in ['validated1', 'validated2', 'done'] and record.id in ids_with_downloadable_reports"
+                                                        role="button" t-attf-href="/my/requests/download/#{record.request_id.id}" class="ml-1">
+                                                    <i class="fa fa-download"></i>
+                                                </a>
+                                            </td>
+                                            <td t-if="not searchbar_inputs['name'].get('inactive')">
+                                                <t t-if="is_intern_user">
+                                                    <a t-attf-href="/my/analysis/#{record.id}?ctx=analysis"><t t-esc="record.name"/></a>
+                                                </t>
+                                                <t t-else="">
+                                                    <t t-esc="record.name"/>
+                                                </t>
+                                            </td>
+                                            <td t-if="not searchbar_inputs['request_id'].get('inactive')">
+                                                <a t-attf-href="/my/requests/#{record.request_id.id}?ctx=requests">
+                                                    <t t-esc="record.request_id.name"/>
+                                                </a>
+                                            </td>
+                                            <td t-if="not searchbar_inputs['partner_id'].get('inactive')">
+                                                <a t-field="record.partner_id" class="text-secondary font-weight-bold" target="_blank" t-att-href="'mailto:' + str(record.partner_id.email)"/>
+                                            </td>
+                                            <td t-if="not searchbar_inputs['partner_contact_ids'].get('inactive')"><span t-esc="', '.join(record.partner_contact_ids.mapped('name'))"/></td>
+                                            <td t-if="not searchbar_inputs['customer_ref'].get('inactive')"><span t-field="record.customer_ref"/></td>
+                                            <td t-if="not searchbar_inputs['date_plan'].get('inactive')"><span t-field="record.date_plan"/></td>
+                                            <td t-if="not searchbar_inputs['date_sample'].get('inactive')"><span t-field="record.date_sample"/></td>
+                                            <td t-if="not searchbar_inputs['date_report'].get('inactive')"><span t-field="record.date_report"/></td>
+                                            <td t-if="not searchbar_inputs['laboratory_id'].get('inactive')"><span t-field="record.laboratory_id.name"/></td>
+                                            <td t-if="not searchbar_inputs['matrix_id'].get('inactive')"><span t-field="record.matrix_id.name"/></td>
+                                            <td t-if="not searchbar_inputs['stage_id'].get('inactive')" style="font-size: 16px;">
+                                                <t t-if="record.rel_type == 'draft'">
+                                                    <i class="fa fa-pencil text-muted" t-att-title="record.stage_id.name"></i>
+                                                </t>
+                                                <t t-if="record.rel_type == 'plan'">
+                                                    <i class="fa fa-calendar-o text-muted" t-att-title="record.stage_id.name"></i>
+                                                </t>
+                                                <t t-if="record.rel_type == 'todo'">
+                                                    <i class="fa fa-calendar-check-o text-info" t-att-title="record.stage_id.name"></i>
+                                                </t>
+                                                <t t-if="record.rel_type == 'wip'">
+                                                    <i class="fa fa-hourglass-half text-warning" t-att-title="record.stage_id.name"></i>
+                                                </t>
+                                                <t t-if="record.rel_type == 'validated1'">
+                                                    <i class="fa fa-check-square-o text-warning" t-att-title="record.stage_id.name"></i>
+                                                </t>
+                                                <t t-if="record.rel_type == 'validated2'">
+                                                    <i class="fa fa-check-square-o text-success" t-att-title="record.stage_id.name"></i>
+                                                </t>
+                                                <t t-if="record.rel_type == 'done'">
+                                                    <i class="fa fa-check-square-o text-primary" t-att-title="record.stage_id.name"></i>
+                                                </t>
+                                                <t t-if="record.rel_type == 'cancel'">
+                                                    <i class="fa fa-window-close-o text-danger" t-att-title="record.stage_id.name"></i>
+                                                </t>
+                                            </td>
+                                            <td t-if="not searchbar_inputs['state'].get('inactive')">
+                                                <t t-if="record.state == 'conform'">
+                                                    <h5><span t-field="record.state" class="badge bg-success"/></h5>
+                                                </t>
+                                                <t t-if="record.state == 'not_conform'">
+                                                    <h5><span t-field="record.state" class="badge bg-danger"/></h5>
+                                                </t>
+                                                <t t-if="record.state == 'unconclusive'">
+                                                    <h5><span t-field="record.state" class="badge bg-light"/></h5>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <!--form view-->
+    <template id="portal_analysis_page" name="Portal Analysis">
+        <form t-attf-action="/my/analysis/update/#{analysis_id and analysis_id.id}" enctype="multipart/form-data" method="post" id="portal_my_analysis_form">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <t t-call="portal.portal_layout">
+                <t t-set="no_footer" t-value="True"/>
+
+                <div class="mt-3 o_analysis_portal_form">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="panel panel-default">
+                                <div class="panel-heading mb-4">
+                                    <div class="dropdown float-right ml-1">
+                                        <button t-if="not portal_rules.get('export_data_xlsx') and analysis_id.rel_type == 'validated2' and (is_user or is_client)" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-file-excel-o"></i> Export
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item o_export_analysis_results" href="#">Export current table</a>
+                                            <a class="dropdown-item o_export_analysis_results" data-all="1" href="#">Export all tables</a>
+                                        </div>
+                                    </div>
+                                    <div class="float-right">
+                                        <button t-if="is_manager" class="btn btn-secondary o_submit_btn_form d-none" type="submit">
+                                            <i class="fa fa-paper-plane"></i> Submit
+                                        </button>
+                                    </div>
+                                    <h4>
+                                        <t t-if="analysis_id.rel_type == 'draft'">
+                                            <i class="fa fa-pencil mr-3"></i>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'plan'">
+                                            <i class="fa fa-calendar-o mr-3"></i>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'todo'">
+                                            <i class="fa fa-calendar-check-o mr-3"></i>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'wip'">
+                                            <i class="fa fa-hourglass-half mr-3"></i>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'validated1'">
+                                            <i class="fa fa-check-square-o mr-3"></i>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'validated2'">
+                                            <i class="fa fa-file-excel-o mr-3"></i>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'done'">
+                                            <i class="fa fa-check-square-o mr-3"></i>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'cancel'">
+                                            <i class="fa fa-window-close-o mr-3"></i>
+                                        </t>
+                                        <span class="badge badge-primary" t-esc="analysis_id.name"/>
+                                        <t t-if="analysis_id.rel_type in ['draft', 'plan', 'todo']">
+                                            <span class="badge badge-warning" t-field="analysis_id.stage_id"/>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'wip'">
+                                            <span class="badge badge-info" t-field="analysis_id.stage_id"/>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type in  ['done', 'validated1', 'validated2']">
+                                            <span class="badge badge-success" t-field="analysis_id.stage_id"/>
+                                        </t>
+                                        <t t-if="analysis_id.rel_type == 'cancel'">
+                                            <span class="badge badge-danger" t-field="analysis_id.stage_id"/>
+                                        </t>
+                                    </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6 text-left">
+                                                    <div>
+                                                        <strong>Sample name: </strong>
+                                                        <span class="o_sample_name" t-field="analysis_id.sample_name"/>
+                                                    </div>
+                                                    <div>
+                                                        <strong>Request: </strong>
+                                                        <a t-attf-href="/my/requests/#{analysis_id.request_id.id}">
+                                                            <t t-esc="analysis_id.request_id.name"/>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <strong>Customer: </strong>
+                                                        <span t-field="analysis_id.partner_id"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 text-left"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_tabs_results"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure mb32"/>
+                <!-- chatter -->
+                <div class="mt-4">
+                    <h2>Comments</h2>
+                    <t t-call="portal.message_thread">
+                        <t t-set="object" t-value="analysis_id"/>
+                    </t>
+                </div>
+            </t>
+        </form>
+    </template>
+
+    <!--cancel result-->
+    <template id="portal_cancel_result" name="Portal Analysis">
+        <form t-attf-action="/my/analysis/cancel/result/#{result.analysis_id.id}/#{result.method_param_charac_id.id}"
+              enctype="multipart/form-data" method="post" id="portal_cancel_result">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <t t-call="portal.portal_layout">
+                <h3>Cancel Reason</h3>
+                <div class="container">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-2 col-md-2 mb-1">
+                                    <a t-attf-href="/my/analysis/#{result.analysis_id.id}">Turn back</a>
+                                </div>
+                                <div class="col-2 col-md-8 mb-1">
+                                    <input name="cancel_reason" type="text" required="True"/>
+                                </div>
+                                <div class="col-2 col-md-2 mb-1">
+                                    <input type="submit"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </form>
+    </template>
+
+</odoo>

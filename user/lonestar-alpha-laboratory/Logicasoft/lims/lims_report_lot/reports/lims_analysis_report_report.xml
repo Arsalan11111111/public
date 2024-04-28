@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="analysis_report_template_sample_information"
+              inherit_id="lims_report.analysis_report_template_sample_information">
+        <t t-if="analysis_id.product_id" position="replace">
+            <t t-if="specific_lot">
+                <t t-set="current_lot" t-value="specific_lot"/>
+                <t t-set="current_product" t-value="specific_lot.product_id"/>
+            </t>
+            <t t-else="">
+                <t t-set="current_lot" t-value="analysis_id.lot_id"/>
+                <t t-set="current_product" t-value="analysis_id.product_id"/>
+            </t>
+            <t t-if="current_product">
+                <br/>
+                <b>Product:</b>
+                <span t-out="current_product.name"/>
+            </t>
+            <t t-if="current_lot">
+                <br/>
+                <b>Lot:</b>
+                <span t-out="current_lot.name"/>
+            </t>
+            <t t-if="current_lot and current_product and current_product.use_expiration_date and current_lot.expiration_date">
+                <br/>
+                <b>Expiration date:</b>
+                <span t-field="current_lot.expiration_date" t-options="{'format':'dd/MM/yyyy'}"/>
+            </t>
+        </t>
+    </template>
+</odoo>

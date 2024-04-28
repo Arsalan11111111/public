@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_salary_attachment_description_type" model="ir.ui.view">
+            <field name="name">hr.salary.attachment.description.type</field>
+            <field name="model">hr.salary.attachment</field>
+            <field name="inherit_id" ref="hr_payroll.hr_salary_attachment_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='description']" position="after">
+                    <field name="description_type_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_partner_details">
+        <t t-call="web.external_layout">
+<!--        <t t-call="web.internal_layout">-->
+            <style>
+                .tablefordetail > :not(caption) > * > * {
+                    padding: 1px !important;
+                    padding-left:5px;
+                    padding-right:5px;
+                }
+
+                tr{
+                    padding: 0px !important;
+                    border-color: transparent !important;
+                    border-style: unset !important;
+                    border-width: 0px !important;
+                }
+            </style>
+            <t t-set="doc" t-value="doc.with_context(lang=doc.lang)"/>
+            <div class="page">
+                <div class="oe_structure"/>
+
+
+                <center>
+                    <strong>Partner Name :
+                        <span t-field="doc.name"/>
+                    </strong>
+                </center>
+
+
+                <table class="table table-bordered ">
+                    <!-- In case we want to repeat the header, remove "display: table-row-group" -->
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_date" class="text-start">Date</th>
+                            <th name="th_inoice" class="text-end">Invoic</th>
+                            <th name="th_due_date" class="text-end">Due Date</th>
+                            <!-- <th name="th_date" class="text-start">delivery Address</th> -->
+                            <th name="th_lpo" class="text-end">LPO</th>
+                            <th name="th_analytic" class="text-end">Analytic Account</th>
+                            <th name="th_analytic" class="text-end">Age</th>
+                            <th name="th_residual" class="text-end">Resaidual Amount</th>
+                            <th name="th_total" class="text-end">Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <t t-set="total" t-value="0"/>
+                        <!--  <t t-set="current_amount" t-value="0"/>
+                         <t t-set="current_residual" t-value="0"/> -->
+                        <!-- <t t-set="lines_to_report" t-value="doc._get_order_lines_to_report()"/> -->
+
+                        <t t-set="delivery_address" t-value="[]" invisible="1"/>
+
+                        <t t-foreach="doc.unreconciled_aml_ids" t-as="line">
+                            <t t-set="delivery_address" t-value="delivery_address+[line.partner_delivery_address_id]"
+                               invisible="1"/>
+                        </t>
+
+                        <t t-foreach="set(delivery_address)" t-as="address">
+
+
+                            <tr>
+
+                                <th name="th_date" colspan="8" class="text-start">
+                                    <span t-field="address.name"/>
+                                </th>
+                            </tr>
+                            <t t-foreach="doc.unreconciled_aml_ids.sorted(key=lambda b: b.remaining_days_count , reverse=True)"
+                               t-as="line">
+                                <!-- <t t-set="current_amount" t-value="current_amount + line.amount_residual_currency"/>
+                                <t t-set="current_residual" t-value="current_residual + line.amount_currency"/> -->
+
+                                <t t-if="address.id==line.partner_delivery_address_id.id">
+
+                                    <tr style="font-size:12px">
+
+                                        <th name="th_date" class="text-start">
+                                            <span t-field="line.date"/>
+                                        </th>
+                                        <th name="th_inoice" class="text-end">
+                                            <span t-field="line.move_name"/>
+                                        </th>
+                                        <th name="th_due_date" class="text-end">
+                                            <span t-field="line.date_maturity"/>
+                                        </th>
+                                        <!-- <th name="th_inoice" class="text-end"><span t-field="line.partner_delivery_address_id"/></th> -->
+                                        <th name="th_lpo" class="text-end">
+                                            <span t-field="line.lpo"/>
+                                        </th>
+                                        <th name="th_origen" class="text-end">
+                                            <span t-field="line.analytic_name"/>
+                                        </th>
+                                        <th name="th_analytic" class="text-end">
+                                            <span t-field="line.remaining_days"/>
+                                        </th>
+                                        <th name="th_residual" class="text-end">
+                                            <span t-field="line.amount_residual_currency"/>
+                                        </th>
+                                        <th name="th_total" class="text-end">
+                                            <span t-field="line.amount_currency"/>
+                                        </th>
+                                    </tr>
+                                </t>
+
+
+                            </t>
+                        </t>
+
+
+                        <tr>
+                            <th class="text-center" colspan="7">Total Due</th>
+                            <th class="text-center">
+                                <span t-field="doc.total_due"/>
+                            </th>
+                        </tr>
+
+
+                        <tr>
+                            <th class="text-center" colspan="7">Total Overdue</th>
+                            <th class="text-center">
+                                <span t-field="doc.total_overdue"/>
+                            </th>
+                        </tr>
+
+
+                        <!-- <tr >
+                            <th  class="text-center" colspan ="9">Total</th>
+                            <t t-set="total" t-value="doc.total_due+doc.total_overdue" />
+                            <th  class="text-center"><t t-esc="total" /></th>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+                <!--
+                            <div class="clearfix" name="so_total_summary">
+                                <div id="total" class="row" name="total">
+                                    <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto">
+                                        <table class="table table-sm table-borderless">
+
+                                        <th name="th_residual" class="text-end"><span t-field="line.amount_residual_currency"/></th>
+                                        <th name="th_total" class="text-end"><span t-field="line.amount_currency"/></th>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div> -->
+            </div>
+        </t>
+    </template>
+
+
+    <template id="report_partner_details_act">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="atawah_amount_discount.report_partner_details" t-lang="doc.lang"/>
+            </t>
+        </t>
+    </template>
+
+
+    <template id="report_partner_invoice">
+        <t t-call="web.external_layout">
+            <t t-set="doc" t-value="doc.with_context(lang=doc.lang)"/>
+            <div class="page">
+                <div class="oe_structure"/>
+
+
+                <center>
+                    <strong>Partner Name :
+                        <span t-field="doc.name"/>
+                    </strong>
+                </center>
+
+
+                <table class="table table-bordered">
+                    <!-- In case we want to repeat the header, remove "display: table-row-group" -->
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_date" class="text-start">Date</th>
+                            <th name="th_inoice" class="text-end">Invoic</th>
+                            <th name="th_due_date" class="text-end">Due Date</th>
+                            <!-- <th name="th_date" class="text-start">delivery Address</th> -->
+                            <th name="th_lpo" class="text-end">LPO</th>
+                            <th name="th_analytic" class="text-end">Analytic Account</th>
+                            <th name="th_analytic" class="text-end">Age</th>
+                            <th name="th_residual" class="text-end">Resaidual Amount</th>
+                            <th name="th_total" class="text-end">Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <!-- <t t-set="total" t-value="0" /> -->
+                        <t t-set="current_amount" t-value="0"/>
+                        <t t-set="current_residual" t-value="0"/>
+                        <!-- <t t-set="lines_to_report" t-value="doc._get_order_lines_to_report()"/> -->
+
+                        <t t-set="delivery_address" t-value="[]" invisible="1"/>
+
+                        <t t-foreach="doc.unpaid_invoice_ids" t-as="line">
+                            <t t-set="delivery_address" t-value="delivery_address+[line.partner_delivery_address_id]"
+                               invisible="1"/>
+                        </t>
+
+                        <t t-foreach="set(delivery_address)" t-as="address">
+
+
+                            <tr>
+
+                                <th name="th_date" colspan="8" class="text-start">
+                                    <span t-field="address.name"/>
+                                </th>
+                            </tr>
+
+                            <t t-foreach="doc.unpaid_invoice_ids.sorted(key=lambda b: b.remaining_days_count , reverse=True)"
+                               t-as="inv">
+                                <t t-set="current_amount"
+                                   t-value="current_amount + inv.amount_total_in_currency_signed"/>
+                                <t t-set="current_residual" t-value="current_residual + inv.amount_residual_signed"/>
+
+                                <t t-if="address.id==inv.partner_delivery_address_id.id">
+
+
+                                    <tr style="font-size:12px">
+
+                                        <th name="th_date" class="text-start">
+                                            <span t-field="inv.date"/>
+                                        </th>
+                                        <th name="th_inoice" class="text-end">
+                                            <span t-field="inv.name"/>
+                                        </th>
+                                        <th name="th_due_date" class="text-end">
+                                            <span t-field="inv.invoice_date_due"/>
+                                        </th>
+                                        <!-- <th name="th_inoice" class="text-end"><span t-field="inv.partner_delivery_address_id"/></th> -->
+                                        <th name="th_lpo" class="text-end">
+                                            <span t-field="inv.lpo"/>
+                                        </th>
+                                        <th name="th_origen" class="text-end">
+                                            <span t-field="inv.analytic_name"/>
+                                        </th>
+                                        <th name="th_analytic" class="text-end">
+                                            <span t-field="inv.remaining_days"/>
+                                        </th>
+                                        <th name="th_residual" class="text-end">
+                                            <span t-field="inv.amount_residual_signed"/>
+                                        </th>
+                                        <th name="th_total" class="text-end">
+                                            <span t-field="inv.amount_total_in_currency_signed"/>
+                                        </th>
+                                    </tr>
+                                </t>
+
+
+                            </t>
+                        </t>
+
+
+                        <tr>
+                            <th class="text-center" colspan="7">Total Due</th>
+                            <th class="text-center">
+                                <span t-esc="current_residual"/>
+                            </th>
+                        </tr>
+
+
+                        <tr>
+                            <th class="text-center" colspan="7">Total Amount</th>
+                            <th class="text-center">
+                                <span t-esc="current_amount"/>
+                            </th>
+                        </tr>
+
+
+                        <!-- <tr >
+                            <th  class="text-center" colspan ="9">Total</th>
+                            <t t-set="total" t-value="doc.total_due+doc.total_overdue" />
+                            <th  class="text-center"><t t-esc="total" /></th>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+                <!--
+                            <div class="clearfix" name="so_total_summary">
+                                <div id="total" class="row" name="total">
+                                    <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ms-auto">
+                                        <table class="table table-sm table-borderless">
+
+                                        <th name="th_residual" class="text-end"><span t-field="line.amount_residual_currency"/></th>
+                                        <th name="th_total" class="text-end"><span t-field="line.amount_currency"/></th>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div> -->
+            </div>
+        </t>
+    </template>
+
+
+    <template id="report_partner_invoices_act">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="atawah_amount_discount.report_partner_invoice" t-lang="doc.lang"/>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

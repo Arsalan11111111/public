@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_quality_check_wizard" model="ir.ui.view">
+        <field name="name">quality_check_wizard</field>
+        <field name="model">quality.check.wizard</field>
+        <field name="inherit_id" ref="quality_control.view_quality_check_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='additional_note']" position="after">
+                <field name="current_check_id" position="move"/>
+            </xpath>
+
+            <xpath expr="//field[@name='current_check_id']" position="attributes">
+                <attribute name="invisible">0</attribute>
+                <attribute name="force_save">1</attribute>
+                <attribute name="readonly">1</attribute>
+            </xpath>
+
+            <xpath expr="//footer" position="before">
+                <group name="group_lot">
+                    <group name="left">
+                        <field name="rel_lot_id"/>
+                    </group>
+
+                    <group name="right"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//button[@name='do_fail']" position="after">
+                <field name="rel_lims_for_analysis" invisible="1"/>
+                <field name="rel_point_id_create_analysis" invisible="1"/>
+                <field name="rel_picking_id" invisible="1"/>
+                <field name="rel_picking_code" invisible="1"/>
+                <field name="rel_production_id" invisible="1"/>
+                <field name="rel_production_code" invisible="1"/>
+                <button name="create_analysis" string="Create Analysis" class="oe_highlight" type="object"
+                        attrs="{'invisible': ['|', '|', '|', ('rel_lims_for_analysis', '=', False), ('rel_point_id_create_analysis', '=', False), ('rel_production_id', '=', False), ('rel_production_code', '!=', 'mrp_operation')]}"
+                />
+                <button name="create_analysis_from_stock_move" string="Create Analysis from stock" class="oe_highlight" type="object"
+                        attrs="{'invisible': ['|', '|', '|', ('rel_lims_for_analysis', '=', False), ('rel_point_id_create_analysis', '=', False), ('rel_picking_id', '=', False), ('rel_picking_code', '=', 'mrp_operation')]}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

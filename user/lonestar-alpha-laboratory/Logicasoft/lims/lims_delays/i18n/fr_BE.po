@@ -1,0 +1,694 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_delays
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-08 07:51+0000\n"
+"PO-Revision-Date: 2022-07-08 07:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.analysis_report_board_template_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_delays.analysis_report_board_vertical_auxiliary_content
+#: model_terms:ir.ui.view,arch_db:lims_delays.analysis_report_template_auxiliary_content
+msgid ""
+"<span class=\"result_is_out_of_time\">\n"
+"                    Analysis out of time\n"
+"                </span>"
+msgstr ""
+"<span class=\"result_is_out_of_time\">\n"
+"                    Analyse hors délai\n"
+"                </span>"
+
+#. module: lims_delays
+#: model:ir.model.fields.selection,name:lims_delays.selection__lims_laboratory__date_end_for_compute_warning_time__now
+msgid "Actual Date"
+msgstr "Date Prévue"
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_analysis
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__analysis_id
+msgid "Analysis"
+msgstr "Échantillon"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_sop__rel_is_commercial_out_of_time
+msgid "Analysis is ' commercially out of time'."
+msgstr "Échantillon est en hors délais commercial"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.change_date_sample_analysis_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_delays
+#: model:ir.actions.act_window,name:lims_delays.change_date_sample_analysis_action
+#: model:ir.model,name:lims_delays.model_change_date_sample_analysis
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_form
+msgid "Change Date Sample"
+msgstr "Changement date d'échantillon"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__change_reason
+msgid "Change reason"
+msgstr "Raison du changement"
+
+#. module: lims_delays
+#: model:ir.actions.server,name:lims_delays.check_analysis_time_ir_actions_server
+#: model:ir.cron,cron_name:lims_delays.check_analysis_time
+#: model:ir.cron,name:lims_delays.check_analysis_time
+msgid "Check commercial out of time (analysis)"
+msgstr "Vérifier le hors délais commercial (échantillons)"
+
+#. module: lims_delays
+#: model:ir.actions.server,name:lims_delays.check_warning_analysis_result_ir_actions_server
+#: model:ir.cron,cron_name:lims_delays.check_warning_analysis_result
+#: model:ir.cron,name:lims_delays.check_warning_analysis_result
+msgid "Check technical out of time (results)"
+msgstr "Vérifier le hors délais technique (résultats)"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_request_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Commercial Overdue"
+msgstr "En retard (commercial)"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_request_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Commercial This week"
+msgstr "Cette semaine (commercial)"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_request_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Commercial Today"
+msgstr "Aujourd'hui (commercial)"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_request_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Commercial Warning"
+msgstr "Alerte (commercial)"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis__commercial_lead_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_request__commercial_lead_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__rel_commercial_lead_date
+msgid "Commercial lead date"
+msgstr "Date de réalisation commerciale"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_parameter_pack__commercial_lead_time
+msgid "Commercial lead time"
+msgstr "Temps de réalisation commerciale"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis__is_commercial_out_of_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_request__is_commercial_out_of_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__rel_is_commercial_out_of_time
+msgid "Commercial out of time"
+msgstr "Hors temps commercial"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis__commercial_warning_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_request__commercial_warning_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__rel_commercial_warning_date
+msgid "Commercial warning date"
+msgstr "Date d'alerte commerciale"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_parameter_pack__commercial_warning_time
+msgid "Commercial warning time"
+msgstr "Temps d'alerte commercial"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.change_date_sample_analysis_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_delays
+#: model:ir.model.fields.selection,name:lims_delays.selection__lims_laboratory__date_end_for_compute_warning_time__analysis_end
+msgid "Date End Analysis"
+msgstr "Date de fin d'analyse"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_laboratory__date_end_for_compute_warning_time
+msgid "Date End For Compute Warning Time"
+msgstr "Date de fin pour le calcul du temps d'avertissement"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_laboratory__date_for_compute_warning_time
+msgid "Date For Compute Warning Time"
+msgstr "Date pour le calcul du temps d'avertissement"
+
+#. module: lims_delays
+#: model:ir.model.fields.selection,name:lims_delays.selection__lims_laboratory__date_end_for_compute_warning_time__analysis_report
+msgid "Date Report Analysis"
+msgstr "Date du rapport de l'analyse"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__date_sample
+#: model:ir.model.fields.selection,name:lims_delays.selection__lims_laboratory__date_for_compute_warning_time__sample
+msgid "Date Sample"
+msgstr "Date Échantillon"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__date_sample_receipt
+#: model:ir.model.fields.selection,name:lims_delays.selection__lims_laboratory__date_for_compute_warning_time__sample_receipt
+msgid "Date Sample Receipt"
+msgstr "Date Réception Échantillon"
+
+#. module: lims_delays
+#: model:ir.model.fields.selection,name:lims_delays.selection__lims_laboratory__date_end_for_compute_warning_time__analysis_start
+msgid "Date Start Analysis"
+msgstr "Date Début Échantillon"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__date_wip
+msgid "Date Wip"
+msgstr "Date 'En cours'"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis__date_change
+msgid "Date change"
+msgstr "Changement de date"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_analysis__date_change
+msgid "Date change is marked if 'Change Date Sample' button has been used"
+msgstr ""
+"Le changement de date est marqué si le bouton 'Changement de date' a été "
+"utilisé "
+
+#. module: lims_delays
+#: code:addons/lims_delays/models/lims_analysis.py:0
+#, python-format
+msgid "Date sample receipt must be filled"
+msgstr "Date échantillon doit être remplie"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_sop__date_wip
+msgid "Date when the sop status has been set to WIP"
+msgstr "Date à laquelle le test est passé dans un statut de type 'en cours'"
+
+#. module: lims_delays
+#: code:addons/lims_delays/models/lims_analysis.py:0
+#, python-format
+msgid "Date(s) changed: {} by {}"
+msgstr "Date(s) modifiée(s): {} par {}"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_laboratory__default_commercial_lead_time
+msgid "Default commercial lead time"
+msgstr "Temps de réalisation commercial par defaut"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_laboratory__default_commercial_warning_time
+msgid "Default commercial warning time"
+msgstr "Temps d'alerte commercial par defaut"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_laboratory__default_technical_lead_time
+msgid "Default technical lead time"
+msgstr "Temps de réalisation technique par defaut"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_laboratory__default_technical_warning_time
+msgid "Default technical warning time"
+msgstr "Temps d'alerte technique par defaut"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_parameter_pack__commercial_lead_time
+msgid ""
+"Define a commercial lead time (in hour(s)) for this pack; for an analysis "
+"that includes several pack, the highest lead time value will be applied to "
+"the all set of results. If this field is empty then no time will be "
+"calculated."
+msgstr ""
+"Définir un délai commercial (en heure(s)) pour ce pack ; pour un échantillon"
+"  qui comprend plusieurs packs, la valeur de délai la plus élevée sera "
+"appliquée à l'ensemble des résultats. Si ce champ est vide, aucune délai ne "
+"sera calculé."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_parameter_pack__commercial_warning_time
+msgid ""
+"Define a commercial warning time (in hour(s)) for this pack; for an analysis"
+" that includes several pack, it's the warning time from the highest "
+"commercial lead time value that will be applied to the all set of results. "
+"If this field is empty then no commercial warning time will be calculated."
+msgstr ""
+"Définir un délai d'alerte commercial (en heure(s)) pour ce pack ; pour un "
+"échantillon qui comprend plusieurs pack, c'est l'heure d'alerte de la plus "
+"haute  valeur de délai commercial qui sera appliquée à l'ensemble des "
+"résultats. Si ce champ est vide, aucun délai d'alerte commercial ne sera "
+"calculé."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_method_parameter_characteristic__technical_lead_time
+msgid ""
+"Define a technical lead time (in hour(s)) for this parameter; for an test "
+"that includes several results, the lowest technical lead time value will be "
+"applied to the all set of results. If this field is empty then no date will "
+"be calculated."
+msgstr ""
+"Définir un délai technique (en heure(s)) pour ce paramètre ; pour un test "
+"qui comprend plusieurs résultats, la valeur du délai technique le plus bas "
+"sera appliqué à l'ensemble des résultats. Si ce champ est vide, aucune date "
+"ne sera  calculé."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_method_parameter_characteristic__technical_warning_time
+msgid ""
+"Define a technical warning time (in hour(s)) for this parameter; for an test"
+" that includes several results, it's the warning time from the lowest "
+"technical lead time value that will be applied to the all set of results. If"
+" this field is empty then no technical warning date will be calculated."
+msgstr ""
+"Définir un délai d'alerte technique (en heure(s)) pour ce paramètre ; pour "
+"un test qui comprend plusieurs résultats, c'est le délai d'alerte avec la "
+"valeur du délai technique la plus basse qui sera appliquée à l'ensemble des "
+"résultats. Si ce champ est vide alors aucune date d'alerte technique ne sera"
+" calculée."
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_method_parameter_characteristic_form
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_parameter_pack_form
+msgid "Delay Configuration"
+msgstr "Configuration du délai"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_form
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_request_form
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_laboratory_form
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_form
+msgid "Delays"
+msgstr "Délais"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_compute_result__rel_due_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_numeric_result__rel_due_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_result__rel_due_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_sel_result__rel_due_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_text_result__rel_due_date
+msgid "Due Date"
+msgstr "Date d'échéance"
+
+#. module: lims_delays
+#: model:ir.actions.act_window,name:lims_delays.lims_sop_due_action
+#: model:ir.ui.menu,name:lims_delays.lims_sop_due_menu
+msgid "Due date tests"
+msgstr "Date test d'échéance"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_method__method_due_time
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_due_action_gantt
+msgid "Due time method"
+msgstr "Délai de réalisation  de méthode"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__id
+msgid "ID"
+msgstr "Id"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_analysis_request__commercial_warning_date
+msgid ""
+"If one of these analysis are not completed before the warning date, it will "
+"be marked as 'warning time'. this date is calculated with the warning time "
+"from the analysis which has the longest commercial lead time."
+msgstr ""
+" Si l'une de ces analyses n'est pas terminée avant la date d'avertissement, "
+"elle sera  marqué comme 'temps d'alerte'. cette date est calculée avec le "
+"temps d'alerte à partir de l'analyse qui a le délai commercial le plus long."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_analysis_request__commercial_lead_date
+msgid ""
+"If one of these analysis are not completed on time, it will be marked as "
+"'out of time'. this date is calculated from the analysis which has the "
+"longest commercial lead time."
+msgstr ""
+"Si l'une de ces analyses n'est pas terminée à temps, elle sera marquée comme"
+" 'hors delai'. cette date est calculée à partir de l'analyse qui a le Délai "
+"commercial le plus long."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_analysis__commercial_warning_date
+msgid ""
+"If this analysis is not completed before the warning date, it will be marked"
+" as 'warning time'. this date is calculated with the warning time from the "
+"pack of this analysis which has the longest commercial lead time."
+msgstr ""
+"Si cette analyse n'est pas terminée avant la date d'alerte, elle sera "
+"marquée comme 'temps d'alerte'. cette date est calculée avec l'heure "
+"d'avertissement du pack de cette analyse qui a le délai commercial le plus "
+"long."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_analysis__commercial_lead_date
+msgid ""
+"If this analysis is not completed on time, it will be marked as 'out of "
+"time'. this date is calculated from the pack of this analysis which has the "
+"longest commercial lead time."
+msgstr ""
+" Si cette analyse n'est pas terminée à temps, elle sera marquée comme hors "
+"delai. Cette date est calculée à partir du pack de cette analyse qui a le "
+"délai commercial le plus long."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_sop__rel_commercial_warning_date
+msgid ""
+"If this test is not completed before the warning date, it will be marked as "
+"'warning time'. this date is calculated with the warning time from the pack "
+"of this analysis which has the longest commercial lead time."
+msgstr ""
+"Si ce test n'est pas terminé avant la date d'avertissement, il sera marqué "
+"comme 'temps d'alerte'. cette date est calculée avec l'heure d'avertissement"
+" du pack de cette analyse qui a le délai commercial le plus long."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_sop__technical_warning_date
+msgid ""
+"If this test is not completed before the warning date, it will be marked as "
+"'warning time'. this date is calculated with the warning time from the "
+"parameter from this test which has the shortest technical lead time."
+msgstr ""
+"Si ce test n'est pas terminé avant la date d'avertissement, il sera marqué "
+"comme 'temps d'alerte'. cette date est calculée avec le temps "
+"d'avertissement du paramètre de ce test qui a le délai technique le plus "
+"court."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_sop__rel_commercial_lead_date
+msgid ""
+"If this test is not completed on time, it will be marked as 'out of time'. "
+"this date is calculated from the pack of this analysis which has the longest"
+" commercial lead time."
+msgstr ""
+"Si ce test n'est pas terminé à temps, il sera marqué comme 'hors du "
+"temps'.cette date est calculée à partir du pack de cette analyse qui a le "
+"plus longdélai commercial."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_sop__technical_lead_date
+msgid ""
+"If this test is not completed on time, it will be marked as 'out of time'. "
+"this date is calculated from the parameter from this test which has the "
+"shortest technical lead time."
+msgstr ""
+"Si ce test n'est pas terminé à temps, il sera marqué comme 'hors délais'. "
+"Cette date est calculée à partir du paramètre de ce test qui a le délai "
+"technique le plus court."
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_laboratory
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_change_date_sample_analysis__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_analysis__is_commercial_out_of_time
+msgid "Mark this analysis as ' commercially out of time'."
+msgstr "Marque cette analyse comme hors temps commercial."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_analysis_request__is_commercial_out_of_time
+msgid "Mark this request as ' commercially out of time'."
+msgstr "Marque cette demande comme hors temps commercial."
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_method
+msgid "Method"
+msgstr "Méthode"
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_method_parameter_characteristic
+msgid "Method Parameter Characteristic"
+msgstr "paramètre de caractéristique de méthode"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_compute_result_search
+msgid "Out of time"
+msgstr "Hors Délais"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_laboratory__delay_result_stage_ids
+msgid "Out of time calculation will be active for results within those stages"
+msgstr ""
+"Les calculs des délais seront activés pour les résultats dans ces étapes"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_compute_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_sel_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_text_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Overdue"
+msgstr "En retard"
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_parameter_pack
+msgid "Parameter Pack"
+msgstr "Groupe de paramètres"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_report__option_print_delay
+msgid "Print Delay"
+msgstr "Imprimer Délai"
+
+#. module: lims_delays
+#: model:ir.actions.server,name:lims_delays.results_delay_recompute
+msgid "Recompute delay for results"
+msgstr "Re-calculer délai pour résultats"
+
+#. module: lims_delays
+#: model:ir.actions.server,name:lims_delays.results_recompute_out
+msgid "Recompute out"
+msgstr "Recalculer hors délais"
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_analysis_report
+msgid "Report"
+msgstr "Rapport"
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_analysis_request
+msgid "Request"
+msgstr "Demande"
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_analysis_result
+msgid "Result"
+msgstr "Résultat"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_laboratory__delay_result_stage_ids
+msgid "Result stages used for delay"
+msgstr "Étapes résultats pour le calcul de délai"
+
+#. module: lims_delays
+#: code:addons/lims_delays/models/lims_analysis.py:0
+#, python-format
+msgid "Sample date must be filled"
+msgstr "La date d'échantillon doit être remplie"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_compute_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_sel_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_text_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Technical Overdue"
+msgstr "En retard (technique)"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_compute_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_sel_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_text_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Technical This week"
+msgstr "Cette semaine (technique)"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_compute_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_sel_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_text_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Technical Today"
+msgstr "Aujourd'hui (technique)"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_compute_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_sel_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_text_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_search
+msgid "Technical Warning"
+msgstr "Alerte technique"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_compute_result__technical_lead_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_numeric_result__technical_lead_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_result__technical_lead_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_sel_result__technical_lead_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_text_result__technical_lead_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__technical_lead_date
+msgid "Technical lead date"
+msgstr "Date de réalisation technique"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_compute_result__technical_lead_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_numeric_result__technical_lead_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_result__technical_lead_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_sel_result__technical_lead_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_text_result__technical_lead_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_method_parameter_characteristic__technical_lead_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__technical_lead_time
+msgid "Technical lead time"
+msgstr "Temps de réalisation technique"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_sop__technical_warning_time
+msgid ""
+"Technical lead time with the shortest duration found in the set of "
+"parameters"
+msgstr ""
+"Délai technique avec la durée la plus courte trouvée dans l'ensemble des "
+"paramètres"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_compute_result__is_technical_out_of_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_numeric_result__is_technical_out_of_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_result__is_technical_out_of_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_sel_result__is_technical_out_of_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_text_result__is_technical_out_of_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__is_technical_out_of_time
+msgid "Technical out of time"
+msgstr "Hors temps technique"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_compute_result__technical_warning_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_numeric_result__technical_warning_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_result__technical_warning_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_sel_result__technical_warning_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_text_result__technical_warning_date
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__technical_warning_date
+msgid "Technical warning date"
+msgstr "Date d'alerte technique"
+
+#. module: lims_delays
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_compute_result__technical_warning_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_numeric_result__technical_warning_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_result__technical_warning_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_sel_result__technical_warning_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_analysis_text_result__technical_warning_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_method_parameter_characteristic__technical_warning_time
+#: model:ir.model.fields,field_description:lims_delays.field_lims_sop__technical_warning_time
+msgid "Technical warning time"
+msgstr "Temps d'alerte technique"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_sop__technical_lead_time
+msgid ""
+"Technical warning time from technical lead time with the shortest duration "
+"found in the set of parameters"
+msgstr ""
+"Délai d'avertissement technique à partir du délai technique avec la durée la"
+" plus courte trouvée dans le jeu de paramètres"
+
+#. module: lims_delays
+#: model:ir.model,name:lims_delays.model_lims_sop
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_sop_due_calendar
+msgid "Test"
+msgstr ""
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_method__method_due_time
+msgid ""
+"This due time delay (in hours) set the due date, when a test change status "
+"from ToDo to WIP"
+msgstr ""
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_compute_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_sel_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_text_result_search
+msgid "This week"
+msgstr "Cette Semaine"
+
+#. module: lims_delays
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_compute_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_sel_result_search
+#: model_terms:ir.ui.view,arch_db:lims_delays.lims_analysis_text_result_search
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_laboratory__default_technical_lead_time
+#: model:ir.model.fields,help:lims_delays.field_lims_laboratory__default_technical_warning_time
+msgid ""
+"if empty no default value will be used. Allows to have a default value when "
+"creating a parameter characteristic, or changing the laboratory in a "
+"parameter characteristic."
+msgstr ""
+"si vide aucune valeur par défaut ne sera utilisée. Permet d'avoir une valeur"
+" par défaut lors de la création d'une caractéristique de paramètre, ou de "
+"changer le laboratoire dans une caractéristique de paramètre."
+
+#. module: lims_delays
+#: model:ir.model.fields,help:lims_delays.field_lims_laboratory__default_commercial_lead_time
+#: model:ir.model.fields,help:lims_delays.field_lims_laboratory__default_commercial_warning_time
+msgid ""
+"if empty no default value will be used. Allows to have a default value when "
+"creating a parameter pack, or changing the laboratory in a parameter pack."
+msgstr ""
+"si vide aucune valeur par défaut ne sera utilisée. Permet d'avoir une valeur"
+" par défaut lors de la création d'un pack de paramètres, ou du changement de"
+" laboratoire dans un pack de paramètres."

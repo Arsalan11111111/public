@@ -1,0 +1,130 @@
+<section class="oe_container">
+    <div class="oe_row">
+        <h1>LIMS Parameter Attribute</h1>
+        <p>Lims is a management system of laboratory data.</p>
+        <p>This module add :</p>
+        <ul>
+            <li>
+                <p class="first">1 Models:</p>
+                <blockquote data-o-mail-quote="1">
+                    <ul>
+                        <li>
+                            <p class="first">1.1 Configuration model</p>
+                            <blockquote data-o-mail-quote="1">
+                                <ul>
+                                    <li>
+                                        <p class="first">Lims parameter attribute</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <ul class="simple">
+                                                <li>Link a attribute type and attributes values with a result selection
+                                                    value.
+                                                </li>
+                                            </ul>
+                                        </blockquote>
+                                    </li>
+                                    <li>
+                                        <p class="first">Lims parameter attribute Type</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <ul class="simple">
+                                                <li>Add a selection on result selection value.</li>
+                                            </ul>
+                                        </blockquote>
+                                    </li>
+                                    <li>
+                                        <p class="first">Lims parameter attribute type value</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <ul class="simple">
+                                                <li>Add attribute type value, can be added to a result select value.
+                                                </li>
+                                                <li>One attribute type value by attribute Type can been added.</li>
+                                                <li>The result selection value must have an Attribute type configured.
+                                                </li>
+                                            </ul>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </blockquote>
+                        </li>
+                        <li>
+                            <p class="first">1.2 configuration model alteration (Lims base)</p>
+                            <blockquote data-o-mail-quote="1">
+                                <ul>
+                                    <li>
+                                        <p class="first">Lims parameter</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <ul>
+                                                <li>
+                                                    add is_attribute boolean, mark the parameter "With attributes"
+                                                    (active the functionality)
+                                                </li>
+                                            </ul>
+                                        </blockquote>
+                                    </li>
+                                    <li>
+                                        <p class="first">Lims result value</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <ul>
+                                                <li>
+                                                    add attribute_ids, link the value with attributes
+                                                </li>
+                                                <li>
+                                                    add is_attribute_print boolean, print on report option for this
+                                                    value
+                                                </li>
+                                            </ul>
+                                        </blockquote>
+                                    </li>
+                                    <li>
+                                        <p class="first">Lims analysis sel result</p>
+                                        <blockquote data-o-mail-quote="1">
+                                            <ul>
+                                                <li>
+                                                    add attribute_values_ids, link the attributes with the result in sop
+                                                    (Can be acceded with the wizard)
+                                                </li>
+                                                <li>
+                                                    add rel_is_attribute boolean, linked with parameter
+                                                    if True, the wizard is available
+                                                </li>
+                                            </ul>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </blockquote>
+                        </li>
+                    </ul>
+                </blockquote>
+            </li>
+            <li>
+                <p>2 New menu:</p>
+                <blockquote data-o-mail-quote="1">
+                    <ul>
+                        <li>
+                            <p class="first">Master Data</p>
+                            <blockquote data-o-mail-quote="1">
+                                <ul class="simple">
+                                    <li>Parameter Attribute</li>
+                                    <li>Parameter Attribute Type</li>
+                                    <li>Parameter Attribute Type Value</li>
+                                </ul>
+                            </blockquote>
+                        </li>
+                    </ul>
+                </blockquote>
+            </li>
+            <li>
+                <p>3 New features:</p>
+                <blockquote data-o-mail-quote="1">
+                    <ul>
+                        <li>
+                            <p class="first">Main Feature</p>
+                            <blockquote data-o-mail-quote="1">
+                                <p>You can now add attribute to the value from a result SE (only)</p>
+                            </blockquote>
+                        </li>
+                    </ul>
+                </blockquote>
+            </li>
+        </ul>
+    </div>
+</section>

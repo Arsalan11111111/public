@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form View -->
+    <record model="ir.ui.view" id="lims_analysis_form">
+        <field name="name">Analysis</field>
+        <field name="model">lims.analysis</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='result_num_ids']//field[@name='date_start']" position="after">
+                <field name="technical_lead_date" readonly="1" optional="show"
+                       decoration-warning="rel_type in ('plan', 'todo','wip') and technical_warning_date &lt; now and technical_lead_date &gt; now"
+                       decoration-danger="is_technical_out_of_time"/>
+                <field name="technical_warning_date" readonly="1" invisible="1"/>
+                <field name="is_technical_out_of_time" readonly="1" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='result_sel_ids']//field[@name='date_start']" position="after">
+                <field name="technical_lead_date" readonly="1" optional="show"
+                       decoration-warning="rel_type in ('plan', 'todo','wip') and technical_warning_date &lt; now and technical_lead_date &gt; now"
+                       decoration-danger="is_technical_out_of_time"/>
+                <field name="technical_warning_date" readonly="1" invisible="1"/>
+                <field name="is_technical_out_of_time" readonly="1" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='result_compute_ids']//field[@name='date_start']" position="after">
+                <field name="technical_lead_date" readonly="1" optional="show"
+                       decoration-warning="rel_type in ('plan', 'todo','wip') and technical_warning_date &lt; now and technical_lead_date &gt; now"
+                       decoration-danger="is_technical_out_of_time"/>
+                <field name="technical_warning_date" readonly="1" invisible="1"/>
+                <field name="is_technical_out_of_time" readonly="1" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='result_text_ids']//field[@name='date_start']" position="after">
+                <field name="technical_lead_date" readonly="1" optional="show"
+                       decoration-warning="rel_type in ('plan', 'todo','wip') and technical_warning_date &lt; now and technical_lead_date &gt; now"
+                       decoration-danger="is_technical_out_of_time"/>
+                <field name="technical_warning_date" readonly="1" invisible="1"/>
+                <field name="is_technical_out_of_time" readonly="1" invisible="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

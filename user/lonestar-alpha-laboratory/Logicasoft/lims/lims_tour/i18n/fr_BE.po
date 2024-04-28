@@ -1,0 +1,1925 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_tour
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 08:22+0000\n"
+"PO-Revision-Date: 2023-08-11 08:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_introduction
+msgid "(Tour model)"
+msgstr "(Modèle de tournée)"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_analysis_page_content
+msgid ""
+"<b>\n"
+"                            <em>Other analyses in this tour:</em>\n"
+"                        </b>"
+msgstr ""
+"<b>\n"
+"                            <em>Autres analyses dans cette tournée :</em>\n"
+"                        </b>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page
+msgid "<b>Samples :</b>"
+msgstr "<b>Échantillons :</b>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid ""
+"<i class=\"fa fa-flask\" aria-label=\"Number of analysis\" title=\"Number of"
+" analysis\" role=\"img\"/>"
+msgstr ""
+"<i class=\"fa fa-flask\" aria-label=\"Nombre d'analyses\" title=\"Nombre d' "
+"analyses\" role=\"img\"/>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page
+msgid "<i class=\"fa fa-fw fa-comments\"/><b>Send message</b>"
+msgstr "<i class=\"fa fa-fw fa-comments\"/><b>Envoyer un message</b>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_priority_element
+msgid ""
+"<i class=\"fa fa-fw fa-star\" aria-label=\"Priority\" title=\"Priority\" "
+"role=\"img\" style=\"color:orange; box-sizing: content-box; margin-"
+"left:-0.2em;margin-right:-0.2em;\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-star\" aria-label=\"Priorité\" title=\"Priorité\" "
+"role=\"img\" style=\"color:orange; box-sizing: content-box; margin-"
+"left:-0.2em;margin-right:-0.2em;\"/>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_state_element
+msgid ""
+"<span class=\"badge bg-danger\">\n"
+"                <i class=\"fa fa-fw fa-times\" aria-label=\"Canceled\" title=\"Canceled\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Canceled</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"badge bg-danger\">\n"
+"                <i class=\"fa fa-fw fa-times\" aria-label=\"Annulé\" title=\"Annulé\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Annulé</span>\n"
+"            </span>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_state_element
+msgid ""
+"<span class=\"badge bg-info\">\n"
+"                <i class=\"fa fa-fw fa-clock-o\" aria-label=\"ToDo\" title=\"ToDo\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">ToDo</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"badge bg-info\">\n"
+"                <i class=\"fa fa-fw fa-clock-o\" aria-label=\"A Faire\" title=\"A Faire\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">A Faire</span>\n"
+"            </span>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_state_element
+msgid ""
+"<span class=\"badge bg-muted\">\n"
+"                <i class=\"fa fa-fw fa-calendar-o\" aria-label=\"Plan\" title=\"Plan\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Plan</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"badge bg-muted\">\n"
+"                <i class=\"fa fa-fw fa-calendar-o\" aria-label=\"Prévu\" title=\"Prévu\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Prévu</span>\n"
+"            </span>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_state_element
+msgid ""
+"<span class=\"badge bg-success\">\n"
+"                <i class=\"fa fa-fw fa-check\" aria-label=\"Done\" title=\"Done\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Done</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"badge bg-success\">\n"
+"                <i class=\"fa fa-fw fa-check\" aria-label=\"Terminé\" title=\"Terminé\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">Terminé</span>\n"
+"            </span>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_state_element
+msgid ""
+"<span class=\"badge bg-warning\">\n"
+"                <i class=\"fa fa-fw fa-clock-o\" aria-label=\"WIP\" title=\"WIP\" role=\"img\"/>\n"
+"                <span class=\"d-none d-md-inline\">WIP</span>\n"
+"            </span>"
+msgstr ""
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page
+msgid ""
+"<strong class=\"text-muted\">\n"
+"                                        Sampler\n"
+"                                </strong>"
+msgstr ""
+"<strong class=\"text-muted\">\n"
+"                                        Échantillonneur\n"
+"                                </strong>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page
+msgid ""
+"<strong class=\"text-muted\">\n"
+"                                        Sampler team\n"
+"                                </strong>"
+msgstr ""
+"<strong class=\"text-muted\">\n"
+"                                        Équipe d'échantillonneurs\n"
+"                                </strong>"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_analysis_page
+msgid ""
+"<strong class=\"text-muted\">\n"
+"                        Tour #\n"
+"                    </strong>"
+msgstr ""
+"<strong class=\"text-muted\">\n"
+"                        Tournée #\n"
+"                    </strong>"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__description
+msgid "A description of the analysis."
+msgstr "Une description de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__result_compute_ids
+msgid "A list of the compute results of the analysis."
+msgstr "Une liste des résultats calculés de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__result_num_ids
+msgid "A list of the numerical results of the analysis."
+msgstr "Une liste des résultats numériques de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__result_sel_ids
+msgid "A list of the selection results of the analysis."
+msgstr "Une liste des résultats sélections de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__result_text_ids
+msgid "A list of the text results of the analysis."
+msgstr "Une liste des résultats textes de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__access_warning
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__access_warning
+msgid "Access warning"
+msgstr "Avertissement d'accès"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_needaction
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_needaction
+msgid "Action Needed"
+msgstr "Nécessite une action"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__active
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__active
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_exception_decoration
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activité d'exception de décoration"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_state
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_state
+msgid "Activity State"
+msgstr "Status de l'Activité"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_type_icon
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de Type d'Activité"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.create_tour_wizard_form
+msgid "Add"
+msgstr "Ajouter"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_add_parameters_wizard
+msgid "Add Parameter"
+msgstr "Ajouter Paramètre"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour_line.py:0
+#, python-format
+msgid "Add parameters"
+msgstr "Ajouter paramètres"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__note
+msgid ""
+"Additional comment addressed to the customer (will be printed on analysis "
+"report)"
+msgstr ""
+"Commentaire additionnel adressé au client (sera imprimé sur le rapport "
+"d'analyse)"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__comment
+msgid ""
+"Additional comment addressed to the internal team (won't be printed on "
+"analysis report)"
+msgstr ""
+"Commentaire additionnel adressé à l'équipe interne (ne sera pas imprimé sur "
+"le rapport d'analyse)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__address
+msgid "Address"
+msgstr "Adresse"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#, python-format
+msgid "All"
+msgstr "Tout"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__all_sop_received
+msgid "All test received"
+msgstr "Tous les tests reçus"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_analysis
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__analysis_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__nb_analysis
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__analysis_id
+#: model_terms:ir.ui.view,arch_db:lims_tour.create_tour_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_search
+msgid "Analysis"
+msgstr "Échantillons"
+
+#. module: lims_tour
+#: model:ir.actions.act_window,name:lims_tour.lims_tour_line_action
+msgid "Analysis (Sampler)"
+msgstr "Analyse (Échantillonneur)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_done
+msgid "Analysis Done Date"
+msgstr "Date Fin Analyse"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_create_analysis_wizard_sampling
+msgid "Analysis Sampling Wizard"
+msgstr "Wizard de Prélèvement d'échantillon"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_start
+msgid "Analysis Start Date"
+msgstr "Date Début Analys"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__analysis_duration
+msgid "Analysis duration in days (start > end)"
+msgstr "Durée d'analyse en jours (début > fin)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__analysis_duration_time
+msgid "Analysis duration in hours (start > end)"
+msgstr "Durée d'analyse en heures (début > fin)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__analysis_time
+msgid "Analysis time (reception > end)"
+msgstr "Durée analyse (réception > fin)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__assigned_to
+msgid "Assigned to"
+msgstr "Assigné à"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_attachment_count
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__nb_ca_result
+msgid "CA"
+msgstr ""
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/wizards/create_tour_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:lims_tour.create_tour_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_tour.duplicate_tour_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+#: model_terms:ir.ui.view,arch_db:lims_tour.tour_cancel_wizard_form
+#, python-format
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__cancel_reason
+msgid "Cancel Reason"
+msgstr "Raison de l'annulation"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour.py:0
+#: model:ir.actions.act_window,name:lims_tour.tour_cancel_wizard_action
+#, python-format
+msgid "Cancel Tour"
+msgstr "Annuler tournée"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_tour_cancel_wizard__comment
+msgid "Cancel reason : "
+msgstr "Raison de l'annulation : "
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour.py:0
+#, python-format
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__category_id
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__change
+msgid "Change"
+msgstr "Changement"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__active
+msgid "Check this to archive the analysis."
+msgstr "Cochez cette case pour archiver l'analyse."
+
+#. module: lims_tour
+#: model_terms:ir.actions.act_window,help:lims_tour.lims_tour_action
+msgid "Click to create a new Tour."
+msgstr "Cliquer pour créer une tournée"
+
+#. module: lims_tour
+#: model_terms:ir.actions.act_window,help:lims_tour.lims_sampler_team_action
+msgid "Click to create a new sampler team."
+msgstr "Cliquer pour créer une équipe d'échantillonneurs."
+
+#. module: lims_tour
+#: model_terms:ir.actions.act_window,help:lims_tour.lims_tour_name_action
+msgid "Click to create a new tour name."
+msgstr "Cliquer pour créer un nom de tournée."
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__color_on_line
+msgid "Color On Line"
+msgstr "Couleur sur la ligne"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_comment
+msgid "Comment(s)"
+msgstr "Commentaire(s)"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "Comments"
+msgstr "Commentaires"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis__is_on_site_complete
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__is_on_site_complete
+msgid "Complet on site"
+msgstr "Complet sur site"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_map
+msgid "Complete"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__result_compute_ids
+msgid "Computed Results"
+msgstr "Résultats Calculés"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "Computed results"
+msgstr "Résultats calculés"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page
+msgid "Contact"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__partner_contact_ids
+msgid "Contacts of the partner, sometimes used for the mail recipients."
+msgstr ""
+"Contacts du partenaire, parfois utilisés pour les destinataires de courrier."
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.tour_cancel_wizard_form
+msgid "Continue"
+msgstr "Continuer"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_create_tour_wizard
+msgid "Create Tour Wizard"
+msgstr "Créer une tournée"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.create_analysis_sampling_wizard_form
+msgid "Create and add in tour"
+msgstr "Créer et ajouter à une tournée"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.create_tour_wizard_form
+msgid "Create/Add"
+msgstr "Créer/Ajouter"
+
+#. module: lims_tour
+#: model:ir.actions.act_window,name:lims_tour.create_tour_wizard_action
+msgid "Create/Add in tour"
+msgstr "Créer/Ajouter dans une tournée"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__create_uid
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__create_uid
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__create_uid
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__create_uid
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__create_uid
+#: model:ir.model.fields,field_description:lims_tour.field_tour_cancel_wizard__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__create_date
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__create_date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__create_date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__create_date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__create_date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__create_date
+#: model:ir.model.fields,field_description:lims_tour.field_tour_cancel_wizard__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__partner_id
+msgid "Customer"
+msgstr "Client"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__access_url
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__access_url
+msgid "Customer Portal URL"
+msgstr "URl du portail client"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__partner_contact_ids
+msgid "Customer contacts"
+msgstr "Contacts client"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__date
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__date
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_plan
+msgid "Date Plan"
+msgstr "Date Prévue"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_report
+msgid "Date Report"
+msgstr "Date Rapport"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_sample
+msgid "Date Sample"
+msgstr "Date échantillon"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_sample_receipt
+msgid "Date Sample Receipt"
+msgstr "Date Réception Échantillon"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_sample_begin
+msgid "Date Sample begin"
+msgstr "Date début de l'échantillon"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis__date_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_tour
+msgid "Date Tour"
+msgstr "Date tournée"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__date_validation2
+msgid "Date Validation2"
+msgstr "Date de 2e validation"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date_sample_begin
+msgid "Date of the begin of the sample."
+msgstr "Date du début de l'échantillon."
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_introduction
+msgid "Date:"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_duplicate_tour_wizard__date
+#: model_terms:ir.ui.view,arch_db:lims_tour.duplicate_tour_wizard_form
+msgid "Defines the date of the new tour, and the planned dates of its samples"
+msgstr ""
+"Défini la date de la nouvelle tournée, et la date prévue de ses échantillons"
+
+#. module: lims_tour
+#: model:lims.tour.name,name:lims_tour.lims_demo_tour_name_1
+msgid "Demo tour name"
+msgstr "Nom du circuit de démonstration"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__description
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__description
+msgid "Description"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__dilution_factor
+msgid "Dilution Factor"
+msgstr "Facteur de dilution"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__display_calendar
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__display_calendar
+msgid "Display Calendar"
+msgstr "Afficher le calendrier"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__display_name
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__display_name
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__display_name
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__display_name
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__display_name
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__display_name
+#: model:ir.model.fields,field_description:lims_tour.field_tour_cancel_wizard__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#: code:addons/lims_tour/models/lims_tour.py:0
+#: code:addons/lims_tour/wizards/create_tour_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+#, python-format
+msgid "Done"
+msgstr "Fait"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__due_date
+msgid "Due Date"
+msgstr "Date d'échéance"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.duplicate_tour_wizard_form
+msgid "Duplicate"
+msgstr "Dupliquer"
+
+#. module: lims_tour
+#: model:ir.actions.act_window,name:lims_tour.duplicate_tour_wizard_action
+msgid "Duplicate Tour"
+msgstr "Dupliquer Tournée"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_duplicate_tour_wizard
+msgid "Duplicate Tour Wizard"
+msgstr "Assistant duplication de tournée"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__note
+msgid "External comment"
+msgstr "Commentaire externe"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_follower_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_partner_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__activity_type_icon
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône Font Awesome e.g. fa-tasks"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_search
+msgid "From Today"
+msgstr "A partir d' aujourd'hui"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__has_message
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: lims_tour
+#: model:ir.model.fields.selection,name:lims_tour.selection__lims_tour__priority__3
+msgid "High (**)"
+msgstr "Élevé (**)"
+
+#. module: lims_tour
+#: model:ir.model.fields.selection,name:lims_tour.selection__lims_tour__priority__4
+msgid "Highest (***)"
+msgstr "Très Élevé (***)"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page
+msgid "History"
+msgstr "Historique"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__id
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__id
+#: model:ir.model.fields,field_description:lims_tour.field_tour_cancel_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_exception_icon
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__activity_exception_icon
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité exceptionnelle"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__message_needaction
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, de nouveaux messages demandent votre attention."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__message_has_error
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__message_has_sms_error
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__message_has_error
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si actif, certains messages ont une erreur de livraison."
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__is_incomplete
+msgid "Incomplete"
+msgstr "Incomplet"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__comment
+msgid "Internal note"
+msgstr "Note interne"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__is_duplicate
+msgid "Is Duplicate"
+msgstr "Est dupliqué"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__is_expired
+msgid "Is Expired"
+msgstr "Expiré"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_is_follower
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_is_follower
+msgid "Is Follower"
+msgstr "Est un abonné"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__is_model
+msgid "Is Model"
+msgstr "Est un modèle"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__is_sampled
+msgid "Is Sampled"
+msgstr "Est échantillonné"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_laboratory
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__laboratory_id
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__laboratory_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__laboratory_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__laboratory_id
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_introduction
+msgid "Laboratory:"
+msgstr "Laboratoire :"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard____last_update
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard____last_update
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team____last_update
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour____last_update
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line____last_update
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name____last_update
+#: model:ir.model.fields,field_description:lims_tour.field_tour_cancel_wizard____last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__write_uid
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__write_uid
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__write_uid
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__write_uid
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__write_uid
+#: model:ir.model.fields,field_description:lims_tour.field_tour_cancel_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Dernière Mise à jour par"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__write_date
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__write_date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__write_date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__write_date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__write_date
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__write_date
+#: model:ir.model.fields,field_description:lims_tour.field_tour_cancel_wizard__write_date
+msgid "Last Updated on"
+msgstr "Dernière Mise à jour le"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_sampler_team
+msgid "Lims Sample Team"
+msgstr "Équipe échantillonneur"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_tour
+msgid "Lims Tour"
+msgstr "Tournée LIMS"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_tour_name
+msgid "Lims Tour Description"
+msgstr "Lims Description de la tournée"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_tour_line
+msgid "Lims Tour Line"
+msgstr "Ligne de tournée"
+
+#. module: lims_tour
+#: model:ir.actions.act_window,name:lims_tour.lims_tour_name_action
+msgid "Lims Tour Name"
+msgstr "Nom Tournée"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__tour_line_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__tour_line_ids
+msgid "Lines"
+msgstr "Lignes"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__location_id
+msgid "Location"
+msgstr "Endroit"
+
+#. module: lims_tour
+#: model:ir.model.fields.selection,name:lims_tour.selection__lims_tour__priority__1
+msgid "Low"
+msgstr "Faible"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_main_attachment_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe Principale"
+
+#. module: lims_tour
+#: model:res.groups,name:lims_tour.lims_tour_manager
+msgid "Manager"
+msgstr "Gestionnaire"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+msgid "Map"
+msgstr "Carte"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour.py:0
+#, python-format
+msgid "Map [{}]"
+msgstr "Carte [{}]"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__matrix_id
+msgid "Matrix"
+msgstr "Matrice"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__matrix_id_domain_ids
+msgid "Matrix Id Domain"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__rel_matrix_type_id
+msgid "Matrix Type"
+msgstr "Type de matrice"
+
+#. module: lims_tour
+#: model:ir.model.fields.selection,name:lims_tour.selection__lims_tour__priority__2
+msgid "Medium (*)"
+msgstr "Moyen (*)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_has_error
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur d'envoi du message"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_method
+msgid "Method"
+msgstr "Méthode"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_method_parameter_characteristic
+msgid "Method Parameter Characteristic"
+msgstr "paramètre de caractéristique de méthode"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__my_activity_date_deadline
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Échéance de mon activité"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__nb_sop
+msgid "NB Test"
+msgstr "Test(s)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__nb_result
+msgid "NU"
+msgstr ""
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__name
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__name
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__name
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__name
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_date_deadline
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de la prochaine activité"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_summary
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de la prochaine activité"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_type_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type de la prochaine activité"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__note
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__note
+msgid "Note"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_needaction_counter
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'Actions"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_has_error_counter
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__message_needaction_counter
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages exigeant une action"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__message_has_error_counter
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec des erreurs d'envoi"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__result_num_ids
+msgid "Numerical Results"
+msgstr "Résultats Numériques"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "Numerical results"
+msgstr "Résultats numériques"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__on_site_result_compute_ids
+msgid "On Site Result Compute"
+msgstr "Résultat calculé sur site"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__on_site_result_num_ids
+msgid "On Site Result Num"
+msgstr "Résultat numérique sur site"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__on_site_result_sel_ids
+msgid "On Site Result Sel"
+msgstr "Résultat sélection sur site"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__on_site_result_text_ids
+msgid "On Site Result Text"
+msgstr "Résultat texte sur site"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_compute_result__rel_is_on_site
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_numeric_result__rel_is_on_site
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_result__rel_is_on_site
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_sel_result__rel_is_on_site
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_text_result__rel_is_on_site
+#: model:ir.model.fields,field_description:lims_tour.field_lims_method__is_on_site
+#: model:ir.model.fields,field_description:lims_tour.field_lims_method_parameter_characteristic__rel_is_on_site
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sop__rel_is_on_site
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_compute_result_search_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_compute_sel_search_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_compute_text_search_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_result_search_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_sop_search_view
+msgid "On site"
+msgstr "Sur site"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.create_tour_wizard_form
+msgid "Or Create"
+msgstr "Ou Créer"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid "Our reference"
+msgstr "Notre référence"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__analysis_out_of_time
+msgid "Out Of Time"
+msgstr "Hors Délais"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__pack_of_pack_ids
+msgid "Pack of packs"
+msgstr "Groupe de groupes"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__pack_ids
+msgid "Packs"
+msgstr "Groupes"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_parameter_pack
+msgid "Parameter Pack"
+msgstr "Groupe de paramètres"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__method_param_charac_ids
+msgid "Parameters"
+msgstr "Paramètres"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__parent_id
+msgid "Parent Analysis"
+msgstr "Échantillon parent"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__ref_sample_id
+msgid "Parent sample"
+msgstr "Échantillon parent"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__rel_partner_owner_id
+msgid "Partner Owner"
+msgstr "Propriétaire"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#: code:addons/lims_tour/models/lims_tour.py:0
+#: code:addons/lims_tour/wizards/create_tour_wizard.py:0
+#, python-format
+msgid "Plan"
+msgstr "Prévu"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__access_url
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__access_url
+msgid "Portal Access URL"
+msgstr "URl d'accès au portail"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+msgid "Print Container"
+msgstr "Imprimer Contenant"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+msgid "Print Label"
+msgstr "Imprimer étiquette"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__priority
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__priority
+#, python-format
+msgid "Priority"
+msgstr "Priorité"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__priority
+msgid "Priority of the analysis."
+msgstr "Priorité de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__product_id
+msgid "Product"
+msgstr "Article"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__product_id
+msgid ""
+"Product of the analysis, that can be restricted by the matrix of the "
+"analysis."
+msgstr ""
+"Produit de l'analyse, qui peut être limité par la matrice de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__quality_zone_id
+msgid "Quality zone"
+msgstr "Zone de qualité"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__reason_id
+msgid "Reason"
+msgstr "Raison"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__reception_deviation
+msgid "Reception Deviation(s)"
+msgstr "Écart(s) de réception"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__customer_ref
+msgid "Reference"
+msgstr "Référence"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__regulation_id
+msgid "Regulation"
+msgstr "Législation"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__regulation_id_domain_ids
+msgid "Regulation Id Domain"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__report_done
+msgid "Report Done"
+msgstr "Rapport terminé"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__request_id
+msgid "Request"
+msgstr "Demande"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+msgid "Reset to Initial"
+msgstr "Initialiser"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+msgid "Reset to To Do"
+msgstr "Remettre en à faire"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__activity_user_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur Responsable"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_analysis_result
+msgid "Result"
+msgstr "Résultat"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "Rework"
+msgstr "Réanalyser"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__nb_sel_result
+msgid "SE"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__message_has_sms_error
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur d'envoi SMS"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__sample_id
+msgid "Sample"
+msgstr "Échantillons"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__sample_name
+msgid "Sample Name"
+msgstr "Nom échantillon"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__sample_condition_id
+msgid "Sample condition"
+msgstr "Condition d'échantillon"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_map
+msgid "Sampled"
+msgstr "Échantillonné"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__sampler_id
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__sampler_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__sampler_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__sampler_id
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid "Sampler"
+msgstr "Échantillonneur"
+
+#. module: lims_tour
+#: model:ir.actions.act_window,name:lims_tour.lims_sampler_team_action
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__sampler_team_id
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__sampler_team_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__sampler_team_id
+msgid "Sampler Team"
+msgstr "Équipe d'échantillonneur(s)"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid "Sampler team"
+msgstr "Équipe d'échantillonneur"
+
+#. module: lims_tour
+#: model:ir.ui.menu,name:lims_tour.lims_sampler_team_menu
+msgid "Sampler teams"
+msgstr "Équipes d'échantillonneur(s)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__sampler_ids
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_sampler_team_form
+msgid "Samplers"
+msgstr "Échantillonneurs"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__external_sampling
+msgid "Sampling By Customer"
+msgstr "Prélevé par le client"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_sampling_point
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__sampling_point_id
+#: model:ir.ui.menu,name:lims_tour.lims_sampling_point_menu_lims_tour
+msgid "Sampling Point"
+msgstr "Point de Prélèvement"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__sampling_type_id
+msgid "Sampling type"
+msgstr "Type de Prélèvement"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_search
+msgid "Search"
+msgstr "Rechercher"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__access_token
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__access_token
+msgid "Security Token"
+msgstr "Jeton de sécurité"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "Select results"
+msgstr "Résultats sélection"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__result_sel_ids
+msgid "Selection Results"
+msgstr "Résultats Sélections"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampler_team__sequence
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__sequence
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_name__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_laboratory__seq_tour_id
+msgid "Sequence tour"
+msgstr "Séquence tournée"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__stage_id
+msgid "Stage"
+msgstr "Étape"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__state
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__state
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__state
+msgid "State"
+msgstr "Statut"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis__rel_tour_id_state
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__rel_tour_id_state
+msgid "State tour"
+msgstr "Statut Tournée"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_tour_page_introduction
+msgid "State:"
+msgstr "État :"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#, python-format
+msgid "Status"
+msgstr "Statut"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__activity_state
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : la date d'échéance est déjà dépassée\n"
+"Aujourd'hui : la date d'activité est aujourd'hui\n"
+"Planifiée : activités futures"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__nb_text_result
+msgid "TX"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__tag_ids
+msgid "Tag"
+msgstr "Étiquette"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__tank
+msgid "Tank"
+msgstr "Réservoir"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__rel_sampler_ids
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__rel_sampler_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__rel_sampler_ids
+msgid "Team's sampler"
+msgstr "Échantillonneur de l'équipe"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_lims_sop
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__sop_ids
+msgid "Test"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__nb_sop
+msgid "Tests"
+msgstr "Test(s)"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__result_text_ids
+msgid "Text Results"
+msgstr "Résultats Texte"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "Text results"
+msgstr "Résultats texte"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__partner_id
+msgid "The client of this analysis."
+msgstr "Le client de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__state
+msgid "The conformity state of the analysis."
+msgstr "L'état de conformité de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__laboratory_id
+msgid "The laboratory of the analysis."
+msgstr "Le laboratoire de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_analysis_compute_result__rel_is_on_site
+#: model:ir.model.fields,help:lims_tour.field_lims_analysis_numeric_result__rel_is_on_site
+#: model:ir.model.fields,help:lims_tour.field_lims_analysis_result__rel_is_on_site
+#: model:ir.model.fields,help:lims_tour.field_lims_analysis_sel_result__rel_is_on_site
+#: model:ir.model.fields,help:lims_tour.field_lims_analysis_text_result__rel_is_on_site
+#: model:ir.model.fields,help:lims_tour.field_lims_method__is_on_site
+#: model:ir.model.fields,help:lims_tour.field_lims_method_parameter_characteristic__rel_is_on_site
+#: model:ir.model.fields,help:lims_tour.field_lims_sop__rel_is_on_site
+msgid ""
+"The method and its parameters are defined to be performed 'on site'. Results"
+" dependent on this method will be visible in the simplified sampler form "
+"view."
+msgstr ""
+"La méthode et ses paramètres sont définis pour être appliqués 'sur place'. "
+"Les résultats dépendant de cette méthode seront visibles dans la vue du "
+"formulaire simplifié de l'échantillonneur."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__sample_name
+msgid "The name of sample."
+msgstr "Le nom de l'échantillon."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__rel_type
+msgid "The name of the actuel progression's state of the analysis."
+msgstr "Le nom de l'état de progression actuelle de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__name
+msgid ""
+"The name of the analysis is automatically set by the analysis's sequence set"
+" in the laboratory."
+msgstr ""
+"Le nom de l'analyse est automatiquement défini par la séquence de l'analyse "
+"dans le laboratoire."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__display_calendar
+msgid "The name shown in the calendar view."
+msgstr "Le nom affiché dans la vue du calendrier."
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid "The number of analyses assigned to this tour"
+msgstr "Le nombre d'analyses affectées à cette tournée."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__nb_sop
+msgid "The number of tests of the analysis."
+msgstr "Le nombre de tests de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__parent_id
+msgid "The parent analysis of this analysis."
+msgstr "L'analyse parente de cette analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__stage_id
+msgid "The progress of the analysis."
+msgstr "La progression de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__sampler_id
+msgid "The public employee which will be the sampler of the analysis."
+msgstr "L'employé public qui sera le préleveur de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__customer_ref
+msgid "The reference of the client of this analysis."
+msgstr "La référence du client de cette analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__rel_labo_users_ids
+msgid "The related's users of the laboratory of the analysis."
+msgstr "Les utilisateurs liés au laboratoire d'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__request_id
+msgid "The request linked of this analysis."
+msgstr "La demande liée de cette analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__ref_sample_id
+msgid "The sample linked to the analysis."
+msgstr "L'échantillon lié à l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__sop_ids
+msgid "The tests of the analysis."
+msgstr "Les tests de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__assigned_to
+msgid "The user at which is assign this analysis."
+msgstr "L'utilisateur auquel est attribuée cette analyse."
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid "There are currently no tours for your account."
+msgstr "Il n'y a actuellement aucune visite guidée pour votre compte."
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_search
+msgid "This Month"
+msgstr "Ce Mois"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_search
+msgid "This Week"
+msgstr "Cette Semaine"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date_done
+msgid ""
+"This date is fulfil at the moment when the analysis switch to 'Done' stage."
+msgstr ""
+"Cette date est remplie au moment où l'analyse passe à l'étape 'Terminé'."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date_validation2
+msgid ""
+"This date is fulfil at the moment when the analysis switch to 'Validated 2' "
+"stage."
+msgstr ""
+"Cette date est remplie au moment où l'analyse passe en seconde validation."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date_report
+msgid ""
+"This date is fulfil only once at the moment you use the 'Preview HTML', "
+"'Preview PDF' or 'Print' button."
+msgstr ""
+"Cette date n'est remplie qu'une seule fois au moment où vous utilisez le "
+"bouton 'Preview HTML','Aperçu PDF' ou 'Imprimer'."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date_start
+msgid ""
+"This date is fulfilled only once at the moment when the analysis switch to "
+"'WIP' stage."
+msgstr ""
+"Cette date n'est remplie qu'une seule fois au moment où l'analyse passe à "
+"l'étape 'WIP'."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date_plan
+msgid ""
+"This date is mandatory to planify the analysis and continue the process."
+msgstr ""
+"Cette date est obligatoire pour planifier l'analyse et poursuivre le "
+"processus."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date_sample
+msgid "This date is used to set the moment when the sample has been done."
+msgstr ""
+"Cette date est utilisée pour définir le moment où l'échantillon a été fait."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__date_sample_receipt
+msgid "This date is used to set the moment when the sample has been received."
+msgstr ""
+"Cette date est utilisée pour définir le moment où l'échantillon a été reçu."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__is_incomplete
+msgid ""
+"This is checked if one the the results of the analysis is on a 'cancel' "
+"state, or if the number of parameters of all his results is different from "
+"the parameters on the analysis and of his packs combined."
+msgstr ""
+"Ceci est coché si l'un des résultats de l'analyse est dans un état 'annulé' "
+"ou si le nombre de paramètres de tous ses résultats est différent de celui "
+"des paramètres sur l'analyse et de ses packs combinés"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__all_sop_received
+msgid "This is checked if the are no sops in a 'draft' or a 'plan' state."
+msgstr ""
+"Ceci est coché s'il n'y a pas de sops dans un état 'brouillon' ou "
+"'planifié'."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__external_sampling
+msgid "This is checked if the sampling is done by the customer."
+msgstr "Ceci est vérifié si l'échantillonnage est effectué par le client."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__is_duplicate
+msgid ""
+"This is checked if this analysis is a duplication or a rework of another "
+"analysis, which will become his parent analysis."
+msgstr ""
+"Ceci est vérifié si cette analyse est une duplication ou un rework d'une "
+"autre analyse, qui deviendra son analyse parent."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__due_date
+msgid "This is the due date of the analysis."
+msgstr "C'est la date d'échéance de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__matrix_id
+msgid ""
+"This is the matrix of the analysis, which can be limited by the regulation."
+msgstr ""
+"C'est la matrice de l'analyse, qui peut être limitée par la législation."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__cancel_reason
+msgid "This is the reason for which you have cancelled the analysis."
+msgstr "C'est la raison pour laquelle vous avez annulé l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__regulation_id
+msgid ""
+"This is the regulation of the analysis, which can be limited by the matrix."
+msgstr ""
+"C'est la régulation de l'analyse, qui peut être limitée par la matrice."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__rel_matrix_type_id
+msgid "This is the related's type of the matrix of the analysis."
+msgstr "C'est le type de la matrice de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__analysis_out_of_time
+msgid ""
+"This will be checked if the time between the date start and the date done is"
+" greater than the highest duration present on the packs of the analysis."
+msgstr ""
+"Ceci sera coché si le temps qui sépare la date de début et la date de fin "
+"est supérieur à la durée la plus élevée présente sur les packs de l'analyse."
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__time_float
+msgid "Time"
+msgstr "Temps"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour.py:0
+#: code:addons/lims_tour/wizards/create_tour_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+#, python-format
+msgid "To Do"
+msgstr "À faire"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#, python-format
+msgid "ToDo"
+msgstr ""
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_search
+#, python-format
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__analysis_duration
+msgid ""
+"Total duration of analysis calculated from date start to date end (displayed"
+" in days)"
+msgstr ""
+"Durée totale de l'analyse calculée de la date de début à la date de fin "
+"(affichée en jours)"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__analysis_duration_time
+msgid ""
+"Total duration of analysis calculated from date start to date end (displayed"
+" in hours)"
+msgstr ""
+"Durée totale de l'analyse calculée de la date de début à la date de fin "
+"(affichée en heures)"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__analysis_time
+msgid ""
+"Total duration of analysis calculated from sample reception to date end"
+msgstr ""
+"Durée totale de l'analyse calculée depuis la réception d'échantillon jusqu'à"
+" la date de fin"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_create_tour_wizard__tour_id
+#: model:ir.model.fields,field_description:lims_tour.field_duplicate_tour_wizard__tour_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis__tour_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_compute_result__tour_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_numeric_result__tour_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_result__tour_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_sel_result__tour_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_analysis_text_result__tour_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sop__tour_id
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__tour_id
+#: model:ir.module.category,name:lims_tour.module_category_lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.duplicate_tour_wizard_form
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_compute_result_search_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_compute_sel_search_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_compute_text_search_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_result_search_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_laboratory_lims_report
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_calendar_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_graph_view
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_map
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_pivot_view
+msgid "Tour"
+msgstr "Tournée"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_analyses_table
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid "Tour #"
+msgstr "Tournée #"
+
+#. module: lims_tour
+#: model:ir.model,name:lims_tour.model_tour_cancel_wizard
+msgid "Tour Cancel Wizard"
+msgstr "Assistant annulation de tournée"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_add_parameters_wizard__tour_line_id
+msgid "Tour Line"
+msgstr "Ligne de tournée"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__tour_name_id
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+msgid "Tour Name"
+msgstr "Nom de Tournée"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour.py:0
+#, python-format
+msgid "Tour cancelled reason: {} by {}"
+msgstr "Tournée annulée raison: {} par {}"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+msgid "Tour line"
+msgstr "Ligne de tournée"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour_line.py:0
+#, python-format
+msgid "Tour line from {0} has been deleted by {1}"
+msgstr "La ligne de tournée {0} a été supprimée par {1}"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#: model:ir.model.fields,field_description:lims_tour.field_lims_sampling_point__tour_name_id
+#: model:ir.ui.menu,name:lims_tour.lims_tour_name_team_menu
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+#, python-format
+msgid "Tour name"
+msgstr "Nom de la tournée"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour.py:0
+#, python-format
+msgid "Tour reset by {}"
+msgstr "Tournée réinitialisée par : {}"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid "Tour stage"
+msgstr "Étape de la tournée"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_analysis_search
+msgid "Tour status"
+msgstr "Statut de la tournée"
+
+#. module: lims_tour
+#: model:ir.actions.act_window,name:lims_tour.lims_tour_action
+#: model:ir.ui.menu,name:lims_tour.lims_tour_menu
+#: model:ir.ui.menu,name:lims_tour.lims_tour_submenu
+#: model:ir.ui.menu,name:lims_tour.tour_submenu
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_home_menu_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_home_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.portal_my_tours
+msgid "Tours"
+msgstr "Tournées"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__rel_type
+msgid "Type"
+msgstr ""
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__activity_exception_decoration
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d'activité d'exception sur l'enregistrement."
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_search
+msgid "Until Today"
+msgstr "Jusque Aujourd'hui"
+
+#. module: lims_tour
+#: model:res.groups,name:lims_tour.lims_tour_user
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__rel_labo_users_ids
+msgid "Users"
+msgstr "Utilisateurs"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/controllers/portal.py:0
+#: code:addons/lims_tour/models/lims_tour.py:0
+#: code:addons/lims_tour/wizards/create_tour_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_form
+#, python-format
+msgid "WIP"
+msgstr "En Cours"
+
+#. module: lims_tour
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour__website_message_ids
+#: model:ir.model.fields,field_description:lims_tour.field_lims_tour_line__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: lims_tour
+#: model:ir.model.fields,help:lims_tour.field_lims_tour__website_message_ids
+#: model:ir.model.fields,help:lims_tour.field_lims_tour_line__website_message_ids
+msgid "Website communication history"
+msgstr "Historique de communication du site web"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid ""
+"Write here your external comments (will be printed on analysis reports)"
+msgstr ""
+"Écrivez ici vos commentaires externes liés (seront imprimés sur les rapports"
+" d'analyse)"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid ""
+"Write here your internal comments (will not be printed on analysis reports)"
+msgstr ""
+"Écrivez ici vos commentaires internes (ne seront pas imprimés sur les "
+"rapports d'analyse)"
+
+#. module: lims_tour
+#: model_terms:ir.actions.act_window,help:lims_tour.lims_sampler_team_action
+#: model_terms:ir.actions.act_window,help:lims_tour.lims_tour_action
+#: model_terms:ir.actions.act_window,help:lims_tour.lims_tour_name_action
+msgid "You can define several."
+msgstr "Vous pouvez en définir plusieurs."
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour.py:0
+#, python-format
+msgid "You can not modify a model tour"
+msgstr "Vous ne pouvez pas modifier une tournée modèle"
+
+#. module: lims_tour
+#. odoo-python
+#: code:addons/lims_tour/models/lims_tour.py:0
+#, python-format
+msgid "You can not modify the date if the tour is cancelled or wip or done"
+msgstr ""
+"Vous ne pouvez pas modifier la date d'une tournée si celle ci est en 'en "
+"cours', 'fait' ou 'terminé'"
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "compute_result"
+msgstr ""
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "numeric_result"
+msgstr ""
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "sel_result"
+msgstr ""
+
+#. module: lims_tour
+#: model_terms:ir.ui.view,arch_db:lims_tour.lims_tour_line_form
+msgid "text_result"
+msgstr ""

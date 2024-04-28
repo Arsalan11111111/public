@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model='ir.ui.view' id='lims_batch_calendar'>
+        <field name="name">Batch</field>
+        <field name="model">lims.batch</field>
+        <field name="arch" type="xml">
+            <calendar string="Batch" color="rel_department_id" date_start="date" mode="month" quick_add="false">
+                <field name="display_calendar"/>
+                <field name="rel_department_id" filters="1"/>
+                <field name="assigned_to" filters="1"/>
+                <field name="method_ids" widget="many2many_tags"/>
+                <field name="state" filters="1"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_batch_graph'>
+        <field name="name">Batch</field>
+        <field name="model">lims.batch</field>
+        <field name="arch" type="xml">
+            <graph string="Batch">
+                <field name="date" type="row"/>
+                <field name="name" type="col"/>
+            </graph>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_analysis_pivot'>
+        <field name="name">batch</field>
+        <field name="model">lims.batch</field>
+        <field name="arch" type="xml">
+            <pivot string="Batch">
+                <field name="date" type="row"/>
+                <field name="name" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_batch_tree'>
+        <field name="name">Batch</field>
+        <field name="model">lims.batch</field>
+        <field name="arch" type="xml">
+            <tree name="lims_batch_tree" multi_edit="1">
+                <field name="name" decoration-bf="1" readonly="1"/>
+                <field name="description" optional="show"/>
+                <field name="date" optional="show"/>
+                <field name="method_ids" widget="many2many_tags" optional="show"/>
+                <field name="sop_ids" widget="many2many_tags" optional="hide"/>
+                <field name="rel_labo_id" optional="hide"/>
+                <field name="rel_department_id" optional="hide"/>
+                <field name="activity_ids" optional="hide" widget="list_activity"/>
+                <field name="assigned_to" optional="hide" widget="many2one_avatar_user"/>
+                <field name="write_uid" optional="hide" widget="many2one_avatar_user"/>
+                <field name="write_date" optional="hide" widget="datetime"/>
+                <field name="state" optional="show" widget="badge"
+                       decoration-success="state == 'done'"
+                       decoration-danger="state == 'cancel'"
+                       decoration-info="state == 'wip'"
+                       decoration-muted="state == 'draft'" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_batch_form_view">
+        <field name="name">Batch</field>
+        <field name="model">lims.batch</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="do_cancel" string="Cancel" type="object"
+                            attrs="{'invisible':['|', ('is_cancel','=',True), ('state', '=', 'cancel')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="open_batch_sop" type="object" class="oe_stat_button" icon="fa-bars">
+                            <field name="nb_sop" widget="statinfo"/>
+                        </button>
+                        <button name="open_batch_result" type="object" class="oe_stat_button" icon="fa-bars">
+                            <field name="nb_result" widget="statinfo"/>
+                        </button>
+                        <button name="open_batch_sel_result" type="object" class="oe_stat_button" icon="fa-bars">
+                            <field name="nb_sel_result" widget="statinfo"/>
+                        </button>
+                        <button name="open_batch_compute_result" type="object" class="oe_stat_button" icon="fa-bars">
+                            <field name="nb_compute_result" widget="statinfo"/>
+                        </button>
+                        <button name="open_batch_text_result" type="object" class="oe_stat_button" icon="fa-bars">
+                            <field name="nb_text_result" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group col="4">
+                        <field name="description"/>
+                        <field name="method_ids" widget="many2many_tags"/>
+                        <field name="date"/>
+                        <field name="rel_labo_id"/>
+                        <field name="rel_department_id"/>
+                        <span colspan="2"/>
+                        <field name="assigned_to" colspan="2"/>
+                        <field name="is_cancel" invisible="1"/>
+                    </group>
+                    <notebook>
+                        <page name="operator" string="Log book">
+                            <field name="operator_ids" nolabel="True" context="{'default_operator_id':uid}"/>
+                        </page>
+                        <page name="tests" string="Test(s)">
+                            <field name="sop_ids" nolabel="True" widget="many2many" options="{'no_create':1}" domain="[('method_id', 'in', method_ids)]"/>
+                        </page>
+                        <page name="comments" string="Comments">
+                            <field name="internal_comment" placeholder="Write here your internal comments (will not be printed on analysis reports)"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_batch_search">
+        <field name="name">Batch</field>
+        <field name="model">lims.batch</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name"/>
+                <field name="sop_ids"/>
+                <field name="method_ids"/>
+                <filter name="is_cancel" string="Cancelled" domain="[('is_cancel', '=', True)]"/>
+                <group string="Group By">
+                    <filter name="assigned_to" string="Assigned to" context="{'group_by': 'assigned_to'}"/>
+                    <filter name="state" string="State" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_batch_action'>
+        <field name="name">Batches</field>
+        <field name="res_model">lims.batch</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form,pivot,graph,calendar,activity</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new batch.
+            </p>
+            <p>
+                You can define several.
+            </p>
+        </field>
+    </record>
+
+
+    <record id="batch_mass_change_action" model="ir.actions.act_window">
+        <field name="name">Mass Change</field>
+        <field name="res_model">batch.mass.change.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="lims_base.model_lims_batch"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem action="lims_batch_action" parent="lims_analysis_submenu" id="lims_batch_menu" sequence="25"/>
+</odoo>

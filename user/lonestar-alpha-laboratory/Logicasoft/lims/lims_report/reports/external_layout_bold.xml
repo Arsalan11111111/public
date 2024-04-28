@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="external_layout_bold" inherit_id="web.external_layout_bold">
+        <xpath expr="//div[3]//div[1]//div[3]" position="attributes">
+            <attribute name="class">col-2</attribute>
+        </xpath>
+
+        <xpath expr="//div[3]//div[1]//div[4]" position="attributes">
+            <attribute name="class">col-2</attribute>
+        </xpath>
+
+        <xpath expr="//span[hasclass('page')]" position="after">
+            <t t-if="report_type == 'pdf' and total_page_layout_bold">
+                /<span class="topage"/>
+            </t>
+        </xpath>
+
+        <xpath expr="//div[3]" position="inside">
+            <div class="row" t-if="report_type == 'pdf' and display_name_in_footer" name="div_name_in_footer">
+                <div class="col-12">
+                    <div class="text-muted text-center">
+                        <span t-field="o.name"/>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,325 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_web_tour
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-27 11:49+0000\n"
+"PO-Revision-Date: 2022-04-27 11:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<b>Computed Result</b>"
+msgstr "<b>Resultat calculé</b>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<b>Result Selection</b>"
+msgstr "<b>Resultat sélection</b>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<b>Result Value</b>"
+msgstr "<b>Valeur du résultat</b>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<b>Text Result</b>"
+msgstr "<b>Resultat texte</b>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_my_tours
+msgid ""
+"<i class=\"fa fa-info-circle\"/> There are currently no tours for your "
+"account."
+msgstr ""
+"<i class=\"fa fa-info-circle\"/> Il n'y a actuellement pas de requête pour "
+"vôtre compte."
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<strong>Address:</strong>"
+msgstr "<strong>Adresse :</strong>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_tour_page
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Date: </strong>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<strong>Location:</strong>"
+msgstr "<strong>Endroit:</strong>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<strong>Note:</strong>"
+msgstr ""
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_tour_page
+msgid "<strong>Sampler Team:</strong>"
+msgstr "<strong>Equipe d'échantillonneur: </strong>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_tour_page
+msgid "<strong>Sampler:</strong>"
+msgstr "<strong>Echantillonneur: </strong>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<strong>Sampling Point:</strong>"
+msgstr "<strong>Point de prélèvement: </strong>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_tour_page
+msgid "<strong>Tour name:</strong>"
+msgstr "<strong>Nom tournée: </strong>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "<strong>Tour:</strong>"
+msgstr "<strong>Tournée :</strong>"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Accreditation Type"
+msgstr "Type d'accréditation"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Action"
+msgstr ""
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "All"
+msgstr "Tout"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_tour_page
+#, python-format
+msgid "Analysis"
+msgstr "Echantillons"
+
+#. module: lims_web_tour
+#: model:ir.model.fields.selection,name:lims_web_tour.selection__lims_tour_line__color__black
+msgid "Black"
+msgstr "Noir"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_tour_page
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: lims_web_tour
+#: model:ir.model.fields,field_description:lims_web_tour.field_lims_tour_line__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Corrected Value"
+msgstr "Valeur corrigé"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Create Date"
+msgstr "Date de création"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Date Start"
+msgstr "Date début échantillon"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Dilution Factor"
+msgstr "Facteur de dillution"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Done"
+msgstr "Fait"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Formula"
+msgstr "Formule"
+
+#. module: lims_web_tour
+#: model:ir.model.fields.selection,name:lims_web_tour.selection__lims_tour_line__color__green
+msgid "Green"
+msgstr "Vert"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "In Progress"
+msgstr "En cours"
+
+#. module: lims_web_tour
+#: model:ir.model,name:lims_web_tour.model_lims_tour
+msgid "Lims Tour"
+msgstr "Tournée LIMS"
+
+#. module: lims_web_tour
+#: model:ir.model,name:lims_web_tour.model_lims_tour_line
+msgid "Lims Tour Line"
+msgstr "Ligne de tournée"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: lims_web_tour
+#: model:ir.model.fields.selection,name:lims_web_tour.selection__lims_tour_line__color__orange
+msgid "Orange"
+msgstr ""
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Plan"
+msgstr "Prévu"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_tour_page
+msgid "Reason"
+msgstr "Raison"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Report Limit Value"
+msgstr "Valeur limite du rapport"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "SOP"
+msgstr ""
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Sample Name"
+msgstr "Nom échantillon"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Sampler"
+msgstr "Echantillonneur"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Sampler Team"
+msgstr "Equipe d'échantillonneur"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_analysis_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_tour_page
+#, python-format
+msgid "Sampling Point"
+msgstr "Point de prélèvement"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+#, python-format
+msgid "Stage"
+msgstr "Étape"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "State"
+msgstr "État"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Test"
+msgstr ""
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "To do"
+msgstr "A faire"
+
+#. module: lims_web_tour
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#: code:addons/lims_web_tour/controllers/lims_tour_portal.py:0
+#, python-format
+msgid "Tour Name"
+msgstr "Nom tournée"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_my_home_lims
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_my_home_menu_tour
+msgid "Tours"
+msgstr "Tournées"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "UoM"
+msgstr "UdM"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Value"
+msgstr "Valeur"
+
+#. module: lims_web_tour
+#: model_terms:ir.ui.view,arch_db:lims_web_tour.portal_analysis_page
+msgid "Value (list)"
+msgstr "Valeur (liste)"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="lims_analysis_request_attachment_form" >
+        <field name="name">Analysis Request</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="open_analysis_pictures" type="object" class="oe_stat_button" icon="fa-camera-retro">
+                 <field string="Pictures" name="pictures_count" widget="statinfo"/>
+            </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

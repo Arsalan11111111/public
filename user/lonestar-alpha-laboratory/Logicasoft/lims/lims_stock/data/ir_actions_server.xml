@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.actions.server" id="action_create_analysis">
+        <field name="name">Create analysis</field>
+        <field name="model_id" ref="model_stock_lot"/>
+        <field name="binding_model_id" ref="model_stock_lot"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action=records.create_analysis()
+        </field>
+    </record>
+</odoo>

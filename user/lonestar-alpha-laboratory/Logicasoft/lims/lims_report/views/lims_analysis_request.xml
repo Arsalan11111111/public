@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_analysis_request" model="ir.ui.view">
+        <field name="name">Request</field>
+        <field name="model">lims.analysis.request</field>
+        <field name="inherit_id" ref="lims_base.lims_analysis_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header//field[@name='state']" position="before">
+                <button name="check_before_create_report" string="Create report" type="object" class="oe_highlight"
+                        attrs="{'invisible': [('is_ok_for_report', '=', False)]}" />
+            </xpath>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="open_reports" type="object" class="oe_stat_button" icon="fa-newspaper-o">
+                    <field name="nb_reports" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='is_request_complete']" position="after">
+                <field name="is_ok_for_report" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='date_report']" position="before">
+                <field name="report_template_id" options="{'no_create': True, 'no_create_edit':True}"
+                       domain="['|', ('laboratory_id', '=', False), ('laboratory_id', '=', labo_id)]"/>
+            </xpath>
+            <xpath expr="//field[@name='date_report']" position="after">
+                <field name="date_report_sent" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

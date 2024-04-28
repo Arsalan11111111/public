@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model='ir.ui.view' id='lims_control_chart_point_form'>
+        <field name="name">Control Chart Point</field>
+        <field name="model">lims.control.chart.point</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="type_line" readonly="1"/>
+                        <field name="value" readonly="1"/>
+                        <field name="result_num_id" readonly="1"/>
+                        <field name="result_com_id" readonly="1"/>
+                        <field name="method_id" readonly="1"/>
+                        <field name="date_result" readonly="1"/>
+                        <field name="date_sample" readonly="1"/>
+                        <field name="date_start" readonly="1"/>
+                        <field name="partner_id" readonly="1"/>
+                        <field name="user_id" readonly="1"/>
+                        <field name="result_stage_id" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_control_chart_point_tree'>
+        <field name="name">Control Chart Point</field>
+        <field name="model">lims.control.chart.point</field>
+        <field name="arch" type="xml">
+            <tree create="false">
+                <field name="type_line" readonly="1"/>
+                <field name="value" readonly="1" optional="show"/>
+                <field name="result_num_id" readonly="1" optional="show"/>
+                <field name="result_com_id" readonly="1" optional="show"/>
+                <field name="method_id" readonly="1" optional="show"/>
+                <field name="date_result" readonly="1" optional="show"/>
+                <field name="date_sample" readonly="1" optional="show"/>
+                <field name="date_start" readonly="1" optional="show"/>
+                <field name="partner_id" readonly="1" optional="show"/>
+                <field name="user_id" readonly="1" optional="show"/>
+                <field name="result_stage_id" readonly="1" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_control_chart_point_graph">
+        <field name="name">Control Chart Graphic</field>
+        <field name="model">lims.control.chart.point</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="sop_id" type="row"/>
+                <field name="value" type="measure"/>
+                <field name="type_line"/>
+                <field name="method_id"/>
+            </graph>
+        </field>
+    </record>
+
+    <!--Action open control chart point view mode graph-->
+    <record model='ir.actions.act_window' id='lims_control_chart_point_action'>
+        <field name="name">Control Chart Point</field>
+        <field name="res_model">lims.control.chart.point</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form,graph</field>
+        <field name="context">{'graph_mode': 'line', 'create': False, 'edit': False}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There aren't any point to build a control graphic chart
+            </p>
+        </field>
+    </record>
+
+    <record id="lims_control_chart_point_statistics_action" model="ir.actions.act_window">
+        <field name="name">Lims control chart point Statisitcs</field>
+        <field name="res_model">lims.control.chart.point.statistics</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="model_lims_control_chart_point"/>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_control_chart_point_ids': active_ids,
+            }
+        </field>
+    </record>
+</odoo>

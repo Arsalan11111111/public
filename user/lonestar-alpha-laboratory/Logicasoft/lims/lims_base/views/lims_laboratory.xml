@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_laboratory_tree'>
+        <field name="name">Laboratory</field>
+        <field name="model">lims.laboratory</field>
+        <field name="arch" type="xml">
+            <tree name="lims_laboratory_tree">
+                <field name="name"/>
+                <field name="responsible_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_laboratory_form">
+        <field name="name">Laboratory</field>
+        <field name="model">lims.laboratory</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="main_group" col="2">
+                        <group name="left_group">
+                            <group string="Laboratory" colspan="2">
+                                <field name="name"/>
+                                <field name="company_id"/>
+                                <field name="partner_id"/>
+                                <field name="responsible_id"/>
+                                <field name="default_laboratory"/>
+                            </group>
+                            <group string="Request" colspan="2">
+                                <field name="default_request_category_id" colspan="2"/>
+                                <field name="seq_request_id" colspan="2"/>
+                            </group>
+                            <group string="Analysis" colspan="2">
+                                <field name="default_analysis_category_id" colspan="2"/>
+                                <field name="seq_analysis_id" colspan="2"/>
+                                <field name="dilution_factor_max" colspan="2"/>
+                                <field name="unconclusive_priority"/>
+                                <field name="only_second_validation"/>
+                                <field name="show_result_comment"/>
+                                <field name="change_loq"/>
+                                <field name="manage_accreditation"/>
+                            </group>
+                        </group>
+                        <group name="right_group">
+                            <group string="Test" colspan="2">
+                                <field name="nb_print_sop_label" colspan="2"/>
+                                <field name="seq_sop_id" colspan="2"/>
+                            </group>
+                            <group string="Timesheet" colspan="2" name="timing">
+                                <field name="resource_calendar_id" colspan="2"/>
+                            </group>
+                            <group string="Batch" name="batch_group" colspan="2">
+                                <field name="seq_batch_id" colspan="2"/>
+                            </group>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Users" name="users" groups="lims_base.manager_group">
+                            <field name="res_users_ids" options="{'no_create':True, 'no_edit': True}">
+                                <tree name="res_user_tree">
+                                    <field name="name" readonly="1" />
+                                    <field name="login" readonly="1" groups="lims_base.lims_admin_group"/>
+                                    <field name="lang" readonly="1" optional="show" groups="lims_base.lims_admin_group"/>
+                                    <field name="login_date" readonly="1" optional="show" groups="lims_base.lims_admin_group"/>
+                                    <field name="company_id" readonly="1" optional="show" groups="lims_base.lims_admin_group"/>
+                                    <field name="laboratory_ids" readonly="1" optional="show"  widget="many2many_tags"/>
+                                    <field name="default_laboratory_id"/>
+                                </tree>
+                                <form>
+                                    <group name="res_users_form">
+                                        <field name="name" readonly="1"/>
+                                        <field name="login" readonly="1" groups="lims_base.lims_admin_group"/>
+                                        <field name="lang" readonly="1" groups="lims_base.lims_admin_group"/>
+                                        <field name="login_date" readonly="1" groups="lims_base.lims_admin_group"/>
+                                        <field name="company_id" readonly="1" groups="lims_base.lims_admin_group"/>
+                                        <field name="laboratory_ids" readonly="1" widget="many2many_tags"/>
+                                        <field name="default_laboratory_id" domain="[('id', 'in', laboratory_ids)]"
+                                               options="{'no_create':1, 'no_edit':1, 'no_open':1}"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_laboratory_search">
+        <field name="name">Laboratory</field>
+        <field name="model">lims.laboratory</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name"/>
+                <group string="Group By">
+                    <filter name="responsible" string="Responsible" context="{'group_by': 'responsible_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_laboratory_action'>
+        <field name="name">Laboratory</field>
+        <field name="res_model">lims.laboratory</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new laboratory.
+            </p>
+            <p>
+                You can define several.
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="lims_laboratory_action" parent="general_settings_submenu" id="lims_laboratory_menu"
+              sequence="11"/>
+</odoo>

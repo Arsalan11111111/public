@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--root Menu Lims-->
+    <menuitem id="menu_control_chart" parent="lims_base.menu_root" name="Control Chart" sequence="350"
+              groups="lims_base.viewer_group"/>
+    <!--Control Chart Submenu-->
+    <menuitem id="menu_control_chart_graph" parent="menu_control_chart" name="Control Chart Graph" sequence="10"
+              action="lims_method_parameter_characteristic_control_graph_action" groups="lims_base.viewer_group"/>
+    <!--Configuration Control Chart Menu  items-->
+    <menuitem name="Control Chart Lines" action="lims_control_chart_line_action"
+              parent="lims_base.lims_master_data_submenu"
+              id="lims_control_chart_lines_menu" sequence="43" groups="lims_base.manager_group"/>
+    <!--Configuration Control Chart Menu  items-->
+    <menuitem name="Control Chart Points" action="lims_control_chart_point_action"
+              parent="lims_base.lims_master_data_submenu"
+              id="lims_control_chart_point_menu" sequence="42" groups="lims_base.manager_group"/>
+</odoo>

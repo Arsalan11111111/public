@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="hr_payslip_view_form">
+        <field name="name">hr.payslip.inherit.form</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <field name="contract_id" position="after">
+                <field name="no_of_days" invisible="1"/> <!--Make this invisible-->
+                <field name="no_of_unpaid_leaves" invisible="1"/> <!--Make this invisible-->
+                <field name="cut_unpaid_leaves" invisible="1"/> <!--Make this invisible-->
+                <field name="sick_leaves_formula" invisible="1"/> <!--Make this invisible-->
+                <field name="sick_leaves_deduction" invisible="1"/> <!--Make this invisible-->
+                <field name="no_of_days_worked" invisible="1"/> <!--Make this invisible-->
+                <field name="gross_salary" invisible="1"/> <!--Make this invisible-->
+                <field name="gross_salary2" invisible="1"/> <!--Make this invisible-->
+                <field name="gross_salary3" invisible="1"/> <!--Make this invisible-->
+            </field>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="hr_payslip_view_tree_view_inherited">
+        <field name="name">hr.payslip.inherit.tree.inherited</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree"/>
+        <field name="arch" type="xml">
+            <field name="employee_id" position="before">
+                <field name="employee_badge" invisible="1"/>
+                <field name="employee_badge_id"/>
+                <field name="no_of_days_worked" />
+            </field>
+            <field name="net_wage" position="before">
+                <field name="gross_salary" />
+                <field name="gross_salary2" />
+                <field name="gross_salary3" />
+            </field>
+        </field>
+    </record>
+
+
+</odoo>

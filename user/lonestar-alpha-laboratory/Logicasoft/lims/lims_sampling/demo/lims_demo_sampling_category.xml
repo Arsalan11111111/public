@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.sampling.category" id="lims_demo_sampling_category_1">
+            <field name="name">Demo sampling category</field>
+        </record>
+    </data>
+</odoo>

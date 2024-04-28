@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="analysis_mass_change_wizard_form" model="ir.ui.view">
+        <field name="name">Analysis Mass Change</field>
+        <field name="model">analysis.mass.change.wizard</field>
+        <field name="inherit_id" ref="lims_base.analysis_mass_change_wizard_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//group[1]//field[@name='external_sampling']" position="after">
+                <field name="sampling_type_id"/>
+            </xpath>
+
+            <xpath expr="//field[@name='line_ids']//field[@name='external_sampling']" position="after">
+                <field name="sampling_type_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

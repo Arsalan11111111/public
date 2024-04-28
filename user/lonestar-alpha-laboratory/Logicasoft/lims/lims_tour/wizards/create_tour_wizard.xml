@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="create_tour_wizard_form">
+        <field name="name">Create Tour</field>
+        <field name="model">create.tour.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h2 style="text-decoration: underline;">Add</h2>
+                    <group col="2">
+                        <field name="tour_id"/>
+                    </group>
+                    <h2 style="text-decoration: underline;">Or Create</h2>
+                    <group col="4" attrs="{'invisible': [('tour_id', '!=', False)]}">
+                        <field name="date"/>
+                        <field name="laboratory_id"/>
+                        <field name="sampler_team_id"/>
+                        <field name="sampler_id" domain="[('id', 'in', rel_sampler_ids)]"/>
+                        <field name="note"/>
+                        <field name="rel_sampler_ids" invisible="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Analysis">
+                            <field name="analysis_ids" nolabel="True" required="True">
+                                <tree editable="bottom">
+                                    <field name="name" readonly="1"/>
+                                    <field name="request_id" readonly="1"/>
+                                    <field name="partner_id" readonly="1"/>
+                                    <field name="sampling_point_id" readonly="1"/>
+                                    <field name="location_id" readonly="1"/>
+                                    <field name="sampling_type_id"/>
+                                    <field name="category_id"/>
+                                    <field name="date_plan" readonly="1"/>
+                                    <field name="stage_id" readonly="1"/>
+                                    <field name="state" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="do_create_add_tour" string="Create/Add" type="object" class="oe_hightlight"/>
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

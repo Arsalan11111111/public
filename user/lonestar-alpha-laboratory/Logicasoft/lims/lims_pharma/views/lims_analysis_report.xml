@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_analysis_report_form" model="ir.ui.view">
+        <field name="name">Analysis report</field>
+        <field name="model">lims.analysis.report</field>
+        <field name="inherit_id" ref="lims_report.lims_analysis_report_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='Auxiliary']" position="inside">
+                <group>
+                    <field name="option_print_result_loq" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                </group>
+                <group>
+                    <field name="option_print_result_lod" attrs="{'readonly': [('is_locked', '=', True)]}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model='ir.ui.view' id='lims_analysis_request_sample_tree'>
+        <field name="name">Analysis Request Sample</field>
+        <field name="model">lims.analysis.request.sample</field>
+        <field name="arch" type="xml">
+            <tree name="lims_analysis_request_sample_tree" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="color"/>
+                <field name="location"/>
+                <field name="comment"/>
+                <field name="matrix_id"/>
+                <field name="date_plan"/>
+                <field name="auto"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_analysis_request_sample_form'>
+        <field name="name">Analysis Request Sample</field>
+        <field name="model">lims.analysis.request.sample</field>
+        <field name="arch" type="xml">
+            <form name="lims_analysis_request_sample_form">
+                <group name="main_group">
+                    <group name="left_group">
+                        <field name="matrix_id" readonly="1"/>
+                        <field name="request_id" readonly="1"/>
+                        <field name="name"/>
+                        <field name="analysis_id" readonly="1"/>
+                        <field name="date_plan" readonly="1"/>
+                        <field name="rel_analysis_stage_id" readonly="1"/>
+                        <field name="state" readonly="1"/>
+                        <field name="comment"/>
+                    </group>
+                    <group name="right_group">
+                        <field name="matrix_type_id" readonly="1"/>
+                        <field name="matrix_id" readonly="1"/>
+                        <field name="regulation_id" readonly="1"/>
+                        <field name="product_id" readonly="1"/>
+                        <field name="rel_parent_analysis_id" readonly="1"/>
+                        <field name="product_pack_id" readonly="1"/>
+                        <field name="location" readonly="1"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page name="parameters" string="Parameters">
+                        <field name="method_param_charac_ids" nolabel="1" readonly="0" context="{'active_test': False}"
+                               domain="[('matrix_id','=',matrix_id), ('state', '=', 'validated'), ('regulation_id','=',regulation_id)]">
+                                <tree create="0" no_open="0"
+                                      decoration-bf="active==False"
+                                      decoration-success="state=='validated'"
+                                      decoration-warning="state=='draft'"
+                                      decoration-danger="state=='cancelled'"
+                                      default_order="laboratory_id, department_id asc, method_id asc, tech_name asc">
+                                    <field name="tech_name" string="Parameters" readonly="1"/>
+                                    <field name="method_id" optional="show" readonly="1"/>
+                                    <field name="department_id" optional="show" readonly="1"/>
+                                    <field name="laboratory_id" optional="show" readonly="1"/>
+                                    <field name="method_id" optional="show" readonly="1"/>
+                                    <field name="regulation_id" optional="hide" readonly="1"/>
+                                    <field name="matrix_id" optional="hide" readonly="1"/>
+                                    <field name="state" optional="hide" readonly="1"/>
+                                    <field name="active" optional="hide" readonly="1"/>
+                                </tree>
+                        </field>
+                    </page>
+                    <page name="packs" string="Packs">
+                        <field name="pack_ids" nolabel="1" readonly="0" context="{'active_test': False}"
+                               domain="[('matrix_id','=',matrix_id), ('state', '=', 'validated'), ('is_pack_of_pack', '=', False), ('regulation_id','=',regulation_id)]">
+                                <tree create="0" no_open="0"
+                                      decoration-success="state=='validated'"
+                                      decoration-warning="state=='draft'"
+                                      decoration-danger="state=='cancelled'"
+                                      decoration-bf="active==False">
+                                    <field name="name" string="Packs" readonly="1"/>
+                                    <field name="regulation_id" optional="hide" readonly="1"/>
+                                    <field name="matrix_id" optional="hide" readonly="1"/>
+                                    <field name="state" optional="hide" readonly="1"/>
+                                    <field name="active" optional="hide" readonly="1"/>
+                                </tree>
+                        </field>
+                    </page>
+                    <page name="packs_of_pack" string="Packs of pack">
+                        <field name="pack_of_pack_ids" nolabel="1" readonly="0" context="{'active_test': False}"
+                               domain="[('matrix_id','=',matrix_id), ('state', '=', 'validated'), ('is_pack_of_pack', '=', True), ('regulation_id','=',regulation_id)]">
+                                <tree create="0" no_open="0"
+                                      decoration-bf="active==False"
+                                      decoration-success="state=='validated'"
+                                      decoration-warning="state=='draft'"
+                                      decoration-danger="state=='cancelled'">
+                                    <field name="name" string="Packs of pack" readonly="1"/>
+                                    <field name="regulation_id" optional="hide" readonly="1"/>
+                                    <field name="matrix_id" optional="hide" readonly="1"/>
+                                    <field name="state" optional="hide" readonly="1"/>
+                                    <field name="active" optional="hide" readonly="1"/>
+                                </tree>
+                            </field>
+                    </page>
+                    <page name="information" string="Information">
+                        <group name="information">
+                            <group name="left_information">
+                                <field name="sequence" readonly="1"/>
+                                <field name="rel_sequence" readonly="1"/>
+                                <field name="dilution_factor" readonly="1"/>
+                            </group>
+                            <group name="right_information">
+                                <field name="auto" readonly="1"/>
+                                <field name="combined" readonly="1"/>
+                                <field name="color" readonly="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_analysis_request_sample_action'>
+        <field name="name">Analysis Request Sample</field>
+        <field name="res_model">lims.analysis.request.sample</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new analysis request sample.
+            </p>
+            <p>
+                You can define several.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.result.value" id="lims_result_value_1">
+            <field name="name">conform</field>
+            <field name="active">1</field>
+            <field name="state">conform</field>
+            <field name="description">generic status</field>
+        </record>
+
+        <record model="lims.result.value" id="lims_result_value_2">
+            <field name="name">trace water</field>
+            <field name="active">1</field>
+            <field name="state">unconclusive</field>
+            <field name="description">for food generic</field>
+        </record>
+
+        <record model="lims.result.value" id="lims_result_value_3">
+            <field name="name">insufficient</field>
+            <field name="active">1</field>
+            <field name="state">not_conform</field>
+            <field name="description">generic status</field>
+        </record>
+
+        <record model="lims.result.value" id="lims_result_value_4">
+            <field name="name">Nearly limpid</field>
+            <field name="active">1</field>
+            <field name="state">unconclusive</field>
+            <field name="description">for visual qualification</field>
+        </record>
+
+        <record model="lims.result.value" id="lims_result_value_5">
+            <field name="name">Hazy</field>
+            <field name="active">1</field>
+            <field name="state">not_conform</field>
+            <field name="description">for visual qualification</field>
+        </record>
+    </data>
+</odoo>

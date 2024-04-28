@@ -1,0 +1,78 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lims_attachment_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-09 10:37+0000\n"
+"PO-Revision-Date: 2023-11-09 10:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: lims_attachment_report
+#: model:ir.model.fields,field_description:lims_attachment_report.field_ir_attachment__analysis_id
+msgid "Analysis"
+msgstr "Analyse"
+
+#. module: lims_attachment_report
+#: model:ir.model,name:lims_attachment_report.model_report_lims_report_analysis_report_qweb
+msgid "Analysis Report Parser"
+msgstr "Parser Rapport d'analyse"
+
+#. module: lims_attachment_report
+#: model:ir.model,name:lims_attachment_report.model_ir_attachment
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#. module: lims_attachment_report
+#: model_terms:ir.ui.view,arch_db:lims_attachment_report.portal_report_attachment_table
+msgid "Attachment(s)"
+msgstr "Pièce(s) jointe(s)"
+
+#. module: lims_attachment_report
+#. odoo-python
+#: code:addons/lims_attachment_report/models/lims_analysis_report.py:0
+#, python-format
+msgid "Attachment(s) for report : {}"
+msgstr "Pièce(s) jointe(s) pour le rapport : {}"
+
+#. module: lims_attachment_report
+#: model_terms:ir.ui.view,arch_db:lims_attachment_report.portal_report_attachment_table
+msgid "Description"
+msgstr "Description"
+
+#. module: lims_attachment_report
+#: model:ir.model.fields,field_description:lims_attachment_report.field_lims_analysis_report__report_image_attachment_ids
+msgid "Images"
+msgstr ""
+
+#. module: lims_attachment_report
+#: model_terms:ir.ui.view,arch_db:lims_attachment_report.lims_analysis_report_form_view
+msgid "Pictures"
+msgstr "Images des échantillons"
+
+#. module: lims_attachment_report
+#: model:ir.model.fields,field_description:lims_attachment_report.field_lims_analysis_report__pictures_count
+msgid "Pictures Count"
+msgstr "Nombre d'images"
+
+#. module: lims_attachment_report
+#: model:ir.model.fields,field_description:lims_attachment_report.field_lims_analysis_report__attachment_published_count
+msgid "Published attachements"
+msgstr "Pièces jointes publiées"
+
+#. module: lims_attachment_report
+#: model:ir.model.fields,field_description:lims_attachment_report.field_lims_analysis_report__attachment_ids
+msgid "Publishable attachements"
+msgstr "Pièces jointes publiables"
+
+#. module: lims_attachment_report
+#: model:ir.model,name:lims_attachment_report.model_lims_analysis_report
+msgid "Report"
+msgstr "Rapport"

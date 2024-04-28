@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model='ir.ui.view' id='lims_method_param_charac_tree'>
+        <field name="name">Method Parameter Characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='laboratory_id']" position='after'>
+                <field name="on_web" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='lims_method_param_charac_form'>
+        <field name="name">Method Parameter Characteristic</field>
+        <field name="model">lims.method.parameter.characteristic</field>
+        <field name="inherit_id" ref="lims_base.lims_method_parameter_characteristic_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='laboratory_id']" position='after'>
+                <field name="on_web"/>
+                <field name="is_published_portal"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

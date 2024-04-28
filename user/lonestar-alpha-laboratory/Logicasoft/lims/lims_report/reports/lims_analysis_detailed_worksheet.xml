@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="lims_analysis_detailed_worksheet_parser" inherit_id="lims_base.lims_analysis_detailed_worksheet_parser">
+        <xpath expr="//tr[@name='analysis_information']//td[1]" position="attributes">
+             <attribute name="colspan">5</attribute>
+        </xpath>
+
+        <xpath expr="//tr[@name='sop_information']//td[1]" position="attributes">
+            <attribute name="colspan">5</attribute>
+        </xpath>
+
+        <xpath expr="//tr[@name='result_title']//td[2]" position="after">
+            <td>
+                Criteria
+            </td>
+        </xpath>
+
+        <xpath expr="//tr[@name='result_information']//td[2]" position="after">
+            <td>
+                <span t-field="result_id.report_limit_value"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//tr[@name='result_sel_information']//td[2]" position="after">
+            <td>
+                <span t-field="result_id.report_limit_value"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//tr[@name='result_compute_information']//td[2]" position="after">
+            <td>
+                <span t-field="result_id.report_limit_value"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//tr[@name='result_text_information']//td[2]" position="after">
+            <td>
+                <span t-field="result_id.report_limit_value"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.parameter.type" id="demo_parameter_type_1">
+            <field name="name">Aspect</field>
+            <field name="active">1</field>
+        </record>
+        <record model="lims.parameter.type" id="demo_parameter_type_2">
+            <field name="name">Color</field>
+            <field name="active">1</field>
+        </record>
+        <record model="lims.parameter.type" id="demo_parameter_type_3">
+            <field name="name">pH</field>
+            <field name="active">1</field>
+        </record>
+    </data>
+</odoo>

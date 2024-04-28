@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="analysis_report_template_img" inherit_id="lims_report.analysis_report_template_img">
+        <xpath expr="//t[@name='image']" position="replace">
+            <t t-set="images" t-value="doc.get_all_images(analysis_id)"/>
+            <t t-if="images">
+                <div class="row" style="text-align:center">
+                    <div class="col-12">
+                        <t t-set="n" t-value="min(3,len(images))"/>
+                        <t t-set="parts" t-value="group_by_n_parts(images, n)"/>
+                        <table style="border: none; width: 100%">
+                            <tbody style="border: none">
+                                <tr style="border: none">
+                                    <t t-foreach="parts" t-as="part">
+                                        <td style="border: none; padding: 10px">
+                                            <t t-foreach="part" t-as="image">
+                                                <img t-attf-src="data:image/*;base64,{{image['binary']}}" style="max-height: 4cm; max-width: 100%"/>
+                                                <div t-esc="image['text']"/>
+                                            </t>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

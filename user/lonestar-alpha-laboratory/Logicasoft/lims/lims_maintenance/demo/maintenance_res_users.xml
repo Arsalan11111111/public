@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+  <record id="partner_lims_maintenance_demo" model="res.partner">
+    <field name="name">John MAINTENANCE van LIMSDEMO</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="company_name">YourCompany</field>
+    <field name="street">14, rue Kefer</field>
+    <field name="city">Jambes</field>
+    <field name="zip">5100</field>
+    <field name="country_id" ref="base.be"/>
+    <field name="tz">Europe/Brussels</field>
+    <field name="email">john.maintenance.van.limsdemo@odoolims.eu</field>
+  </record>
+
+  <record id="user_lims_maintenance_demo" model="res.users">
+    <field name="partner_id" ref="partner_lims_maintenance_demo"/>
+    <field name="login">lims_maintenance_demo</field>
+    <field name="password">lims_maintenance_demo</field>
+    <field name="signature" type="html"><span>-- <br/>Mr John MAINTENANCE van LIMSDEMO</span></field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="groups_id" eval="[Command.set([ref('base.group_user'), ref('maintenance.group_equipment_manager'), ref('lims_base.user_group')])]"/>
+    <field name="default_laboratory_id" ref="lims_base.default_laboratory" />
+  </record>
+
+  <record id="partner_maintenance_no_lims_demo" model="res.partner">
+    <field name="name">Jack MAINTENANCE no LIMSDEMO</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="company_name">YourCompany</field>
+    <field name="street">14, rue Kefer</field>
+    <field name="city">Jambes</field>
+    <field name="zip">5100</field>
+    <field name="country_id" ref="base.be"/>
+    <field name="tz">Europe/Brussels</field>
+    <field name="email">jack.maintenance.no.limsdemo@odoolims.eu</field>
+  </record>
+
+  <record id="user_lims_maintenance_no_lims_demo" model="res.users">
+    <field name="partner_id" ref="partner_maintenance_no_lims_demo"/>
+    <field name="login">maintenance_no_lims_demo</field>
+    <field name="password">maintenance_no_lims_demo</field>
+    <field name="signature" type="html"><span>-- <br/>Mr Jack MAINTENANCE no LIMSDEMO</span></field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="groups_id" eval="[Command.set([ref('base.group_user'), ref('maintenance.group_equipment_manager')])]"/>
+    <field name="default_laboratory_id" ref="lims_base.default_laboratory" />
+  </record>
+
+</odoo>

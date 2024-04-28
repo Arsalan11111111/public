@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="res_config_settings_view_form">
+        <field name="name">Lims Settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Lims" string="Lims" data-key="lims_base"
+                     groups="lims_base.lims_admin_group">
+                    <h2>lims Management</h2>
+                    <div class="row mt16 o_settings_container" name="lims_config_boolean">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="deactivate_container_for_label"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="deactivate_container_for_label"/>
+                                <div class="text-muted">
+                                    Deactivate container for label
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="module_lims_double_validation"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="module_lims_double_validation"/>
+                                <div class="text-muted">
+                                    Install lims double validation
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="is_parameter_and_pack_protected"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="is_parameter_and_pack_protected"/>
+                                <div class="text-muted">
+                                    Enable protection of validated characteristic parameters and validated packs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="is_automatic_customer_follower"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="is_automatic_customer_follower"/>
+                                <div class="text-muted">
+                                    Add automatically customers as followers in request and analysis
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="module_lims_product_limit"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="module_lims_product_limit"/>
+                                <div class="text-muted">
+                                    Install Lims Product limit
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="module_lims_partner_limit"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="module_lims_partner_limit"/>
+                                <div class="text-muted">
+                                    Install Lims Partner limit
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container" name="lims_main_config">
+                        <group>
+                            <field name="analysis_stage_id"/>
+                            <field name="sop_stage_id"/>
+                            <field name="time_between_check_identity"/>
+                            <field name="priority_limit" attrs="{
+                                'invisible':  ['|', ('module_lims_partner_limit', '=', False),
+                                ('module_lims_product_limit', '=', False)]}"/>
+                        </group>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record model='ir.actions.act_window' id='lims_settings_action'>
+        <field name="name">General Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="type">ir.actions.act_window</field>
+        <field name="context">{'module': 'lims_base', 'bin_size': False}</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+
+    <menuitem action="lims_settings_action"
+              parent="general_settings_submenu"
+              id="lims_settings_menu"
+              groups="lims_base.lims_admin_group"
+              sequence="10"/>
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Form -->
+    <record model="ir.ui.view" id="spw_tax_partner_activity_form">
+        <field name="name">Partner Activity</field>
+        <field name="model">spw.tax.partner.activity</field>
+        <field name="arch" type="xml">
+            <form string="Partner Activity">
+                <sheet>
+                    <group>
+                        <field name="sequence"/>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="ecotoxicity"/>
+                        <field name="days_activity_count"/>
+                        <field name="days_discharge_count"/>
+                        <field name="month_activity_id"/>
+                        <field name="day_activity_ids" widget="many2many_tags"/>
+                        <field name="month_activity_ids" widget="many2many_tags"/>
+                        <field name="partner_id" invisible="context.get('make_site_invisible', False)"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="spw_tax_partner_activity_tree">
+        <field name="name">Partner Activity</field>
+        <field name="model">spw.tax.partner.activity</field>
+        <field name="arch" type="xml">
+            <tree string="Partner Activity">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="ecotoxicity"/>
+                <field name="days_activity_count"/>
+                <field name="days_discharge_count"/>
+                <field name="month_activity_id"/>
+                <field name="day_activity_ids"/>
+                <field name="month_activity_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="spw_tax_partner_activity_action" >
+        <field name="name">Partner Activity</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spw.tax.partner.activity</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="spw_tax_partner_activity_menu"
+              name="Partner Activity"
+              parent="spw_tax_configuration"
+              action="spw_tax_partner_activity_action"/>
+</odoo>

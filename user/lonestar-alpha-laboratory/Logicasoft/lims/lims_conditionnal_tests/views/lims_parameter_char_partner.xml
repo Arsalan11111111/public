@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="lims_parameter_char_partner_form" model="ir.ui.view">
+        <field name="name">Parameter Partner</field>
+        <field name="model">lims.parameter.char.partner</field>
+        <field name="inherit_id" ref="lims_partner_limit.lims_parameter_char_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='limit_ids']/tree/field[@name='message']" position="before">
+                <field name="pack_ids" widget="many2many_tags" domain="[('matrix_id', '=', parent.matrix_id), ('regulation_id', '=', parent.rel_regulation_id)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_wizard_tax_report,access.wizard.tax.report,model_wizard_tax_report,,1,1,1,1
+access_wizard_vat_return,access.wizard.vat.return,model_wizard_vat_return,,1,1,1,1
+access_tax_report_partner_views,access_tax_report_partner_views,model_tax_report_partner_views,,1,1,1,1

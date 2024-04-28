@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record model="ir.ui.view" id="lims_result_log_form">
+        <field name="name">Result Log</field>
+        <field name="model">lims.result.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="log" readonly="1"/>
+                        <field name="result_reason_id" readonly="1"/>
+                        <field name="user_id" readonly="1"/>
+                        <field name="date" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="lims_result_log_tree">
+        <field name="name">Result Log</field>
+        <field name="model">lims.result.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="log"/>
+                <field name="result_id" invisible="1"/>
+                <field name="sel_result_id" invisible="1"/>
+                <field name="compute_result_id" invisible="1"/>
+                <field name="text_result_id" invisible="1"/>
+                <field name="result_reason_id" readonly="1"/>
+                <field name="user_id" readonly="1"/>
+                <field name="date" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

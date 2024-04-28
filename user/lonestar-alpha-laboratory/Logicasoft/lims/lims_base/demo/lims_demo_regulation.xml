@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="lims.regulation" id="demo_regulation_1">
+            <field name="name">Generic</field>
+            <field name="active">1</field>
+            <field name="description">Without specific regulation</field>
+        </record>
+        <record model="lims.regulation" id="demo_regulation_2">
+            <field name="name">Regulated</field>
+            <field name="active">2</field>
+            <field name="description">With any Regulation</field>
+        </record>
+    </data>
+</odoo>

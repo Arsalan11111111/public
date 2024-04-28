@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="parameter_print_group_template">
+        <t t-call="lims_base.lims_external_layout">
+            <t t-set="doc" t-value="doc.with_context({'lang': doc.partner_id.lang})"/>
+
+            <t t-set="analysis_ids" t-value="get_analysis(doc)"/>
+            <t t-set="analysis_request_ids" t-value="analysis_ids.mapped('request_id')"/>
+            <t t-set="parameter_print_group_ids" t-value="get_parameter_print_group_ids(analysis_ids)"/>
+
+            <div class="page">
+                <style type="text/css">
+                    table, th, td {
+                      border: 1px solid black;
+                      text-align: center;
+                    }
+                    th, td {
+                      padding: 3px;
+                    }
+                </style>
+                <t t-foreach="parameter_print_group_ids" t-as="parameter_print_group_id">
+                    <t t-set="parameter_print_ids" t-value="parameter_print_group_id.parameter_print_ids"/>
+                    <t t-set="sop_ids" t-value="get_sop_ids(analysis_ids, parameter_print_group_id)"/>
+                    <t t-set="parameter_print_ids" t-value="no_empty_column(parameter_print_ids, sop_ids)"/>
+                    <t t-set="sop_ids" t-value="no_empty_line(parameter_print_ids, sop_ids)"/>
+                    <t t-if="sop_ids">
+                        <table class="table table-condensed" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th style="border-right: 3px double black;">
+                                        <t t-esc="parameter_print_group_id.print_name"/>
+                                    </th>
+                                    <t t-foreach="parameter_print_ids" t-as="parameter_print_id">
+                                        <th>
+                                            <t t-esc="parameter_print_id.name"/>
+                                        </th>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="sop_ids" t-as="sop_id">
+                                    <t t-if="parameter_print_ids">
+                                        <tr>
+                                            <td style="border-right: 3px double black">
+                                                <t t-esc="sop_id.name"/>
+                                            </td>
+
+                                            <t t-foreach="parameter_print_ids" t-as="parameter_print_id">
+                                                <t t-set="result_vals" t-value="get_result_vals(sop_id, parameter_print_id)"/>
+                                                <td>
+                                                    <t t-if="result_vals">
+                                                        <t t-esc="result_vals['value']"/> <t t-esc="result_vals['uom']"/>
+                                                    </t>
+                                                </td>
+                                            </t>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                            <tfoot>
+                                <tr t-if="display_average(parameter_print_ids)">
+                                    <td style="border-right: 3px double black">
+                                        Average :
+                                    </td>
+
+                                    <t t-foreach="parameter_print_ids" t-as="parameter_print_id">
+                                        <td>
+                                            <t t-if="parameter_print_id.print_mean_report">
+                                                <ul style="list-style: none">
+                                                    <t t-foreach="get_units(sop_ids, parameter_print_id)" t-as="unit">
+                                                        <li>
+                                                            <t t-esc="get_mean(sop_ids, parameter_print_id, unit)"/> <t t-esc="unit"/>
+                                                        </li>
+                                                    </t>
+                                                </ul>
+                                            </t>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <br/>
+                    </t>
+                </t>
+            </div>
+            <p style="page-break-after:always;"/>
+        </t>
+    </template>
+
+    <template id="lims_report_column.parameter_print_group_qweb">
+        <t t-call="web.html_container">
+            <t t-foreach="doc_ids" t-as="doc">
+                <t t-set="company" t-value="doc.laboratory_id.company_id"/>
+                <t t-call="lims_report_column.parameter_print_group_template" t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <record id="parameter_print_group_report" model="ir.actions.report">
+        <field name="name">Report regroup by print group</field>
+        <field name="model">lims.analysis.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">lims_report_column.parameter_print_group_qweb</field>
+        <field name="report_file">lims_report_column.parameter_print_group_qweb</field>
+        <field name="attachment">('REP '+(object.name or '').replace('/','')+'.pdf')</field>
+    </record>
+
+</odoo>

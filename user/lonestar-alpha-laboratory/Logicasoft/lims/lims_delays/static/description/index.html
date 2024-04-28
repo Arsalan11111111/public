@@ -1,0 +1,120 @@
+<section class="oe_container">
+    <div class="oe_row">
+        <h1>Lims Delays</h1>
+        <blockquote data-o-mail-quote="1">
+            <h2>New fields:</h2>
+            <ol class="arabic">
+                <li>
+                    <dl class="first docutils">
+                        <dt>Analysis</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Date change: Box checked if the dates (date sample and date sample receipt) has
+                                    change
+                                </li>
+                                <li>Commercial lead date : this date is calculated by taking the highest duration configured in the parameters pack which has the highest commercial lead time.</li>
+                                <li>Commercial warning date : this date is calculated with the duration linked to the parameters pack which has the highest commercial lead time.</li>
+                                <li>Is commercial lead date : is true if in the life cycle of this analysis, it was marked as out of time.</li>
+                                <li>Is commercial warning date : is true if in the life cycle of this analysis, it was marked as warning time.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Test</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Date wip : date when the test is set to the status "WIP".</li>
+                                <li>Commercial lead date: linked to the commercial lead date from the analysis.</li>
+                                <li>Commercial warning date: linked to the commercial warning date from the analysis.</li>
+                                <li>Technical lead date: linked to the technical lead date from the results with the smallest technical lead date.</li>
+                                <li>Technical warning date: linked to the technical warning date from the results with the smallest technical lead date.</li>
+                                <li>Technical lead time: linked to the technical warning time from the results with the smallest technical lead time.</li>
+                                <li>Technical warning time: linked to the technical warning time from the results with the smallest technical lead time.</li>
+                                <li>Date WIP: This is the date when the test's state change to "WIP"</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Results (all types)</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Technical lead date: This is an expiration date.</li>
+                                <li>Technical warning date: This is an alert date.</li>
+                                <li>Technical lead time: This is an expiration time.</li>
+                                <li>Technical warning time: This is an alert time.</li>
+                                <li>Is technical out of time : is true if in the life cycle of this result, it was marked as out of time.</li>
+                                <li>Is technical warning date : is true if in the life cycle of this result, it was marked as warning time.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <h2>Configuration(s):</h2>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Laboratory</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Default Lead Time: This Lead time used by default if the lead time of the model
+                                    isn't fill
+                                </li>
+                                <li>Default Warning Time: This Warning Time used by default if the Warning Time of the
+                                    model isn't fill
+                                </li>
+                                <li>Date for compute Warning Time: A selection of date (Date Sample, Date Sample
+                                    Receipt)
+                                </li>
+                                <li>Date End for compute Warning time: A selection of date (Date Start Analysis, Date
+                                    end Analysis, Date report Analysis, Actual Date)
+                                </li>
+                                <li>Stage Warning Time Filter: A selection of stage (See lims base --&gt; Section
+                                    Analysis Stage).
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Method</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Due time: this is the due time necessary to use the method</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Parameter Characteristic</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Technical Lead Time: This is an expiration time.</li>
+                                <li>Technical Warning time: It's used to set the warning time of a analysis when the warning time
+                                    of this one is set
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="first docutils">
+                        <dt>Parameter pack</dt>
+                        <dd>
+                            <ul class="first last simple">
+                                <li>Commercial Lead Time: This is an expiration time.</li>
+                                <li>Commercial Warning time: It's used to set the Warning time of the analysis</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <h3>About calculation of date</h3>
+                <p>Lead date : date start + lead time</p>
+                <p>Warning date : date start + lead time - warning date</p>
+            </ol>
+        </blockquote>
+    </div>
+</section>
